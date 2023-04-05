@@ -31,3 +31,36 @@ D:\Study\HOC KY 2 - HTTT2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Text.Json.x
 D:\Study\HOC KY 2 - HTTT2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Study\HOC KY 2 - HTTT2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.ValueTuple.xml
 D:\Study\HOC KY 2 - HTTT2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.CopyComplete
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\Phase_1.exe.config
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\Phase_1.exe
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\Phase_1.pdb
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Buffers.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Memory.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Numerics.Vectors.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Text.Encodings.Web.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Text.Json.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.ValueTuple.dll
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Buffers.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Memory.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Numerics.Vectors.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Text.Encodings.Web.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Text.Json.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\bin\Debug\System.ValueTuple.xml
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.AssemblyReference.cache
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.SuggestedBindingRedirects.cache
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.Form1.resources
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.Form2.resources
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.Form3.resources
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.Properties.Resources.resources
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.GenerateResource.cache
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.CoreCompileInputs.cache
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.CopyComplete
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.exe
+D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.pdb

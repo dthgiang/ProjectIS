@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
+
 
 namespace Phase_1
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        OracleConnection con = null;
+        public Form3(OracleConnection connection)
         {
             InitializeComponent();
+            this.con = connection;
         }
 
         private void button3_Click(object sender, EventArgs e)
