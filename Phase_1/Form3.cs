@@ -16,6 +16,7 @@ namespace Phase_1
     public partial class Form3 : Form
     {
         OracleConnection con = null;
+        String name = null;
         public Form3(OracleConnection connection)
         {
             InitializeComponent();
@@ -45,6 +46,35 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
+            if (name == null)
+            {
+                dataGridView1.Hide();
+            }
+            else
+            {
+                OracleDataAdapter da = new OracleDataAdapter("exec get_all_privileges "+name, con);
+                //OracleCommandBuilder builder = new OracleCommandBuilder(da);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Show();
+            }    
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            name = cbb_name.Text;
+            dataGridView1.Show();
+            OracleDataAdapter da = new OracleDataAdapter("SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE FROM DBA_TAB_PRIVS  WHERE GRANTEE ='" + name+ "'" , con);
+            //OracleCommandBuilder builder = new OracleCommandBuilder(da);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

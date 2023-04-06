@@ -120,6 +120,7 @@ namespace Phase_1
                 lbl_username.Show();
                 bt_createuser.Show();
                 label2.Hide();
+                bt_createrole.Hide();
             }
             else if (strCBB == "Role")
             {
@@ -128,6 +129,8 @@ namespace Phase_1
                 label2.Show();
                 bt_createuser.Hide();
                 bt_createrole.Show();
+                dataGridView2.Hide();
+                lbl_tablename.Hide();
             }
 
         }
@@ -145,26 +148,25 @@ namespace Phase_1
             strSQL = "create table " + tablename + " ( ";
             String name = "";
             String datatype = "";
-            bool isChecked = false;
+ 
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
                 if (!row.IsNewRow)
                 {
+
                     name = (String)row.Cells["Name"].Value;
-                    datatype = (String)row.Cells["Datatype"].Value;
-                    isChecked = (bool)row.Cells["PrimaryKey"].Value;
-                    if (isChecked != true)
+                    datatype = (String)row.Cells["DataType"].Value;
+
+
+                    if (name != null & datatype != null )
                     {
-                        isChecked=false;
+                        strSQL += name + " " + datatype;
                     }
-                    if (name != null & datatype != null & isChecked)
+                    if (PrimaryKey.Equals(DataGridViewTriState.True))
                     {
-                        strSQL += name + " " + datatype + " primary key,";
+                        strSQL += " primary key";
                     }
-                    else if (name != null & datatype != null )
-                    {
-                        strSQL += name + " " + datatype + ",";
-                    }
+                        strSQL += ",";
                 }
 
             }
@@ -240,6 +242,11 @@ namespace Phase_1
                 int n = command.ExecuteNonQuery();
 
             }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

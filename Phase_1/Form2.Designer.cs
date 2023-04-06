@@ -38,15 +38,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lbl_tablename = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Datatype = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.PrimaryKey = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bt_createtable = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
             this.bt_createuser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.bt_createrole = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PrimaryKey = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -150,48 +150,6 @@
             this.txt_name.Size = new System.Drawing.Size(406, 26);
             this.txt_name.TabIndex = 10;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
-            this.Datatype,
-            this.PrimaryKey});
-            this.dataGridView2.Location = new System.Drawing.Point(358, 320);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(703, 198);
-            this.dataGridView2.TabIndex = 11;
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 8;
-            this.Name.Name = "Name";
-            this.Name.Width = 150;
-            // 
-            // Datatype
-            // 
-            this.Datatype.HeaderText = "Datatype";
-            this.Datatype.Items.AddRange(new object[] {
-            "varchar2(100)",
-            "char(100)",
-            "date",
-            "number"});
-            this.Datatype.MinimumWidth = 8;
-            this.Datatype.Name = "Datatype";
-            this.Datatype.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Datatype.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Datatype.Width = 150;
-            // 
-            // PrimaryKey
-            // 
-            this.PrimaryKey.HeaderText = "PrimaryKey";
-            this.PrimaryKey.MinimumWidth = 8;
-            this.PrimaryKey.Name = "PrimaryKey";
-            this.PrimaryKey.Width = 150;
-            // 
             // bt_createtable
             // 
             this.bt_createtable.Location = new System.Drawing.Point(901, 564);
@@ -232,7 +190,7 @@
             // 
             // bt_createrole
             // 
-            this.bt_createrole.Location = new System.Drawing.Point(990, 252);
+            this.bt_createrole.Location = new System.Drawing.Point(986, 251);
             this.bt_createrole.Name = "bt_createrole";
             this.bt_createrole.Size = new System.Drawing.Size(106, 37);
             this.bt_createrole.TabIndex = 16;
@@ -240,17 +198,60 @@
             this.bt_createrole.UseVisualStyleBackColor = true;
             this.bt_createrole.Click += new System.EventHandler(this.bt_createrole_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.DataType,
+            this.PrimaryKey});
+            this.dataGridView2.Location = new System.Drawing.Point(373, 344);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(621, 146);
+            this.dataGridView2.TabIndex = 17;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.MinimumWidth = 8;
+            this.Name.Name = "Name";
+            this.Name.Width = 150;
+            // 
+            // DataType
+            // 
+            this.DataType.HeaderText = "DataType";
+            this.DataType.Items.AddRange(new object[] {
+            "varchar2(100)",
+            "char(100)",
+            "date",
+            "number"});
+            this.DataType.MinimumWidth = 8;
+            this.DataType.Name = "DataType";
+            this.DataType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DataType.Width = 150;
+            // 
+            // PrimaryKey
+            // 
+            this.PrimaryKey.HeaderText = "Primary Key";
+            this.PrimaryKey.MinimumWidth = 8;
+            this.PrimaryKey.Name = "PrimaryKey";
+            this.PrimaryKey.Width = 150;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 863);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bt_createrole);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bt_createuser);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.bt_createtable);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_tablename);
             this.Controls.Add(this.button2);
@@ -261,8 +262,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-
+            this.Name = "Form2";
             this.Text = "DATABASE OBJECT";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -284,14 +284,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lbl_tablename;
         private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button bt_createtable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Datatype;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn PrimaryKey;
         private System.Windows.Forms.Label lbl_username;
         private System.Windows.Forms.Button bt_createuser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bt_createrole;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewComboBoxColumn DataType;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn PrimaryKey;
     }
 }
