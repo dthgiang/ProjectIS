@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Oracle.ManagedDataAccess.Client;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Collections.Specialized;
 using System.Data.Common;
@@ -61,31 +60,26 @@ namespace Phase_1
         {
             return "select * from " + owner + "." + viewName;
         }
+
+        private void raiseTable(DataGridView dgv, string SQLCommand)
+        {
+            OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, con);
+
+            DataTable userTable = new DataTable();
+
+            adt.Fill(userTable);
+            dgv.DataSource = userTable;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
-            strCBB = comboBox1.Text;
-            String strSQL = null;
+            strCBB = filterBox.Text.ToUpper();
+            string view = "PH1_VIEW_ALL_" + strCBB + "S";
+            String strSQL = sqlQueryView(view, "GOD");
             
-            if (strCBB == "User"){
-                strSQL = sqlQueryView("PH1_VIEW_ALL_USRES", "GOD");
-            }
-            else if (strCBB == "Role"){
-                strSQL = sqlQueryView("PH1_VIEW_ALL_ROLES", "GOD");
-            }
-            else if (strCBB == "Table"){
-                strSQL = sqlQueryView("PH1_VIEW_ALL_TABLES", "GOD");
-            }
-            else if (strCBB == "View"){
-                strSQL = sqlQueryView("PH1_VIEW_ALL_VIEWS", "GOD");
-            }
             
             try{
-                OracleDataAdapter da = new OracleDataAdapter(strSQL, con);
-                //OracleCommandBuilder builder = new OracleCommandBuilder(da);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                raiseTable(dataGridView1, strSQL);
                 dataGridView1.Show();
             }
             catch (OracleException ex){
@@ -103,7 +97,7 @@ namespace Phase_1
         private void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.Hide();
-            strCBB = comboBox1.Text;
+            strCBB = filterBox.Text;
 
 
             if (strCBB == "Table")
@@ -119,7 +113,7 @@ namespace Phase_1
             }
             else if (strCBB == "User")
             {
-                strCBB = comboBox1.Text;
+                strCBB = filterBox.Text;
                 lbl_tablename.Hide();
                 txt_name.Show();
                 dataGridView2.Hide();
@@ -200,7 +194,7 @@ namespace Phase_1
         private void button4_Click(object sender, EventArgs e)
         {
             dataGridView1.Hide();
-            strCBB = comboBox1.Text;
+            strCBB = filterBox.Text;
             lbl_tablename.Hide();
             txt_name.Show();
             dataGridView2.Hide();
@@ -263,6 +257,83 @@ namespace Phase_1
 
         private void dropButton_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Are you sure to drop this one", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    string mode = filterBox.Text;
+                    string names = mode + "Name";
+                    string choose = selectedRow.Cells[names].Value.ToString();
+   
+
+                    try{
+                        
+                        OracleCommand command = new OracleCommand("ph1_dropUserOrRole", con);
+
+
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        // Add input parameter(s) to the command
+                        command.Parameters.Add("p_userOrRole", OracleDbType.Varchar2).Value = choose;
+                        command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = mode;
+                        System.Diagnostics.Debug.WriteLine(choose + " - " + mode);
+                        // Get the value of the output parameter(s)
+                        int resultEx = command.ExecuteNonQuery();
+                        System.Diagnostics.Debug.WriteLine(resultEx);
+
+                        if (resultEx >= 0){
+                            // The stored procedure executed successfully
+                            MessageBox.Show(mode + " dropped", "Message", MessageBoxButtons.OK);
+                        }
+                        else {
+                            // The stored procedure did not execute successfully
+                            MessageBox.Show("Something went wrong! please try again", "Message", MessageBoxButtons.OK);
+                        }
+                    }
+                    catch (OracleException ex)
+                    {
+                        Console.WriteLine("OracleException: " + ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please choose the object", "Message", MessageBoxButtons.OK);
+
+                }
+            }
+        }
+
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string names = filterBox.Text + "Name";
+                objectNameTextBox.Text = selectedRow.Cells[names].Value.ToString();
+
+            }
+        }
+
+        private void filterBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            strCBB = filterBox.SelectedItem.ToString().ToUpper();
+            string view = "PH1_VIEW_ALL_" + strCBB + "S";
+            String strSQL = sqlQueryView(view, "GOD");
+
+
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
 
         }
     }

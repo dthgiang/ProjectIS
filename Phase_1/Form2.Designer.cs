@@ -32,10 +32,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.filterBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.createNewButton = new System.Windows.Forms.Button();
             this.lbl_tablename = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.bt_createtable = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PrimaryKey = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.objectNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dropButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,6 +63,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(862, 292);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // pictureBox1
             // 
@@ -93,30 +93,19 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // filterBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.filterBox.FormattingEnabled = true;
+            this.filterBox.Items.AddRange(new object[] {
             "Table",
             "View",
             "User",
             "Role"});
-            this.comboBox1.Location = new System.Drawing.Point(482, 145);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(406, 28);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(927, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Xem";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.filterBox.Location = new System.Drawing.Point(482, 145);
+            this.filterBox.Name = "filterBox";
+            this.filterBox.Size = new System.Drawing.Size(406, 28);
+            this.filterBox.TabIndex = 5;
+            this.filterBox.SelectedIndexChanged += new System.EventHandler(this.filterBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -128,16 +117,17 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Filter";
             // 
-            // button2
+            // createNewButton
             // 
-            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1040, 141);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 36);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Tạo mới";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.createNewButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.createNewButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createNewButton.Location = new System.Drawing.Point(927, 141);
+            this.createNewButton.Name = "createNewButton";
+            this.createNewButton.Size = new System.Drawing.Size(121, 36);
+            this.createNewButton.TabIndex = 8;
+            this.createNewButton.Text = "Tạo mới";
+            this.createNewButton.UseVisualStyleBackColor = false;
+            this.createNewButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbl_tablename
             // 
@@ -255,13 +245,13 @@
             this.PrimaryKey.Name = "PrimaryKey";
             this.PrimaryKey.Width = 150;
             // 
-            // textBox1
+            // objectNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(482, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(406, 26);
-            this.textBox1.TabIndex = 18;
+            this.objectNameTextBox.Location = new System.Drawing.Point(482, 200);
+            this.objectNameTextBox.Name = "objectNameTextBox";
+            this.objectNameTextBox.ReadOnly = true;
+            this.objectNameTextBox.Size = new System.Drawing.Size(406, 26);
+            this.objectNameTextBox.TabIndex = 18;
             // 
             // label3
             // 
@@ -292,7 +282,7 @@
             this.ClientSize = new System.Drawing.Size(1476, 863);
             this.Controls.Add(this.dropButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.objectNameTextBox);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bt_createrole);
             this.Controls.Add(this.label2);
@@ -301,10 +291,9 @@
             this.Controls.Add(this.bt_createtable);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.lbl_tablename);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.createNewButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.filterBox);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -324,10 +313,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox filterBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button createNewButton;
         private System.Windows.Forms.Label lbl_tablename;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Button bt_createtable;
@@ -339,7 +327,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewComboBoxColumn DataType;
         private System.Windows.Forms.DataGridViewCheckBoxColumn PrimaryKey;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox objectNameTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button dropButton;
     }
