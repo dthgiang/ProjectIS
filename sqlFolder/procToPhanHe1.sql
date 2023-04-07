@@ -116,7 +116,7 @@ alter role wibu not identified;
 -- proc xem tat ca user va role trong he thong --
 
 -- proc xem tat ca user va role trong he thong --
-CREATE OR REPLACE VIEW PH1_VIEW_USRES_PRIVS
+CREATE OR REPLACE VIEW PH1_VIEW_USERS_PRIVS
 AS
     SELECT grantee, owner, table_name, grantor, privilege, grantable, type FROM DBA_TAB_PRIVS
         WHERE GRANTEE IN (
@@ -156,7 +156,7 @@ AS
 CREATE OR REPLACE VIEW PH1_TEST_VIEW_ALL_VIEWS
 AS select * from god.PH1_VIEW_ALL_VIEWS;
 /
-grant select on PH1_VIEW_USRES_PRIVS to DB_Manager;
+grant select on PH1_VIEW_USERS_PRIVS to DB_Manager;
 grant select on PH1_VIEW_ALL_TABLES to DB_Manager;
 grant select on PH1_VIEW_ALL_VIEWS to DB_Manager;
 grant select on PH1_VIEW_ALL_USRES to DB_Manager;
