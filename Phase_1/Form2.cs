@@ -336,5 +336,27 @@ namespace Phase_1
             }
 
         }
+
+        private void detailButton_Click(object sender, EventArgs e)
+        {
+            string objectName = objectNameTextBox.Text;
+            string mode = filterBox.Text;
+            if (objectName == ""){
+                MessageBox.Show("Please choose the object", "Message", MessageBoxButtons.OK);
+            } else
+            {
+                if (mode != "User" && mode != "Role"){
+                    MessageBox.Show("Only for User & Role", "Message", MessageBoxButtons.OK);
+
+                }
+                else {
+                    Detail d = new Detail(con, objectName, mode);
+                    this.Hide();
+                    d.Show();
+                }
+                
+            }
+           
+        }
     }
 }

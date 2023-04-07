@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.filterBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,9 +48,11 @@
             this.objectNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dropButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.detailButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,18 +65,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(862, 292);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Phase_1.Properties.Resources.ObjectDatabase;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1482, 923);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button3
             // 
@@ -275,11 +264,36 @@
             this.dropButton.UseVisualStyleBackColor = false;
             this.dropButton.Click += new System.EventHandler(this.dropButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Phase_1.Properties.Resources.ObjectDatabase;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1482, 923);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // detailButton
+            // 
+            this.detailButton.BackColor = System.Drawing.Color.LightGreen;
+            this.detailButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailButton.Location = new System.Drawing.Point(1040, 194);
+            this.detailButton.Name = "detailButton";
+            this.detailButton.Size = new System.Drawing.Size(144, 37);
+            this.detailButton.TabIndex = 21;
+            this.detailButton.Text = "View Detail";
+            this.detailButton.UseVisualStyleBackColor = false;
+            this.detailButton.Click += new System.EventHandler(this.detailButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 863);
+            this.Controls.Add(this.detailButton);
             this.Controls.Add(this.dropButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.objectNameTextBox);
@@ -301,8 +315,8 @@
             this.Text = "DATABASE OBJECT";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +344,6 @@
         private System.Windows.Forms.TextBox objectNameTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button dropButton;
+        private System.Windows.Forms.Button detailButton;
     }
 }
