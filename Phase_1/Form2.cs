@@ -64,19 +64,19 @@ namespace Phase_1
             String strSQL = null;
             if (strCBB == "User")
             {
-                strSQL = "select * from HIENTHU.NHANVIEN ";
+                strSQL = "select * from PH1_VIEW_ALL_USRES";
             }
             else if (strCBB == "Role")
             {
-                strSQL = "exec ";
+                strSQL = "select * from PH1_VIEW_USRES_PRIVS";
             }
             else if (strCBB == "Table")
             {
-                strSQL = "exec ";
+                strSQL = "select * from PH1_VIEW_USRES_PRIVS";
             }
             else if (strCBB == "View")
             {
-                strSQL = "exec ";
+                strSQL = "select * from PH1_VIEW_USRES_PRIVS";
             }
 
             OracleDataAdapter da = new OracleDataAdapter(strSQL, con);

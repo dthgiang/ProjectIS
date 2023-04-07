@@ -64,3 +64,34 @@ D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.CoreC
 D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.csproj.CopyComplete
 D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.exe
 D:\FIT\Study\HK2-2022-2023\ATBM\ProjectIS\Phase_1\obj\Debug\Phase_1.pdb
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\Phase_1.exe.config
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\Phase_1.exe
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\Phase_1.pdb
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\Oracle.ManagedDataAccess.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Buffers.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Memory.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Numerics.Vectors.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Text.Encodings.Web.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Text.Json.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Threading.Tasks.Extensions.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.ValueTuple.dll
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Buffers.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Memory.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Numerics.Vectors.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Text.Encodings.Web.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Text.Json.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.Threading.Tasks.Extensions.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\bin\Debug\System.ValueTuple.xml
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.csproj.AssemblyReference.cache
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.Form1.resources
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.Form2.resources
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.Form3.resources
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.Properties.Resources.resources
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.csproj.GenerateResource.cache
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.csproj.CoreCompileInputs.cache
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.exe
+K:\HCMUS Hoc Ki\HCMUS Nam 3\HK2 nam 3\Bao Mat HTTT\Project Code\Phase_1\obj\Debug\Phase_1.pdb
