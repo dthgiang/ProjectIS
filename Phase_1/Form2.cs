@@ -57,34 +57,41 @@ namespace Phase_1
             bt_createrole.Hide();
         }
 
+        private string sqlQueryView(string viewName, string owner)
+        {
+            return "select * from " + owner + "." + viewName;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
             strCBB = comboBox1.Text;
             String strSQL = null;
-            if (strCBB == "User")
-            {
-                strSQL = "select * from PH1_VIEW_ALL_USRES";
+            
+            if (strCBB == "User"){
+                strSQL = sqlQueryView("PH1_VIEW_ALL_USRES", "GOD");
             }
-            else if (strCBB == "Role")
-            {
-                strSQL = "select * from PH1_VIEW_USRES_PRIVS";
+            else if (strCBB == "Role"){
+                strSQL = sqlQueryView("PH1_VIEW_ALL_ROLES", "GOD");
             }
-            else if (strCBB == "Table")
-            {
-                strSQL = "select * from PH1_VIEW_USRES_PRIVS";
+            else if (strCBB == "Table"){
+                strSQL = sqlQueryView("PH1_VIEW_ALL_TABLES", "GOD");
             }
-            else if (strCBB == "View")
-            {
-                strSQL = "select * from PH1_VIEW_USRES_PRIVS";
+            else if (strCBB == "View"){
+                strSQL = sqlQueryView("PH1_VIEW_ALL_VIEWS", "GOD");
             }
-
-            OracleDataAdapter da = new OracleDataAdapter(strSQL, con);
-            //OracleCommandBuilder builder = new OracleCommandBuilder(da);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Show();
+            
+            try{
+                OracleDataAdapter da = new OracleDataAdapter(strSQL, con);
+                //OracleCommandBuilder builder = new OracleCommandBuilder(da);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Show();
+            }
+            catch (OracleException ex){
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
+           
 
         }
 
@@ -245,6 +252,16 @@ namespace Phase_1
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dropButton_Click(object sender, EventArgs e)
         {
 
         }

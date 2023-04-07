@@ -47,6 +47,9 @@
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PrimaryKey = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dropButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -65,7 +68,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Phase_1.Properties.Resources.ObjectDatabase;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -34);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1482, 923);
@@ -98,35 +101,39 @@
             "View",
             "User",
             "Role"});
-            this.comboBox1.Location = new System.Drawing.Point(482, 177);
+            this.comboBox1.Location = new System.Drawing.Point(482, 145);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(406, 28);
             this.comboBox1.TabIndex = 5;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(939, 175);
+            this.button1.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(927, 140);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 31);
+            this.button1.Size = new System.Drawing.Size(98, 37);
             this.button1.TabIndex = 6;
             this.button1.Text = "Xem";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(369, 180);
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(330, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.Size = new System.Drawing.Size(73, 28);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Object";
+            this.label1.Text = "Filter";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1075, 172);
+            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1040, 141);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 34);
+            this.button2.Size = new System.Drawing.Size(121, 36);
             this.button2.TabIndex = 8;
             this.button2.Text = "Tạo mới";
             this.button2.UseVisualStyleBackColor = true;
@@ -135,10 +142,10 @@
             // lbl_tablename
             // 
             this.lbl_tablename.AutoSize = true;
-            this.lbl_tablename.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_tablename.Location = new System.Drawing.Point(294, 255);
+            this.lbl_tablename.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_tablename.Location = new System.Drawing.Point(326, 255);
             this.lbl_tablename.Name = "lbl_tablename";
-            this.lbl_tablename.Size = new System.Drawing.Size(130, 25);
+            this.lbl_tablename.Size = new System.Drawing.Size(145, 28);
             this.lbl_tablename.TabIndex = 9;
             this.lbl_tablename.Text = "Table\'s name";
             this.lbl_tablename.Click += new System.EventHandler(this.label2_Click);
@@ -163,39 +170,46 @@
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
-            this.lbl_username.Location = new System.Drawing.Point(326, 255);
+            this.lbl_username.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(320, 255);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(98, 20);
+            this.lbl_username.Size = new System.Drawing.Size(138, 28);
             this.lbl_username.TabIndex = 13;
             this.lbl_username.Text = "User\'s name";
             // 
             // bt_createuser
             // 
-            this.bt_createuser.Location = new System.Drawing.Point(972, 252);
+            this.bt_createuser.BackColor = System.Drawing.Color.LightGreen;
+            this.bt_createuser.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_createuser.Location = new System.Drawing.Point(928, 251);
             this.bt_createuser.Name = "bt_createuser";
             this.bt_createuser.Size = new System.Drawing.Size(135, 34);
             this.bt_createuser.TabIndex = 14;
             this.bt_createuser.Text = "Create user";
-            this.bt_createuser.UseVisualStyleBackColor = true;
+            this.bt_createuser.UseVisualStyleBackColor = false;
             this.bt_createuser.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 260);
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(320, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
+            this.label2.Size = new System.Drawing.Size(136, 28);
             this.label2.TabIndex = 15;
             this.label2.Text = "Role\'s name";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // bt_createrole
             // 
-            this.bt_createrole.Location = new System.Drawing.Point(986, 251);
+            this.bt_createrole.BackColor = System.Drawing.Color.LightGreen;
+            this.bt_createrole.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_createrole.Location = new System.Drawing.Point(927, 249);
             this.bt_createrole.Name = "bt_createrole";
-            this.bt_createrole.Size = new System.Drawing.Size(106, 37);
+            this.bt_createrole.Size = new System.Drawing.Size(136, 37);
             this.bt_createrole.TabIndex = 16;
             this.bt_createrole.Text = "Create role";
-            this.bt_createrole.UseVisualStyleBackColor = true;
+            this.bt_createrole.UseVisualStyleBackColor = false;
             this.bt_createrole.Click += new System.EventHandler(this.bt_createrole_Click);
             // 
             // dataGridView2
@@ -241,11 +255,44 @@
             this.PrimaryKey.Name = "PrimaryKey";
             this.PrimaryKey.Width = 150;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(482, 200);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(406, 26);
+            this.textBox1.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(330, 196);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 28);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Object";
+            // 
+            // dropButton
+            // 
+            this.dropButton.BackColor = System.Drawing.Color.Tomato;
+            this.dropButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dropButton.Location = new System.Drawing.Point(927, 194);
+            this.dropButton.Name = "dropButton";
+            this.dropButton.Size = new System.Drawing.Size(98, 37);
+            this.dropButton.TabIndex = 20;
+            this.dropButton.Text = "Drop";
+            this.dropButton.UseVisualStyleBackColor = false;
+            this.dropButton.Click += new System.EventHandler(this.dropButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 863);
+            this.Controls.Add(this.dropButton);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bt_createrole);
             this.Controls.Add(this.label2);
@@ -292,5 +339,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewComboBoxColumn DataType;
         private System.Windows.Forms.DataGridViewCheckBoxColumn PrimaryKey;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button dropButton;
     }
 }
