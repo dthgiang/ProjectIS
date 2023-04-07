@@ -65,7 +65,7 @@ namespace Phase_1
             // Set the location of the form
             this.Location = new Point(x, y);
             string view = "PH1_VIEW_USERS_PRIVS";
-            String strSQL = sqlQueryViewCon(view, "GOD");
+            String strSQL = sqlQueryViewCon(view, "DTHGIANG");
             System.Diagnostics.Debug.WriteLine(strSQL);
 
             try

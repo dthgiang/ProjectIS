@@ -14,14 +14,13 @@ namespace Phase_1
     public partial class Form1 : Form
     {
         OracleConnection connection = null;
-        string userID = "DB_MANAGER";
-        string password = "123";
-        public Form1()
+        public String userID = null;
+        public String password = null;
+        public Form1(OracleConnection connection)
         {
             InitializeComponent();
-            string connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
 
-            connection = new OracleConnection(connectionString);
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -40,11 +39,14 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
-            connection.Open();
+
+            String connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
+            this.connection = new OracleConnection(connectionString);
         }
 
         private void button1_Click(object sender, EventArgs e) //Form 2
         {
+            
             Form2 f2 = new Form2(connection);
             this.Hide();
             f2.Show();
@@ -59,8 +61,9 @@ namespace Phase_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            connection.Close();
+            Form4 f4 = new Form4();
+            this.Hide();
+            f4.Show();
         }
     }
 }

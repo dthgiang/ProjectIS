@@ -28,13 +28,14 @@ namespace Phase_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            Form1 f1 = new Form1(con);
             this.Hide();
             f1.Show();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+
             // Get the size of the primary screen
             Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 
@@ -44,6 +45,9 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
+
+            
+
             dataGridView1.Hide();
             lbl_tablename.Hide();
             txt_name.Hide();
@@ -63,6 +67,8 @@ namespace Phase_1
 
         private void raiseTable(DataGridView dgv, string SQLCommand)
         {
+
+
             OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, con);
 
             DataTable userTable = new DataTable();
@@ -75,7 +81,7 @@ namespace Phase_1
 
             strCBB = filterBox.Text.ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, "DTHGIANG");
             
             
             try{
@@ -143,6 +149,8 @@ namespace Phase_1
 
         private void bt_createtable_Click(object sender, EventArgs e)
         {
+
+
             String tablename = "";
             tablename = txt_name.Text;
             String strSQL = "";
@@ -174,14 +182,21 @@ namespace Phase_1
             strSQL = strSQL.Substring(0, strSQL.Length - 1);
             strSQL += ")";
 
-            using (OracleCommand command = new OracleCommand(strSQL, con))
-            {
-                int n = command.ExecuteNonQuery();
 
+
+            OracleCommand command = new OracleCommand(strSQL, con);
+            try
+            {
+               
+                 MessageBox.Show("Create table successfully!");
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error!" + ex.Message);
             }
 
 
-            
 
 
         }
@@ -209,16 +224,18 @@ namespace Phase_1
             strSQL = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=TRUE ";
 
 
-            using (OracleCommand command = new OracleCommand(strSQL, con))
+          
+            strSQL = "create user " + user_name + " IDENTIFIED BY " + user_name;
+            OracleCommand command = new OracleCommand(strSQL, con);
+            try
             {
-                int n = command.ExecuteNonQuery();
+
+                MessageBox.Show("Create user successfully!");
 
             }
-            strSQL = "create user " + user_name + " IDENTIFIED BY " + user_name;
-            using (OracleCommand command = new OracleCommand(strSQL, con))
+            catch (Exception ex)
             {
-                int n = command.ExecuteNonQuery();
-
+                Console.WriteLine("Error!" + ex.Message);
             }
         }
 
@@ -232,16 +249,18 @@ namespace Phase_1
 
 
 
-            using (OracleCommand command = new OracleCommand(strSQL, con))
+          
+            strSQL = "create role " + role_name;
+            OracleCommand command = new OracleCommand(strSQL, con);
+            try
             {
-                int n = command.ExecuteNonQuery();
+
+                MessageBox.Show("Create user successfully!");
 
             }
-            strSQL = "create role " + role_name;
-            using (OracleCommand command = new OracleCommand(strSQL, con))
+            catch (Exception ex)
             {
-                int n = command.ExecuteNonQuery();
-
+                Console.WriteLine("Error!" + ex.Message);
             }
         }
 
@@ -320,9 +339,18 @@ namespace Phase_1
         private void filterBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            lbl_tablename.Hide();
+            txt_name.Hide();
+            dataGridView2.Hide();
+            bt_createtable.Hide();
+            lbl_username.Hide();
+            bt_createuser.Hide();
+            label2.Hide();
+            bt_createrole.Hide();
+
             strCBB = filterBox.SelectedItem.ToString().ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, "DTHGIANG");
 
 
             try
@@ -357,6 +385,11 @@ namespace Phase_1
                 
             }
            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

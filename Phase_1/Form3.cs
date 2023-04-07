@@ -24,7 +24,7 @@ namespace Phase_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            Form1 f1 = new Form1(con);
             this.Hide();
             f1.Show();
         }
@@ -73,6 +73,11 @@ namespace Phase_1
             string view = "PH1_VIEW_USERS_PRIVS";
             String strSQL = sqlQueryView(view, "SYS");
             raiseTable(dataGridView1, strSQL);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         //private void button1_Click(object sender, EventArgs e)

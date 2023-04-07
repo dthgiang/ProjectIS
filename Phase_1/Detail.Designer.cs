@@ -31,7 +31,6 @@ namespace Phase_1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detail));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grantButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.privComboBox = new System.Windows.Forms.ComboBox();
@@ -39,6 +38,7 @@ namespace Phase_1
             this.label2 = new System.Windows.Forms.Label();
             this.granteeComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,22 +46,14 @@ namespace Phase_1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(272, 258);
+            this.dataGridView1.Location = new System.Drawing.Point(181, 168);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(536, 284);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1498, 919);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // grantButton
             // 
@@ -69,9 +61,10 @@ namespace Phase_1
             this.grantButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.grantButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.grantButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grantButton.Location = new System.Drawing.Point(995, 186);
+            this.grantButton.Location = new System.Drawing.Point(663, 121);
+            this.grantButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grantButton.Name = "grantButton";
-            this.grantButton.Size = new System.Drawing.Size(98, 37);
+            this.grantButton.Size = new System.Drawing.Size(65, 24);
             this.grantButton.TabIndex = 2;
             this.grantButton.Text = "Grant";
             this.grantButton.UseVisualStyleBackColor = false;
@@ -81,9 +74,10 @@ namespace Phase_1
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(274, 194);
+            this.label1.Location = new System.Drawing.Point(183, 126);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 28);
+            this.label1.Size = new System.Drawing.Size(69, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Privilege";
             // 
@@ -95,17 +89,19 @@ namespace Phase_1
             "Insert",
             "Update",
             "Delete"});
-            this.privComboBox.Location = new System.Drawing.Point(379, 194);
+            this.privComboBox.Location = new System.Drawing.Point(253, 126);
+            this.privComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.privComboBox.Name = "privComboBox";
-            this.privComboBox.Size = new System.Drawing.Size(139, 28);
+            this.privComboBox.Size = new System.Drawing.Size(94, 21);
             this.privComboBox.TabIndex = 4;
             // 
             // objectComboBox
             // 
             this.objectComboBox.FormattingEnabled = true;
-            this.objectComboBox.Location = new System.Drawing.Point(638, 194);
+            this.objectComboBox.Location = new System.Drawing.Point(425, 126);
+            this.objectComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.objectComboBox.Name = "objectComboBox";
-            this.objectComboBox.Size = new System.Drawing.Size(139, 28);
+            this.objectComboBox.Size = new System.Drawing.Size(94, 21);
             this.objectComboBox.TabIndex = 6;
             // 
             // label2
@@ -113,18 +109,20 @@ namespace Phase_1
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.MediumAquamarine;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(560, 194);
+            this.label2.Location = new System.Drawing.Point(373, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 28);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Object";
             // 
             // granteeComboBox
             // 
             this.granteeComboBox.FormattingEnabled = true;
-            this.granteeComboBox.Location = new System.Drawing.Point(838, 194);
+            this.granteeComboBox.Location = new System.Drawing.Point(559, 126);
+            this.granteeComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.granteeComboBox.Name = "granteeComboBox";
-            this.granteeComboBox.Size = new System.Drawing.Size(139, 28);
+            this.granteeComboBox.Size = new System.Drawing.Size(94, 21);
             this.granteeComboBox.TabIndex = 8;
             // 
             // label3
@@ -132,17 +130,28 @@ namespace Phase_1
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.MediumAquamarine;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(801, 194);
+            this.label3.Location = new System.Drawing.Point(534, 126);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 28);
+            this.label3.Size = new System.Drawing.Size(26, 19);
             this.label3.TabIndex = 7;
             this.label3.Text = "To";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(999, 597);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Detail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 695);
+            this.ClientSize = new System.Drawing.Size(972, 561);
             this.Controls.Add(this.granteeComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.objectComboBox);
@@ -152,6 +161,7 @@ namespace Phase_1
             this.Controls.Add(this.grantButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Detail";
             this.Text = "Detail";
             this.Load += new System.EventHandler(this.Detail_Load);
