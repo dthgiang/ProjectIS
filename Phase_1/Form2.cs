@@ -350,7 +350,7 @@ namespace Phase_1
 
             strCBB = filterBox.SelectedItem.ToString().ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "DTHGIANG");
+            String strSQL = sqlQueryView(view, "GOD");
 
 
             try

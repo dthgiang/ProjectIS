@@ -19,7 +19,7 @@ namespace Phase_1
         public Form1(OracleConnection connection)
         {
             InitializeComponent();
-
+            this.connection = connection;
             
         }
 
@@ -39,9 +39,6 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
-
-            String connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
-            this.connection = new OracleConnection(connectionString);
         }
 
         private void button1_Click(object sender, EventArgs e) //Form 2

@@ -46,27 +46,23 @@ namespace Phase_1
             userID = textBox1.Text; password = textBox2.Text;
             String connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
 
-
-            using (OracleConnection connection = new OracleConnection(connectionString))
+            try
             {
-                try
-                {
-                        connection.Open();
-                        MessageBox.Show("Login successful!");
-                        Form1 f1 = new Form1(connection);
-                        this.Hide();
-                        f1.userID = userID;
-                        f1.password = password;
-                        f1.Show();
+                OracleConnection connection = new OracleConnection(connectionString);
+                connection.Open();
+                MessageBox.Show("Login successful!");
 
+                Form1 f1 = new Form1(connection);
+                this.Hide();
+                f1.userID = userID;
+                f1.password = password;
+                f1.Show();
 
+            }
 
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi khi kết nối đến cơ sở dữ liệu Oracle: " + ex.Message);
-                }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi kết nối đến cơ sở dữ liệu Oracle: " + ex.Message);
             }
             
         }

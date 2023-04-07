@@ -71,7 +71,7 @@ namespace Phase_1
             //}    
 
             string view = "PH1_VIEW_USERS_PRIVS";
-            String strSQL = sqlQueryView(view, "SYS");
+            String strSQL = sqlQueryView(view, "GOD");
             raiseTable(dataGridView1, strSQL);
         }
 
