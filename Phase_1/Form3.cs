@@ -16,7 +16,7 @@ namespace Phase_1
     public partial class Form3 : Form
     {
         OracleConnection con = null;
-        String name = null;
+
         public Form3(OracleConnection connection)
         {
             InitializeComponent();
@@ -30,9 +30,19 @@ namespace Phase_1
             f1.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private string sqlQueryView(string viewName, string owner)
         {
+            return "select * from " + owner + "." + viewName;
+        }
 
+        private void raiseTable(DataGridView dgv, string SQLCommand)
+        {
+            OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, con);
+
+            DataTable userTable = new DataTable();
+
+            adt.Fill(userTable);
+            dgv.DataSource = userTable;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -46,35 +56,34 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
-            if (name == null)
-            {
-                dataGridView1.Hide();
-            }
-            else
-            {
-                OracleDataAdapter da = new OracleDataAdapter("exec get_all_privileges "+name, con);
-                //OracleCommandBuilder builder = new OracleCommandBuilder(da);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Show();
-            }    
+
+            //if (name == null)
+            //{
+            //    dataGridView1.Hide();
+            //}
+            //else
+            //{
+            //    OracleDataAdapter da = new OracleDataAdapter("exec get_all_privileges "+name, con);
+            //    //OracleCommandBuilder builder = new OracleCommandBuilder(da);
+            //    DataTable dt = new DataTable();
+            //    da.Fill(dt);
+            //    dataGridView1.DataSource = dt;
+            //    dataGridView1.Show();
+            //}    
+
+            string view = "PH1_VIEW_USERS_PRIVS";
+            String strSQL = sqlQueryView(view, "SYS");
+            raiseTable(dataGridView1, strSQL);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            name = cbb_name.Text;
-            dataGridView1.Show();
-            OracleDataAdapter da = new OracleDataAdapter("SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE FROM DBA_TAB_PRIVS  WHERE GRANTEE ='" + name+ "'" , con);
-            //OracleCommandBuilder builder = new OracleCommandBuilder(da);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    dataGridView1.Show();
+        //    OracleDataAdapter da = new OracleDataAdapter("SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE FROM DBA_TAB_PRIVS  WHERE GRANTEE ='" + name+ "'" , con);
+        //    //OracleCommandBuilder builder = new OracleCommandBuilder(da);
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+        //    dataGridView1.DataSource = dt;
+        //}
     }
 }
