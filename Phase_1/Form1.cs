@@ -15,10 +15,12 @@ namespace Phase_1
     public partial class Form1 : Form
     {
         OracleConnection connection = null;
+        string userID = "DB_MANAGER";
+        string password = "123";
         public Form1()
         {
             InitializeComponent();
-            string connectionString = "Data Source=localhost;Persist Security Info=True;User ID=HIENTHU; password=21052002";
+            string connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
 
             connection = new OracleConnection(connectionString);
         }
