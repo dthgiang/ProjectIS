@@ -160,6 +160,7 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
+
             String strSQL = sqlQueryViewCon(view, "GOD");
             try
             {

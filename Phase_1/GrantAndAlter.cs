@@ -156,9 +156,9 @@ namespace Phase_1
             grantRolePanel.Hide();
             changePWPanel.Hide();
 
-            grantPrivLabel.Show();
-            grantRoleLabel.Hide();
-            changePWLabel.Hide();
+            //grantPrivLabel.Show();
+            //grantRoleLabel.Hide();
+            //changePWLabel.Hide();
 
         }
 
@@ -168,9 +168,9 @@ namespace Phase_1
             grantRolePanel.Show();
             changePWPanel.Hide();
 
-            grantPrivLabel.Hide();
-            grantRoleLabel.Show();
-            changePWLabel.Hide();
+            //grantPrivLabel.Hide();
+            //grantRoleLabel.Show();
+            //changePWLabel.Hide();
 
             rowComboBox.DataSource = getAllRole();
 
@@ -182,9 +182,9 @@ namespace Phase_1
             grantRolePanel.Hide();
             changePWPanel.Show();
 
-            grantPrivLabel.Hide();
-            grantRoleLabel.Hide();
-            changePWLabel.Show();
+            //grantPrivLabel.Hide();
+            //grantRoleLabel.Hide();
+            //changePWLabel.Show();
 
             if (this.mode == "Role") {
                 passwordCheckBox.Show();
@@ -203,6 +203,16 @@ namespace Phase_1
 
         private void GrantAndAlter_Load(object sender, EventArgs e)
         {
+            // Get the size of the primary screen
+            Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
+
+            // Calculate the location of the form to be centered on the screen
+            int x = (workingArea.Width - this.Width) / 2;
+            int y = (workingArea.Height - this.Height) / 2;
+
+            // Set the location of the form
+            this.Location = new Point(x, y);
+
             nameObjsLabel.Text = this.objectName;
             welcomeLabel.Text = "You are editing on " + this.mode;
             List<string> objectList = getUserRoleTableList("Table");
@@ -218,9 +228,9 @@ namespace Phase_1
             grantRolePanel.Hide();
             changePWPanel.Hide();
 
-            grantPrivLabel.Show();
-            grantRoleLabel.Hide();
-            changePWLabel.Hide();
+            //grantPrivLabel.Show();
+            //grantRoleLabel.Hide();
+            //changePWLabel.Hide();
         }
 
 

@@ -38,34 +38,35 @@ namespace Phase_1
             this.searchButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.moreActionButton = new System.Windows.Forms.Button();
             this.allPrivCheckbox = new System.Windows.Forms.CheckBox();
             this.colPrivCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(166, 278);
+            this.dataGridView1.Location = new System.Drawing.Point(228, 276);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(804, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(536, 284);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // backButton
             // 
-            this.backButton.BackColor = System.Drawing.Color.Turquoise;
-            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.backButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(1076, 634);
+            this.backButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.ForeColor = System.Drawing.Color.SteelBlue;
+            this.backButton.Location = new System.Drawing.Point(805, 538);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(98, 37);
+            this.backButton.Size = new System.Drawing.Size(88, 34);
             this.backButton.TabIndex = 9;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
@@ -73,21 +74,24 @@ namespace Phase_1
             // 
             // privilegeTextBox
             // 
-            this.privilegeTextBox.Location = new System.Drawing.Point(347, 201);
+            this.privilegeTextBox.Location = new System.Drawing.Point(366, 228);
+            this.privilegeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.privilegeTextBox.Name = "privilegeTextBox";
             this.privilegeTextBox.ReadOnly = true;
-            this.privilegeTextBox.Size = new System.Drawing.Size(331, 26);
+            this.privilegeTextBox.Size = new System.Drawing.Size(222, 20);
             this.privilegeTextBox.TabIndex = 12;
             this.privilegeTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(161, 200);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(202, 228);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 28);
+            this.label5.Size = new System.Drawing.Size(153, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "Privilege Choose";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -97,10 +101,13 @@ namespace Phase_1
             this.revokeButton.BackColor = System.Drawing.Color.Tomato;
             this.revokeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.revokeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.revokeButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revokeButton.Location = new System.Drawing.Point(715, 191);
+            this.revokeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.revokeButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revokeButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.revokeButton.Location = new System.Drawing.Point(612, 221);
+            this.revokeButton.Margin = new System.Windows.Forms.Padding(2);
             this.revokeButton.Name = "revokeButton";
-            this.revokeButton.Size = new System.Drawing.Size(98, 37);
+            this.revokeButton.Size = new System.Drawing.Size(202, 27);
             this.revokeButton.TabIndex = 14;
             this.revokeButton.Text = "Revoke";
             this.revokeButton.UseVisualStyleBackColor = false;
@@ -108,13 +115,16 @@ namespace Phase_1
             // 
             // searchButton
             // 
-            this.searchButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.searchButton.BackColor = System.Drawing.Color.SteelBlue;
             this.searchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.searchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.searchButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(715, 130);
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.searchButton.Location = new System.Drawing.Point(612, 181);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(98, 37);
+            this.searchButton.Size = new System.Drawing.Size(97, 27);
             this.searchButton.TabIndex = 18;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
@@ -123,39 +133,36 @@ namespace Phase_1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(161, 139);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(202, 188);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 28);
+            this.label6.Size = new System.Drawing.Size(119, 18);
             this.label6.TabIndex = 17;
             this.label6.Text = "Find grantee";
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(347, 140);
+            this.searchTextBox.Location = new System.Drawing.Point(366, 188);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(331, 26);
+            this.searchTextBox.Size = new System.Drawing.Size(222, 20);
             this.searchTextBox.TabIndex = 16;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1305, 918);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // moreActionButton
             // 
-            this.moreActionButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.moreActionButton.BackColor = System.Drawing.Color.SteelBlue;
             this.moreActionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.moreActionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.moreActionButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moreActionButton.Location = new System.Drawing.Point(834, 129);
+            this.moreActionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.moreActionButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moreActionButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.moreActionButton.Location = new System.Drawing.Point(713, 181);
+            this.moreActionButton.Margin = new System.Windows.Forms.Padding(2);
             this.moreActionButton.Name = "moreActionButton";
-            this.moreActionButton.Size = new System.Drawing.Size(165, 37);
+            this.moreActionButton.Size = new System.Drawing.Size(101, 27);
             this.moreActionButton.TabIndex = 26;
             this.moreActionButton.Text = "More Action";
             this.moreActionButton.UseVisualStyleBackColor = false;
@@ -164,34 +171,40 @@ namespace Phase_1
             // allPrivCheckbox
             // 
             this.allPrivCheckbox.AutoSize = true;
-            this.allPrivCheckbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.allPrivCheckbox.Location = new System.Drawing.Point(650, 238);
-            this.allPrivCheckbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.allPrivCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.allPrivCheckbox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allPrivCheckbox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.allPrivCheckbox.Location = new System.Drawing.Point(539, 134);
+            this.allPrivCheckbox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.allPrivCheckbox.Name = "allPrivCheckbox";
-            this.allPrivCheckbox.Size = new System.Drawing.Size(172, 32);
+            this.allPrivCheckbox.Size = new System.Drawing.Size(127, 22);
             this.allPrivCheckbox.TabIndex = 28;
             this.allPrivCheckbox.Text = "All Privilege";
-            this.allPrivCheckbox.UseVisualStyleBackColor = true;
+            this.allPrivCheckbox.UseVisualStyleBackColor = false;
             this.allPrivCheckbox.CheckedChanged += new System.EventHandler(this.allPrivCheckbox_CheckedChanged);
             // 
             // colPrivCheckbox
             // 
             this.colPrivCheckbox.AutoSize = true;
-            this.colPrivCheckbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.colPrivCheckbox.Location = new System.Drawing.Point(291, 238);
-            this.colPrivCheckbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.colPrivCheckbox.BackColor = System.Drawing.Color.Transparent;
+            this.colPrivCheckbox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colPrivCheckbox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.colPrivCheckbox.Location = new System.Drawing.Point(300, 134);
+            this.colPrivCheckbox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.colPrivCheckbox.Name = "colPrivCheckbox";
-            this.colPrivCheckbox.Size = new System.Drawing.Size(226, 32);
+            this.colPrivCheckbox.Size = new System.Drawing.Size(172, 22);
             this.colPrivCheckbox.TabIndex = 27;
             this.colPrivCheckbox.Text = "Column Privilege";
-            this.colPrivCheckbox.UseVisualStyleBackColor = true;
+            this.colPrivCheckbox.UseVisualStyleBackColor = false;
             this.colPrivCheckbox.CheckedChanged += new System.EventHandler(this.colPrivCheckbox_CheckedChanged);
             // 
             // Detail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 863);
+            this.BackgroundImage = global::Phase_1.Properties.Resources.Details;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(984, 645);
             this.Controls.Add(this.allPrivCheckbox);
             this.Controls.Add(this.colPrivCheckbox);
             this.Controls.Add(this.moreActionButton);
@@ -203,20 +216,18 @@ namespace Phase_1
             this.Controls.Add(this.privilegeTextBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Detail";
-            this.Text = "Detail";
+            this.Text = "DETAILS";
             this.Load += new System.EventHandler(this.Detail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.TextBox privilegeTextBox;

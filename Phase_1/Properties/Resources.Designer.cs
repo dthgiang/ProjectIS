@@ -63,9 +63,29 @@ namespace Phase_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Details {
+            get {
+                object obj = ResourceManager.GetObject("Details", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Entity_s_rivileges {
             get {
                 object obj = ResourceManager.GetObject("Entity\'s rivileges", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GrantAndAlter {
+            get {
+                object obj = ResourceManager.GetObject("GrantAndAlter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
