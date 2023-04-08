@@ -17,6 +17,8 @@ namespace Phase_1
         OracleConnection con = null;
         string objectName = null;
         string mode = null;
+        string view = "PH1_VIEW_USERS_PRIVS";
+
         public Detail(OracleConnection connection)
         {
             InitializeComponent();
@@ -39,6 +41,87 @@ namespace Phase_1
             return "select * from " + owner + "." + viewName + " where GRANTEE = '" + objectName.ToUpper() + "'";
         }
 
+        private List<string> getUserRoleTableList(string m)
+        {
+
+            string sql = "SELECT " + m.ToUpper() + "NAME FROM GOD.PH1_VIEW_ALL_" + m.ToUpper() + "S";
+            OracleCommand cmd = new OracleCommand(sql, con);
+
+            // Execute the query and get the data reader
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            // Initialize a string array to store the column values
+            List<string> userList = new List<string>();
+
+            // Loop through the rows in the data reader and add the column values to the array
+            while (reader.Read())
+            {
+                string columnValue = reader.GetString(0); // Assuming the column is of type string
+                userList.Add(columnValue);
+            }
+
+            return userList;
+        }
+
+
+        private bool isExist()
+        {
+            List<string> userList = getUserRoleTableList("user");
+            int r;
+            string OjName = this.objectName.ToUpper();
+
+            r = userList.BinarySearch(OjName);
+            if (r < 0)
+            {
+                List<string> roleList = getUserRoleTableList("role");
+                r = roleList.BinarySearch(OjName);
+
+                return r < 0 ? false : true;
+            }
+            return true;
+        }
+
+        private List<string> getTableAttribute(string tabName)
+        {
+
+            string sql = "SELECT column_name FROM ALL_TAB_COLUMNS WHERE table_name = '" + tabName + "'";
+            OracleCommand cmd = new OracleCommand(sql, con);
+
+            // Execute the query and get the data reader
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            // Initialize a string array to store the column values
+            List<string> userList = new List<string>();
+
+            // Loop through the rows in the data reader and add the column values to the array
+            while (reader.Read())
+            {
+                string columnValue = reader.GetString(0); // Assuming the column is of type string
+                userList.Add(columnValue);
+                System.Diagnostics.Debug.WriteLine(columnValue);
+            }
+            userList.Add("ALL");
+            return userList;
+        }
+
+        private string getTableOwner(string tabName, string m)
+        {
+
+            string sql = "SELECT OWNER FROM GOD.PH1_VIEW_ALL_" + m.ToUpper() + "S WHERE " + m.ToUpper() + "NAME = '" + tabName + "'";
+            OracleCommand cmd = new OracleCommand(sql, con);
+
+            // Execute the query and get the data reader
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            // Initialize a string array to store the column values
+
+            // Loop through the rows in the data reader and add the column values to the array
+
+             return  reader.Read() ? reader.GetString(0) : ""; // Assuming the column is of type string
+                
+         
+        }
+
         private void raiseTable(DataGridView dgv, string SQLCommand)
         {
             OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, con);
@@ -48,9 +131,16 @@ namespace Phase_1
             adt.Fill(userTable);
             dgv.DataSource = userTable;
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
+                    + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                privilegeTextBox.Text = priv;
 
+            }
         }
 
         private void Detail_Load(object sender, EventArgs e)
@@ -64,12 +154,14 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
-            string view = "PH1_VIEW_USERS_PRIVS";
-            String strSQL = sqlQueryViewCon(view, "DTHGIANG");
-            System.Diagnostics.Debug.WriteLine(strSQL);
-
+            String strSQL = sqlQueryViewCon(view, "GOD");
+            objectTextBox.Text = this.objectName.ToUpper();
             try
             {
+                List<string> objectList = getUserRoleTableList("Table");
+                objectList.AddRange(getUserRoleTableList("View"));
+                objectComboBox.DataSource = objectList;
+                optionComboBox.Text = "No";
                 raiseTable(dataGridView1, strSQL);
                 dataGridView1.Show();
             }
@@ -78,6 +170,159 @@ namespace Phase_1
                 Console.WriteLine("OracleException: " + ex.Message);
             }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form2 f1 = new Form2(con);
+            this.Hide();
+            f1.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string userR = searchTextBox.Text;
+            string temp = this.objectName;
+            searchTextBox.Text = "";
+            if (userR != "") {
+                this.objectName = userR;
+                if (isExist()){
+                    string sqlCommand = sqlQueryViewCon(view, "GOD");
+                    objectTextBox.Text = userR.ToUpper();
+                    try
+                    {
+                        raiseTable(dataGridView1, sqlCommand);
+                        dataGridView1.Show();
+                    }
+                    catch (OracleException ex)
+                    {
+                        Console.WriteLine("OracleException: " + ex.Message);
+                    }
+                }
+                else{
+                    MessageBox.Show("Can not find this User/Role", "Message", MessageBoxButtons.OK);
+                    this.objectName = temp;
+                }
+
+            }
+        }
+
+        private void objectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string obj = objectComboBox.SelectedItem.ToString().ToUpper();
+            string priv = privComboBox.Text.ToUpper();
+        
+            List<string> s = new List<string> { "ALL" };
+            attributeComboBox.DataSource = priv == "UPDATE" ? getTableAttribute(obj) : s;
+            
+      
+        }
+
+        private void privComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string obj = objectComboBox.Text.ToUpper();
+            
+            string priv = privComboBox.SelectedItem.ToString().ToUpper(); ;
+
+            List<string> s = new List<string> { "ALL" };
+            attributeComboBox.DataSource = priv == "UPDATE" ? getTableAttribute(obj) : s;
+        }
+
+        private void grantButton_Click(object sender, EventArgs e)
+        {
+            string obj = objectComboBox.Text.ToUpper();
+            string grantee = objectTextBox.Text;
+            string priv = privComboBox.Text.ToUpper();
+            string owner = getTableOwner(obj, "view");
+            string opt = optionComboBox.Text;
+            if (owner == "") owner = getTableOwner(obj, "table");
+            string privl = priv + " ON " + owner + "." + obj;
+
+
+            System.Diagnostics.Debug.WriteLine(grantee);
+
+            System.Diagnostics.Debug.WriteLine(privl);
+
+
+            try
+            {
+
+                OracleCommand command = new OracleCommand("ph1_grantPriv", con);
+
+
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // Add input parameter(s) to the command
+                command.Parameters.Add("p_userOrRole", OracleDbType.Varchar2).Value = grantee;
+                command.Parameters.Add("p_privilege", OracleDbType.Varchar2).Value = privl;
+                command.Parameters.Add("p_option", OracleDbType.Varchar2).Value = opt;
+
+                // Get the value of the output parameter(s)
+                int resultEx = command.ExecuteNonQuery();
+                System.Diagnostics.Debug.WriteLine(resultEx);
+
+             
+                    // The stored procedure executed successfully
+                MessageBox.Show(priv + " granted", "Message", MessageBoxButtons.OK);
+                Detail_Load(sender, e);
+                
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
+            }
+
+
+        }
+
+        private void revokeButton_Click(object sender, EventArgs e)
+        {
+            string priv = privilegeTextBox.Text;
+            if (priv == "")
+            {
+                MessageBox.Show("Please choose privilege to revoke", "Message", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure to revoke this privilege from this user/role?", "Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+
+                        OracleCommand command = new OracleCommand("ph1_revokePriv", con);
+
+
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        // Add input parameter(s) to the command
+                        command.Parameters.Add("p_userOrRole", OracleDbType.Varchar2).Value = this.objectName;
+                        command.Parameters.Add("p_privilege", OracleDbType.Varchar2).Value = priv;
+
+                        // Get the value of the output parameter(s)
+                        int resultEx = command.ExecuteNonQuery();
+                        System.Diagnostics.Debug.WriteLine(resultEx);
+
+                        
+                        // The stored procedure executed successfully
+                        MessageBox.Show(priv + " dropped", "Message", MessageBoxButtons.OK);
+                        Detail_Load(sender, e);
+                        
+                    }
+                    catch (OracleException ex)
+                    {
+                        MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
+                    }
+                }
+            }
+        }
+
     }
 
     
