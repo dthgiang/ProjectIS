@@ -90,6 +90,7 @@ namespace Phase_1
             this.label5.Size = new System.Drawing.Size(185, 28);
             this.label5.TabIndex = 13;
             this.label5.Text = "Privilege Choose";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // revokeButton
             // 

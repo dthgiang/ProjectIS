@@ -15,7 +15,7 @@ namespace Phase_1
     public partial class Form3 : Form
     {
         OracleConnection con = null;
-
+        string pri;
         public Form3(OracleConnection connection)
         {
             InitializeComponent();
@@ -55,20 +55,21 @@ namespace Phase_1
 
             // Set the location of the form
             this.Location = new Point(x, y);
+            allPrivCheckbox.Checked = true;
 
-            //if (name == null)
-            //{
-            //    dataGridView1.Hide();
-            //}
-            //else
-            //{
-            //    OracleDataAdapter da = new OracleDataAdapter("exec get_all_privileges "+name, con);
-            //    //OracleCommandBuilder builder = new OracleCommandBuilder(da);
-            //    DataTable dt = new DataTable();
-            //    da.Fill(dt);
-            //    dataGridView1.DataSource = dt;
-            //    dataGridView1.Show();
-            //}    
+            string view = "PH1_VIEW_USERS_PRIVS";
+        
+        String strSQL = sqlQueryView(view, "GOD");
+            
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+        dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
 
             
         }
@@ -117,6 +118,94 @@ namespace Phase_1
                 Console.WriteLine("OracleException: " + ex.Message);
             }
         }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string priv;
+                objChoosetextBox.Text = selectedRow.Cells["GRANTEE"].Value.ToString();
+
+                this.pri = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
+                        + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                if (allPrivCheckbox.Checked == false)
+                {
+                    priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + "(" + selectedRow.Cells["COLUMN_NAME"].Value.ToString() + ")" + " ON "
+                        + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                    privilegeTextBox.Text = priv;
+
+                } else
+                {
+                    privilegeTextBox.Text = this.pri;
+
+                }
+
+
+            }
+        }
+
+        private void revokeButton_Click(object sender, EventArgs e)
+        {
+            string priv = this.pri;
+            if (priv == "")
+            {
+                MessageBox.Show("Please choose privilege to revoke", "Message", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure to revoke this privilege from this user/role?", "Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+
+                        OracleCommand command = new OracleCommand("ph1_revokePriv", con);
+
+
+                        command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        // Add input parameter(s) to the command
+                        command.Parameters.Add("p_userOrRole", OracleDbType.Varchar2).Value = objChoosetextBox.Text;
+                        command.Parameters.Add("p_privilege", OracleDbType.Varchar2).Value = priv;
+
+                        // Get the value of the output parameter(s)
+                        int resultEx = command.ExecuteNonQuery();
+                        System.Diagnostics.Debug.WriteLine(resultEx);
+
+                        // The stored procedure executed successfully
+                        MessageBox.Show(priv + " dropped", "Message", MessageBoxButtons.OK);
+                        Form3_Load(sender, e);
+
+                    }
+                    catch (OracleException ex)
+                    {
+                        MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
+                    }
+                }
+            }
+        }
+
+        private void moreActionButton_Click(object sender, EventArgs e)
+        {
+            string priv = this.pri;
+            if (priv == "")
+            {
+                MessageBox.Show("Please choose user", "Message", MessageBoxButtons.OK);
+
+            }
+            else
+            {
+                string grantee = objChoosetextBox.Text;
+                string mode = grantee.Substring(0, 3) == "RL_" ? "Role" : "User";
+                GrantAndAlter d = new GrantAndAlter(con, grantee, mode);
+                this.Hide();
+                d.Show();
+            }
+        }
+
+
 
         //private void button1_Click(object sender, EventArgs e)
         //{

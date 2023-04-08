@@ -138,20 +138,12 @@ namespace Phase_1
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (allPrivCheckbox.Checked)
-                {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
-                        + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
-                    privilegeTextBox.Text = priv;
-                }
-                else
-                {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
-                        + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
-                    privilegeTextBox.Text = priv;
-                }
+              
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
+                    + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                privilegeTextBox.Text = priv;
+              
                
 
             }
@@ -322,6 +314,11 @@ namespace Phase_1
             {
                 Console.WriteLine("OracleException: " + ex.Message);
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
