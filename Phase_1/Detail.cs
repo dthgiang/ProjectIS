@@ -268,7 +268,7 @@ namespace Phase_1
 
              
                     // The stored procedure executed successfully
-                MessageBox.Show(priv + " granted", "Message", MessageBoxButtons.OK);
+                MessageBox.Show(privl + " granted", "Message", MessageBoxButtons.OK);
                 Detail_Load(sender, e);
                 
             }
