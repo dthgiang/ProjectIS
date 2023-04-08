@@ -44,7 +44,7 @@ namespace Phase_1
         private void button1_Click(object sender, EventArgs e)
         {
             userID = textBox1.Text; password = textBox2.Text;
-            userID = "GOD";// "DB_MANAGER";
+            userID =  "DB_MANAGER";
             password = "123";
             String connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
 

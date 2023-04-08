@@ -300,9 +300,11 @@ namespace Phase_1
                     string mode = filterBox.Text;
                     string names = mode + "Name";
                     string choose = selectedRow.Cells[names].Value.ToString();
-   
+                    objectNameTextBox.Text = "";
 
-                    try{
+
+                    try
+                    {
                         
                         OracleCommand command = new OracleCommand("ph1_dropUserOrRole", con);
 
@@ -314,17 +316,12 @@ namespace Phase_1
                         command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = mode;
                         System.Diagnostics.Debug.WriteLine(choose + " - " + mode);
                         // Get the value of the output parameter(s)
-                        int resultEx = command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
 
-                        if (resultEx >= 0){
-                            // The stored procedure executed successfully
-                            MessageBox.Show(mode + " dropped", "Message", MessageBoxButtons.OK);
-                            Form2_Load(sender, e);
-                        }
-                        else {
-                            // The stored procedure did not execute successfully
-                            MessageBox.Show("Something went wrong! please try again", "Message", MessageBoxButtons.OK);
-                        }
+                        // The stored procedure executed successfully
+                        MessageBox.Show(mode + " " + choose + " dropped", "Message", MessageBoxButtons.OK);
+                        Form2_Load(sender, e);
+                      
                     }
                     catch (OracleException ex)
                     {

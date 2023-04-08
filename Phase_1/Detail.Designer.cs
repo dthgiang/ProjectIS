@@ -31,30 +31,17 @@ namespace Phase_1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detail));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.grantButton = new System.Windows.Forms.Button();
-            this.privLabel = new System.Windows.Forms.Label();
-            this.privComboBox = new System.Windows.Forms.ComboBox();
-            this.objectComboBox = new System.Windows.Forms.ComboBox();
-            this.objectLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
-            this.attributeComboBox = new System.Windows.Forms.ComboBox();
-            this.attributeLabel = new System.Windows.Forms.Label();
             this.privilegeTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.revokeButton = new System.Windows.Forms.Button();
-            this.objectTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.optionComboBox = new System.Windows.Forms.ComboBox();
-            this.optionLabel = new System.Windows.Forms.Label();
-            this.roleCheckBox = new System.Windows.Forms.CheckBox();
-            this.privCheckBox = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.roleLabel = new System.Windows.Forms.Label();
-            this.rowComboBox = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.moreActionButton = new System.Windows.Forms.Button();
+            this.allPrivCheckbox = new System.Windows.Forms.CheckBox();
+            this.colPrivCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,92 +49,13 @@ namespace Phase_1
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 243);
+            this.dataGridView1.Location = new System.Drawing.Point(166, 278);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(804, 437);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // grantButton
-            // 
-            this.grantButton.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.grantButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.grantButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.grantButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grantButton.Location = new System.Drawing.Point(1076, 470);
-            this.grantButton.Name = "grantButton";
-            this.grantButton.Size = new System.Drawing.Size(98, 37);
-            this.grantButton.TabIndex = 2;
-            this.grantButton.Text = "Grant";
-            this.grantButton.UseVisualStyleBackColor = false;
-            this.grantButton.Click += new System.EventHandler(this.grantButton_Click);
-            // 
-            // privLabel
-            // 
-            this.privLabel.AutoSize = true;
-            this.privLabel.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.privLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.privLabel.Location = new System.Drawing.Point(873, 261);
-            this.privLabel.Name = "privLabel";
-            this.privLabel.Size = new System.Drawing.Size(105, 28);
-            this.privLabel.TabIndex = 3;
-            this.privLabel.Text = "Privilege";
-            // 
-            // privComboBox
-            // 
-            this.privComboBox.FormattingEnabled = true;
-            this.privComboBox.Items.AddRange(new object[] {
-            "Select",
-            "Insert",
-            "Update",
-            "Delete"});
-            this.privComboBox.Location = new System.Drawing.Point(979, 261);
-            this.privComboBox.Name = "privComboBox";
-            this.privComboBox.Size = new System.Drawing.Size(195, 28);
-            this.privComboBox.TabIndex = 4;
-            this.privComboBox.SelectedIndexChanged += new System.EventHandler(this.privComboBox_SelectedIndexChanged);
-            // 
-            // objectComboBox
-            // 
-            this.objectComboBox.FormattingEnabled = true;
-            this.objectComboBox.Location = new System.Drawing.Point(946, 309);
-            this.objectComboBox.Name = "objectComboBox";
-            this.objectComboBox.Size = new System.Drawing.Size(228, 28);
-            this.objectComboBox.TabIndex = 6;
-            this.objectComboBox.SelectedIndexChanged += new System.EventHandler(this.objectComboBox_SelectedIndexChanged);
-            // 
-            // objectLabel
-            // 
-            this.objectLabel.AutoSize = true;
-            this.objectLabel.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.objectLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectLabel.Location = new System.Drawing.Point(873, 308);
-            this.objectLabel.Name = "objectLabel";
-            this.objectLabel.Size = new System.Drawing.Size(78, 28);
-            this.objectLabel.TabIndex = 5;
-            this.objectLabel.Text = "Object";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(873, 388);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 28);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "To";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1305, 918);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // backButton
             // 
@@ -162,25 +70,6 @@ namespace Phase_1
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // attributeComboBox
-            // 
-            this.attributeComboBox.FormattingEnabled = true;
-            this.attributeComboBox.Location = new System.Drawing.Point(979, 351);
-            this.attributeComboBox.Name = "attributeComboBox";
-            this.attributeComboBox.Size = new System.Drawing.Size(195, 28);
-            this.attributeComboBox.TabIndex = 11;
-            // 
-            // attributeLabel
-            // 
-            this.attributeLabel.AutoSize = true;
-            this.attributeLabel.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.attributeLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attributeLabel.Location = new System.Drawing.Point(873, 351);
-            this.attributeLabel.Name = "attributeLabel";
-            this.attributeLabel.Size = new System.Drawing.Size(106, 28);
-            this.attributeLabel.TabIndex = 10;
-            this.attributeLabel.Text = "Attribute";
             // 
             // privilegeTextBox
             // 
@@ -216,14 +105,6 @@ namespace Phase_1
             this.revokeButton.UseVisualStyleBackColor = false;
             this.revokeButton.Click += new System.EventHandler(this.revokeButton_Click);
             // 
-            // objectTextBox
-            // 
-            this.objectTextBox.Location = new System.Drawing.Point(916, 388);
-            this.objectTextBox.Name = "objectTextBox";
-            this.objectTextBox.ReadOnly = true;
-            this.objectTextBox.Size = new System.Drawing.Size(258, 26);
-            this.objectTextBox.TabIndex = 15;
-            // 
             // searchButton
             // 
             this.searchButton.BackColor = System.Drawing.Color.DarkTurquoise;
@@ -256,112 +137,70 @@ namespace Phase_1
             this.searchTextBox.Size = new System.Drawing.Size(331, 26);
             this.searchTextBox.TabIndex = 16;
             // 
-            // optionComboBox
+            // pictureBox1
             // 
-            this.optionComboBox.FormattingEnabled = true;
-            this.optionComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.optionComboBox.Location = new System.Drawing.Point(979, 436);
-            this.optionComboBox.Name = "optionComboBox";
-            this.optionComboBox.Size = new System.Drawing.Size(195, 28);
-            this.optionComboBox.TabIndex = 20;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1305, 918);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // optionLabel
+            // moreActionButton
             // 
-            this.optionLabel.AutoSize = true;
-            this.optionLabel.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.optionLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionLabel.Location = new System.Drawing.Point(873, 436);
-            this.optionLabel.Name = "optionLabel";
-            this.optionLabel.Size = new System.Drawing.Size(82, 28);
-            this.optionLabel.TabIndex = 19;
-            this.optionLabel.Text = "Option";
+            this.moreActionButton.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.moreActionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.moreActionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.moreActionButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moreActionButton.Location = new System.Drawing.Point(834, 129);
+            this.moreActionButton.Name = "moreActionButton";
+            this.moreActionButton.Size = new System.Drawing.Size(165, 37);
+            this.moreActionButton.TabIndex = 26;
+            this.moreActionButton.Text = "More Action";
+            this.moreActionButton.UseVisualStyleBackColor = false;
+            this.moreActionButton.Click += new System.EventHandler(this.moreActionButton_Click);
             // 
-            // roleCheckBox
+            // allPrivCheckbox
             // 
-            this.roleCheckBox.AutoSize = true;
-            this.roleCheckBox.BackColor = System.Drawing.Color.GreenYellow;
-            this.roleCheckBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleCheckBox.Location = new System.Drawing.Point(876, 219);
-            this.roleCheckBox.Name = "roleCheckBox";
-            this.roleCheckBox.Size = new System.Drawing.Size(88, 32);
-            this.roleCheckBox.TabIndex = 21;
-            this.roleCheckBox.Text = "Role";
-            this.roleCheckBox.UseVisualStyleBackColor = false;
-            this.roleCheckBox.CheckedChanged += new System.EventHandler(this.roleCheckBox_CheckedChanged);
+            this.allPrivCheckbox.AutoSize = true;
+            this.allPrivCheckbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.allPrivCheckbox.Location = new System.Drawing.Point(650, 238);
+            this.allPrivCheckbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.allPrivCheckbox.Name = "allPrivCheckbox";
+            this.allPrivCheckbox.Size = new System.Drawing.Size(172, 32);
+            this.allPrivCheckbox.TabIndex = 28;
+            this.allPrivCheckbox.Text = "All Privilege";
+            this.allPrivCheckbox.UseVisualStyleBackColor = true;
+            this.allPrivCheckbox.CheckedChanged += new System.EventHandler(this.allPrivCheckbox_CheckedChanged);
             // 
-            // privCheckBox
+            // colPrivCheckbox
             // 
-            this.privCheckBox.AutoSize = true;
-            this.privCheckBox.BackColor = System.Drawing.Color.GreenYellow;
-            this.privCheckBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.privCheckBox.Location = new System.Drawing.Point(1037, 219);
-            this.privCheckBox.Name = "privCheckBox";
-            this.privCheckBox.Size = new System.Drawing.Size(137, 32);
-            this.privCheckBox.TabIndex = 22;
-            this.privCheckBox.Text = "Privilege";
-            this.privCheckBox.UseVisualStyleBackColor = false;
-            this.privCheckBox.CheckedChanged += new System.EventHandler(this.privCheckBox_CheckedChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.PaleGreen;
-            this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(931, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(186, 28);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Pick one to grant";
-            // 
-            // roleLabel
-            // 
-            this.roleLabel.AutoSize = true;
-            this.roleLabel.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.roleLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleLabel.Location = new System.Drawing.Point(873, 309);
-            this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(59, 28);
-            this.roleLabel.TabIndex = 24;
-            this.roleLabel.Text = "Role";
-            // 
-            // rowComboBox
-            // 
-            this.rowComboBox.FormattingEnabled = true;
-            this.rowComboBox.Location = new System.Drawing.Point(946, 308);
-            this.rowComboBox.Name = "rowComboBox";
-            this.rowComboBox.Size = new System.Drawing.Size(228, 28);
-            this.rowComboBox.TabIndex = 25;
+            this.colPrivCheckbox.AutoSize = true;
+            this.colPrivCheckbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colPrivCheckbox.Location = new System.Drawing.Point(291, 238);
+            this.colPrivCheckbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.colPrivCheckbox.Name = "colPrivCheckbox";
+            this.colPrivCheckbox.Size = new System.Drawing.Size(226, 32);
+            this.colPrivCheckbox.TabIndex = 27;
+            this.colPrivCheckbox.Text = "Column Privilege";
+            this.colPrivCheckbox.UseVisualStyleBackColor = true;
+            this.colPrivCheckbox.CheckedChanged += new System.EventHandler(this.colPrivCheckbox_CheckedChanged);
             // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 863);
-            this.Controls.Add(this.rowComboBox);
-            this.Controls.Add(this.roleLabel);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.privCheckBox);
-            this.Controls.Add(this.roleCheckBox);
-            this.Controls.Add(this.optionComboBox);
-            this.Controls.Add(this.optionLabel);
+            this.Controls.Add(this.allPrivCheckbox);
+            this.Controls.Add(this.colPrivCheckbox);
+            this.Controls.Add(this.moreActionButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.searchTextBox);
-            this.Controls.Add(this.objectTextBox);
             this.Controls.Add(this.revokeButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.privilegeTextBox);
-            this.Controls.Add(this.attributeComboBox);
-            this.Controls.Add(this.attributeLabel);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.objectComboBox);
-            this.Controls.Add(this.objectLabel);
-            this.Controls.Add(this.privComboBox);
-            this.Controls.Add(this.privLabel);
-            this.Controls.Add(this.grantButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Detail";
@@ -378,28 +217,15 @@ namespace Phase_1
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button grantButton;
-        private System.Windows.Forms.Label privLabel;
-        private System.Windows.Forms.ComboBox privComboBox;
-        private System.Windows.Forms.ComboBox objectComboBox;
-        private System.Windows.Forms.Label objectLabel;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.ComboBox attributeComboBox;
-        private System.Windows.Forms.Label attributeLabel;
         private System.Windows.Forms.TextBox privilegeTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button revokeButton;
-        private System.Windows.Forms.TextBox objectTextBox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox searchTextBox;
-        private System.Windows.Forms.ComboBox optionComboBox;
-        private System.Windows.Forms.Label optionLabel;
-        private System.Windows.Forms.CheckBox roleCheckBox;
-        private System.Windows.Forms.CheckBox privCheckBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label roleLabel;
-        private System.Windows.Forms.ComboBox rowComboBox;
+        private System.Windows.Forms.Button moreActionButton;
+        private System.Windows.Forms.CheckBox allPrivCheckbox;
+        private System.Windows.Forms.CheckBox colPrivCheckbox;
     }
 }

@@ -36,6 +36,10 @@ namespace Phase_1
         {
             InitializeComponent();
         }
+        private string sqlQueryView(string viewName, string owner)
+        {
+            return "select * from " + owner + "." + viewName;
+        }
         private string sqlQueryViewCon(string viewName, string owner)
         {
             return "select * from " + owner + "." + viewName + " where GRANTEE = '" + objectName.ToUpper() + "'";
@@ -120,29 +124,7 @@ namespace Phase_1
              return  reader.Read() ? reader.GetString(0) : ""; // Assuming the column is of type string
         }
 
-        private List<string> getAllRole()
-        {
-
-            string sql = "SELECT ROLENAME FROM GOD.PH1_VIEW_ALL_ROLES";
-            OracleCommand cmd = new OracleCommand(sql, con);
-
-            // Execute the query and get the data reader
-            OracleDataReader reader = cmd.ExecuteReader();
-
-            List<string> userList = new List<string>();
-
-            // Loop through the rows in the data reader and add the column values to the array
-            while (reader.Read())
-            {
-                string columnValue = reader.GetString(0); // Assuming the column is of type string
-                userList.Add(columnValue);
-                System.Diagnostics.Debug.WriteLine(columnValue);
-            }
-
-            return userList;
-
-
-        }
+       
         private void raiseTable(DataGridView dgv, string SQLCommand)
         {
             OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, con);
@@ -156,10 +138,21 @@ namespace Phase_1
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
-                    + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
-                privilegeTextBox.Text = priv;
+                if (allPrivCheckbox.Checked)
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
+                        + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                    privilegeTextBox.Text = priv;
+                }
+                else
+                {
+                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                    string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
+                        + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                    privilegeTextBox.Text = priv;
+                }
+               
 
             }
         }
@@ -176,15 +169,10 @@ namespace Phase_1
             // Set the location of the form
             this.Location = new Point(x, y);
             String strSQL = sqlQueryViewCon(view, "GOD");
-            objectTextBox.Text = this.objectName.ToUpper();
             try
             {
-                List<string> objectList = getUserRoleTableList("Table");
-                objectList.AddRange(getUserRoleTableList("View"));
-                objectComboBox.DataSource = objectList;
-                privCheckBox.Checked = true;
                 
-                optionComboBox.Text = "No";
+                
                 raiseTable(dataGridView1, strSQL);
                 dataGridView1.Show();
             }
@@ -216,7 +204,6 @@ namespace Phase_1
                 this.objectName = userR;
                 if (isExist()){
                     string sqlCommand = sqlQueryViewCon(view, "GOD");
-                    objectTextBox.Text = userR.ToUpper();
                     try
                     {
                         raiseTable(dataGridView1, sqlCommand);
@@ -235,74 +222,7 @@ namespace Phase_1
             }
         }
 
-        private void objectComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string obj = objectComboBox.SelectedItem.ToString().ToUpper();
-            string priv = privComboBox.Text.ToUpper();
-        
-            List<string> s = new List<string> { "ALL" };
-            attributeComboBox.DataSource = priv == "UPDATE" ? getTableAttribute(obj) : s;
-            
-      
-        }
-
-        private void privComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string obj = objectComboBox.Text.ToUpper();
-            
-            string priv = privComboBox.SelectedItem.ToString().ToUpper(); ;
-
-            List<string> s = new List<string> { "ALL" };
-            attributeComboBox.DataSource = priv == "UPDATE" ? getTableAttribute(obj) : s;
-        }
-
-        private void grantButton_Click(object sender, EventArgs e)
-        {
-            string obj = objectComboBox.Text.ToUpper();
-            string grantee = objectTextBox.Text;
-            string priv = privComboBox.Text.ToUpper();
-            string owner = getTableOwner(obj, "view");
-            string opt = optionComboBox.Text;
-            if (owner == "") owner = getTableOwner(obj, "table");
-            string privl = priv + " ON " + owner + "." + obj;
-
-
-            System.Diagnostics.Debug.WriteLine(grantee);
-
-            System.Diagnostics.Debug.WriteLine(privl);
-
-
-            try
-            {
-
-                OracleCommand command = new OracleCommand("ph1_grantPriv", con);
-
-
-                command.CommandType = System.Data.CommandType.StoredProcedure;
-
-                // Add input parameter(s) to the command
-                command.Parameters.Add("p_userOrRole", OracleDbType.Varchar2).Value = grantee;
-                command.Parameters.Add("p_privilege", OracleDbType.Varchar2).Value = privl;
-                command.Parameters.Add("p_option", OracleDbType.Varchar2).Value = opt;
-
-                // Get the value of the output parameter(s)
-                int resultEx = command.ExecuteNonQuery();
-                System.Diagnostics.Debug.WriteLine(resultEx);
-
-             
-                    // The stored procedure executed successfully
-                MessageBox.Show(privl + " granted", "Message", MessageBoxButtons.OK);
-                Detail_Load(sender, e);
-                
-            }
-            catch (OracleException ex)
-            {
-                MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
-            }
-
-
-        }
-
+   
         private void revokeButton_Click(object sender, EventArgs e)
         {
             string priv = privilegeTextBox.Text;
@@ -346,42 +266,61 @@ namespace Phase_1
             }
         }
 
-        private void roleCheckBox_CheckedChanged(object sender, EventArgs e)
+        
+        private void moreActionButton_Click(object sender, EventArgs e)
         {
-            if (roleCheckBox.Checked)
-            {
-                privLabel.Hide();
-                objectLabel.Hide();
-                optionLabel.Hide();
-                attributeLabel.Hide();
-                privComboBox.Hide();
-                objectComboBox.Hide();
-                optionComboBox.Hide();
-                attributeComboBox.Hide();
+            GrantAndAlter d = new GrantAndAlter(con, objectName, mode);
+            this.Hide();
+            d.Show();
+        }
 
-                roleLabel.Show();
-                rowComboBox.DataSource = getAllRole();
-                rowComboBox.Show();
-                privCheckBox.Checked = false;
+        private void rowComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colPrivCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            string view = "";
+            if (colPrivCheckbox.Checked)
+            {
+                allPrivCheckbox.Checked = false;
+                view = "PH1_VIEW_COL_PRIVS";
+
+            }
+            String strSQL = sqlQueryViewCon(view, "GOD");
+
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
             }
         }
 
-        private void privCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void allPrivCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            if (privCheckBox.Checked)
+            string view = "";
+            if (allPrivCheckbox.Checked)
             {
-                privLabel.Show();
-                objectLabel.Show();
-                optionLabel.Show();
-                attributeLabel.Show();
-                privComboBox.Show();
-                objectComboBox.Show();
-                optionComboBox.Show();
-                attributeComboBox.Show();
+                colPrivCheckbox.Checked = false;
 
-                roleLabel.Hide();
-                rowComboBox.Hide();
-                roleCheckBox.Checked = false;
+                view = "PH1_VIEW_USERS_PRIVS";
+            }
+            string strSQL = sqlQueryViewCon(view, "GOD");
+
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
             }
         }
     }
