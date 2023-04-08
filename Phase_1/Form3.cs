@@ -70,14 +70,52 @@ namespace Phase_1
             //    dataGridView1.Show();
             //}    
 
-            string view = "PH1_VIEW_USERS_PRIVS";
-            String strSQL = sqlQueryView(view, "GOD");
-            raiseTable(dataGridView1, strSQL);
+            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void colPrivCheckbox_CheckedChanged(object sender, EventArgs e)
         {
+            string view = "";
+            if (colPrivCheckbox.Checked == true)
+            {
+                allPrivCheckbox.Checked = false;
+                view = "PH1_VIEW_COL_PRIVS";
 
+            }
+            String strSQL = sqlQueryView(view, "GOD");
+
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+                
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
+        }
+
+        private void allPrivCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            string view = "";
+            if (allPrivCheckbox.Checked == true)
+            {
+                colPrivCheckbox.Checked = false;
+                
+                view = "PH1_VIEW_USERS_PRIVS";
+            }
+            String strSQL = sqlQueryView(view, "GOD");
+            
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
         }
 
         //private void button1_Click(object sender, EventArgs e)

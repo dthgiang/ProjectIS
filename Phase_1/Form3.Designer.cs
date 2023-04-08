@@ -32,6 +32,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colPrivCheckbox = new System.Windows.Forms.CheckBox();
+            this.allPrivCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -39,12 +41,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(180, 157);
+            this.dataGridView1.Location = new System.Drawing.Point(240, 193);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(623, 323);
+            this.dataGridView1.Size = new System.Drawing.Size(831, 398);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button3
             // 
@@ -53,9 +55,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button3.Location = new System.Drawing.Point(703, 486);
+            this.button3.Location = new System.Drawing.Point(937, 598);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 44);
+            this.button3.Size = new System.Drawing.Size(133, 54);
             this.button3.TabIndex = 5;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
@@ -64,28 +67,57 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Phase_1.Properties.Resources.Entity_s_rivileges;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(988, 600);
+            this.pictureBox1.Size = new System.Drawing.Size(1317, 738);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // colPrivCheckbox
+            // 
+            this.colPrivCheckbox.AutoSize = true;
+            this.colPrivCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colPrivCheckbox.Location = new System.Drawing.Point(439, 148);
+            this.colPrivCheckbox.Name = "colPrivCheckbox";
+            this.colPrivCheckbox.Size = new System.Drawing.Size(197, 29);
+            this.colPrivCheckbox.TabIndex = 6;
+            this.colPrivCheckbox.Text = "Column Privilege";
+            this.colPrivCheckbox.UseVisualStyleBackColor = true;
+            this.colPrivCheckbox.CheckedChanged += new System.EventHandler(this.colPrivCheckbox_CheckedChanged);
+            // 
+            // allPrivCheckbox
+            // 
+            this.allPrivCheckbox.AutoSize = true;
+            this.allPrivCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.allPrivCheckbox.Location = new System.Drawing.Point(758, 148);
+            this.allPrivCheckbox.Name = "allPrivCheckbox";
+            this.allPrivCheckbox.Size = new System.Drawing.Size(148, 29);
+            this.allPrivCheckbox.TabIndex = 7;
+            this.allPrivCheckbox.Text = "All Privilege";
+            this.allPrivCheckbox.UseVisualStyleBackColor = true;
+            this.allPrivCheckbox.CheckedChanged += new System.EventHandler(this.allPrivCheckbox_CheckedChanged);
+            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1312, 690);
+            this.Controls.Add(this.allPrivCheckbox);
+            this.Controls.Add(this.colPrivCheckbox);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "ENTITY\'S PRIVILEGES";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -94,5 +126,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.CheckBox colPrivCheckbox;
+        private System.Windows.Forms.CheckBox allPrivCheckbox;
     }
 }

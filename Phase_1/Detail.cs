@@ -118,8 +118,6 @@ namespace Phase_1
             // Loop through the rows in the data reader and add the column values to the array
 
              return  reader.Read() ? reader.GetString(0) : ""; // Assuming the column is of type string
-                
-         
         }
 
         private List<string> getAllRole()
