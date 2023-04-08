@@ -44,15 +44,14 @@ namespace Phase_1
         private void button1_Click(object sender, EventArgs e)
         {
             userID = textBox1.Text; password = textBox2.Text;
-            //userID = "DB_MANAGER";
-            //password = "123";
+            userID = "GOD";// "DB_MANAGER";
+            password = "123";
             String connectionString = "Data Source=localhost;Persist Security Info=True;User ID=" + userID + ";Password=" + password;
 
             try
             {
                 OracleConnection connection = new OracleConnection(connectionString);
                 connection.Open();
-                MessageBox.Show("Login successful!");
 
                 Form1 f1 = new Form1(connection);
                 this.Hide();

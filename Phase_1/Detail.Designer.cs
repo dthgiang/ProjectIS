@@ -32,15 +32,15 @@ namespace Phase_1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detail));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.grantButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.privLabel = new System.Windows.Forms.Label();
             this.privComboBox = new System.Windows.Forms.ComboBox();
             this.objectComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.objectLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
             this.attributeComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.attributeLabel = new System.Windows.Forms.Label();
             this.privilegeTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.revokeButton = new System.Windows.Forms.Button();
@@ -49,7 +49,12 @@ namespace Phase_1
             this.label6 = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.optionComboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.optionLabel = new System.Windows.Forms.Label();
+            this.roleCheckBox = new System.Windows.Forms.CheckBox();
+            this.privCheckBox = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.roleLabel = new System.Windows.Forms.Label();
+            this.rowComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,16 +84,16 @@ namespace Phase_1
             this.grantButton.UseVisualStyleBackColor = false;
             this.grantButton.Click += new System.EventHandler(this.grantButton_Click);
             // 
-            // label1
+            // privLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(873, 261);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Privilege";
+            this.privLabel.AutoSize = true;
+            this.privLabel.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.privLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.privLabel.Location = new System.Drawing.Point(873, 261);
+            this.privLabel.Name = "privLabel";
+            this.privLabel.Size = new System.Drawing.Size(105, 28);
+            this.privLabel.TabIndex = 3;
+            this.privLabel.Text = "Privilege";
             // 
             // privComboBox
             // 
@@ -113,16 +118,16 @@ namespace Phase_1
             this.objectComboBox.TabIndex = 6;
             this.objectComboBox.SelectedIndexChanged += new System.EventHandler(this.objectComboBox_SelectedIndexChanged);
             // 
-            // label2
+            // objectLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(873, 308);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 28);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Object";
+            this.objectLabel.AutoSize = true;
+            this.objectLabel.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.objectLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectLabel.Location = new System.Drawing.Point(873, 308);
+            this.objectLabel.Name = "objectLabel";
+            this.objectLabel.Size = new System.Drawing.Size(78, 28);
+            this.objectLabel.TabIndex = 5;
+            this.objectLabel.Text = "Object";
             // 
             // label3
             // 
@@ -166,16 +171,16 @@ namespace Phase_1
             this.attributeComboBox.Size = new System.Drawing.Size(195, 28);
             this.attributeComboBox.TabIndex = 11;
             // 
-            // label4
+            // attributeLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(873, 351);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 28);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Attribute";
+            this.attributeLabel.AutoSize = true;
+            this.attributeLabel.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.attributeLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attributeLabel.Location = new System.Drawing.Point(873, 351);
+            this.attributeLabel.Name = "attributeLabel";
+            this.attributeLabel.Size = new System.Drawing.Size(106, 28);
+            this.attributeLabel.TabIndex = 10;
+            this.attributeLabel.Text = "Attribute";
             // 
             // privilegeTextBox
             // 
@@ -262,24 +267,85 @@ namespace Phase_1
             this.optionComboBox.Size = new System.Drawing.Size(195, 28);
             this.optionComboBox.TabIndex = 20;
             // 
-            // label7
+            // optionLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(873, 436);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 28);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Option";
+            this.optionLabel.AutoSize = true;
+            this.optionLabel.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.optionLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionLabel.Location = new System.Drawing.Point(873, 436);
+            this.optionLabel.Name = "optionLabel";
+            this.optionLabel.Size = new System.Drawing.Size(82, 28);
+            this.optionLabel.TabIndex = 19;
+            this.optionLabel.Text = "Option";
+            // 
+            // roleCheckBox
+            // 
+            this.roleCheckBox.AutoSize = true;
+            this.roleCheckBox.BackColor = System.Drawing.Color.GreenYellow;
+            this.roleCheckBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleCheckBox.Location = new System.Drawing.Point(876, 219);
+            this.roleCheckBox.Name = "roleCheckBox";
+            this.roleCheckBox.Size = new System.Drawing.Size(88, 32);
+            this.roleCheckBox.TabIndex = 21;
+            this.roleCheckBox.Text = "Role";
+            this.roleCheckBox.UseVisualStyleBackColor = false;
+            this.roleCheckBox.CheckedChanged += new System.EventHandler(this.roleCheckBox_CheckedChanged);
+            // 
+            // privCheckBox
+            // 
+            this.privCheckBox.AutoSize = true;
+            this.privCheckBox.BackColor = System.Drawing.Color.GreenYellow;
+            this.privCheckBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.privCheckBox.Location = new System.Drawing.Point(1037, 219);
+            this.privCheckBox.Name = "privCheckBox";
+            this.privCheckBox.Size = new System.Drawing.Size(137, 32);
+            this.privCheckBox.TabIndex = 22;
+            this.privCheckBox.Text = "Privilege";
+            this.privCheckBox.UseVisualStyleBackColor = false;
+            this.privCheckBox.CheckedChanged += new System.EventHandler(this.privCheckBox_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.PaleGreen;
+            this.label8.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(931, 177);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(186, 28);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Pick one to grant";
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.roleLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Location = new System.Drawing.Point(873, 309);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(59, 28);
+            this.roleLabel.TabIndex = 24;
+            this.roleLabel.Text = "Role";
+            // 
+            // rowComboBox
+            // 
+            this.rowComboBox.FormattingEnabled = true;
+            this.rowComboBox.Location = new System.Drawing.Point(946, 308);
+            this.rowComboBox.Name = "rowComboBox";
+            this.rowComboBox.Size = new System.Drawing.Size(228, 28);
+            this.rowComboBox.TabIndex = 25;
             // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 863);
+            this.Controls.Add(this.rowComboBox);
+            this.Controls.Add(this.roleLabel);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.privCheckBox);
+            this.Controls.Add(this.roleCheckBox);
             this.Controls.Add(this.optionComboBox);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.optionLabel);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.searchTextBox);
@@ -288,13 +354,13 @@ namespace Phase_1
             this.Controls.Add(this.label5);
             this.Controls.Add(this.privilegeTextBox);
             this.Controls.Add(this.attributeComboBox);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.attributeLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.objectComboBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.objectLabel);
             this.Controls.Add(this.privComboBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.privLabel);
             this.Controls.Add(this.grantButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
@@ -313,14 +379,14 @@ namespace Phase_1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button grantButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label privLabel;
         private System.Windows.Forms.ComboBox privComboBox;
         private System.Windows.Forms.ComboBox objectComboBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label objectLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.ComboBox attributeComboBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label attributeLabel;
         private System.Windows.Forms.TextBox privilegeTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button revokeButton;
@@ -329,6 +395,11 @@ namespace Phase_1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.ComboBox optionComboBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label optionLabel;
+        private System.Windows.Forms.CheckBox roleCheckBox;
+        private System.Windows.Forms.CheckBox privCheckBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.ComboBox rowComboBox;
     }
 }

@@ -40,7 +40,6 @@
             this.txt_name = new System.Windows.Forms.TextBox();
             this.bt_createtable = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
-            this.bt_createuser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.bt_createrole = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -48,9 +47,12 @@
             this.DataType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PrimaryKey = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.objectNameTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.objectLabel = new System.Windows.Forms.Label();
             this.dropButton = new System.Windows.Forms.Button();
             this.detailButton = new System.Windows.Forms.Button();
+            this.pwTextBox = new System.Windows.Forms.TextBox();
+            this.pwLabel = new System.Windows.Forms.Label();
+            this.pwCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -78,14 +80,15 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 297);
+            this.dataGridView1.Location = new System.Drawing.Point(410, 457);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(503, 247);
+            this.dataGridView1.Size = new System.Drawing.Size(754, 380);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -97,9 +100,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button3.Location = new System.Drawing.Point(685, 548);
+            this.button3.Location = new System.Drawing.Point(1028, 843);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 33);
+            this.button3.Size = new System.Drawing.Size(136, 51);
             this.button3.TabIndex = 4;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
@@ -108,17 +112,16 @@
             // filterBox
             // 
             this.filterBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.filterBox.Font = new System.Drawing.Font("Varela", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filterBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterBox.FormattingEnabled = true;
             this.filterBox.Items.AddRange(new object[] {
             "Table",
             "View",
             "User",
             "Role"});
-            this.filterBox.Location = new System.Drawing.Point(346, 162);
-            this.filterBox.Margin = new System.Windows.Forms.Padding(2);
+            this.filterBox.Location = new System.Drawing.Point(519, 249);
             this.filterBox.Name = "filterBox";
-            this.filterBox.Size = new System.Drawing.Size(272, 25);
+            this.filterBox.Size = new System.Drawing.Size(406, 33);
             this.filterBox.TabIndex = 5;
             this.filterBox.SelectedIndexChanged += new System.EventHandler(this.filterBox_SelectedIndexChanged);
             // 
@@ -128,10 +131,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(215, 165);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(322, 254);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 18);
+            this.label1.Size = new System.Drawing.Size(84, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Filter";
             // 
@@ -142,10 +144,9 @@
             this.createNewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createNewButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createNewButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.createNewButton.Location = new System.Drawing.Point(640, 157);
-            this.createNewButton.Margin = new System.Windows.Forms.Padding(2);
+            this.createNewButton.Location = new System.Drawing.Point(960, 242);
             this.createNewButton.Name = "createNewButton";
-            this.createNewButton.Size = new System.Drawing.Size(201, 30);
+            this.createNewButton.Size = new System.Drawing.Size(302, 46);
             this.createNewButton.TabIndex = 8;
             this.createNewButton.Text = "Create new";
             this.createNewButton.UseVisualStyleBackColor = false;
@@ -155,12 +156,11 @@
             // 
             this.lbl_tablename.AutoSize = true;
             this.lbl_tablename.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tablename.Font = new System.Drawing.Font("Varela", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tablename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tablename.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_tablename.Location = new System.Drawing.Point(215, 240);
-            this.lbl_tablename.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_tablename.Location = new System.Drawing.Point(322, 311);
             this.lbl_tablename.Name = "lbl_tablename";
-            this.lbl_tablename.Size = new System.Drawing.Size(123, 21);
+            this.lbl_tablename.Size = new System.Drawing.Size(170, 29);
             this.lbl_tablename.TabIndex = 9;
             this.lbl_tablename.Text = "Table\'s name";
             this.lbl_tablename.Click += new System.EventHandler(this.label2_Click);
@@ -169,10 +169,9 @@
             // 
             this.txt_name.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txt_name.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(346, 239);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_name.Location = new System.Drawing.Point(519, 309);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(272, 23);
+            this.txt_name.Size = new System.Drawing.Size(406, 31);
             this.txt_name.TabIndex = 10;
             // 
             // bt_createtable
@@ -182,10 +181,9 @@
             this.bt_createtable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_createtable.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_createtable.ForeColor = System.Drawing.Color.SteelBlue;
-            this.bt_createtable.Location = new System.Drawing.Point(266, 549);
-            this.bt_createtable.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_createtable.Location = new System.Drawing.Point(399, 845);
             this.bt_createtable.Name = "bt_createtable";
-            this.bt_createtable.Size = new System.Drawing.Size(91, 33);
+            this.bt_createtable.Size = new System.Drawing.Size(136, 51);
             this.bt_createtable.TabIndex = 12;
             this.bt_createtable.Text = "Create";
             this.bt_createtable.UseVisualStyleBackColor = false;
@@ -195,27 +193,13 @@
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_username.Font = new System.Drawing.Font("Varela", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_username.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_username.Location = new System.Drawing.Point(215, 240);
-            this.lbl_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_username.Location = new System.Drawing.Point(322, 313);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(115, 21);
+            this.lbl_username.Size = new System.Drawing.Size(157, 29);
             this.lbl_username.TabIndex = 13;
             this.lbl_username.Text = "User\'s name";
-            // 
-            // bt_createuser
-            // 
-            this.bt_createuser.BackColor = System.Drawing.Color.LightGreen;
-            this.bt_createuser.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_createuser.Location = new System.Drawing.Point(641, 230);
-            this.bt_createuser.Margin = new System.Windows.Forms.Padding(2);
-            this.bt_createuser.Name = "bt_createuser";
-            this.bt_createuser.Size = new System.Drawing.Size(90, 22);
-            this.bt_createuser.TabIndex = 14;
-            this.bt_createuser.Text = "Create user";
-            this.bt_createuser.UseVisualStyleBackColor = false;
-            this.bt_createuser.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -223,10 +207,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(215, 240);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(322, 310);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 18);
+            this.label2.Size = new System.Drawing.Size(176, 29);
             this.label2.TabIndex = 15;
             this.label2.Text = "Role\'s name";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
@@ -237,12 +220,11 @@
             this.bt_createrole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_createrole.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_createrole.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_createrole.Location = new System.Drawing.Point(640, 229);
-            this.bt_createrole.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_createrole.Location = new System.Drawing.Point(962, 291);
             this.bt_createrole.Name = "bt_createrole";
-            this.bt_createrole.Size = new System.Drawing.Size(201, 33);
+            this.bt_createrole.Size = new System.Drawing.Size(302, 51);
             this.bt_createrole.TabIndex = 16;
-            this.bt_createrole.Text = "Create role";
+            this.bt_createrole.Text = "Create it";
             this.bt_createrole.UseVisualStyleBackColor = false;
             this.bt_createrole.Click += new System.EventHandler(this.bt_createrole_Click);
             // 
@@ -256,12 +238,11 @@
             this.DataType,
             this.PrimaryKey});
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.Location = new System.Drawing.Point(266, 296);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(399, 455);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(510, 247);
+            this.dataGridView2.Size = new System.Drawing.Size(765, 380);
             this.dataGridView2.TabIndex = 17;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -297,36 +278,33 @@
             // 
             this.objectNameTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.objectNameTextBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectNameTextBox.Location = new System.Drawing.Point(346, 202);
-            this.objectNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.objectNameTextBox.Location = new System.Drawing.Point(519, 311);
             this.objectNameTextBox.Name = "objectNameTextBox";
             this.objectNameTextBox.ReadOnly = true;
-            this.objectNameTextBox.Size = new System.Drawing.Size(272, 23);
+            this.objectNameTextBox.Size = new System.Drawing.Size(406, 31);
             this.objectNameTextBox.TabIndex = 18;
             // 
-            // label3
+            // objectLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(215, 202);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Object";
+            this.objectLabel.AutoSize = true;
+            this.objectLabel.BackColor = System.Drawing.Color.Transparent;
+            this.objectLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.objectLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.objectLabel.Location = new System.Drawing.Point(322, 309);
+            this.objectLabel.Name = "objectLabel";
+            this.objectLabel.Size = new System.Drawing.Size(101, 29);
+            this.objectLabel.TabIndex = 19;
+            this.objectLabel.Text = "Object";
             // 
             // dropButton
             // 
-            this.dropButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.dropButton.BackColor = System.Drawing.Color.Tomato;
             this.dropButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dropButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dropButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dropButton.Location = new System.Drawing.Point(640, 193);
-            this.dropButton.Margin = new System.Windows.Forms.Padding(2);
+            this.dropButton.Location = new System.Drawing.Point(962, 297);
             this.dropButton.Name = "dropButton";
-            this.dropButton.Size = new System.Drawing.Size(75, 32);
+            this.dropButton.Size = new System.Drawing.Size(112, 49);
             this.dropButton.TabIndex = 20;
             this.dropButton.Text = "Drop";
             this.dropButton.UseVisualStyleBackColor = false;
@@ -338,30 +316,65 @@
             this.detailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.detailButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.detailButton.Location = new System.Drawing.Point(719, 194);
-            this.detailButton.Margin = new System.Windows.Forms.Padding(2);
+            this.detailButton.Location = new System.Drawing.Point(1078, 298);
             this.detailButton.Name = "detailButton";
-            this.detailButton.Size = new System.Drawing.Size(122, 30);
+            this.detailButton.Size = new System.Drawing.Size(183, 46);
             this.detailButton.TabIndex = 21;
             this.detailButton.Text = "View Detail";
             this.detailButton.UseVisualStyleBackColor = false;
             this.detailButton.Click += new System.EventHandler(this.detailButton_Click);
             // 
+            // pwTextBox
+            // 
+            this.pwTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pwTextBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwTextBox.Location = new System.Drawing.Point(519, 352);
+            this.pwTextBox.Name = "pwTextBox";
+            this.pwTextBox.Size = new System.Drawing.Size(406, 31);
+            this.pwTextBox.TabIndex = 22;
+            // 
+            // pwLabel
+            // 
+            this.pwLabel.AutoSize = true;
+            this.pwLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pwLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pwLabel.Location = new System.Drawing.Point(322, 352);
+            this.pwLabel.Name = "pwLabel";
+            this.pwLabel.Size = new System.Drawing.Size(144, 29);
+            this.pwLabel.TabIndex = 23;
+            this.pwLabel.Text = "Password";
+            // 
+            // pwCheckBox
+            // 
+            this.pwCheckBox.AutoSize = true;
+            this.pwCheckBox.BackColor = System.Drawing.Color.Turquoise;
+            this.pwCheckBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwCheckBox.Location = new System.Drawing.Point(962, 352);
+            this.pwCheckBox.Name = "pwCheckBox";
+            this.pwCheckBox.Size = new System.Drawing.Size(181, 32);
+            this.pwCheckBox.TabIndex = 24;
+            this.pwCheckBox.Text = "Use password";
+            this.pwCheckBox.UseVisualStyleBackColor = false;
+            this.pwCheckBox.CheckedChanged += new System.EventHandler(this.pwCheckBox_CheckedChanged);
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Phase_1.Properties.Resources.ObjectDatabase;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(984, 600);
+            this.ClientSize = new System.Drawing.Size(1476, 923);
+            this.Controls.Add(this.pwCheckBox);
+            this.Controls.Add(this.pwLabel);
+            this.Controls.Add(this.pwTextBox);
             this.Controls.Add(this.detailButton);
             this.Controls.Add(this.dropButton);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.objectLabel);
             this.Controls.Add(this.objectNameTextBox);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bt_createrole);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.bt_createuser);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.bt_createtable);
             this.Controls.Add(this.txt_name);
@@ -372,8 +385,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            //this.Name = "Form2";
             this.Text = "DATABASE OBJECT";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -393,7 +404,6 @@
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Button bt_createtable;
         private System.Windows.Forms.Label lbl_username;
-        private System.Windows.Forms.Button bt_createuser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bt_createrole;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -401,8 +411,11 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn DataType;
         private System.Windows.Forms.DataGridViewCheckBoxColumn PrimaryKey;
         private System.Windows.Forms.TextBox objectNameTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label objectLabel;
         private System.Windows.Forms.Button dropButton;
         private System.Windows.Forms.Button detailButton;
+        private System.Windows.Forms.TextBox pwTextBox;
+        private System.Windows.Forms.Label pwLabel;
+        private System.Windows.Forms.CheckBox pwCheckBox;
     }
 }

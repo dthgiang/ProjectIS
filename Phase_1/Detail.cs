@@ -122,6 +122,29 @@ namespace Phase_1
          
         }
 
+        private List<string> getAllRole()
+        {
+
+            string sql = "SELECT ROLENAME FROM GOD.PH1_VIEW_ALL_ROLES";
+            OracleCommand cmd = new OracleCommand(sql, con);
+
+            // Execute the query and get the data reader
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            List<string> userList = new List<string>();
+
+            // Loop through the rows in the data reader and add the column values to the array
+            while (reader.Read())
+            {
+                string columnValue = reader.GetString(0); // Assuming the column is of type string
+                userList.Add(columnValue);
+                System.Diagnostics.Debug.WriteLine(columnValue);
+            }
+
+            return userList;
+
+
+        }
         private void raiseTable(DataGridView dgv, string SQLCommand)
         {
             OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, con);
@@ -161,6 +184,8 @@ namespace Phase_1
                 List<string> objectList = getUserRoleTableList("Table");
                 objectList.AddRange(getUserRoleTableList("View"));
                 objectComboBox.DataSource = objectList;
+                privCheckBox.Checked = true;
+                
                 optionComboBox.Text = "No";
                 raiseTable(dataGridView1, strSQL);
                 dataGridView1.Show();
@@ -323,6 +348,44 @@ namespace Phase_1
             }
         }
 
+        private void roleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (roleCheckBox.Checked)
+            {
+                privLabel.Hide();
+                objectLabel.Hide();
+                optionLabel.Hide();
+                attributeLabel.Hide();
+                privComboBox.Hide();
+                objectComboBox.Hide();
+                optionComboBox.Hide();
+                attributeComboBox.Hide();
+
+                roleLabel.Show();
+                rowComboBox.DataSource = getAllRole();
+                rowComboBox.Show();
+                privCheckBox.Checked = false;
+            }
+        }
+
+        private void privCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (privCheckBox.Checked)
+            {
+                privLabel.Show();
+                objectLabel.Show();
+                optionLabel.Show();
+                attributeLabel.Show();
+                privComboBox.Show();
+                objectComboBox.Show();
+                optionComboBox.Show();
+                attributeComboBox.Show();
+
+                roleLabel.Hide();
+                rowComboBox.Hide();
+                roleCheckBox.Checked = false;
+            }
+        }
     }
 
     

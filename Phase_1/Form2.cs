@@ -54,10 +54,18 @@ namespace Phase_1
             dataGridView2.Hide();
             bt_createtable.Hide();
             lbl_username.Hide();
-            bt_createuser.Hide();
             label2.Hide();
             label2.Hide();
             bt_createrole.Hide();
+            pwCheckBox.Hide();
+            pwLabel.Hide();
+            pwTextBox.Hide();
+
+            objectNameTextBox.Show();
+            detailButton.Show();
+            dropButton.Show();
+            objectLabel.Show();
+
         }
 
         private string sqlQueryView(string viewName, string owner)
@@ -81,7 +89,7 @@ namespace Phase_1
 
             strCBB = filterBox.Text.ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "DTHGIANG");
+            String strSQL = sqlQueryView(view, "GOD");
             
             
             try{
@@ -104,7 +112,10 @@ namespace Phase_1
         {
             dataGridView1.Hide();
             strCBB = filterBox.Text;
-
+            objectNameTextBox.Hide();
+            detailButton.Hide();
+            dropButton.Hide();
+            objectLabel.Hide();
 
             if (strCBB == "Table")
             {
@@ -113,9 +124,14 @@ namespace Phase_1
                 dataGridView2.Show();
                 bt_createtable.Show();
                 lbl_username.Hide();
-                bt_createuser.Hide();
                 label2.Hide();
                 bt_createrole.Hide();
+
+                pwCheckBox.Hide();
+                pwLabel.Hide();
+                pwTextBox.Hide();
+
+             
             }
             else if (strCBB == "User")
             {
@@ -125,19 +141,27 @@ namespace Phase_1
                 dataGridView2.Hide();
                 bt_createtable.Hide();
                 lbl_username.Show();
-                bt_createuser.Show();
                 label2.Hide();
-                bt_createrole.Hide();
+                bt_createrole.Show();
+
+                pwCheckBox.Hide();
+                pwLabel.Show();
+                pwTextBox.Show();
+
+
             }
             else if (strCBB == "Role")
             {
                 lbl_username.Hide();
                 txt_name.Show();
                 label2.Show();
-                bt_createuser.Hide();
                 bt_createrole.Show();
                 dataGridView2.Hide();
                 lbl_tablename.Hide();
+
+                pwCheckBox.Show();
+                pwLabel.Hide();
+                pwTextBox.Hide();
             }
 
         }
@@ -206,8 +230,11 @@ namespace Phase_1
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+
+
+        private void bt_createrole_Click(object sender, EventArgs e)
         {
+
             dataGridView1.Hide();
             strCBB = filterBox.Text;
             lbl_tablename.Hide();
@@ -215,53 +242,41 @@ namespace Phase_1
             dataGridView2.Hide();
             bt_createtable.Hide();
             lbl_username.Show();
-            bt_createuser.Show();
-
-            String user_name = null;
-            user_name= txt_name.Text;
-
-            String strSQL = null;
-            strSQL = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=TRUE ";
 
 
-          
-            strSQL = "create user " + user_name + " IDENTIFIED BY " + user_name;
-            OracleCommand command = new OracleCommand(strSQL, con);
+
             try
             {
 
-                MessageBox.Show("Create user successfully!");
+                OracleCommand command = new OracleCommand("ph1_createUserOrRole", con);
+                string x = txt_name.Text;
+
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // Add input parameter(s) to the command
+                command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = txt_name.Text;
+                command.Parameters.Add("p_password", OracleDbType.Varchar2).Value = pwTextBox.Text;
+                command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = filterBox.Text;
+                command.Parameters.Add("p_isPW", OracleDbType.Varchar2).Value = pwCheckBox.Checked;
+
+                // Get the value of the output parameter(s)
+                int resultEx = command.ExecuteNonQuery();
+                System.Diagnostics.Debug.WriteLine(x);
+
+
+                // The stored procedure executed successfully
+                MessageBox.Show("create" + filterBox.Text + " " + txt_name.Text + " succeed", "Message", MessageBoxButtons.OK);
+                txt_name.Text = "";
+                pwTextBox.Text = "";
+                Form2_Load(sender, e);
 
             }
-            catch (Exception ex)
+            catch (OracleException ex)
             {
-                Console.WriteLine("Error!" + ex.Message);
+                MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
             }
-        }
-
-        private void bt_createrole_Click(object sender, EventArgs e)
-        {
-            String role_name = null;
-            role_name = txt_name.Text;
-
-            String strSQL = null;
-            strSQL = "ALTER SESSION SET \"_ORACLE_SCRIPT\"=TRUE ";
 
 
-
-          
-            strSQL = "create role " + role_name;
-            OracleCommand command = new OracleCommand(strSQL, con);
-            try
-            {
-
-                MessageBox.Show("Create user successfully!");
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error!" + ex.Message);
-            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -295,16 +310,16 @@ namespace Phase_1
                         command.CommandType = System.Data.CommandType.StoredProcedure;
 
                         // Add input parameter(s) to the command
-                        command.Parameters.Add("p_userOrRole", OracleDbType.Varchar2).Value = choose;
+                        command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = choose;
                         command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = mode;
                         System.Diagnostics.Debug.WriteLine(choose + " - " + mode);
                         // Get the value of the output parameter(s)
                         int resultEx = command.ExecuteNonQuery();
-                        System.Diagnostics.Debug.WriteLine(resultEx);
 
                         if (resultEx >= 0){
                             // The stored procedure executed successfully
                             MessageBox.Show(mode + " dropped", "Message", MessageBoxButtons.OK);
+                            Form2_Load(sender, e);
                         }
                         else {
                             // The stored procedure did not execute successfully
@@ -313,7 +328,7 @@ namespace Phase_1
                     }
                     catch (OracleException ex)
                     {
-                        Console.WriteLine("OracleException: " + ex.Message);
+                        MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
                     }
                 }
                 else
@@ -344,9 +359,11 @@ namespace Phase_1
             dataGridView2.Hide();
             bt_createtable.Hide();
             lbl_username.Hide();
-            bt_createuser.Hide();
             label2.Hide();
             bt_createrole.Hide();
+            pwCheckBox.Hide();
+            pwLabel.Hide();
+            pwTextBox.Hide();
 
             strCBB = filterBox.SelectedItem.ToString().ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
@@ -390,6 +407,19 @@ namespace Phase_1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pwCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pwCheckBox.Checked){
+                pwLabel.Show();
+                pwTextBox.Show();
+            }
+            else
+            {
+                pwLabel.Hide();
+                pwTextBox.Hide();
+            }
         }
     }
 }
