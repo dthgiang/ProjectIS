@@ -66,6 +66,23 @@ namespace Phase_1
             dropButton.Show();
             objectLabel.Show();
 
+            string temp = filterBox.Text.ToUpper() ;
+            strCBB = temp == "" ? "Table" : temp;
+
+            string view = "PH1_VIEW_ALL_" + strCBB + "S";
+            String strSQL = sqlQueryView(view, "GOD");
+
+
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
+
         }
 
         private string sqlQueryView(string viewName, string owner)
@@ -206,18 +223,21 @@ namespace Phase_1
             strSQL = strSQL.Substring(0, strSQL.Length - 1);
             strSQL += ")";
 
-
+            System.Diagnostics.Debug.WriteLine(strSQL);
 
             OracleCommand command = new OracleCommand(strSQL, con);
+
             try
             {
-               
-                 MessageBox.Show("Create table successfully!");
+                OracleDataReader reader = command.ExecuteReader(); // run it
+
+                MessageBox.Show("Create table successfully!");
+                Form2_Load(sender, e);
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error!" + ex.Message);
+                MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
             }
 
 

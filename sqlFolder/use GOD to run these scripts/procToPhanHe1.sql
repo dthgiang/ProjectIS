@@ -179,6 +179,7 @@ GRANT CREATE ROLE TO DB_Manager;
 -- Cho phep thuc hien cap quyen: cap quyen cho user/role/ cap role cho user
 
 GRANT GRANT ANY object PRIVILEGE TO DB_MANAGER;
+grant create table to DB_MANAGER ;
 GRANT GRANT ANY ROLE TO DB_MANAGER ;
 grant select any table to DB_Manager ;
 grant insert any table to DB_Manager ;
