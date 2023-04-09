@@ -198,7 +198,7 @@ namespace Phase_1
             strSQL = "create table " + tablename + " ( ";
             String name = "";
             String datatype = "";
- 
+            bool isChecked = false;
             foreach (DataGridViewRow row in dataGridView2.Rows)
             {
                 if (!row.IsNewRow)
@@ -206,13 +206,14 @@ namespace Phase_1
 
                     name = (String)row.Cells["Name"].Value;
                     datatype = (String)row.Cells["DataType"].Value;
+                    isChecked = (bool)row.Cells["PrimaryKey"].Value;
 
 
                     if (name != null & datatype != null )
                     {
                         strSQL += name + " " + datatype;
                     }
-                    if (PrimaryKey.Equals(DataGridViewTriState.True))
+                    if (isChecked)
                     {
                         strSQL += " primary key";
                     }
@@ -222,7 +223,7 @@ namespace Phase_1
             }
             strSQL = strSQL.Substring(0, strSQL.Length - 1);
             strSQL += ")";
-
+            MessageBox.Show(strSQL);
             System.Diagnostics.Debug.WriteLine(strSQL);
 
             OracleCommand command = new OracleCommand(strSQL, con);

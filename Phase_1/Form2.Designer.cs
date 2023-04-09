@@ -100,7 +100,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button3.Location = new System.Drawing.Point(1038, 902);
+            this.button3.Location = new System.Drawing.Point(1200, 562);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 51);
@@ -181,7 +181,7 @@
             this.bt_createtable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_createtable.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_createtable.ForeColor = System.Drawing.Color.SteelBlue;
-            this.bt_createtable.Location = new System.Drawing.Point(410, 903);
+            this.bt_createtable.Location = new System.Drawing.Point(185, 562);
             this.bt_createtable.Name = "bt_createtable";
             this.bt_createtable.Size = new System.Drawing.Size(136, 51);
             this.bt_createtable.TabIndex = 12;
@@ -386,7 +386,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form2";
+
             this.Text = "DATABASE OBJECT";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
