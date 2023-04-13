@@ -1,6 +1,5 @@
 /*
-Name:   Nguyen Van Viet
-MSSV:   20127664
+Name:   Group 10
 Class:  20HTTT01
 */
 
@@ -38,6 +37,16 @@ CREATE  TABLE NhanVien (
 );
 /
 
+exec sp_XoaTable('TaiKhoan');
+/
+
+CREATE  TABLE TaiKhoan (
+    Username    varchar(50) primary key,
+    Password    varchar(150),
+    MaNV        varchar(10)
+);
+/
+
 exec sp_XoaTable('PhongBan');
 /
 -- Tao bang PhongBan
@@ -68,7 +77,8 @@ CREATE TABLE DeAn (
 	MaDA 		varchar(10) primary key,
 	TenDA 	    varchar2(60) not null,
 	NgayBD 	    date,
-	Phong 	    number
+	Phong 	    number,
+    TruongDeAn  varchar(10)
 	
 );
 
@@ -99,7 +109,19 @@ ADD CONSTRAINT FK_DA_PB
 ALTER TABLE PhanCong
 ADD CONSTRAINT FK_PC_NV
   FOREIGN KEY (MaNV)
+  REFERENCES NhanVien(MaNV) on delete cascade
+  
+--MaNV (TaiKhoan) --> MaNV (NhanVien)
+ALTER TABLE TaiKhoan
+ADD CONSTRAINT FK_TK_NV
+  FOREIGN KEY (MaNV)
   REFERENCES NhanVien(MaNV) on delete cascade;
+ 
+ --MaNV (DeAn) --> MaNV (NhanVien)
+ALTER TABLE DeAn
+ADD CONSTRAINT FK_DA_NV
+  FOREIGN KEY (TruongDeAn)
+  REFERENCES NhanVien(MaNV) on delete cascade; 
   
 --MaDA (PhanCong) --> MaDA (DeAn)
 ALTER TABLE PhanCong
