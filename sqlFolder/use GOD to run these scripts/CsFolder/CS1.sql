@@ -2,7 +2,7 @@ SET SERVEROUTPUT ON;
 
 CREATE OR REPLACE PROCEDURE createUser
 AS
-    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE MANV NOT IN (SELECT USERNAME FROM ALL_USERS));
+    CURSOR CUR IS (SELECT MANV FROM GOD.NHANVIEN WHERE MANV NOT IN (SELECT USERNAME FROM ALL_USERS));
     STR VARCHAR(1000);
     USR VARCHAR2(10);
     BEGIN
@@ -22,12 +22,13 @@ AS
         EXECUTE IMMEDIATE (STR);
         dbms_output.put_line( 'All user are created' );
     END;
-    
+/
 exec createUser;
+/
 
 CREATE OR REPLACE PROCEDURE dropUser
 AS
-    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE MANV IN (SELECT USERNAME FROM ALL_USERS));
+    CURSOR CUR IS (SELECT MANV FROM GOD.NHANVIEN WHERE MANV IN (SELECT USERNAME FROM ALL_USERS));
     STR VARCHAR(1000);
     USR VARCHAR2(10);
     BEGIN
@@ -50,15 +51,16 @@ AS
 -- cs1
 ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
 create role RL_NhanVien;
-
+/
 
 grant select on god.PhongBan to RL_NhanVien;
 grant select on god.DeAn to RL_NhanVien;
+/
 
 grant update(NGAYSINH) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
 grant update(SODT) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
 grant update(DIACHI) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
-
+/
 
 --grant RL_NhanVien to NV200;
 
@@ -85,22 +87,19 @@ AS
 exec grantEmpRole;
 /
 
-create view Vw_NhanVienToNhanVien as
-    select * from NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
-    
+create OR REPLACE view Vw_NhanVienToNhanVien as
+    select * from GOD.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
 
 create view Vw_PhanCongToNhanVien as
-    select * from PhanCong  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
-    
+    select * from GOD.PhanCong  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
 
-grant select on Vw_NhanVienToNhanVien to RL_NhanVien;
-grant select on Vw_PhanCongToNhanVien to RL_NhanVien;
+grant select on god.Vw_NhanVienToNhanVien to RL_NhanVien;
+grant select on god.Vw_PhanCongToNhanVien to RL_NhanVien;
 
 --select * from god.Vw_NhanVienToNhanVien;
 --update god.Vw_NhanVienToNhanVien set DiaChi = 'Th? S?n, Anh S?n, Ngh? An' where MANV = 'NV200';
-
-
-
 
 -- to test policy function
 /*
@@ -146,4 +145,44 @@ AS
 
 exec revokeEmpRole
 
+*/
+
+--create or replace function F_NhanVienCS1(P_Schema varchar2, P_Object varchar2)
+--return varchar2
+--as
+--    userAcc varchar(20);
+--begin
+--    userAcc := SYS_CONTEXT('USERENV', 'SESSION_USER');
+--    return 'MANV = '||''''||userAcc||'''';
+--end;
+
+-- to test policy function
+/*
+SET SERVEROUTPUT ON;
+DECLARE
+  l_output varchar2(1000);
+BEGIN
+  l_output := F_NhanVienCS1('god', 'NhanVien');
+  DBMS_OUTPUT.PUT_LINE('Result: ' || l_output);
+END;
+*/
+/*
+BEGIN
+    DBMS_RLS.add_policy(
+    object_schema => 'god',
+    object_name => 'NHANVIEN',
+    policy_name => 'PC1_NhanVien',
+    function_schema => 'god',
+    policy_function => 'F_NhanVienCS1'
+    );
+END;
+
+BEGIN
+    DBMS_RLS.add_policy(
+    object_schema => 'god',
+    object_name => 'PHANCONG',
+    policy_name => 'PC1_PhanCong',
+    policy_function => 'F_NhanVienCS1'
+    );
+END;
 */
