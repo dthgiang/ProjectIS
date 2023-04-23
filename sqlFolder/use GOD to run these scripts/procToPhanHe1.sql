@@ -154,12 +154,13 @@ AS
 
 /
 CREATE OR REPLACE VIEW PH1_TEST_VIEW_ALL_VIEWS
-AS select * from god.PH1_VIEW_ALL_VIEWS;
+ AS 
+    select * from god.PH1_VIEW_ALL_VIEWS;
 /
 grant select on PH1_VIEW_USERS_PRIVS to DB_Manager;
 grant select on PH1_VIEW_ALL_TABLES to DB_Manager;
 grant select on PH1_VIEW_ALL_VIEWS to DB_Manager;
-grant select on PH1_VIEW_ALL_USRES to DB_Manager;
+grant select on PH1_VIEW_ALL_USERS to DB_Manager;
 grant select on ROLE_PRIVS to DB_Manager;
 grant select on USER_PRIVS to DB_Manager;
 grant select on USER_INFO to DB_Manager;

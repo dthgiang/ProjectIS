@@ -3,7 +3,7 @@ create role RL_TruongPhong;
 
 --SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE = 'RL_QUANLY';
 
-
+/
 
 CREATE OR REPLACE PROCEDURE grantTruongPhongRole
 AS
@@ -23,7 +23,7 @@ AS
         END LOOP;
         dbms_output.put_line( 'All truong phong are granted' );
     END;
-    
+/
 exec grantTruongPhongRole;
 --SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTED_ROLE = 'RL_TRUONGPHONG'; -- xem all user cua 1 role
 
@@ -65,21 +65,27 @@ BEGIN
     sec_relevant_cols_opt => dbms_rls.ALL_ROWS
     );
 END;
+--XOA POLICY
+begin
+  DBMS_RLS.DROP_POLICY(
+  object_schema => 'GOD',
+  object_name => 'NHANVIEN',
+  policy_name => 'PC1_TruongPhongCS3');
+end;
+/
 
-
-
-create view Vw_TruongPhongToNhanVien as
-    select NV.* from NhanVien NV join PhongBan on NV.PHG = MaPB where TrPHG = SYS_CONTEXT('USERENV', 'SESSION_USER');
+create OR REPLACE view Vw_TruongPhongToNhanVien as
+    select NV.MANV, TENNV, PHAI, DIACHI, SODT, VAITRO, MANQL, PHG, USERNAME from NhanVien NV join PhongBan on NV.PHG = MaPB where TrPHG = SYS_CONTEXT('USERENV', 'SESSION_USER');
     
+/
 
-
-create view Vw_TruongPhongToPhanCong as
+create OR REPLACE view Vw_TruongPhongToPhanCong as
     select PC.* from Vw_TruongPhongToNhanVien NV join PhanCong PC on NV.MaNV = PC.MANV;
-
+/
 grant select on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 grant select on Vw_TruongPhongToNhanVien to RL_TruongPhong;
-select * from god.PhanCong
-
+select * from god.NHANVIEN
+/
 CREATE OR REPLACE TRIGGER Insert_PhongBanTruongPhong
 INSTEAD OF INSERT
 ON Vw_TruongPhongToPhanCong
@@ -95,7 +101,7 @@ BEGIN
     end if;
         
 END;
-
+/
 CREATE OR REPLACE TRIGGER Delete_PhongBanTruongPhong
 INSTEAD OF DELETE
 ON Vw_TruongPhongToPhanCong
@@ -111,7 +117,7 @@ BEGIN
     end if;
         
 END;
-
+/
 CREATE OR REPLACE TRIGGER Update_PhongBanTruongPhong
 INSTEAD OF INSERT
 ON Vw_TruongPhongToPhanCong
@@ -128,7 +134,7 @@ BEGIN
     end if;
         
 END;
-
+/
 grant insert on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 grant delete on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 grant update on Vw_TruongPhongToPhanCong to RL_TruongPhong;
