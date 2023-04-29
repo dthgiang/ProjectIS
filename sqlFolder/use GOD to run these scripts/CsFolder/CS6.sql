@@ -1,30 +1,6 @@
-ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
-CREATE ROLE RL_TRUONGDEAN;
+
 
 GRANT SELECT, INSERT, DELETE, UPDATE ON god.DEAN TO RL_TRUONGDEAN; 
 
+select * from nhanvien;
 
-
-CREATE OR REPLACE PROCEDURE usp_GrantUserTRUONGDEAN
-AS
-    CURSOR CUR IS (SELECT MANV
-                    FROM god.nhanvien
-                    WHERE vaitro=N'Trý?ng ð? án');
-    strSQL VARCHAR(2000);
-    Usr varchar2(30);
-BEGIN
-    OPEN CUR;
-    strSQL := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
-    EXECUTE IMMEDIATE (strSQL);
-    LOOP
-        FETCH CUR INTO Usr;
-        EXIT WHEN CUR%NOTFOUND;
- 
-        strSQL:= 'GRANT RL_TRUONGDEAN TO '||Usr;
-        EXECUTE IMMEDIATE (strSQL);
-    END LOOP;
-    strSQL := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
-    EXECUTE IMMEDIATE (strSQL);
-END;
-/
-EXECUTE usp_GrantUserTRUONGDEAN;

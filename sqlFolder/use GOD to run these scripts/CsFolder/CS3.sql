@@ -1,30 +1,9 @@
-ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
-create role RL_TruongPhong;
 
 --SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE = 'RL_QUANLY';
 
 /
 
-CREATE OR REPLACE PROCEDURE grantTruongPhongRole
-AS
-    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE VaiTro = 'Tr??ng phòng' AND
-        MANV NOT IN (SELECT grantee FROM DBA_ROLE_PRIVS
-                 where granted_role = 'RL_TRUONGPHONG'));
-    STR VARCHAR(1000);
-    USR VARCHAR2(10);
-    BEGIN
-        OPEN CUR;
-        LOOP
-            FETCH CUR INTO USR;
-            EXIT WHEN CUR%NOTFOUND;
-            
-            STR := 'grant RL_TruongPhong to '||USR;
-            EXECUTE IMMEDIATE (STR);
-        END LOOP;
-        dbms_output.put_line( 'All truong phong are granted' );
-    END;
-/
-exec grantTruongPhongRole;
+
 --SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTED_ROLE = 'RL_TRUONGPHONG'; -- xem all user cua 1 role
 
 -- Gan user roi moi cap quyen
@@ -75,7 +54,7 @@ end;
 /
 
 create OR REPLACE view Vw_TruongPhongToNhanVien as
-    select NV.MANV, TENNV, PHAI, DIACHI, SODT, VAITRO, MANQL, PHG, USERNAME from NhanVien NV join PhongBan on NV.PHG = MaPB where TrPHG = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select * from NhanVien NV join PhongBan on NV.PHG = MaPB where TrPHG = SYS_CONTEXT('USERENV', 'SESSION_USER');
     
 /
 

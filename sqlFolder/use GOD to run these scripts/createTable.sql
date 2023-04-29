@@ -27,8 +27,6 @@ exec sp_XoaTable('NhanVien');
 /
 exec sp_XoaTable('PhongBan');
 /
-exec sp_XoaTable('TaiKhoan');
-/
 
 CREATE  TABLE NhanVien (
     MaNV 		varchar(10) primary key,
@@ -42,14 +40,7 @@ CREATE  TABLE NhanVien (
 	VaiTro 	    varchar2(50),
 	MaNQL 	    varchar(10),
 	PHG 		number,
-    username    varchar(50) unique
-);
-/
-
-
-CREATE  TABLE TaiKhoan (
-    Username    varchar(50) primary key,
-    Password    varchar(150)
+    password    varchar2(150)
 );
 /
 
@@ -117,12 +108,7 @@ ALTER TABLE PhanCong
 ADD CONSTRAINT FK_PC_NV
   FOREIGN KEY (MaNV)
   REFERENCES NhanVien(MaNV)  on delete set null;
-  
---Username (NhanVien) --> username (TaiKhoan)
-ALTER TABLE TaiKhoan
-ADD CONSTRAINT FK_NV_TK
-  FOREIGN KEY (username)
-  REFERENCES TaiKhoan(username)  on delete cascade;
+
  
 --MaDA (PhanCong) --> MaDA (DeAn)
 ALTER TABLE PhanCong

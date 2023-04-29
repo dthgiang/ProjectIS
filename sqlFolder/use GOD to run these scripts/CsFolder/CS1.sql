@@ -1,92 +1,7 @@
-SET SERVEROUTPUT ON;
-
-CREATE OR REPLACE PROCEDURE createUser
-AS
-    CURSOR CUR IS (SELECT MANV FROM GOD.NHANVIEN WHERE MANV NOT IN (SELECT USERNAME FROM ALL_USERS));
-    STR VARCHAR(1000);
-    USR VARCHAR2(10);
-    BEGIN
-        OPEN CUR;
-        STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
-        EXECUTE IMMEDIATE (STR);
-        LOOP
-            FETCH CUR INTO USR;
-            EXIT WHEN CUR%NOTFOUND;
-            
-            STR := 'CREATE USER '||USR||' IDENTIFIED BY 123';
-            EXECUTE IMMEDIATE (STR);
-            STR := 'GRANT CONNECT TO '||USR;
-            EXECUTE IMMEDIATE (STR);
-        END LOOP;
-        STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
-        EXECUTE IMMEDIATE (STR);
-        dbms_output.put_line( 'All user are created' );
-    END;
-/
-exec createUser;
-/
-
-CREATE OR REPLACE PROCEDURE dropUser
-AS
-    CURSOR CUR IS (SELECT MANV FROM GOD.NHANVIEN WHERE MANV IN (SELECT USERNAME FROM ALL_USERS));
-    STR VARCHAR(1000);
-    USR VARCHAR2(10);
-    BEGIN
-        OPEN CUR;
-        STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
-        EXECUTE IMMEDIATE (STR);
-        LOOP
-            FETCH CUR INTO USR;
-            EXIT WHEN CUR%NOTFOUND;
-            
-            STR := 'drop USER '||USR;
-            EXECUTE IMMEDIATE (STR);
-        END LOOP;
-        STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
-        EXECUTE IMMEDIATE (STR);
-        dbms_output.put_line( 'All user are droped' );
-    END;
-    -- exec dropUser;
-/
 -- cs1
-ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
-create role RL_NhanVien;
-/
 
-grant select on god.PhongBan to RL_NhanVien;
-grant select on god.DeAn to RL_NhanVien;
-/
-
-grant update(NGAYSINH) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
-grant update(SODT) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
-grant update(DIACHI) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
-/
-
---grant RL_NhanVien to NV200;
-
-
-CREATE OR REPLACE PROCEDURE grantEmpRole
-AS
-    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE MANV NOT IN 
-        (SELECT grantee FROM DBA_ROLE_PRIVS
-            where granted_role = 'RL_NHANVIEN') AND VaiTro = 'Nhân viên');
-    STR VARCHAR(1000);
-    USR VARCHAR2(10);
-    BEGIN
-        OPEN CUR;
-        LOOP
-            FETCH CUR INTO USR;
-            EXIT WHEN CUR%NOTFOUND;
-            
-            STR := 'grant RL_NhanVien to '||USR;
-            EXECUTE IMMEDIATE (STR);
-        END LOOP;
-        dbms_output.put_line( 'All user are granted' );
-    END;
-/
-exec grantEmpRole;
-/
-
+-- Co quyen xem tat ca cac thuoc tinh trên quan he NHANVIEN va PHANCONG lien quan ?en chinh nhan vien do. 
+------------
 create OR REPLACE view Vw_NhanVienToNhanVien as
     select * from GOD.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
@@ -98,91 +13,14 @@ create view Vw_PhanCongToNhanVien as
 grant select on god.Vw_NhanVienToNhanVien to RL_NhanVien;
 grant select on god.Vw_PhanCongToNhanVien to RL_NhanVien;
 
---select * from god.Vw_NhanVienToNhanVien;
---update god.Vw_NhanVienToNhanVien set DiaChi = 'Th? S?n, Anh S?n, Ngh? An' where MANV = 'NV200';
 
--- to test policy function
-/*
-SET SERVEROUTPUT ON;
-DECLARE
-  l_output varchar2(1000);
-BEGIN
-  l_output := F_NhanVienCS1('god', 'NhanVien');
-  DBMS_OUTPUT.PUT_LINE('Result: ' || l_output);
-END;
-*/
--- to delete a policy
-/*
-begin
-DBMS_RLS.DROP_POLICY(
-    object_schema => 'god',
-    object_name => 'NHANVIEN',
-    policy_name => 'PC1_NhanVien'
-);
-end;
+--Co the sua trên các thu?c tính NGAYSINH, DIACHI, SODT liên quan ??n chính nhân viên ?ó. 
+grant update(NGAYSINH) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
+grant update(SODT) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
+grant update(DIACHI) on god.Vw_NhanVienToNhanVien to RL_NhanVien;
+/
 
-*/
-
-/*
-CREATE OR REPLACE PROCEDURE revokeEmpRole
-AS
-    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE MANV IN 
-        (SELECT grantee FROM DBA_ROLE_PRIVS
-            where granted_role = 'RL_NHANVIEN'));
-    STR VARCHAR(1000);
-    USR VARCHAR2(10);
-    BEGIN
-        OPEN CUR;
-        LOOP
-            FETCH CUR INTO USR;
-            EXIT WHEN CUR%NOTFOUND;
-            
-            STR := 'revoke RL_NhanVien from '||USR;
-            EXECUTE IMMEDIATE (STR);
-        END LOOP;
-        dbms_output.put_line( 'All user are revoked' );
-    END;
-
-exec revokeEmpRole
-
-*/
-
---create or replace function F_NhanVienCS1(P_Schema varchar2, P_Object varchar2)
---return varchar2
---as
---    userAcc varchar(20);
---begin
---    userAcc := SYS_CONTEXT('USERENV', 'SESSION_USER');
---    return 'MANV = '||''''||userAcc||'''';
---end;
-
--- to test policy function
-/*
-SET SERVEROUTPUT ON;
-DECLARE
-  l_output varchar2(1000);
-BEGIN
-  l_output := F_NhanVienCS1('god', 'NhanVien');
-  DBMS_OUTPUT.PUT_LINE('Result: ' || l_output);
-END;
-*/
-/*
-BEGIN
-    DBMS_RLS.add_policy(
-    object_schema => 'god',
-    object_name => 'NHANVIEN',
-    policy_name => 'PC1_NhanVien',
-    function_schema => 'god',
-    policy_function => 'F_NhanVienCS1'
-    );
-END;
-
-BEGIN
-    DBMS_RLS.add_policy(
-    object_schema => 'god',
-    object_name => 'PHANCONG',
-    policy_name => 'PC1_PhanCong',
-    policy_function => 'F_NhanVienCS1'
-    );
-END;
-*/
+--Co the xem d? li?u c?a toàn b? quan h? PHONGBAN và DEAN
+grant select on god.PhongBan to RL_NhanVien;
+grant select on god.DeAn to RL_NhanVien;
+/
