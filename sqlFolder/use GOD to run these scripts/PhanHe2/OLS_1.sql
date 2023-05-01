@@ -50,13 +50,13 @@ BEGIN
 		(policy_name    => 'ols_policy',
 		long_name      => 'Truong phong',
 		short_name     => 'TP',
-		level_num      => 8000);
+		level_num      => 6000);
 
 	sa_components.create_level
 		(policy_name    => 'ols_policy',
 		long_name      => 'Nhan vien',
 		short_name     => 'NV',
-		level_num      => 7000);
+		level_num      => 3000);
 		
 	--Tao compartments
 	sa_components.create_compartment
@@ -91,6 +91,8 @@ BEGIN
 		long_name      => 'Mien Nam',
 		short_name     => 'MN',
 		group_num      => 120);
+        
+        
      --label giam doc 
 	sa_label_admin.create_label
 		(policy_name    => 'ols_policy',
@@ -177,6 +179,7 @@ BEGIN
     sys.get_customer_label('GD1','GD');
     sys.get_customer_label('TP1','TP');
 END;
+
 CREATE USER GD1 IDENTIFIED BY 123; 
 grant create session to gd1;
 CREATE USER TP1 IDENTIFIED BY 123; 

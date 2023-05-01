@@ -14,25 +14,25 @@
 -- Co quyen xem tat ca cac thuoc tinh tr�n quan he NHANVIEN va PHANCONG lien quan ?en chinh nhan vien do. 
 ------------
 create OR REPLACE view Vw_NhanVien as
-    select * from GOD.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select * from ATBM.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
 
 create OR REPLACE view Vw_PhanCong as
-    select * from GOD.PhanCong  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select * from ATBM.PhanCong  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
-grant select on god.Vw_NhanVien to RL_NhanVien;
-grant select on god.Vw_PhanCong to RL_NhanVien;
+grant select on ATBM.Vw_NhanVien to RL_NhanVien;
+grant select on ATBM.Vw_PhanCong to RL_NhanVien;
 
 
 --Co the sua tren cac thuoc tinh NGAYSINH, DIACHI, SODT lien quan ?en chinh nh�n vi�n ?o. 
-grant update(NGAYSINH) on god.Vw_NhanVien to RL_NhanVien;
-grant update(SODT) on god.Vw_NhanVien to RL_NhanVien;
-grant update(DIACHI) on god.Vw_NhanVien to RL_NhanVien;
+grant update(NGAYSINH) on ATBM.Vw_NhanVien to RL_NhanVien;
+grant update(SODT) on ATBM.Vw_NhanVien to RL_NhanVien;
+grant update(DIACHI) on ATBM.Vw_NhanVien to RL_NhanVien;
 /
 
 --Co the xem du lieu caa toan bo quan he PHONGBAN va DEAN
-grant select on god.PhongBan to RL_NhanVien;
-grant select on god.DeAn to RL_NhanVien;
+grant select on ATBM.PhongBan to RL_NhanVien;
+grant select on ATBM.DeAn to RL_NhanVien;
 /
 
 
@@ -47,7 +47,7 @@ grant RL_NhanVien to RL_QuanLy;
 -- Duoc xem tat ca cac thuoc tinh, tru LUONG va PHUCAP trong quan he NHANVIEN do Q quan ly truc tiep .
 create or replace view PH2_View_QLy_XemNhanvien
 as
-    select MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG, LUONG, PHUCAP from GOD.NhanVien 
+    select MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG, LUONG, PHUCAP from ATBM.NhanVien 
     where MaNQL = SYS_CONTEXT('USERENV', 'SESSION_USER') or MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER')
 /
 
@@ -63,30 +63,30 @@ end;
 /
 BEGIN
     DBMS_RLS.add_policy(
-    object_schema => 'god',
+    object_schema => 'ATBM',
     object_name => 'PH2_View_QLy_XemNhanvien',
     policy_name => 'F_CS2QuanLy',
-    function_schema => 'god',
+    function_schema => 'ATBM',
     policy_function => 'F_ForCSPolicy',
     sec_relevant_cols => 'Luong, PhuCap',
     sec_relevant_cols_opt => dbms_rls.ALL_ROWS
     );
 END;
 /
-GRANT SELECT ON GOD.PH2_View_QLy_XemNhanvien TO RL_QUANLY;
+GRANT SELECT ON ATBM.PH2_View_QLy_XemNhanvien TO RL_QUANLY;
 
 -- Co the xem cac dong trong quan he PHANCONG lien quan den chinh Q va cac nhan vien N duyoc Q quan ly
 create or replace view PH2_View_Qly_XemPhanCong
 as
-    select * from GOD.phancong
+    select * from ATBM.phancong
     where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER') OR MANV IN (
         SELECT MANV 
-        FROM GOD.NHANVIEN 
+        FROM ATBM.NHANVIEN 
         WHERE MaNQL = SYS_CONTEXT('USERENV', 'SESSION_USER')
     );
 / 
 
-GRANT SELECT ON GOD.PH2_View_Qly_XemPhanCong TO RL_QUANLY;
+GRANT SELECT ON ATBM.PH2_View_Qly_XemPhanCong TO RL_QUANLY;
 
 -------------------------------------
 --- <<<< CS3 - Truong Phong >>>> ----
@@ -109,10 +109,10 @@ create OR REPLACE view Vw_TruongPhongToNhanVien as
 
 BEGIN
     DBMS_RLS.add_policy(
-    object_schema => 'god',
+    object_schema => 'ATBM',
     object_name => 'Vw_TruongPhongToNhanVien',
     policy_name => 'F_CS3TruongPhong',
-    function_schema => 'god',
+    function_schema => 'ATBM',
     policy_function => 'F_ForCSPolicy',
     sec_relevant_cols => 'Luong, PhuCap',
     sec_relevant_cols_opt => dbms_rls.ALL_ROWS
@@ -135,10 +135,10 @@ ON Vw_TruongPhongToPhanCong
 FOR EACH ROW
 DECLARE ckt int;
 BEGIN
-    select count(*) into ckt from god.Vw_TruongPhongToNhanVien where MaNV = :NEW.MaNV;
+    select count(*) into ckt from ATBM.Vw_TruongPhongToNhanVien where MaNV = :NEW.MaNV;
         
     if ckt > 0 then
-        insert into god.PhanCong values(:NEW.MANV, :NEW.MADA, :NEW.THOIGIAN);
+        insert into ATBM.PhanCong values(:NEW.MANV, :NEW.MADA, :NEW.THOIGIAN);
     else
         RAISE_APPLICATION_ERROR(-20001, 'You do not have permission to insert this employee');
     end if;
@@ -151,10 +151,10 @@ ON Vw_TruongPhongToPhanCong
 FOR EACH ROW
 DECLARE ckt int;
 BEGIN
-    select count(*) into ckt from god.Vw_TruongPhongToNhanVien where MaNV = :OLD.MaNV;
+    select count(*) into ckt from ATBM.Vw_TruongPhongToNhanVien where MaNV = :OLD.MaNV;
         
     if ckt > 0 then
-        delete from god.PhanCong where MaNV = :OLD.MaNV and MaDA = :Old.MaDA;
+        delete from ATBM.PhanCong where MaNV = :OLD.MaNV and MaDA = :Old.MaDA;
     else
         RAISE_APPLICATION_ERROR(-20001, 'You do not have permission to delete this employee');
     end if;
@@ -167,10 +167,10 @@ ON Vw_TruongPhongToPhanCong
 FOR EACH ROW
 DECLARE ckt int;
 BEGIN
-    select count(*) into ckt from god.Vw_TruongPhongToNhanVien where MaNV = :NEW.MaNV;
+    select count(*) into ckt from ATBM.Vw_TruongPhongToNhanVien where MaNV = :NEW.MaNV;
         
     if ckt > 0 then
-        update god.PhanCong set MaNV = :NEW.MANV, MaDA = :NEW.MADA, ThoiGian = :NEW.THOIGIAN
+        update ATBM.PhanCong set MaNV = :NEW.MANV, MaDA = :NEW.MADA, ThoiGian = :NEW.THOIGIAN
         where MaNV = :OLD.MANV and MaDA = :OLD.MADA;
     else
         RAISE_APPLICATION_ERROR(-20001, 'You do not have permission to update this employee');
@@ -192,11 +192,11 @@ grant update on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 grant RL_NhanVien to RL_TaiChinh;
 
 -- Xem tren toan bo quan he NHANVIEN & PHANCNG
-GRANT SELECT ON god.NHANVIEN TO RL_TAICHINH;
-GRANT SELECT ON god.phancong TO RL_TAICHINH;
+GRANT SELECT ON ATBM.NHANVIEN TO RL_TAICHINH;
+GRANT SELECT ON ATBM.phancong TO RL_TAICHINH;
 
 -- Co the sua tren thuoc tinh LUONG & PHUCAP (Thua hanh ban giam doc) -- can nhac
-GRANT UPDATE (LUONG, PHUCAP) ON god.NHANVIEN TO RL_TAICHINH;
+GRANT UPDATE (LUONG, PHUCAP) ON ATBM.NHANVIEN TO RL_TAICHINH;
 
 --------------------------------
 --- <<<< CS5 - Nhan su >>>> ----
@@ -206,7 +206,7 @@ GRANT UPDATE (LUONG, PHUCAP) ON god.NHANVIEN TO RL_TAICHINH;
 grant RL_NhanVien to RL_NhanSu;
 
 -- Duoc qwyen them, cap nhat tren quan he phong ban
-GRANT INSERT, UPDATE ON god.PHONGBAN TO RL_NHANSU;
+GRANT INSERT, UPDATE ON ATBM.PHONGBAN TO RL_NHANSU;
 
 
 /* 
@@ -224,7 +224,7 @@ SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT,
 	 DECODE( manv, sys_CONTEXT ('userenv', 'session_user'), LUONG, null) LUONG ,
 	 DECODE (manv, sys_CONTEXT ('userenv', 'session_user'), PHUCAP, null) PHUCAP, 
 	 VAITRO, MANQL, PHG FROM
-     god.NHANVIEN 
+     ATBM.NHANVIEN 
 /
 
 
@@ -234,7 +234,7 @@ ON NS_XEMNHANVIEN
 FOR EACH ROW 
 DECLARE
 BEGIN
-	insert into god.nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, null,null,:new.vaitro, :new.manql, :new.phg, '123');
+	insert into ATBM.nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, null,null,:new.vaitro, :new.manql, :new.phg, '123');
 END;
 /
 CREATE OR REPLACE TRIGGER TR_NHANSU_UPDATE_NHANVIEN 
@@ -246,14 +246,14 @@ BEGIN
     IF UPDATING('luong') OR UPDATING('phucap') THEN
 		RAISE_APPLICATION_ERROR(-20001, 'KHONG DUOC CAP NHAT LUONG VA PHU CAP');
     else
-        update god.nhanvien set tennv=:new.tennV , phai=:new.phai, ngaysinh=:new.ngaysinh, diachi=:new.diachi, sodt=:new.sodt, vaitro=:new.vaitro, manql=:new.manql, phg=:new.phg 
+        update ATBM.nhanvien set tennv=:new.tennV , phai=:new.phai, ngaysinh=:new.ngaysinh, diachi=:new.diachi, sodt=:new.sodt, vaitro=:new.vaitro, manql=:new.manql, phg=:new.phg 
         where :old.manv=manv;
     end if;
 END;
 /
-grant select on god.NS_XEMNHANVIEN  to RL_nhansu;
-grant insert on god.NS_XEMNHANVIEN  to RL_nhansu;
-grant update on god.NS_XEMNHANVIEN  to RL_nhansu;
+grant select on ATBM.NS_XEMNHANVIEN  to RL_nhansu;
+grant insert on ATBM.NS_XEMNHANVIEN  to RL_nhansu;
+grant update on ATBM.NS_XEMNHANVIEN  to RL_nhansu;
 -------------------------------------
 --- <<<< CS6 - Truong De An >>>> ----
 -------------------------------------
@@ -263,6 +263,6 @@ grant update on god.NS_XEMNHANVIEN  to RL_nhansu;
 grant RL_NhanVien to RL_TruongDeAn;
 
 -- Co quyen them, xoa, sua tren quan he DeAn
-GRANT INSERT, DELETE, UPDATE ON god.DEAN TO RL_TRUONGDEAN; 
+GRANT INSERT, DELETE, UPDATE ON ATBM.DEAN TO RL_TRUONGDEAN; 
 
 
