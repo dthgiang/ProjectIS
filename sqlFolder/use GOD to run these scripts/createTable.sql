@@ -1,3 +1,4 @@
+ALTER SESSION SET container = PDB1;
 /*
 Name:   Group 10
 Class:  20HTTT01
@@ -11,14 +12,15 @@ BEGIN
     FROM USER_TABLES WHERE TABLE_NAME = UPPER(p_TenTable);
     
     if checks > 0 then
-      EXECUTE IMMEDIATE 'DROP TABLE ' || p_TenTable;
+      EXECUTE IMMEDIATE 'DROP TABLE ' || p_TenTable ;
        dbms_output.put_line( 'Table droppped' );
     else 
         dbms_output.put_line( 'Table does not exist' );
     end if;
 END;
 /
-
+exec sp_XoaTable('save_key');
+/
 exec sp_XoaTable('PhanCong');
 /
 exec sp_XoaTable('DeAn');
@@ -27,20 +29,33 @@ exec sp_XoaTable('NhanVien');
 /
 exec sp_XoaTable('PhongBan');
 /
-
-CREATE  TABLE NhanVien (
+exec sp_XoaTable('TaiKhoan');
+/
+create table save_key(
     MaNV 		varchar(10) primary key,
+    key raw(255)
+); 
+/
+CREATE  TABLE NhanVien (
+    MaNV 		varchar2(10) primary key,
 	TenNV 	    varchar2(60) not null,
 	Phai 		varchar2(4),
 	NgaySinh 	date,
 	DiaChi 	    varchar2(100),
 	SoDT 		varchar(10) not null unique,
-	Luong 	    number,
-	PhuCap 	    number,
+	Luong 	    raw(255),
+	PhuCap 	    raw(255),
 	VaiTro 	    varchar2(50),
 	MaNQL 	    varchar(10),
 	PHG 		number,
-    password    varchar2(150)
+    username    varchar(50) unique
+);
+/
+
+
+CREATE  TABLE TaiKhoan (
+    Username    varchar(50) primary key,
+    Password    varchar(150)
 );
 /
 
@@ -108,7 +123,12 @@ ALTER TABLE PhanCong
 ADD CONSTRAINT FK_PC_NV
   FOREIGN KEY (MaNV)
   REFERENCES NhanVien(MaNV)  on delete set null;
-
+  
+--Username (NhanVien) --> username (TaiKhoan)
+ALTER TABLE TaiKhoan
+ADD CONSTRAINT FK_NV_TK
+  FOREIGN KEY (username)
+  REFERENCES TaiKhoan(username)  on delete cascade;
  
 --MaDA (PhanCong) --> MaDA (DeAn)
 ALTER TABLE PhanCong

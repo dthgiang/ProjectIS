@@ -11,7 +11,7 @@
 -- password of them: 123
 
 
--- Co quyen xem tat ca cac thuoc tinh tr�n quan he NHANVIEN va PHANCONG lien quan ?en chinh nhan vien do. 
+-- Co quyen xem tat ca cac thuoc tinh tr n quan he NHANVIEN va PHANCONG lien quan ?en chinh nhan vien do. 
 ------------
 create OR REPLACE view Vw_NhanVien as
     select * from GOD.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
@@ -24,7 +24,7 @@ grant select on god.Vw_NhanVien to RL_NhanVien;
 grant select on god.Vw_PhanCong to RL_NhanVien;
 
 
---Co the sua tren cac thuoc tinh NGAYSINH, DIACHI, SODT lien quan ?en chinh nh�n vi�n ?o. 
+--Co the sua tren cac thuoc tinh NGAYSINH, DIACHI, SODT lien quan ?en chinh nh n vi n ?o. 
 grant update(NGAYSINH) on god.Vw_NhanVien to RL_NhanVien;
 grant update(SODT) on god.Vw_NhanVien to RL_NhanVien;
 grant update(DIACHI) on god.Vw_NhanVien to RL_NhanVien;
@@ -191,12 +191,30 @@ grant update on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 -- Co quyen cua mot nhan vien
 grant RL_NhanVien to RL_TaiChinh;
 
--- Xem tren toan bo quan he NHANVIEN & PHANCNG
-GRANT SELECT ON god.NHANVIEN TO RL_TAICHINH;
+create or replace view view_nhanvien
+as
+    
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg from nhanvien;
+    
+GRANT SELECT ON view_nhanvien TO RL_TAICHINH;
 GRANT SELECT ON god.phancong TO RL_TAICHINH;
 
--- Co the sua tren thuoc tinh LUONG & PHUCAP (Thua hanh ban giam doc) -- can nhac
-GRANT UPDATE (LUONG, PHUCAP) ON god.NHANVIEN TO RL_TAICHINH;
+GRANT UPDATE (LUONG, PHUCAP) ON view_nhanvien TO RL_TAICHINH;
+SELECT * FROM view_nhanvien;
+
+CREATE OR REPLACE TRIGGER update_viewnhanvien
+INSTEAD OF UPDATE 
+ON view_nhanvien 
+FOR EACH ROW 
+BEGIN
+    IF :new.luong <> :old.luong THEN
+        UPDATE god.nhanvien SET luong = encryption(UTL_RAW.CAST_TO_RAW(:new.luong), manv) WHERE manv = :old.manv;
+    END IF;
+    
+    IF :new.phucap <> :old.phucap THEN
+        UPDATE god.nhanvien SET phucap = encryption(UTL_RAW.CAST_TO_RAW(:new.phucap), manv) WHERE manv = :old.manv;
+    END IF;
+END;
 
 --------------------------------
 --- <<<< CS5 - Nhan su >>>> ----
@@ -211,7 +229,7 @@ GRANT INSERT, UPDATE ON god.PHONGBAN TO RL_NHANSU;
 
 /* 
 Them, cap nhat du lieu tron quan he NHANVIEN voi gia tri cac truong LUONG, PHUCAP la mang gia tri mac dinh la NULL
-khong duocc xem LUONG, PHUCAP cua nguoi khac v� khong duoc cap nhat tren cac truong LUONG, PHUCAP. 
+khong duocc xem LUONG, PHUCAP cua nguoi khac v  khong duoc cap nhat tren cac truong LUONG, PHUCAP. 
 */
 
 ----------
