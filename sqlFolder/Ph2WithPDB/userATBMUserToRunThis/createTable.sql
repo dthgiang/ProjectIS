@@ -40,7 +40,9 @@ CREATE  TABLE NhanVien (
 	VaiTro 	    varchar2(50),
 	MaNQL 	    varchar(10),
 	PHG 		number,
-    password    varchar2(150)
+    password    varchar2(150),
+    KhuVuc      varchar2(30),
+    LinhVuc     varchar2(50)
 );
 /
 

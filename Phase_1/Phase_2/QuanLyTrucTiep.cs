@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Phase_1
 {
@@ -16,6 +17,8 @@ namespace Phase_1
         bool sidebarExpand;
         bool taskCollapsed;
         bool profileCollapsed;
+        string username;
+        OracleConnection connection;
 
         private void addUserControl(UserControl userControl)
         {
@@ -26,6 +29,12 @@ namespace Phase_1
         }
         public QuanLyTrucTiep()
         {
+            InitializeComponent();
+        }
+        public QuanLyTrucTiep(string user, OracleConnection con)
+        {
+            username = user;
+            connection = con;
             InitializeComponent();
         }
 

@@ -79,58 +79,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Detail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Detail.Designer.cs">
-      <DependentUpon>Detail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GiamDoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GiamDoc.Designer.cs">
-      <DependentUpon>GiamDoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GrantAndAlter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GrantAndAlter.Designer.cs">
-      <DependentUpon>GrantAndAlter.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanSu.cs">
+    <Compile Include="Phase_1\Detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanSu.Designer.cs">
+    <Compile Include="Phase_1\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_1\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_1\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_1\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_1\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_2\GiamDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_2\GiamDoc.Designer.cs">
+      <DependentUpon>GiamDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\GrantAndAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_1\GrantAndAlter.Designer.cs">
+      <DependentUpon>GrantAndAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_2\NhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_2\NhanSu.Designer.cs">
       <DependentUpon>NhanSu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -140,147 +140,147 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyTrucTiep.cs">
+    <Compile Include="Phase_2\QuanLyTrucTiep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyTrucTiep.Designer.cs">
+    <Compile Include="Phase_2\QuanLyTrucTiep.Designer.cs">
       <DependentUpon>QuanLyTrucTiep.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaiChinh.cs">
+    <Compile Include="Phase_2\TaiChinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TaiChinh.Designer.cs">
+    <Compile Include="Phase_2\TaiChinh.Designer.cs">
       <DependentUpon>TaiChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="TruongDeAn.cs">
+    <Compile Include="Phase_2\TruongDeAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TruongDeAn.Designer.cs">
+    <Compile Include="Phase_2\TruongDeAn.Designer.cs">
       <DependentUpon>TruongDeAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="TruongPhong.cs">
+    <Compile Include="Phase_2\TruongPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TruongPhong.Designer.cs">
+    <Compile Include="Phase_2\TruongPhong.Designer.cs">
       <DependentUpon>TruongPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\GiamDoc_XemDSNhanVien.cs">
+    <Compile Include="Phase_2\UserControls\GiamDoc_XemDSNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\GiamDoc_XemDSNhanVien.Designer.cs">
+    <Compile Include="Phase_2\UserControls\GiamDoc_XemDSNhanVien.Designer.cs">
       <DependentUpon>GiamDoc_XemDSNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\NhanSu_EditNhanVien.cs">
+    <Compile Include="Phase_2\UserControls\NhanSu_EditNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\NhanSu_EditNhanVien.Designer.cs">
+    <Compile Include="Phase_2\UserControls\NhanSu_EditNhanVien.Designer.cs">
       <DependentUpon>NhanSu_EditNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\NhanSu_EditPhongBan.cs">
+    <Compile Include="Phase_2\UserControls\NhanSu_EditPhongBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\NhanSu_EditPhongBan.Designer.cs">
+    <Compile Include="Phase_2\UserControls\NhanSu_EditPhongBan.Designer.cs">
       <DependentUpon>NhanSu_EditPhongBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PhanCongEveryone.cs">
+    <Compile Include="Phase_2\UserControls\PhanCongEveryone.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\PhanCongEveryone.Designer.cs">
+    <Compile Include="Phase_2\UserControls\PhanCongEveryone.Designer.cs">
       <DependentUpon>PhanCongEveryone.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_DSDeAn.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_DSDeAn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_DSDeAn.Designer.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_DSDeAn.Designer.cs">
       <DependentUpon>QLTrucTiep_DSDeAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_DSPhongBan.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_DSPhongBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_DSPhongBan.Designer.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_DSPhongBan.Designer.cs">
       <DependentUpon>QLTrucTiep_DSPhongBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_Task.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_Task.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_Task.Designer.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_Task.Designer.cs">
       <DependentUpon>QLTrucTiep_Task.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_TaskEmp.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_TaskEmp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_TaskEmp.Designer.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_TaskEmp.Designer.cs">
       <DependentUpon>QLTrucTiep_TaskEmp.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_ThongTinNV.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_ThongTinNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\QLTrucTiep_ThongTinNV.Designer.cs">
+    <Compile Include="Phase_2\UserControls\QLTrucTiep_ThongTinNV.Designer.cs">
       <DependentUpon>QLTrucTiep_ThongTinNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\SuaProfile.cs">
+    <Compile Include="Phase_2\UserControls\SuaProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\SuaProfile.Designer.cs">
+    <Compile Include="Phase_2\UserControls\SuaProfile.Designer.cs">
       <DependentUpon>SuaProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TaiChinh_DSNhanVien.cs">
+    <Compile Include="Phase_2\UserControls\TaiChinh_DSNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TaiChinh_DSNhanVien.Designer.cs">
+    <Compile Include="Phase_2\UserControls\TaiChinh_DSNhanVien.Designer.cs">
       <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TaiChinh_PhanCongEveryone.cs">
+    <Compile Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TaiChinh_PhanCongEveryone.Designer.cs">
+    <Compile Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.Designer.cs">
       <DependentUpon>TaiChinh_PhanCongEveryone.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TruongDeAn_CapNhatDeAn.cs">
+    <Compile Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TruongDeAn_CapNhatDeAn.Designer.cs">
+    <Compile Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.Designer.cs">
       <DependentUpon>TruongDeAn_CapNhatDeAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\TruongPhong_DSNV_HieuChinh.cs">
+    <Compile Include="Phase_2\UserControls\TruongPhong_DSNV_HieuChinh.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\TruongPhong_DSNV_HieuChinh.Designer.cs">
+    <Compile Include="Phase_2\UserControls\TruongPhong_DSNV_HieuChinh.Designer.cs">
       <DependentUpon>TruongPhong_DSNV_HieuChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\XemProfile.cs">
+    <Compile Include="Phase_2\UserControls\XemProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\XemProfile.Designer.cs">
+    <Compile Include="Phase_2\UserControls\XemProfile.Designer.cs">
       <DependentUpon>XemProfile.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Detail.resx">
-      <DependentUpon>Detail.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GiamDoc.resx">
-      <DependentUpon>GiamDoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GrantAndAlter.resx">
-      <DependentUpon>GrantAndAlter.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NhanSu.resx">
+    <EmbeddedResource Include="Phase_1\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\GiamDoc.resx">
+      <DependentUpon>GiamDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\GrantAndAlter.resx">
+      <DependentUpon>GrantAndAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\NhanSu.resx">
       <DependentUpon>NhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -288,61 +288,61 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyTrucTiep.resx">
+    <EmbeddedResource Include="Phase_2\QuanLyTrucTiep.resx">
       <DependentUpon>QuanLyTrucTiep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaiChinh.resx">
+    <EmbeddedResource Include="Phase_2\TaiChinh.resx">
       <DependentUpon>TaiChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TruongDeAn.resx">
+    <EmbeddedResource Include="Phase_2\TruongDeAn.resx">
       <DependentUpon>TruongDeAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TruongPhong.resx">
+    <EmbeddedResource Include="Phase_2\TruongPhong.resx">
       <DependentUpon>TruongPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\GiamDoc_XemDSNhanVien.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\GiamDoc_XemDSNhanVien.resx">
       <DependentUpon>GiamDoc_XemDSNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\NhanSu_EditNhanVien.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\NhanSu_EditNhanVien.resx">
       <DependentUpon>NhanSu_EditNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\NhanSu_EditPhongBan.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\NhanSu_EditPhongBan.resx">
       <DependentUpon>NhanSu_EditPhongBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\PhanCongEveryone.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\PhanCongEveryone.resx">
       <DependentUpon>PhanCongEveryone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLTrucTiep_DSDeAn.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\QLTrucTiep_DSDeAn.resx">
       <DependentUpon>QLTrucTiep_DSDeAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLTrucTiep_DSPhongBan.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\QLTrucTiep_DSPhongBan.resx">
       <DependentUpon>QLTrucTiep_DSPhongBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLTrucTiep_Task.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\QLTrucTiep_Task.resx">
       <DependentUpon>QLTrucTiep_Task.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLTrucTiep_TaskEmp.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\QLTrucTiep_TaskEmp.resx">
       <DependentUpon>QLTrucTiep_TaskEmp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\QLTrucTiep_ThongTinNV.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\QLTrucTiep_ThongTinNV.resx">
       <DependentUpon>QLTrucTiep_ThongTinNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\SuaProfile.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\SuaProfile.resx">
       <DependentUpon>SuaProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TaiChinh_DSNhanVien.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\TaiChinh_DSNhanVien.resx">
       <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TaiChinh_PhanCongEveryone.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.resx">
       <DependentUpon>TaiChinh_PhanCongEveryone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TruongDeAn_CapNhatDeAn.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.resx">
       <DependentUpon>TruongDeAn_CapNhatDeAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\TruongPhong_DSNV_HieuChinh.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\TruongPhong_DSNV_HieuChinh.resx">
       <DependentUpon>TruongPhong_DSNV_HieuChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\XemProfile.resx">
+    <EmbeddedResource Include="Phase_2\UserControls\XemProfile.resx">
       <DependentUpon>XemProfile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
@@ -433,6 +433,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\password_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseAccess\DatabaseAccess.csproj">
+      <Project>{2a9e182e-813a-4e26-919e-7ed6ce6d4913}</Project>
+      <Name>DatabaseAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

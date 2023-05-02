@@ -16,7 +16,7 @@ namespace Phase_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TruongPhong());
+            Application.Run(new Login());
         }
     }
 }

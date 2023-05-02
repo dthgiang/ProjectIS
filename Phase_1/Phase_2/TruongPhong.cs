@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Oracle.ManagedDataAccess.Client;
 namespace Phase_1
 {
     public partial class TruongPhong : Form
@@ -16,12 +16,22 @@ namespace Phase_1
         bool sidebarExpand;
         bool taskCollapsed;
         bool profileCollapsed;
+        string username;
+        OracleConnection connection;
+
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(userControl);
             userControl.BringToFront();
+        }
+
+        public TruongPhong(string user, OracleConnection con)
+        {
+            username = user;
+            connection = con;
+            InitializeComponent();
         }
         public TruongPhong()
         {
@@ -36,7 +46,7 @@ namespace Phase_1
 
         private void button21_Click(object sender, EventArgs e)
         {
-            TruongPhong_DSNV_HieuChinh ql = new TruongPhong_DSNV_HieuChinh();
+            TruongPhong_DSNV_HieuChinh ql = new TruongPhong_DSNV_HieuChinh(username, connection);
             addUserControl(ql);
         }
 

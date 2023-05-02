@@ -33,7 +33,7 @@ namespace DatabaseAccess
             try
             {
 
-                string connectionString = "TNS_ADMIN=C:\\Users\\ADMIN\\Oracle\network\admin;USER ID=" + username + ";password = " + password + ";DATA SOURCE=localhost:1521/QLDTPDB;PERSIST SECURITY INFO=True";
+                string connectionString = "Data Source=localhost:1521/QLDTPDB;Persist Security Info=True;User ID=" + username + ";Password=" + password;
                 connection = new OracleConnection(connectionString);
                 connection.Open();
                 return connection;
