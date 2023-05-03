@@ -3,15 +3,18 @@ alter session set container= qldtpdb;
 -- Cau 3a:
 CREATE USER ols_giamdoc IDENTIFIED BY 123; 
 CREATE USER ols_TPSXMN IDENTIFIED BY 123; 
+CREATE USER ols_TPSXMT IDENTIFIED BY 123; -- this user for test 3b
 CREATE USER ols_GDMienBac IDENTIFIED BY 123; 
-grant connect to ols_giamdoc, ols_TPSXMN, ols_GDMienBac;
-grant select on THONGBAO to ols_giamdoc, ols_TPSXMN, ols_GDMienBac ;
+grant connect to ols_giamdoc, ols_TPSXMN, ols_GDMienBac, OLS_TPSXMT;
+grant select on THONGBAO to ols_giamdoc, ols_TPSXMN, ols_GDMienBac, OLS_TPSXMT ;
 
 BEGIN 
     -- Giam doc co the doc duoc toan bo du lieu
     SA_USER_ADMIN.SET_USER_LABELS('region_policy','OLS_GIAMDOC','GD:SX,GC,MB:MB,MT,MN'); 
     -- Truong phong phu trach Linh vuc San Xuat o Mien Nam
     SA_USER_ADMIN.SET_USER_LABELS('region_policy','OLS_TPSXMN','TP:SX:MN'); 
+    SA_USER_ADMIN.SET_USER_LABELS('region_policy','OLS_TPSXMT','TP:SX:MT'); 
+
     -- Giam doc Mien bac co the xem duoc ma khong phan biet linh vuc
     SA_USER_ADMIN.SET_USER_LABELS('region_policy','OLS_GDMIENBAC','GD:SX,GC,MB:MB'); 
 END;
@@ -24,6 +27,9 @@ insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T2',
 
 -- Thong bao de test lai OLS
 insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T3 (Tat ca deu thay thong bao nay)', 'Nhan vien', null, null);
+
+-- Thong bao de test lai 2 
+insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T4 (Tat ca deu thay thong bao nay)', 'Nhan vien', null, null);
 
 CREATE OR REPLACE FUNCTION get_obj_label ( 
  p_role IN VARCHAR2, 

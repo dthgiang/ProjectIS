@@ -48,7 +48,9 @@ GRANT LBAC_DBA TO OLS_ADMIN;
 GRANT EXECUTE ON sa_sysdba TO OLS_ADMIN; 
 GRANT EXECUTE ON to_lbac_data_label TO OLS_ADMIN; 
 grant select, update, insert, delete on NHANVIEN to OLS_ADMIN;
+grant create user to OLS_ADMIN;
 
+grant connect to OLS_ADMIN with admin option;
 --GRANT region_policy_DBA TO OLS_ADMIN; 
 
 
