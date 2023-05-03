@@ -200,7 +200,7 @@ BEGIN
      policy_name => 'REGION_POLICY', 
      schema_name => 'OLS_ADMIN', 
      table_name => 'THONGBAO', 
-     table_options => 'READ_CONTROL,WRITE_CONTROL,CHECK_CONTROL', 
+     table_options => 'READ_CONTROL,WRITE_CONTROL,CHECK_CONTROL, LABEL_DEFAULT', --HIDE
      --label_function => 'OLS_ADMIN.get_object_label(:new.DOITUONG,:new.KHUVUC,:new.LINHVUC)', 
      predicate => NULL); 
 END; 
@@ -233,13 +233,13 @@ BEGIN
      END IF; 
 
     UPDATE THONGBAO 
-        SET region_label = get_object_label(obj,reg,fie) where id = p_n;     
-         dbms_output.put_line( getUserLabel(obj, req, fie );
+        SET region_label = get_obj_label(obj,reg,fie) where id = p_n;     
+         dbms_output.put_line( get_obj_label(obj, reg, fie));
 
     END LOOP; 
      CLOSE CUR; 
 END;
-
+/
 
 --- Proc thuc hien gan Label cho user trong bang Nhan Vien
 ----
@@ -282,25 +282,4 @@ exec setUserLabel;
 ----- Test area    -----
 ------------------------
 
-/*
-ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
-CREATE USER ols_giamdoc IDENTIFIED BY 123; 
-CREATE USER ols_TPSXMN IDENTIFIED BY 123; 
-CREATE USER ols_GDMienBac IDENTIFIED BY 123; 
-grant connect to ols_giamdoc, ols_TPSXMN, ols_GDMienBac;
-grant select on THONGBAO to ols_giamdoc, ols_TPSXMN, ols_GDMienBac ;
-*/
-BEGIN
-   SA_USER_ADMIN.SET_LEVELS (
-      policy_name  => 'region_policy',
-      user_name    => 'OLS_GIAMDOC', 
-      max_level    => 'GD:SX,GC,MB:MB,MT,MN',
-      min_level    => 'GD:SX,GC,MB:MB,MT,MN');
 
-   SA_USER_ADMIN.SET_LEVELS (
-      policy_name  => 'region_policy',
-      user_name    => 'ols_TPSXMN', 
-      max_level    => 'TP:SX,MB,GC:MB,MT,MN',
-      min_level    => 'TP:SX,MB,GC:MB,MT,MN');
-END;
-/
