@@ -140,5 +140,10 @@ namespace Phase_1
             TruongDeAn_CapNhatDeAn tda = new TruongDeAn_CapNhatDeAn();
             addUserControl(tda);
         }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -38,6 +38,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnTask = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -60,15 +64,17 @@
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnTask = new System.Windows.Forms.Button();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.btnThongBao = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -78,8 +84,8 @@
             this.panel13.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelThongTin.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -90,6 +96,7 @@
             this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.panel8);
+            this.sidebar.Controls.Add(this.panel22);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(273, 1080);
@@ -181,6 +188,58 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.btnTask);
+            this.panel4.Location = new System.Drawing.Point(3, 189);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(270, 57);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Location = new System.Drawing.Point(0, 54);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(270, 57);
+            this.panel5.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(-19, -5);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(308, 67);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "                  Home";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // btnTask
+            // 
+            this.btnTask.BackColor = System.Drawing.Color.Transparent;
+            this.btnTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            this.btnTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTask.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTask.ForeColor = System.Drawing.Color.White;
+            this.btnTask.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
+            this.btnTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTask.Location = new System.Drawing.Point(-19, -5);
+            this.btnTask.Name = "btnTask";
+            this.btnTask.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnTask.Size = new System.Drawing.Size(308, 67);
+            this.btnTask.TabIndex = 2;
+            this.btnTask.Text = "                  Task assignment";
+            this.btnTask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTask.UseVisualStyleBackColor = false;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             // 
             // panel6
             // 
@@ -444,57 +503,58 @@
             this.ProfileTimer.Interval = 10;
             this.ProfileTimer.Tick += new System.EventHandler(this.ProfileTimer_Tick);
             // 
-            // panel4
+            // panel22
             // 
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.btnTask);
-            this.panel4.Location = new System.Drawing.Point(3, 189);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(270, 57);
-            this.panel4.TabIndex = 1;
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.btnThongBao);
+            this.panel22.Location = new System.Drawing.Point(3, 378);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(270, 57);
+            this.panel22.TabIndex = 7;
             // 
-            // panel5
+            // panel23
             // 
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Location = new System.Drawing.Point(0, 54);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(270, 57);
-            this.panel5.TabIndex = 3;
+            this.panel23.Controls.Add(this.button22);
+            this.panel23.Location = new System.Drawing.Point(0, 54);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(270, 57);
+            this.panel23.TabIndex = 3;
             // 
-            // button3
+            // button22
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-19, -5);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(308, 67);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "                  Home";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.button22.BackColor = System.Drawing.Color.Transparent;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button22.Location = new System.Drawing.Point(-19, -5);
+            this.button22.Name = "button22";
+            this.button22.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button22.Size = new System.Drawing.Size(308, 67);
+            this.button22.TabIndex = 2;
+            this.button22.Text = "                  Home";
+            this.button22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button22.UseVisualStyleBackColor = false;
             // 
-            // btnTask
+            // btnThongBao
             // 
-            this.btnTask.BackColor = System.Drawing.Color.Transparent;
-            this.btnTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            this.btnTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTask.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTask.ForeColor = System.Drawing.Color.White;
-            this.btnTask.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
-            this.btnTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTask.Location = new System.Drawing.Point(-19, -5);
-            this.btnTask.Name = "btnTask";
-            this.btnTask.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnTask.Size = new System.Drawing.Size(308, 67);
-            this.btnTask.TabIndex = 2;
-            this.btnTask.Text = "                  Task assignment";
-            this.btnTask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTask.UseVisualStyleBackColor = false;
-            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
+            this.btnThongBao.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongBao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            this.btnThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThongBao.ForeColor = System.Drawing.Color.White;
+            this.btnThongBao.Image = global::Phase_1.Properties.Resources.icons8_notification_24;
+            this.btnThongBao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongBao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnThongBao.Location = new System.Drawing.Point(-19, -12);
+            this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnThongBao.Size = new System.Drawing.Size(308, 67);
+            this.btnThongBao.TabIndex = 2;
+            this.btnThongBao.Text = "                  Notification";
+            this.btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongBao.UseVisualStyleBackColor = false;
             // 
             // NhanVien
             // 
@@ -516,6 +576,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -526,8 +588,8 @@
             this.panel13.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -568,5 +630,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnTask;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button btnThongBao;
     }
 }

@@ -86,6 +86,10 @@
             this.button25 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.btnThongBao = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -113,6 +117,8 @@
             this.panel13.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelThongTin.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -124,6 +130,7 @@
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel10);
+            this.sidebar.Controls.Add(this.panel22);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(273, 1080);
@@ -810,6 +817,59 @@
             this.ProfileTimer.Interval = 10;
             this.ProfileTimer.Tick += new System.EventHandler(this.ProfileTimer_Tick);
             // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.btnThongBao);
+            this.panel22.Location = new System.Drawing.Point(3, 434);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(270, 57);
+            this.panel22.TabIndex = 7;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.button22);
+            this.panel23.Location = new System.Drawing.Point(0, 54);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(270, 57);
+            this.panel23.TabIndex = 3;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.Transparent;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button22.Location = new System.Drawing.Point(-19, -5);
+            this.button22.Name = "button22";
+            this.button22.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button22.Size = new System.Drawing.Size(308, 67);
+            this.button22.TabIndex = 2;
+            this.button22.Text = "                  Home";
+            this.button22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // btnThongBao
+            // 
+            this.btnThongBao.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongBao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            this.btnThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThongBao.ForeColor = System.Drawing.Color.White;
+            this.btnThongBao.Image = global::Phase_1.Properties.Resources.icons8_notification_24;
+            this.btnThongBao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongBao.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnThongBao.Location = new System.Drawing.Point(-19, -12);
+            this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnThongBao.Size = new System.Drawing.Size(308, 67);
+            this.btnThongBao.TabIndex = 2;
+            this.btnThongBao.Text = "                  Notification";
+            this.btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongBao.UseVisualStyleBackColor = false;
+            // 
             // QuanLyTrucTiep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -853,6 +913,8 @@
             this.panel13.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -915,5 +977,9 @@
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer ProfileTimer;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button btnThongBao;
     }
 }
