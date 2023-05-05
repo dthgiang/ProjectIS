@@ -109,7 +109,7 @@ namespace Phase_1
                     }
                 case "Tai chinh":
                     {
-                        TruongPhong l = new TruongPhong(user, connection);
+                        TaiChinh l = new TaiChinh(user, connection);
                         l.Show();
                         break;
                     }

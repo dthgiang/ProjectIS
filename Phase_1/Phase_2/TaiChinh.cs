@@ -20,6 +20,7 @@ namespace Phase_1
         bool taskCollapsed;
         bool profileCollapsed;
         OracleConnection connection = null;
+        String username;
 
         private void addUserControl(UserControl userControl)
         {
@@ -32,10 +33,11 @@ namespace Phase_1
         {
             InitializeComponent();
         }
-        public TaiChinh(OracleConnection connection)
+        public TaiChinh(string user, OracleConnection connection)
         {
             InitializeComponent();
             this.connection = connection;
+            this.username = user;
         }
         private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
@@ -95,7 +97,7 @@ namespace Phase_1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            PhanCongEveryone ql = new PhanCongEveryone();
+            PhanCongEveryone ql = new PhanCongEveryone(username, connection);
             addUserControl(ql);
         }
 
@@ -113,7 +115,7 @@ namespace Phase_1
 
         private void button10_Click(object sender, EventArgs e)
         {
-            TaiChinh_DSNhanVien ql = new TaiChinh_DSNhanVien();
+            TaiChinh_DSNhanVien ql = new TaiChinh_DSNhanVien(username, connection);
             addUserControl(ql);
         }
 

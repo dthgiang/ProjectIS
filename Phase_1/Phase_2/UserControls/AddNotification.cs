@@ -251,6 +251,6 @@ namespace Phase_1.UserControls
             return label;
         }
 
-       
+
     }
 }
