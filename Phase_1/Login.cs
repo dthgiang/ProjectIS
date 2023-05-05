@@ -119,6 +119,12 @@ namespace Phase_1
                         l.Show();
                         break;
                     }
+                case "Truong de an":
+                    {
+                        TruongDeAn l = new TruongDeAn(user, connection);
+                        l.Show();
+                        break;
+                    }
                 default:
                     { // default se la nhan vien
                         TruongPhong l = new TruongPhong(user, connection);

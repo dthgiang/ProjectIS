@@ -75,7 +75,7 @@ CREATE TABLE PhanCong (
 -- Tao bang PhanCong
 CREATE TABLE DeAn (
 	MaDA 		varchar(10) primary key,
-	TenDA 	    varchar2(60) not null,
+	TenDA 	    varchar2(60) ,
 	NgayBD 	    date,
 	Phong 	    number,
     TruongDeAn  varchar(10)

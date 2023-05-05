@@ -1,4 +1,5 @@
-﻿using Phase_1.UserControls;
+﻿using Oracle.ManagedDataAccess.Client;
+using Phase_1.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace Phase_1
     {
         bool sidebarExpand;
         bool profileCollapsed;
+        OracleConnection connection = null;
+        String username;
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -27,7 +30,12 @@ namespace Phase_1
         {
             InitializeComponent();
         }
-
+        public TruongDeAn(string user, OracleConnection connection)
+        {
+            InitializeComponent();
+            this.connection = connection;
+            this.username = user;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             QLTrucTiep_Task tda = new QLTrucTiep_Task();
@@ -137,7 +145,7 @@ namespace Phase_1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            TruongDeAn_CapNhatDeAn tda = new TruongDeAn_CapNhatDeAn();
+            TruongDeAn_CapNhatDeAn tda = new TruongDeAn_CapNhatDeAn(username, connection);
             addUserControl(tda);
         }
 
