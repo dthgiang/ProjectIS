@@ -1,3 +1,7 @@
+ALTER SESSION SET container = QLDTPDB;
+
+/
+
 -----------------------
 -- CS1 ----------------
 -----------------------
@@ -188,53 +192,56 @@ grant update on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 --- <<<< CS4 - Tai Chinh >>>> ----
 ----------------------------------
 
--- Co quyen cua mot nhan vien
-grant RL_NhanVien to RL_TaiChinh;
+create or replace view view_nhanvien
+as
+    
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg from nhanvien;
+/   
+GRANT SELECT ON view_nhanvien TO RL_TAICHINH;
+GRANT SELECT ON phancong TO RL_TAICHINH;
+GRANT UPDATE (LUONG, PHUCAP) ON view_nhanvien TO RL_TAICHINH;
 
--- Xem tren toan bo quan he NHANVIEN & PHANCNG
-GRANT SELECT ON ATBM.NHANVIEN TO RL_TAICHINH;
-GRANT SELECT ON ATBM.phancong TO RL_TAICHINH;
+/
+CREATE OR REPLACE TRIGGER update_viewnhanvien
+INSTEAD OF UPDATE 
+ON view_nhanvien 
+FOR EACH ROW 
+BEGIN
+    IF :new.luong <> :old.luong THEN
+        UPDATE nhanvien SET luong = encryption(UTL_RAW.CAST_TO_RAW(:new.luong), manv) WHERE manv = :old.manv;
+    END IF;
+    
+    IF :new.phucap <> :old.phucap THEN
+        UPDATE nhanvien SET phucap = encryption(UTL_RAW.CAST_TO_RAW(:new.phucap), manv) WHERE manv = :old.manv;
+    END IF;
+END;
 
--- Co the sua tren thuoc tinh LUONG & PHUCAP (Thua hanh ban giam doc) -- can nhac
-GRANT UPDATE (LUONG, PHUCAP) ON ATBM.NHANVIEN TO RL_TAICHINH;
+/
+SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE = 'RL_TAICHINH';
 
 --------------------------------
 --- <<<< CS5 - Nhan su >>>> ----
 --------------------------------
 
--- Co quyen cua 1 nhan vien
-grant RL_NhanVien to RL_NhanSu;
-
--- Duoc qwyen them, cap nhat tren quan he phong ban
-GRANT INSERT, UPDATE ON ATBM.PHONGBAN TO RL_NHANSU;
-
-
-/* 
-Them, cap nhat du lieu tron quan he NHANVIEN voi gia tri cac truong LUONG, PHUCAP la mang gia tri mac dinh la NULL
-khong duocc xem LUONG, PHUCAP cua nguoi khac v� khong duoc cap nhat tren cac truong LUONG, PHUCAP. 
-*/
-
-----------
---->>>> tai sao cs2, 3 su dung VPD ma cs5 dung DECODE ????????
-----------
+--2 -
+GRANT INSERT, UPDATE ON PHONGBAN TO RL_NHANSU;
+--3
 /
 CREATE OR REPLACE VIEW NS_XEMNHANVIEN 
 AS
 SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, 
 	 DECODE( manv, sys_CONTEXT ('userenv', 'session_user'), LUONG, null) LUONG ,
 	 DECODE (manv, sys_CONTEXT ('userenv', 'session_user'), PHUCAP, null) PHUCAP, 
-	 VAITRO, MANQL, PHG FROM
-     ATBM.NHANVIEN 
+	 VAITRO, MANQL, PHG, khuvuc, linhvuc FROM
+     NHANVIEN 
 /
-
-
 CREATE OR REPLACE TRIGGER TR_NHANSU_INSERT_NHANVIEN
 INSTEAD OF INSERT 
 ON NS_XEMNHANVIEN 
 FOR EACH ROW 
 DECLARE
 BEGIN
-	insert into ATBM.nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, null,null,:new.vaitro, :new.manql, :new.phg, '123');
+	insert into nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, null,null,:new.vaitro, :new.manql, :new.phg,'123', :new.khuvuc, :new.linhvuc);
 END;
 /
 CREATE OR REPLACE TRIGGER TR_NHANSU_UPDATE_NHANVIEN 
@@ -246,19 +253,18 @@ BEGIN
     IF UPDATING('luong') OR UPDATING('phucap') THEN
 		RAISE_APPLICATION_ERROR(-20001, 'KHONG DUOC CAP NHAT LUONG VA PHU CAP');
     else
-        update ATBM.nhanvien set tennv=:new.tennV , phai=:new.phai, ngaysinh=:new.ngaysinh, diachi=:new.diachi, sodt=:new.sodt, vaitro=:new.vaitro, manql=:new.manql, phg=:new.phg 
+        update nhanvien set tennv=:new.tennV , phai=:new.phai, ngaysinh=:new.ngaysinh, diachi=:new.diachi, sodt=:new.sodt, vaitro=:new.vaitro, manql=:new.manql, phg=:new.phg, khuvuc=:new.khuvuc, linhvuc=:new.linhvuc
         where :old.manv=manv;
     end if;
 END;
 /
-grant select on ATBM.NS_XEMNHANVIEN  to RL_nhansu;
-grant insert on ATBM.NS_XEMNHANVIEN  to RL_nhansu;
-grant update on ATBM.NS_XEMNHANVIEN  to RL_nhansu;
+grant select on NS_XEMNHANVIEN  to RL_nhansu;
+grant insert on NS_XEMNHANVIEN  to RL_nhansu;
+grant update on NS_XEMNHANVIEN  to RL_nhansu;
+
 -------------------------------------
 --- <<<< CS6 - Truong De An >>>> ----
 -------------------------------------
-
-
 -- Co quyen cua 1 nhan vien
 grant RL_NhanVien to RL_TruongDeAn;
 
