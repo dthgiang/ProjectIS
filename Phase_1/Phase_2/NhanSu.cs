@@ -108,8 +108,7 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NhanSu_EditPhongBan nhansu = new NhanSu_EditPhongBan(username, connection);
-            addUserControl(nhansu);
+
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -153,7 +152,7 @@ namespace Phase_1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            NhanSu_EditPhongBan ql = new NhanSu_EditPhongBan();
+            NhanSu_EditPhongBan ql = new NhanSu_EditPhongBan(username, connection);
             addUserControl(ql);
         }
 
@@ -165,7 +164,7 @@ namespace Phase_1
 
         private void button10_Click(object sender, EventArgs e)
         {
-            NhanSu_EditNhanVien ql = new NhanSu_EditNhanVien();
+            NhanSu_EditNhanVien ql = new NhanSu_EditNhanVien(username, connection);
             addUserControl(ql);
         }
 

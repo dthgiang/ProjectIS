@@ -227,11 +227,12 @@ GRANT RL_NHANVIEN TO RL_NHANSU;
 GRANT INSERT, UPDATE ON PHONGBAN TO RL_NHANSU;
 --3
 /
+
 CREATE OR REPLACE VIEW NS_XEMNHANVIEN 
 AS
 SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, 
-	 DECODE( manv, sys_CONTEXT ('userenv', 'session_user'), LUONG, null) LUONG ,
-	 DECODE (manv, sys_CONTEXT ('userenv', 'session_user'), PHUCAP, null) PHUCAP, 
+	 DECODE( manv, sys_CONTEXT ('userenv', 'session_user'), decryption(luong, manv) , null) LUONG ,
+	 DECODE (manv, sys_CONTEXT ('userenv', 'session_user'), decryption(PHUCAP, manv) , null) PHUCAP, 
 	 VAITRO, MANQL, PHG, khuvuc, linhvuc FROM
      NHANVIEN 
 /
@@ -241,7 +242,7 @@ ON NS_XEMNHANVIEN
 FOR EACH ROW 
 DECLARE
 BEGIN
-	insert into nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, null,null,:new.vaitro, :new.manql, :new.phg,'123', :new.khuvuc, :new.linhvuc);
+	insert into nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, '0','0',:new.vaitro, :new.manql, :new.phg,'123', :new.khuvuc, :new.linhvuc);
 END;
 /
 CREATE OR REPLACE TRIGGER TR_NHANSU_UPDATE_NHANVIEN 
@@ -260,6 +261,8 @@ END;
 /
 grant select on NS_XEMNHANVIEN  to RL_NHANSU;
 grant insert on NS_XEMNHANVIEN  to RL_NHANSU;
+grant insert on NS_XEMNHANVIEN to RL_NHANSU;
+
 grant update on NS_XEMNHANVIEN  to RL_NHANSU;
 
 -------------------------------------

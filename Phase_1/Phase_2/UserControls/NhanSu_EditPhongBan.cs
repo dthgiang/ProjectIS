@@ -38,7 +38,6 @@ namespace Phase_1.UserControls
             dataGridView1.ReadOnly = false;
 
             dataGridView1.CellEndEdit += new DataGridViewCellEventHandler(dataGridView1_CellValueChanged);
-            //dataGridView1.CellEndEdit += new DataGridViewCellEventHandler(dataGridView1_RowsAdded);
 
         }
         // Xử lý sự kiện CellValueChanged của datagridview để lưu dữ liệu khi người dùng chỉnh sửa

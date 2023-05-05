@@ -35,11 +35,11 @@ create table save_key(
 /
 CREATE  TABLE NhanVien (
     MaNV 		varchar(10) primary key,
-	TenNV 	    varchar2(60) not null,
+	TenNV 	    varchar2(60) ,
 	Phai 		varchar2(4),
 	NgaySinh 	date,
 	DiaChi 	    varchar2(100),
-	SoDT 		varchar(10) not null unique,
+	SoDT 		varchar(10)  unique,
 	Luong 	    raw(255),
 	PhuCap 	    raw(255),
 	VaiTro 	    varchar2(50),
