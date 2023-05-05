@@ -189,5 +189,11 @@ namespace Phase_1
             QLTrucTiep_ThongTinNV ql = new QLTrucTiep_ThongTinNV();
             addUserControl(ql);
         }
+
+        private void notificationButton_Click(object sender, EventArgs e)
+        {
+            Notification nt = new Notification(username, connection, panelContainer);
+            addUserControl(nt);
+        }
     }
 }

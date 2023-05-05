@@ -154,9 +154,9 @@ drop table ThongBao;
 CREATE TABLE ThongBao ( 
 id NUMBER(10) GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), 
 NoiDung VARCHAR2(300), 
-DoiTuong VARCHAR2(30), 
-LinhVuc VARCHAR2(30), 
-KhuVuc VARCHAR2(20),
+DoiTuong VARCHAR2(100), 
+LinhVuc VARCHAR2(100), 
+KhuVuc VARCHAR2(100),
 CONSTRAINT ThongBao_pk PRIMARY KEY (id)
 );
 /
