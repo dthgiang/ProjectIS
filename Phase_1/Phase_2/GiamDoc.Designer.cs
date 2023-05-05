@@ -74,6 +74,9 @@
             this.button25 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button13 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -86,6 +89,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.btnThongBao = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -111,6 +115,8 @@
             this.panel13.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelThongTin.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.SuspendLayout();
@@ -124,6 +130,7 @@
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel10);
+            this.sidebar.Controls.Add(this.panel22);
             resources.ApplyResources(this.sidebar, "sidebar");
             this.sidebar.Name = "sidebar";
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
@@ -441,6 +448,27 @@
             this.ProfileTimer.Interval = 10;
             this.ProfileTimer.Tick += new System.EventHandler(this.ProfileTimer_Tick);
             // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.btnThongBao);
+            resources.ApplyResources(this.panel22, "panel22");
+            this.panel22.Name = "panel22";
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.button22);
+            resources.ApplyResources(this.panel23, "panel23");
+            this.panel23.Name = "panel23";
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button22, "button22");
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.Name = "button22";
+            this.button22.UseVisualStyleBackColor = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -561,6 +589,17 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // btnThongBao
+            // 
+            this.btnThongBao.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongBao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.btnThongBao, "btnThongBao");
+            this.btnThongBao.ForeColor = System.Drawing.Color.White;
+            this.btnThongBao.Image = global::Phase_1.Properties.Resources.icons8_notification_24;
+            this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.UseVisualStyleBackColor = false;
+            this.btnThongBao.Click += new System.EventHandler(this.button10_Click);
+            // 
             // GiamDoc
             // 
             resources.ApplyResources(this, "$this");
@@ -598,6 +637,8 @@
             this.panel13.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.ResumeLayout(false);
@@ -662,5 +703,9 @@
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer ProfileTimer;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button btnThongBao;
     }
 }

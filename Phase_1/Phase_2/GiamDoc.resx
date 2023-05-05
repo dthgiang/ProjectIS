@@ -1362,6 +1362,132 @@
   <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="button22.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="button22.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="button22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-19, -5</value>
+  </data>
+  <data name="button22.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>30, 0, 0, 0</value>
+  </data>
+  <data name="button22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 67</value>
+  </data>
+  <data name="button22.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="button22.Text" xml:space="preserve">
+    <value>                  Home</value>
+  </data>
+  <data name="button22.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;button22.Name" xml:space="preserve">
+    <value>button22</value>
+  </data>
+  <data name="&gt;&gt;button22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button22.Parent" xml:space="preserve">
+    <value>panel23</value>
+  </data>
+  <data name="&gt;&gt;button22.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 54</value>
+  </data>
+  <data name="panel23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 57</value>
+  </data>
+  <data name="panel23.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel23.Name" xml:space="preserve">
+    <value>panel23</value>
+  </data>
+  <data name="&gt;&gt;panel23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel23.Parent" xml:space="preserve">
+    <value>panel22</value>
+  </data>
+  <data name="&gt;&gt;panel23.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnThongBao.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnThongBao.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="btnThongBao.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnThongBao.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnThongBao.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-19, -12</value>
+  </data>
+  <data name="btnThongBao.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>30, 0, 0, 0</value>
+  </data>
+  <data name="btnThongBao.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 67</value>
+  </data>
+  <data name="btnThongBao.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnThongBao.Text" xml:space="preserve">
+    <value>                  Notification</value>
+  </data>
+  <data name="btnThongBao.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnThongBao.Name" xml:space="preserve">
+    <value>btnThongBao</value>
+  </data>
+  <data name="&gt;&gt;btnThongBao.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnThongBao.Parent" xml:space="preserve">
+    <value>panel22</value>
+  </data>
+  <data name="&gt;&gt;btnThongBao.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 434</value>
+  </data>
+  <data name="panel22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 57</value>
+  </data>
+  <data name="panel22.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;panel22.Name" xml:space="preserve">
+    <value>panel22</value>
+  </data>
+  <data name="&gt;&gt;panel22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel22.Parent" xml:space="preserve">
+    <value>sidebar</value>
+  </data>
+  <data name="&gt;&gt;panel22.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="sidebar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -3323,9 +3449,6 @@
         3zqhnZe8GTN/iGx6AbNjF+QF8sJnh3vPPp5NAF/4CeHw++GSr4A7/hjd3MS7YQAIVAW6cQq3fhJbbKIm
         wXdn8VP7kd40AIaUrLsA5RB59bPl/bOPz8/j/wMYzBytUtPM6AAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

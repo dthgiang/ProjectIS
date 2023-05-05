@@ -153,6 +153,16 @@ namespace Phase_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_notification_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notification-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_organization_chart_people_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-organization-chart-people-24", resourceCulture);
