@@ -33,9 +33,11 @@
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.TaskContainer = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -44,6 +46,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
             this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -51,22 +54,35 @@
             this.button17 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.btnThongBao = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.TaskTimer = new System.Windows.Forms.Timer(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelThongTin = new System.Windows.Forms.Panel();
@@ -74,24 +90,13 @@
             this.button25 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.button22 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.menuButton = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.btnThongBao = new System.Windows.Forms.Button();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.button26 = new System.Windows.Forms.Button();
+            this.btnAudit = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.TaskContainer.SuspendLayout();
@@ -111,14 +116,15 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelThongTin.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -131,6 +137,7 @@
             this.sidebar.Controls.Add(this.panel8);
             this.sidebar.Controls.Add(this.panel10);
             this.sidebar.Controls.Add(this.panel22);
+            this.sidebar.Controls.Add(this.panel25);
             resources.ApplyResources(this.sidebar, "sidebar");
             this.sidebar.Name = "sidebar";
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
@@ -147,6 +154,15 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
+            // 
+            // menuButton
+            // 
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::Phase_1.Properties.Resources.menu;
+            resources.ApplyResources(this.menuButton, "menuButton");
+            this.menuButton.Name = "menuButton";
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // panel1
             // 
@@ -168,6 +184,17 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Phase_1.Properties.Resources.icons8_home_page_24;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TaskContainer
             // 
@@ -231,6 +258,16 @@
             this.button20.Name = "button20";
             this.button20.UseVisualStyleBackColor = false;
             // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.Transparent;
+            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(134)))), ((int)(((byte)(173)))));
+            resources.ApplyResources(this.button21, "button21");
+            this.button21.ForeColor = System.Drawing.Color.White;
+            this.button21.Image = global::Phase_1.Properties.Resources.icons8_full_stop_24;
+            this.button21.Name = "button21";
+            this.button21.UseVisualStyleBackColor = false;
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(74)))), ((int)(((byte)(133)))));
@@ -284,6 +321,16 @@
             this.button14.Name = "button14";
             this.button14.UseVisualStyleBackColor = false;
             // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(134)))), ((int)(((byte)(173)))));
+            resources.ApplyResources(this.button15, "button15");
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Image = global::Phase_1.Properties.Resources.icons8_full_stop_24;
+            this.button15.Name = "button15";
+            this.button15.UseVisualStyleBackColor = false;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel5);
@@ -304,6 +351,17 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
@@ -326,6 +384,17 @@
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = global::Phase_1.Properties.Resources.icons8_organization_chart_people_24;
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.panel9);
@@ -346,6 +415,17 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Name = "button7";
             this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = global::Phase_1.Properties.Resources.icons8_project_24;
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel10
             // 
@@ -368,6 +448,49 @@
             this.button9.Name = "button9";
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = global::Phase_1.Properties.Resources.icons8_staff_24;
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.panel23);
+            this.panel22.Controls.Add(this.btnThongBao);
+            resources.ApplyResources(this.panel22, "panel22");
+            this.panel22.Name = "panel22";
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.button22);
+            resources.ApplyResources(this.panel23, "panel23");
+            this.panel23.Name = "panel23";
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button22, "button22");
+            this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.Name = "button22";
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // btnThongBao
+            // 
+            this.btnThongBao.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongBao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.btnThongBao, "btnThongBao");
+            this.btnThongBao.ForeColor = System.Drawing.Color.White;
+            this.btnThongBao.Image = global::Phase_1.Properties.Resources.icons8_notification_24;
+            this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.UseVisualStyleBackColor = false;
+            this.btnThongBao.Click += new System.EventHandler(this.button10_Click);
+            // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
@@ -381,6 +504,15 @@
             resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Phase_1.Properties.Resources.icons8_user_30;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.button13);
@@ -390,10 +522,37 @@
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
+            // button13
+            // 
+            this.button13.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button13, "button13");
+            this.button13.Image = global::Phase_1.Properties.Resources.minimize;
+            this.button13.Name = "button13";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // panel24
             // 
             resources.ApplyResources(this.panel24, "panel24");
             this.panel24.Name = "panel24";
+            // 
+            // button11
+            // 
+            this.button11.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button11, "button11");
+            this.button11.Image = global::Phase_1.Properties.Resources.close;
+            this.button11.Name = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button12, "button12");
+            this.button12.Image = global::Phase_1.Properties.Resources.maximize;
+            this.button12.Name = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // TaskTimer
             // 
@@ -448,157 +607,37 @@
             this.ProfileTimer.Interval = 10;
             this.ProfileTimer.Tick += new System.EventHandler(this.ProfileTimer_Tick);
             // 
-            // panel22
+            // panel25
             // 
-            this.panel22.Controls.Add(this.panel23);
-            this.panel22.Controls.Add(this.btnThongBao);
-            resources.ApplyResources(this.panel22, "panel22");
-            this.panel22.Name = "panel22";
+            this.panel25.Controls.Add(this.panel26);
+            this.panel25.Controls.Add(this.btnAudit);
+            resources.ApplyResources(this.panel25, "panel25");
+            this.panel25.Name = "panel25";
             // 
-            // panel23
+            // panel26
             // 
-            this.panel23.Controls.Add(this.button22);
-            resources.ApplyResources(this.panel23, "panel23");
-            this.panel23.Name = "panel23";
+            this.panel26.Controls.Add(this.button26);
+            resources.ApplyResources(this.panel26, "panel26");
+            this.panel26.Name = "panel26";
             // 
-            // button22
+            // button26
             // 
-            this.button22.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button22, "button22");
-            this.button22.ForeColor = System.Drawing.Color.White;
-            this.button22.Name = "button22";
-            this.button22.UseVisualStyleBackColor = false;
+            this.button26.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button26, "button26");
+            this.button26.ForeColor = System.Drawing.Color.White;
+            this.button26.Name = "button26";
+            this.button26.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnAudit
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Phase_1.Properties.Resources.icons8_user_30;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button13
-            // 
-            this.button13.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button13, "button13");
-            this.button13.Image = global::Phase_1.Properties.Resources.minimize;
-            this.button13.Name = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button11
-            // 
-            this.button11.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button11, "button11");
-            this.button11.Image = global::Phase_1.Properties.Resources.close;
-            this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button12, "button12");
-            this.button12.Image = global::Phase_1.Properties.Resources.maximize;
-            this.button12.Name = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // menuButton
-            // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::Phase_1.Properties.Resources.menu;
-            resources.ApplyResources(this.menuButton, "menuButton");
-            this.menuButton.Name = "menuButton";
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Phase_1.Properties.Resources.icons8_home_page_24;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.Transparent;
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(134)))), ((int)(((byte)(173)))));
-            resources.ApplyResources(this.button21, "button21");
-            this.button21.ForeColor = System.Drawing.Color.White;
-            this.button21.Image = global::Phase_1.Properties.Resources.icons8_full_stop_24;
-            this.button21.Name = "button21";
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(134)))), ((int)(((byte)(173)))));
-            resources.ApplyResources(this.button15, "button15");
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Image = global::Phase_1.Properties.Resources.icons8_full_stop_24;
-            this.button15.Name = "button15";
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::Phase_1.Properties.Resources.icons8_organization_chart_people_24;
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.button8, "button8");
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::Phase_1.Properties.Resources.icons8_project_24;
-            this.button8.Name = "button8";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.button10, "button10");
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = global::Phase_1.Properties.Resources.icons8_staff_24;
-            this.button10.Name = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // btnThongBao
-            // 
-            this.btnThongBao.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongBao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.btnThongBao, "btnThongBao");
-            this.btnThongBao.ForeColor = System.Drawing.Color.White;
-            this.btnThongBao.Image = global::Phase_1.Properties.Resources.icons8_notification_24;
-            this.btnThongBao.Name = "btnThongBao";
-            this.btnThongBao.UseVisualStyleBackColor = false;
-            this.btnThongBao.Click += new System.EventHandler(this.button10_Click);
+            this.btnAudit.BackColor = System.Drawing.Color.Transparent;
+            this.btnAudit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.btnAudit, "btnAudit");
+            this.btnAudit.ForeColor = System.Drawing.Color.White;
+            this.btnAudit.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
+            this.btnAudit.Name = "btnAudit";
+            this.btnAudit.UseVisualStyleBackColor = false;
+            this.btnAudit.Click += new System.EventHandler(this.btnAudit_Click);
             // 
             // GiamDoc
             // 
@@ -613,6 +652,7 @@
             this.sidebar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.TaskContainer.ResumeLayout(false);
@@ -632,15 +672,16 @@
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -707,5 +748,9 @@
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button btnThongBao;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button btnAudit;
     }
 }

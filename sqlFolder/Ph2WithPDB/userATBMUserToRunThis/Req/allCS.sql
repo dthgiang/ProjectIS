@@ -272,6 +272,6 @@ grant update on NS_XEMNHANVIEN  to RL_NHANSU;
 grant RL_NhanVien to RL_TruongDeAn;
 
 -- Co quyen them, xoa, sua tren quan he DeAn
-GRANT INSERT, DELETE, UPDATE ON ATBM.DEAN TO RL_TRUONGDEAN; 
+GRANT SELECT, INSERT, DELETE, UPDATE ON ATBM.DEAN TO RL_TRUONGDEAN; 
 
 

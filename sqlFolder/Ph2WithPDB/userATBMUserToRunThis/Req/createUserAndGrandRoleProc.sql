@@ -11,6 +11,7 @@ exec grantTruongPhongRole;
 exec usp_GrantUserTAICHINH;
 exec usp_GrantUserNHANSU;
 exec usp_GrantUserTRUONGDEAN;
+exec usp_GrantUserGD;
 */
 ------------ start from here ---
 -- Run from this than run Proc Area ---
@@ -213,3 +214,18 @@ BEGIN
     END LOOP;
 END;
 /
+CREATE OR REPLACE PROCEDURE usp_GrantUserGD
+AS
+    CURSOR CUR IS (SELECT MANV FROM ATBM.NHANVIEN WHERE VaiTro = 'Ban giam doc');
+    strSQL VARCHAR(2000);
+    Usr varchar2(100);
+BEGIN
+    OPEN CUR;
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+ 
+        strSQL:= 'GRANT SELECT ON fga_log$ TO '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+    END LOOP;
+END;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Phase_1.UserControls
 {
@@ -121,18 +122,40 @@ namespace Phase_1.UserControls
             {
                 if (MessageBox.Show("Bạn có chắc muốn xóa dòng này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                    {
 
-                        String MADA = row.Cells["MADA"].Value.ToString();
+                        DataGridViewRow Row = dataGridView1.SelectedRows[0];
+
+
+                        String MADA = Row.Cells["MADA"].Value.ToString();
                         String sql = "delete atbm.DEAN where MADA='" + MADA + "'";
                         OracleCommand command = new OracleCommand(sql, connection);
                         command.ExecuteNonQuery();
-                        dataGridView1.Rows.Remove(row);
-                    }
+                        dataGridView1.Rows.Remove(Row);
+                    
                     
                 }
             }
         }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["IsDelete"].Index && e.RowIndex >= 0)
+            {
+                if (MessageBox.Show("Bạn có chắc muốn xóa dòng này?", "Xác nhận xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int rowIndex = e.RowIndex;
+
+                    String MADA = dataGridView1.Rows[e.RowIndex].Cells["MADA"].Value.ToString();
+
+                    String sql = "delete atbm.DEAN where MaDA='" + MADA + "'";
+                    OracleCommand command = new OracleCommand(sql, connection);
+                    command.ExecuteNonQuery();
+                    dataGridView1.Rows.RemoveAt(rowIndex);
+                }
+
+            }
+        }
+
+
+
     }
 }

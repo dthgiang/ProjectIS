@@ -1,4 +1,5 @@
-﻿using Phase_1.Phase_2.UserControls;
+﻿using Oracle.ManagedDataAccess.Client;
+using Phase_1.Phase_2.UserControls;
 using Phase_1.UserControls;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,8 @@ namespace Phase_1
         bool sidebarExpand;
         bool taskCollapsed;
         bool profileCollapsed;
-
+        OracleConnection connection = null;
+        String username;
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -29,6 +31,12 @@ namespace Phase_1
         public GiamDoc()
         {
             InitializeComponent();
+        }
+        public GiamDoc(string user, OracleConnection connection)
+        {
+            InitializeComponent();
+            this.connection = connection;
+            this.username = user;
         }
 
         private void sidebar_Paint(object sender, PaintEventArgs e)
@@ -154,8 +162,7 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GiamDoc giamdoc = new GiamDoc();
-            giamdoc.Show();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -180,6 +187,12 @@ namespace Phase_1
         {
             GiamDoc_XemDSNhanVien gd = new GiamDoc_XemDSNhanVien();
             addUserControl(gd);
+        }
+
+        private void btnAudit_Click(object sender, EventArgs e)
+        {
+            Audit audit = new Audit(username,connection);
+            addUserControl(audit);
         }
     }
 }

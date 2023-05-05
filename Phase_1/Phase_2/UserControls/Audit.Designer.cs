@@ -1,6 +1,6 @@
-﻿namespace Phase_1.UserControls
+﻿namespace Phase_1.Phase_2.UserControls
 {
-    partial class TaiChinh_DSNhanVien
+    partial class Audit
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,26 +34,23 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1366, 805);
-            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1049, 677);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // TaiChinh_DSNhanVien
+            // Audit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "TaiChinh_DSNhanVien";
-            this.Size = new System.Drawing.Size(1366, 805);
-            this.Load += new System.EventHandler(this.TaiChinh_DSNhanVien_Load);
+            this.Name = "Audit";
+            this.Size = new System.Drawing.Size(1049, 677);
+            this.Load += new System.EventHandler(this.Audit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

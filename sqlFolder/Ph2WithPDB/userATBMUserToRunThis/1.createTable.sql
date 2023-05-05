@@ -90,37 +90,37 @@ CREATE TABLE DeAn (
 ALTER TABLE NhanVien
 ADD CONSTRAINT FK_NV_NV
   FOREIGN KEY (MaNQL)
-  REFERENCES NhanVien(MaNV) on delete set null;
+  REFERENCES NhanVien(MaNV) on delete CASCADE;
   
 --PHG (NhanVien) --> MaPB(PhongBan)
 ALTER TABLE NhanVien
 ADD CONSTRAINT FK_NV_PB
   FOREIGN KEY (PHG)
-  REFERENCES PhongBan(MaPB)  on delete set null;
+  REFERENCES PhongBan(MaPB)  on delete CASCADE;
   
 --Phong (DeAn) --> MaPB(PhongBan)
 ALTER TABLE DeAn
 ADD CONSTRAINT FK_DA_PB
   FOREIGN KEY (Phong)
-  REFERENCES PhongBan(MaPB)  on delete set null;
+  REFERENCES PhongBan(MaPB)  on delete CASCADE;
 
 --TruongDeAn (DeAn) --> MaNV(NhanVien)
 ALTER TABLE DeAn
 ADD CONSTRAINT FK_DA_NV
   FOREIGN KEY (TruongDeAn)
-  REFERENCES NhanVien(MaNV)  on delete set null;
+  REFERENCES NhanVien(MaNV)  on delete CASCADE;
 
 --MaNV (PhanCong) --> MaNV (NhanVien)
 ALTER TABLE PhanCong
 ADD CONSTRAINT FK_PC_NV
   FOREIGN KEY (MaNV)
-  REFERENCES NhanVien(MaNV)  on delete set null;
+  REFERENCES NhanVien(MaNV)  on delete CASCADE;
 
  
 --MaDA (PhanCong) --> MaDA (DeAn)
 ALTER TABLE PhanCong
 ADD CONSTRAINT FK_PC_DA
   FOREIGN KEY (MaDA)
-  REFERENCES DeAn(MaDA)  on delete set null;
+  REFERENCES DeAn(MaDA)  on delete CASCADE;
 
 

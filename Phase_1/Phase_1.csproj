@@ -140,6 +140,12 @@
     <Compile Include="Phase_2\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phase_2\UserControls\Audit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\Audit.Designer.cs">
+      <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phase_2\UserControls\Notification.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\Audit.resx">
+      <DependentUpon>Audit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\Notification.resx">
       <DependentUpon>Notification.cs</DependentUpon>

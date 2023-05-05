@@ -91,7 +91,7 @@ namespace Phase_1
 
                 case "Quan ly":
                     {
-                        TruongPhong l = new TruongPhong(user, connection);
+                        QuanLyTrucTiep l= new QuanLyTrucTiep(user, connection);
                         l.Show();
                         break;
                     }
@@ -113,9 +113,9 @@ namespace Phase_1
                         l.Show();
                         break;
                     }
-                case "Giam doc":
+                case "Ban giam doc":
                     {
-                        TruongPhong l = new TruongPhong(user, connection);
+                        GiamDoc l = new GiamDoc(user, connection);
                         l.Show();
                         break;
                     }
