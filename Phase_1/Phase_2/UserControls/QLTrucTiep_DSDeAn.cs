@@ -16,5 +16,10 @@ namespace Phase_1.UserControls
         {
             InitializeComponent();
         }
+
+        private void QLTrucTiep_DSDeAn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

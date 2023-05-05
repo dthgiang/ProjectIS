@@ -50,7 +50,6 @@ AS
         dbms_output.put_line( 'All user are created' );
     END;
 /
-
 ----------------
 -- this proc have permission to delete user by username and pw in db
 ----------------

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using DatabaseAccess;
+using Oracle.ManagedDataAccess.Client;
+
 namespace Phase_1
 {
     public partial class Login : Form
@@ -42,7 +44,7 @@ namespace Phase_1
             }
             */
 
-            OracleConnection connection = Connector.GetConnectionPhase2("TP040", "123");
+            OracleConnection connection = Connector.GetConnectionPhase2("TC010", "123");
             // Check if connection does not succeed
             if (connection == null) {
                 MessageBox.Show("Something went wrong ! Please try again");

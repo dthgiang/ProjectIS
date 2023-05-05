@@ -1,4 +1,4 @@
-ALTER SESSION SET container = PDB1;
+ALTER SESSION SET container = QLDTPDB;
 /*
 Name:   Group 10
 Class:  20HTTT01

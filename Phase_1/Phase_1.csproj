@@ -230,12 +230,6 @@
     <Compile Include="Phase_2\UserControls\TaiChinh_DSNhanVien.Designer.cs">
       <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.Designer.cs">
-      <DependentUpon>TaiChinh_PhanCongEveryone.cs</DependentUpon>
-    </Compile>
     <Compile Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -332,9 +326,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\TaiChinh_DSNhanVien.resx">
       <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.resx">
-      <DependentUpon>TaiChinh_PhanCongEveryone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.resx">
       <DependentUpon>TruongDeAn_CapNhatDeAn.cs</DependentUpon>

@@ -2,7 +2,7 @@
 Name:   Group 10
 Class:  20HTTT01
 */
-
+ALTER SESSION SET container = QLDTPDB;
 CREATE OR REPLACE PROCEDURE sp_XoaTable (p_TenTable IN VARCHAR2)
 AS
 checks int;
@@ -18,7 +18,8 @@ BEGIN
     end if;
 END;
 /
-
+exec sp_XoaTable('save_key');
+/
 exec sp_XoaTable('PhanCong');
 /
 exec sp_XoaTable('DeAn');
@@ -27,7 +28,11 @@ exec sp_XoaTable('NhanVien');
 /
 exec sp_XoaTable('PhongBan');
 /
-
+create table save_key(
+    MaNV 		varchar(10) primary key,
+    key raw(255)
+); 
+/
 CREATE  TABLE NhanVien (
     MaNV 		varchar(10) primary key,
 	TenNV 	    varchar2(60) not null,
@@ -35,8 +40,8 @@ CREATE  TABLE NhanVien (
 	NgaySinh 	date,
 	DiaChi 	    varchar2(100),
 	SoDT 		varchar(10) not null unique,
-	Luong 	    number,
-	PhuCap 	    number,
+	Luong 	    raw(255),
+	PhuCap 	    raw(255),
 	VaiTro 	    varchar2(50),
 	MaNQL 	    varchar(10),
 	PHG 		number,

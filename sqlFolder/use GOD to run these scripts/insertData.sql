@@ -375,697 +375,697 @@ select 1 from dual;
 -- Nhap lieu cho bang NHANVIEN ---
 ----------------------------------
 /
-insert into GOD.NHANVIEN values('GD001', 'Gian Gia Bac', 'Nu', TO_DATE('2005-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450001', '22000', '10000', 'Ban giam doc', NULL, 2, 'UserGD001')
+insert into NHANVIEN values('GD001', 'Gian Gia Bac', 'Nu', TO_DATE('2005-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450001', '22000', '10000', 'Ban giam doc', NULL, 2, 'UserGD001')
 /
- insert into GOD.NHANVIEN values('GD002', 'Lai Gia Phu', 'Nam', TO_DATE('2010-1-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450002', '22000', '10000', 'Ban giam doc', NULL, 3, 'UserGD002')
+ insert into NHANVIEN values('GD002', 'Lai Gia Phu', 'Nam', TO_DATE('2010-1-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450002', '22000', '10000', 'Ban giam doc', NULL, 3, 'UserGD002')
 /
- insert into GOD.NHANVIEN values('GD003', 'Le Van Chi', 'Nu', TO_DATE('2017-7-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450003', '22000', '10000', 'Ban giam doc', NULL, 4, 'UserGD003')
+ insert into NHANVIEN values('GD003', 'Le Van Chi', 'Nu', TO_DATE('2017-7-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450003', '22000', '10000', 'Ban giam doc', NULL, 4, 'UserGD003')
 /
- insert into GOD.NHANVIEN values('GD004', 'An Gia Tan', 'Nu', TO_DATE('2004-2-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450004', '22000', '10000', 'Ban giam doc', NULL, 5, 'UserGD004')
+ insert into NHANVIEN values('GD004', 'An Gia Tan', 'Nu', TO_DATE('2004-2-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450004', '22000', '10000', 'Ban giam doc', NULL, 5, 'UserGD004')
 /
- insert into GOD.NHANVIEN values('GD005', 'Vo Tung Thuong', 'Nu', TO_DATE('2022-10-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450005', '22000', '10000', 'Ban giam doc', NULL, 6, 'UserGD005')
+ insert into NHANVIEN values('GD005', 'Vo Tung Thuong', 'Nu', TO_DATE('2022-10-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450005', '22000', '10000', 'Ban giam doc', NULL, 6, 'UserGD005')
 /
- insert into GOD.NHANVIEN values('TC06', 'Nguyen Hoang Han', 'Nam', TO_DATE('2009-4-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450006', '22000', '10000', 'Tai chinh', NULL, 7, 'UserTC06')
+ insert into NHANVIEN values('TC06', 'Nguyen Hoang Han', 'Nam', TO_DATE('2009-4-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450006', '22000', '10000', 'Tai chinh', NULL, 7, 'UserTC06')
 /
- insert into GOD.NHANVIEN values('TC07', 'Au Gia Cuc', 'Nu', TO_DATE('2005-1-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450007', '22000', '10000', 'Tai chinh', NULL, 8, 'UserTC07')
+ insert into NHANVIEN values('TC07', 'Au Gia Cuc', 'Nu', TO_DATE('2005-1-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450007', '22000', '10000', 'Tai chinh', NULL, 8, 'UserTC07')
 /
- insert into GOD.NHANVIEN values('TC08', 'Au Hoang Giang', 'Nu', TO_DATE('2016-6-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450008', '22000', '10000', 'Tai chinh', NULL, 1, 'UserTC08')
+ insert into NHANVIEN values('TC08', 'Au Hoang Giang', 'Nu', TO_DATE('2016-6-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450008', '22000', '10000', 'Tai chinh', NULL, 1, 'UserTC08')
 /
- insert into GOD.NHANVIEN values('TC09', 'Vo Song Ðuc', 'Nam', TO_DATE('2001-8-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450009', '22000', '10000', 'Tai chinh', NULL, 2, 'UserTC09')
+ insert into NHANVIEN values('TC09', 'Vo Song Ðuc', 'Nam', TO_DATE('2001-8-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450009', '22000', '10000', 'Tai chinh', NULL, 2, 'UserTC09')
 /
- insert into GOD.NHANVIEN values('TC010', 'Gian Song Chi', 'Nu', TO_DATE('2000-11-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500010', '22000', '10000', 'Tai chinh', NULL, 3, 'UserTC010')
+ insert into NHANVIEN values('TC010', 'Gian Song Chi', 'Nu', TO_DATE('2000-11-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500010', '22000', '10000', 'Tai chinh', NULL, 3, 'UserTC010')
 /
- insert into GOD.NHANVIEN values('NS011', 'Ðoan Gia Giang', 'Nam', TO_DATE('2017-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500011', '22000', '10000', 'Nhan su', NULL, 4, 'UserNS011')
+ insert into NHANVIEN values('NS011', 'Ðoan Gia Giang', 'Nam', TO_DATE('2017-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500011', '22000', '10000', 'Nhan su', NULL, 4, 'UserNS011')
 /
- insert into GOD.NHANVIEN values('NS012', 'Gian Van Bao', 'Nam', TO_DATE('2019-12-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500012', '22000', '10000', 'Nhan su', NULL, 5, 'UserNS012')
+ insert into NHANVIEN values('NS012', 'Gian Van Bao', 'Nam', TO_DATE('2019-12-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500012', '22000', '10000', 'Nhan su', NULL, 5, 'UserNS012')
 /
- insert into GOD.NHANVIEN values('NS013', 'Tran Tung Quoc', 'Nam', TO_DATE('2011-3-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500013', '22000', '10000', 'Nhan su', NULL, 6, 'UserNS013')
+ insert into NHANVIEN values('NS013', 'Tran Tung Quoc', 'Nam', TO_DATE('2011-3-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500013', '22000', '10000', 'Nhan su', NULL, 6, 'UserNS013')
 /
- insert into GOD.NHANVIEN values('NS014', 'Ðang Thi Ðang', 'Nu', TO_DATE('2022-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500014', '22000', '10000', 'Nhan su', NULL, 7, 'UserNS014')
+ insert into NHANVIEN values('NS014', 'Ðang Thi Ðang', 'Nu', TO_DATE('2022-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500014', '22000', '10000', 'Nhan su', NULL, 7, 'UserNS014')
 /
- insert into GOD.NHANVIEN values('NS015', 'Au Thi Giang', 'Nu', TO_DATE('2022-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500015', '22000', '10000', 'Nhan su', NULL, 8, 'UserNS015')
+ insert into NHANVIEN values('NS015', 'Au Thi Giang', 'Nu', TO_DATE('2022-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500015', '22000', '10000', 'Nhan su', NULL, 8, 'UserNS015')
 /
- insert into GOD.NHANVIEN values('QL016', 'Ly Chi Chung', 'Nu', TO_DATE('2015-10-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500016', '22000', '10000', 'Quan li', NULL, 1, 'UserQL016')
+ insert into NHANVIEN values('QL016', 'Ly Chi Chung', 'Nu', TO_DATE('2015-10-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500016', '22000', '10000', 'Quan li', NULL, 1, 'UserQL016')
 /
- insert into GOD.NHANVIEN values('QL017', 'Tran Van Duy', 'Nu', TO_DATE('2017-9-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500017', '22000', '10000', 'Quan li', NULL, 2, 'UserQL017')
+ insert into NHANVIEN values('QL017', 'Tran Van Duy', 'Nu', TO_DATE('2017-9-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500017', '22000', '10000', 'Quan li', NULL, 2, 'UserQL017')
 /
- insert into GOD.NHANVIEN values('QL018', 'Ly Tung Ngan', 'Nu', TO_DATE('2017-3-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500018', '22000', '10000', 'Quan li', NULL, 3, 'UserQL018')
+ insert into NHANVIEN values('QL018', 'Ly Tung Ngan', 'Nu', TO_DATE('2017-3-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500018', '22000', '10000', 'Quan li', NULL, 3, 'UserQL018')
 /
- insert into GOD.NHANVIEN values('QL019', 'Ðoan Hoang An', 'Nu', TO_DATE('2012-12-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500019', '22000', '10000', 'Quan li', NULL, 4, 'UserQL019')
+ insert into NHANVIEN values('QL019', 'Ðoan Hoang An', 'Nu', TO_DATE('2012-12-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500019', '22000', '10000', 'Quan li', NULL, 4, 'UserQL019')
 /
- insert into GOD.NHANVIEN values('QL020', 'Nguyen Thi Cuc', 'Nam', TO_DATE('2014-3-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500020', '22000', '10000', 'Quan li', NULL, 5, 'UserQL020')
+ insert into NHANVIEN values('QL020', 'Nguyen Thi Cuc', 'Nam', TO_DATE('2014-3-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500020', '22000', '10000', 'Quan li', NULL, 5, 'UserQL020')
 /
- insert into GOD.NHANVIEN values('QL021', 'Le Thi Phu', 'Nu', TO_DATE('2022-10-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500021', '22000', '10000', 'Quan li', NULL, 6, 'UserQL021')
+ insert into NHANVIEN values('QL021', 'Le Thi Phu', 'Nu', TO_DATE('2022-10-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500021', '22000', '10000', 'Quan li', NULL, 6, 'UserQL021')
 /
- insert into GOD.NHANVIEN values('QL022', 'Ung Gia Sang', 'Nam', TO_DATE('2017-2-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500022', '22000', '10000', 'Quan li', NULL, 7, 'UserQL022')
+ insert into NHANVIEN values('QL022', 'Ung Gia Sang', 'Nam', TO_DATE('2017-2-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500022', '22000', '10000', 'Quan li', NULL, 7, 'UserQL022')
 /
- insert into GOD.NHANVIEN values('QL023', 'Tran Tung Bac', 'Nu', TO_DATE('2000-5-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500023', '22000', '10000', 'Quan li', NULL, 8, 'UserQL023')
+ insert into NHANVIEN values('QL023', 'Tran Tung Bac', 'Nu', TO_DATE('2000-5-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500023', '22000', '10000', 'Quan li', NULL, 8, 'UserQL023')
 /
- insert into GOD.NHANVIEN values('QL024', 'Ung Thi khanh', 'Nam', TO_DATE('2019-1-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500024', '22000', '10000', 'Quan li', NULL, 1, 'UserQL024')
+ insert into NHANVIEN values('QL024', 'Ung Thi khanh', 'Nam', TO_DATE('2019-1-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500024', '22000', '10000', 'Quan li', NULL, 1, 'UserQL024')
 /
- insert into GOD.NHANVIEN values('QL025', 'Ho Hoang Han', 'Nu', TO_DATE('2006-10-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500025', '22000', '10000', 'Quan li', NULL, 2, 'UserQL025')
+ insert into NHANVIEN values('QL025', 'Ho Hoang Han', 'Nu', TO_DATE('2006-10-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500025', '22000', '10000', 'Quan li', NULL, 2, 'UserQL025')
 /
- insert into GOD.NHANVIEN values('QL026', 'Vo Song An', 'Nam', TO_DATE('2006-10-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500026', '22000', '10000', 'Quan li', NULL, 3, 'UserQL026')
+ insert into NHANVIEN values('QL026', 'Vo Song An', 'Nam', TO_DATE('2006-10-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500026', '22000', '10000', 'Quan li', NULL, 3, 'UserQL026')
 /
- insert into GOD.NHANVIEN values('QL027', 'Bui Tung Quoc', 'Nu', TO_DATE('2006-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500027', '22000', '10000', 'Quan li', NULL, 4, 'UserQL027')
+ insert into NHANVIEN values('QL027', 'Bui Tung Quoc', 'Nu', TO_DATE('2006-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500027', '22000', '10000', 'Quan li', NULL, 4, 'UserQL027')
 /
- insert into GOD.NHANVIEN values('QL028', 'Ðang Song Duy', 'Nu', TO_DATE('2012-3-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500028', '22000', '10000', 'Quan li', NULL, 5, 'UserQL028')
+ insert into NHANVIEN values('QL028', 'Ðang Song Duy', 'Nu', TO_DATE('2012-3-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500028', '22000', '10000', 'Quan li', NULL, 5, 'UserQL028')
 /
- insert into GOD.NHANVIEN values('QL029', 'Gian Chi Tu', 'Nu', TO_DATE('2002-11-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500029', '22000', '10000', 'Quan li', NULL, 6, 'UserQL029')
+ insert into NHANVIEN values('QL029', 'Gian Chi Tu', 'Nu', TO_DATE('2002-11-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500029', '22000', '10000', 'Quan li', NULL, 6, 'UserQL029')
 /
- insert into GOD.NHANVIEN values('QL030', 'Nguyen Tung Vinh', 'Nam', TO_DATE('2004-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500030', '22000', '10000', 'Quan li', NULL, 7, 'UserQL030')
+ insert into NHANVIEN values('QL030', 'Nguyen Tung Vinh', 'Nam', TO_DATE('2004-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500030', '22000', '10000', 'Quan li', NULL, 7, 'UserQL030')
 /
- insert into GOD.NHANVIEN values('QL031', 'Gian Tung Minh', 'Nu', TO_DATE('2009-5-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500031', '22000', '10000', 'Quan li', NULL, 8, 'UserQL031')
+ insert into NHANVIEN values('QL031', 'Gian Tung Minh', 'Nu', TO_DATE('2009-5-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500031', '22000', '10000', 'Quan li', NULL, 8, 'UserQL031')
 /
- insert into GOD.NHANVIEN values('QL032', 'Ung Hoang Sang', 'Nam', TO_DATE('2019-10-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500032', '22000', '10000', 'Quan li', NULL, 1, 'UserQL032')
+ insert into NHANVIEN values('QL032', 'Ung Hoang Sang', 'Nam', TO_DATE('2019-10-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500032', '22000', '10000', 'Quan li', NULL, 1, 'UserQL032')
 /
- insert into GOD.NHANVIEN values('QL033', 'Gian Thi Nam', 'Nu', TO_DATE('2019-8-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500033', '22000', '10000', 'Quan li', NULL, 2, 'UserQL033')
+ insert into NHANVIEN values('QL033', 'Gian Thi Nam', 'Nu', TO_DATE('2019-8-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500033', '22000', '10000', 'Quan li', NULL, 2, 'UserQL033')
 /
- insert into GOD.NHANVIEN values('QL034', 'Bui Chi Han', 'Nu', TO_DATE('2009-6-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500034', '22000', '10000', 'Quan li', NULL, 3, 'UserQL034')
+ insert into NHANVIEN values('QL034', 'Bui Chi Han', 'Nu', TO_DATE('2009-6-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500034', '22000', '10000', 'Quan li', NULL, 3, 'UserQL034')
 /
- insert into GOD.NHANVIEN values('QL035', 'Truong Chi Chi', 'Nu', TO_DATE('2017-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500035', '22000', '10000', 'Quan li', NULL, 4, 'UserQL035')
+ insert into NHANVIEN values('QL035', 'Truong Chi Chi', 'Nu', TO_DATE('2017-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500035', '22000', '10000', 'Quan li', NULL, 4, 'UserQL035')
 /
- insert into GOD.NHANVIEN values('TDA036', 'Pham Chi Vy', 'Nam', TO_DATE('2004-2-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500036', '22000', '10000', 'Truong de an', NULL, 5, 'UserTDA036')
+ insert into NHANVIEN values('TDA036', 'Pham Chi Vy', 'Nam', TO_DATE('2004-2-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500036', '22000', '10000', 'Truong de an', NULL, 5, 'UserTDA036')
 /
- insert into GOD.NHANVIEN values('TDA037', 'Bui Chi Thien', 'Nu', TO_DATE('2015-7-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500037', '22000', '10000', 'Truong de an', NULL, 6, 'UserTDA037')
+ insert into NHANVIEN values('TDA037', 'Bui Chi Thien', 'Nu', TO_DATE('2015-7-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500037', '22000', '10000', 'Truong de an', NULL, 6, 'UserTDA037')
 /
- insert into GOD.NHANVIEN values('TDA038', 'Ung Song Vu', 'Nu', TO_DATE('2000-3-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500038', '22000', '10000', 'Truong de an', NULL, 7, 'UserTDA038')
+ insert into NHANVIEN values('TDA038', 'Ung Song Vu', 'Nu', TO_DATE('2000-3-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500038', '22000', '10000', 'Truong de an', NULL, 7, 'UserTDA038')
 /
- insert into GOD.NHANVIEN values('TP039', 'Duong Van Cuc', 'Nu', TO_DATE('2010-10-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500039', '22000', '10000', 'Truong phong', NULL, 1, 'UserTP039')
+ insert into NHANVIEN values('TP039', 'Duong Van Cuc', 'Nu', TO_DATE('2010-10-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500039', '22000', '10000', 'Truong phong', NULL, 1, 'UserTP039')
 /
- insert into GOD.NHANVIEN values('TP040', 'Ðang Chi Bac', 'Nam', TO_DATE('2004-12-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500040', '22000', '10000', 'Truong phong', NULL, 2, 'UserTP040')
+ insert into NHANVIEN values('TP040', 'Ðang Chi Bac', 'Nam', TO_DATE('2004-12-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500040', '22000', '10000', 'Truong phong', NULL, 2, 'UserTP040')
 /
- insert into GOD.NHANVIEN values('TP041', 'Lai Song Anh', 'Nu', TO_DATE('2019-7-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500041', '22000', '10000', 'Truong phong', NULL, 3, 'UserTP041')
+ insert into NHANVIEN values('TP041', 'Lai Song Anh', 'Nu', TO_DATE('2019-7-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500041', '22000', '10000', 'Truong phong', NULL, 3, 'UserTP041')
 /
- insert into GOD.NHANVIEN values('TP042', 'Au Song Duy', 'Nu', TO_DATE('2003-1-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500042', '22000', '10000', 'Truong phong', NULL, 4, 'UserTP042')
+ insert into NHANVIEN values('TP042', 'Au Song Duy', 'Nu', TO_DATE('2003-1-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500042', '22000', '10000', 'Truong phong', NULL, 4, 'UserTP042')
 /
- insert into GOD.NHANVIEN values('TP043', 'Ung Thi An', 'Nu', TO_DATE('2019-3-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500043', '22000', '10000', 'Truong phong', NULL, 5, 'UserTP043')
+ insert into NHANVIEN values('TP043', 'Ung Thi An', 'Nu', TO_DATE('2019-3-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500043', '22000', '10000', 'Truong phong', NULL, 5, 'UserTP043')
 /
- insert into GOD.NHANVIEN values('TP044', 'Lai Tung Ðang', 'Nam', TO_DATE('2015-5-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500044', '22000', '10000', 'Truong phong', NULL, 6, 'UserTP044')
+ insert into NHANVIEN values('TP044', 'Lai Tung Ðang', 'Nam', TO_DATE('2015-5-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500044', '22000', '10000', 'Truong phong', NULL, 6, 'UserTP044')
 /
- insert into GOD.NHANVIEN values('TP045', 'Ðang Tung Chi', 'Nam', TO_DATE('2004-5-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500045', '22000', '10000', 'Truong phong', NULL, 7, 'UserTP045')
+ insert into NHANVIEN values('TP045', 'Ðang Tung Chi', 'Nam', TO_DATE('2004-5-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500045', '22000', '10000', 'Truong phong', NULL, 7, 'UserTP045')
 /
- insert into GOD.NHANVIEN values('TP046', 'Ung Hoang Tin', 'Nam', TO_DATE('2001-6-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500046', '22000', '10000', 'Truong phong', NULL, 8, 'UserTP046')
+ insert into NHANVIEN values('TP046', 'Ung Hoang Tin', 'Nam', TO_DATE('2001-6-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500046', '22000', '10000', 'Truong phong', NULL, 8, 'UserTP046')
 /
- insert into GOD.NHANVIEN values('NV47', 'Truong Van Cau', 'Nu', TO_DATE('2007-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500047', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV47')
+ insert into NHANVIEN values('NV47', 'Truong Van Cau', 'Nu', TO_DATE('2007-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500047', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV47')
 /
- insert into GOD.NHANVIEN values('NV48', 'Le Tung Tan', 'Nam', TO_DATE('2020-9-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500048', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV48')
+ insert into NHANVIEN values('NV48', 'Le Tung Tan', 'Nam', TO_DATE('2020-9-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500048', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV48')
 /
- insert into GOD.NHANVIEN values('NV49', 'Tran Hoang Vu', 'Nam', TO_DATE('2013-1-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500049', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV49')
+ insert into NHANVIEN values('NV49', 'Tran Hoang Vu', 'Nam', TO_DATE('2013-1-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500049', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV49')
 /
- insert into GOD.NHANVIEN values('NV50', 'Bui Van Cau', 'Nam', TO_DATE('2001-3-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500050', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV50')
+ insert into NHANVIEN values('NV50', 'Bui Van Cau', 'Nam', TO_DATE('2001-3-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500050', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV50')
 /
- insert into GOD.NHANVIEN values('NV51', 'Bui Van Chi', 'Nam', TO_DATE('2006-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500051', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV51')
+ insert into NHANVIEN values('NV51', 'Bui Van Chi', 'Nam', TO_DATE('2006-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500051', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV51')
 /
- insert into GOD.NHANVIEN values('NV52', 'Ho Tung Ðang', 'Nu', TO_DATE('2010-1-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500052', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV52')
+ insert into NHANVIEN values('NV52', 'Ho Tung Ðang', 'Nu', TO_DATE('2010-1-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500052', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV52')
 /
- insert into GOD.NHANVIEN values('NV53', 'Lai Hoang Tien', 'Nam', TO_DATE('2011-3-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500053', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV53')
+ insert into NHANVIEN values('NV53', 'Lai Hoang Tien', 'Nam', TO_DATE('2011-3-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500053', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV53')
 /
- insert into GOD.NHANVIEN values('NV54', 'Gian Thi Anh', 'Nu', TO_DATE('2021-7-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500054', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV54')
+ insert into NHANVIEN values('NV54', 'Gian Thi Anh', 'Nu', TO_DATE('2021-7-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500054', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV54')
 /
- insert into GOD.NHANVIEN values('NV55', 'Duong Song Vinh', 'Nam', TO_DATE('2003-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500055', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV55')
+ insert into NHANVIEN values('NV55', 'Duong Song Vinh', 'Nam', TO_DATE('2003-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500055', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV55')
 /
- insert into GOD.NHANVIEN values('NV56', 'Ly Tung Anh', 'Nam', TO_DATE('2005-11-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500056', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV56')
+ insert into NHANVIEN values('NV56', 'Ly Tung Anh', 'Nam', TO_DATE('2005-11-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500056', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV56')
 /
- insert into GOD.NHANVIEN values('NV57', 'Truong Gia Tuan', 'Nu', TO_DATE('2011-1-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500057', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV57')
+ insert into NHANVIEN values('NV57', 'Truong Gia Tuan', 'Nu', TO_DATE('2011-1-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500057', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV57')
 /
- insert into GOD.NHANVIEN values('NV58', 'Ly Gia Ngoc Nhi', 'Nam', TO_DATE('2014-11-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500058', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV58')
+ insert into NHANVIEN values('NV58', 'Ly Gia Ngoc Nhi', 'Nam', TO_DATE('2014-11-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500058', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV58')
 /
- insert into GOD.NHANVIEN values('NV59', 'Nguyen Thi Han', 'Nam', TO_DATE('2013-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500059', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV59')
+ insert into NHANVIEN values('NV59', 'Nguyen Thi Han', 'Nam', TO_DATE('2013-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500059', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV59')
 /
- insert into GOD.NHANVIEN values('NV60', 'Au Gia Tin', 'Nam', TO_DATE('2001-5-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500060', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV60')
+ insert into NHANVIEN values('NV60', 'Au Gia Tin', 'Nam', TO_DATE('2001-5-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500060', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV60')
 /
- insert into GOD.NHANVIEN values('NV61', 'Lai Thi Cau', 'Nu', TO_DATE('2012-2-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500061', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV61')
+ insert into NHANVIEN values('NV61', 'Lai Thi Cau', 'Nu', TO_DATE('2012-2-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500061', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV61')
 /
- insert into GOD.NHANVIEN values('NV62', 'Gian Song Thong', 'Nam', TO_DATE('2015-8-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500062', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV62')
+ insert into NHANVIEN values('NV62', 'Gian Song Thong', 'Nam', TO_DATE('2015-8-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500062', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV62')
 /
- insert into GOD.NHANVIEN values('NV63', 'Bui Song Vu', 'Nu', TO_DATE('2000-7-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500063', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV63')
+ insert into NHANVIEN values('NV63', 'Bui Song Vu', 'Nu', TO_DATE('2000-7-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500063', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV63')
 /
- insert into GOD.NHANVIEN values('NV64', 'Vo Thi Tu', 'Nam', TO_DATE('2017-12-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500064', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV64')
+ insert into NHANVIEN values('NV64', 'Vo Thi Tu', 'Nam', TO_DATE('2017-12-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500064', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV64')
 /
- insert into GOD.NHANVIEN values('NV65', 'Lai Hoang Duy', 'Nam', TO_DATE('2005-7-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500065', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV65')
+ insert into NHANVIEN values('NV65', 'Lai Hoang Duy', 'Nam', TO_DATE('2005-7-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500065', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV65')
 /
- insert into GOD.NHANVIEN values('NV66', 'Duong Thi Tien', 'Nu', TO_DATE('2002-8-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500066', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV66')
+ insert into NHANVIEN values('NV66', 'Duong Thi Tien', 'Nu', TO_DATE('2002-8-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500066', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV66')
 /
- insert into GOD.NHANVIEN values('NV67', 'Ho Van Bao', 'Nam', TO_DATE('2005-6-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500067', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV67')
+ insert into NHANVIEN values('NV67', 'Ho Van Bao', 'Nam', TO_DATE('2005-6-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500067', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV67')
 /
- insert into GOD.NHANVIEN values('NV68', 'Le Thi Tan', 'Nam', TO_DATE('2009-11-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500068', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV68')
+ insert into NHANVIEN values('NV68', 'Le Thi Tan', 'Nam', TO_DATE('2009-11-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500068', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV68')
 /
- insert into GOD.NHANVIEN values('NV69', 'Ly Thi Tin', 'Nam', TO_DATE('2005-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500069', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV69')
+ insert into NHANVIEN values('NV69', 'Ly Thi Tin', 'Nam', TO_DATE('2005-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500069', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV69')
 /
- insert into GOD.NHANVIEN values('NV70', 'Bui Gia Ðuc', 'Nu', TO_DATE('2020-7-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500070', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV70')
+ insert into NHANVIEN values('NV70', 'Bui Gia Ðuc', 'Nu', TO_DATE('2020-7-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500070', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV70')
 /
- insert into GOD.NHANVIEN values('NV71', 'Pham Song Nam', 'Nam', TO_DATE('2020-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500071', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV71')
+ insert into NHANVIEN values('NV71', 'Pham Song Nam', 'Nam', TO_DATE('2020-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500071', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV71')
 /
- insert into GOD.NHANVIEN values('NV72', 'Nguyen Chi Thien', 'Nu', TO_DATE('2006-12-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500072', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV72')
+ insert into NHANVIEN values('NV72', 'Nguyen Chi Thien', 'Nu', TO_DATE('2006-12-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500072', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV72')
 /
- insert into GOD.NHANVIEN values('NV73', 'Truong Song Tuan', 'Nu', TO_DATE('2010-10-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500073', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV73')
+ insert into NHANVIEN values('NV73', 'Truong Song Tuan', 'Nu', TO_DATE('2010-10-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500073', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV73')
 /
- insert into GOD.NHANVIEN values('NV74', 'An Gia Ðang', 'Nu', TO_DATE('2007-7-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500074', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV74')
+ insert into NHANVIEN values('NV74', 'An Gia Ðang', 'Nu', TO_DATE('2007-7-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500074', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV74')
 /
- insert into GOD.NHANVIEN values('NV75', 'Truong Chi Minh', 'Nam', TO_DATE('2021-2-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500075', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV75')
+ insert into NHANVIEN values('NV75', 'Truong Chi Minh', 'Nam', TO_DATE('2021-2-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500075', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV75')
 /
- insert into GOD.NHANVIEN values('NV76', 'Nguyen Chi Duy', 'Nam', TO_DATE('2008-7-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500076', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV76')
+ insert into NHANVIEN values('NV76', 'Nguyen Chi Duy', 'Nam', TO_DATE('2008-7-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500076', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV76')
 /
- insert into GOD.NHANVIEN values('NV77', 'Ðoan Van Ðuc', 'Nam', TO_DATE('2003-5-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500077', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV77')
+ insert into NHANVIEN values('NV77', 'Ðoan Van Ðuc', 'Nam', TO_DATE('2003-5-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500077', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV77')
 /
- insert into GOD.NHANVIEN values('NV78', 'Pham Song Anh', 'Nu', TO_DATE('2017-9-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500078', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV78')
+ insert into NHANVIEN values('NV78', 'Pham Song Anh', 'Nu', TO_DATE('2017-9-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500078', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV78')
 /
- insert into GOD.NHANVIEN values('NV79', 'Vu Hoang Bac', 'Nam', TO_DATE('2017-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500079', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV79')
+ insert into NHANVIEN values('NV79', 'Vu Hoang Bac', 'Nam', TO_DATE('2017-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500079', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV79')
 /
- insert into GOD.NHANVIEN values('NV80', 'Pham Song Vinh', 'Nam', TO_DATE('2009-12-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500080', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV80')
+ insert into NHANVIEN values('NV80', 'Pham Song Vinh', 'Nam', TO_DATE('2009-12-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500080', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV80')
 /
- insert into GOD.NHANVIEN values('NV81', 'Ho Hoang Ðan', 'Nam', TO_DATE('2002-3-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500081', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV81')
+ insert into NHANVIEN values('NV81', 'Ho Hoang Ðan', 'Nam', TO_DATE('2002-3-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500081', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV81')
 /
- insert into GOD.NHANVIEN values('NV82', 'Le Tung Vy', 'Nam', TO_DATE('2011-3-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500082', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV82')
+ insert into NHANVIEN values('NV82', 'Le Tung Vy', 'Nam', TO_DATE('2011-3-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500082', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV82')
 /
- insert into GOD.NHANVIEN values('NV83', 'Au Gia Tu', 'Nu', TO_DATE('2006-1-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500083', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV83')
+ insert into NHANVIEN values('NV83', 'Au Gia Tu', 'Nu', TO_DATE('2006-1-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500083', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV83')
 /
- insert into GOD.NHANVIEN values('NV84', 'Ho Thi Tan', 'Nu', TO_DATE('2009-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500084', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV84')
+ insert into NHANVIEN values('NV84', 'Ho Thi Tan', 'Nu', TO_DATE('2009-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500084', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV84')
 /
- insert into GOD.NHANVIEN values('NV85', 'Gian Tung Tan', 'Nu', TO_DATE('2013-3-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500085', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV85')
+ insert into NHANVIEN values('NV85', 'Gian Tung Tan', 'Nu', TO_DATE('2013-3-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500085', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV85')
 /
- insert into GOD.NHANVIEN values('NV86', 'Ung Thi Chi', 'Nam', TO_DATE('2019-7-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500086', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV86')
+ insert into NHANVIEN values('NV86', 'Ung Thi Chi', 'Nam', TO_DATE('2019-7-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500086', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV86')
 /
- insert into GOD.NHANVIEN values('NV87', 'Truong Hoang Viet', 'Nu', TO_DATE('2010-5-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500087', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV87')
+ insert into NHANVIEN values('NV87', 'Truong Hoang Viet', 'Nu', TO_DATE('2010-5-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500087', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV87')
 /
- insert into GOD.NHANVIEN values('NV88', 'Truong Chi Tiep', 'Nam', TO_DATE('2016-6-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500088', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV88')
+ insert into NHANVIEN values('NV88', 'Truong Chi Tiep', 'Nam', TO_DATE('2016-6-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500088', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV88')
 /
- insert into GOD.NHANVIEN values('NV89', 'Ly Van Tien', 'Nam', TO_DATE('2012-5-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500089', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV89')
+ insert into NHANVIEN values('NV89', 'Ly Van Tien', 'Nam', TO_DATE('2012-5-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500089', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV89')
 /
- insert into GOD.NHANVIEN values('NV90', 'Gian Song khanh', 'Nam', TO_DATE('2005-10-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500090', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV90')
+ insert into NHANVIEN values('NV90', 'Gian Song khanh', 'Nam', TO_DATE('2005-10-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500090', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV90')
 /
- insert into GOD.NHANVIEN values('NV91', 'An Chi Bac', 'Nam', TO_DATE('2012-10-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500091', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV91')
+ insert into NHANVIEN values('NV91', 'An Chi Bac', 'Nam', TO_DATE('2012-10-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500091', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV91')
 /
- insert into GOD.NHANVIEN values('NV92', 'Tran Tung Thuong', 'Nu', TO_DATE('2013-6-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500092', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV92')
+ insert into NHANVIEN values('NV92', 'Tran Tung Thuong', 'Nu', TO_DATE('2013-6-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500092', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV92')
 /
- insert into GOD.NHANVIEN values('NV93', 'Le Thi Tan', 'Nam', TO_DATE('2010-12-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500093', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV93')
+ insert into NHANVIEN values('NV93', 'Le Thi Tan', 'Nam', TO_DATE('2010-12-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500093', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV93')
 /
- insert into GOD.NHANVIEN values('NV94', 'Tran Hoang Cau', 'Nu', TO_DATE('2021-12-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500094', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV94')
+ insert into NHANVIEN values('NV94', 'Tran Hoang Cau', 'Nu', TO_DATE('2021-12-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500094', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV94')
 /
- insert into GOD.NHANVIEN values('NV95', 'Le Chi Sang', 'Nu', TO_DATE('2013-1-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500095', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV95')
+ insert into NHANVIEN values('NV95', 'Le Chi Sang', 'Nu', TO_DATE('2013-1-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500095', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV95')
 /
- insert into GOD.NHANVIEN values('NV96', 'Duong Chi Bao', 'Nu', TO_DATE('2004-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500096', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV96')
+ insert into NHANVIEN values('NV96', 'Duong Chi Bao', 'Nu', TO_DATE('2004-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500096', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV96')
 /
- insert into GOD.NHANVIEN values('NV97', 'Au Song Viet', 'Nu', TO_DATE('2016-12-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500097', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV97')
+ insert into NHANVIEN values('NV97', 'Au Song Viet', 'Nu', TO_DATE('2016-12-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500097', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV97')
 /
- insert into GOD.NHANVIEN values('NV98', 'Ðoan Van Phu', 'Nu', TO_DATE('2002-5-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500098', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV98')
+ insert into NHANVIEN values('NV98', 'Ðoan Van Phu', 'Nu', TO_DATE('2002-5-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500098', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV98')
 /
- insert into GOD.NHANVIEN values('NV99', 'Le Gia Thien', 'Nu', TO_DATE('2004-7-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500099', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV99')
+ insert into NHANVIEN values('NV99', 'Le Gia Thien', 'Nu', TO_DATE('2004-7-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '094500099', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV99')
 /
- insert into GOD.NHANVIEN values('NV100', 'Ho Tung May', 'Nu', TO_DATE('2009-11-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000100', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV100')
+ insert into NHANVIEN values('NV100', 'Ho Tung May', 'Nu', TO_DATE('2009-11-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000100', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV100')
 /
- insert into GOD.NHANVIEN values('NV101', 'Tran Gia Ðuc', 'Nam', TO_DATE('2010-10-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000101', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV101')
+ insert into NHANVIEN values('NV101', 'Tran Gia Ðuc', 'Nam', TO_DATE('2010-10-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000101', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV101')
 /
- insert into GOD.NHANVIEN values('NV102', 'Ly Tung Bao', 'Nam', TO_DATE('2020-7-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000102', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV102')
+ insert into NHANVIEN values('NV102', 'Ly Tung Bao', 'Nam', TO_DATE('2020-7-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000102', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV102')
 /
- insert into GOD.NHANVIEN values('NV103', 'Vo Hoang Thien', 'Nu', TO_DATE('2019-6-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000103', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV103')
+ insert into NHANVIEN values('NV103', 'Vo Hoang Thien', 'Nu', TO_DATE('2019-6-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000103', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV103')
 /
- insert into GOD.NHANVIEN values('NV104', 'Lai Chi Tu', 'Nam', TO_DATE('2006-7-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000104', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV104')
+ insert into NHANVIEN values('NV104', 'Lai Chi Tu', 'Nam', TO_DATE('2006-7-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000104', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV104')
 /
- insert into GOD.NHANVIEN values('NV105', 'Truong Song Phu', 'Nu', TO_DATE('2003-10-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000105', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV105')
+ insert into NHANVIEN values('NV105', 'Truong Song Phu', 'Nu', TO_DATE('2003-10-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000105', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV105')
 /
- insert into GOD.NHANVIEN values('NV106', 'Vo Tung Thien', 'Nam', TO_DATE('2022-11-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000106', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV106')
+ insert into NHANVIEN values('NV106', 'Vo Tung Thien', 'Nam', TO_DATE('2022-11-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000106', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV106')
 /
- insert into GOD.NHANVIEN values('NV107', 'Ðoan Song Tien', 'Nu', TO_DATE('2012-6-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000107', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV107')
+ insert into NHANVIEN values('NV107', 'Ðoan Song Tien', 'Nu', TO_DATE('2012-6-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000107', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV107')
 /
- insert into GOD.NHANVIEN values('NV108', 'Au Chi Ngoc Nhi', 'Nam', TO_DATE('2014-5-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000108', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV108')
+ insert into NHANVIEN values('NV108', 'Au Chi Ngoc Nhi', 'Nam', TO_DATE('2014-5-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000108', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV108')
 /
- insert into GOD.NHANVIEN values('NV109', 'Le Song Thien', 'Nu', TO_DATE('2008-1-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000109', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV109')
+ insert into NHANVIEN values('NV109', 'Le Song Thien', 'Nu', TO_DATE('2008-1-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000109', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV109')
 /
- insert into GOD.NHANVIEN values('NV110', 'Ho Van An', 'Nu', TO_DATE('2013-3-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000110', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV110')
+ insert into NHANVIEN values('NV110', 'Ho Van An', 'Nu', TO_DATE('2013-3-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000110', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV110')
 /
- insert into GOD.NHANVIEN values('NV111', 'Vu Hoang An', 'Nu', TO_DATE('2014-2-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000111', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV111')
+ insert into NHANVIEN values('NV111', 'Vu Hoang An', 'Nu', TO_DATE('2014-2-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000111', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV111')
 /
- insert into GOD.NHANVIEN values('NV112', 'Vo Gia Thong', 'Nam', TO_DATE('2009-2-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000112', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV112')
+ insert into NHANVIEN values('NV112', 'Vo Gia Thong', 'Nam', TO_DATE('2009-2-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000112', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV112')
 /
- insert into GOD.NHANVIEN values('NV113', 'Vo Gia Minh', 'Nu', TO_DATE('2016-5-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000113', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV113')
+ insert into NHANVIEN values('NV113', 'Vo Gia Minh', 'Nu', TO_DATE('2016-5-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000113', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV113')
 /
- insert into GOD.NHANVIEN values('NV114', 'Tran Van Thong', 'Nu', TO_DATE('2011-11-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000114', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV114')
+ insert into NHANVIEN values('NV114', 'Tran Van Thong', 'Nu', TO_DATE('2011-11-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000114', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV114')
 /
- insert into GOD.NHANVIEN values('NV115', 'Vu Hoang Nam', 'Nam', TO_DATE('2005-5-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000115', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV115')
+ insert into NHANVIEN values('NV115', 'Vu Hoang Nam', 'Nam', TO_DATE('2005-5-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000115', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV115')
 /
- insert into GOD.NHANVIEN values('NV116', 'Vu Song Ðang', 'Nu', TO_DATE('2012-8-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000116', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV116')
+ insert into NHANVIEN values('NV116', 'Vu Song Ðang', 'Nu', TO_DATE('2012-8-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000116', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV116')
 /
- insert into GOD.NHANVIEN values('NV117', 'Ðang Thi Vu', 'Nam', TO_DATE('2004-3-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000117', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV117')
+ insert into NHANVIEN values('NV117', 'Ðang Thi Vu', 'Nam', TO_DATE('2004-3-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000117', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV117')
 /
- insert into GOD.NHANVIEN values('NV118', 'Ho Hoang Nam', 'Nam', TO_DATE('2018-3-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000118', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV118')
+ insert into NHANVIEN values('NV118', 'Ho Hoang Nam', 'Nam', TO_DATE('2018-3-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000118', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV118')
 /
- insert into GOD.NHANVIEN values('NV119', 'Duong Song Ðang', 'Nu', TO_DATE('2012-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000119', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV119')
+ insert into NHANVIEN values('NV119', 'Duong Song Ðang', 'Nu', TO_DATE('2012-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000119', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV119')
 /
- insert into GOD.NHANVIEN values('NV120', 'Tran Chi Nam', 'Nu', TO_DATE('2010-11-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000120', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV120')
+ insert into NHANVIEN values('NV120', 'Tran Chi Nam', 'Nu', TO_DATE('2010-11-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000120', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV120')
 /
- insert into GOD.NHANVIEN values('NV121', 'Au Tung Phu', 'Nam', TO_DATE('2007-7-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000121', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV121')
+ insert into NHANVIEN values('NV121', 'Au Tung Phu', 'Nam', TO_DATE('2007-7-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000121', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV121')
 /
- insert into GOD.NHANVIEN values('NV122', 'Tran Gia Ðuc', 'Nu', TO_DATE('2021-11-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000122', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV122')
+ insert into NHANVIEN values('NV122', 'Tran Gia Ðuc', 'Nu', TO_DATE('2021-11-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000122', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV122')
 /
- insert into GOD.NHANVIEN values('NV123', 'Vo Hoang Vy', 'Nu', TO_DATE('2022-12-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000123', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV123')
+ insert into NHANVIEN values('NV123', 'Vo Hoang Vy', 'Nu', TO_DATE('2022-12-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000123', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV123')
 /
- insert into GOD.NHANVIEN values('NV124', 'Nguyen Hoang Nam', 'Nam', TO_DATE('2000-8-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000124', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV124')
+ insert into NHANVIEN values('NV124', 'Nguyen Hoang Nam', 'Nam', TO_DATE('2000-8-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000124', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV124')
 /
- insert into GOD.NHANVIEN values('NV125', 'Vo Tung Ðuc', 'Nu', TO_DATE('2019-12-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000125', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV125')
+ insert into NHANVIEN values('NV125', 'Vo Tung Ðuc', 'Nu', TO_DATE('2019-12-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000125', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV125')
 /
- insert into GOD.NHANVIEN values('NV126', 'Ung Hoang Viet', 'Nam', TO_DATE('2022-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000126', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV126')
+ insert into NHANVIEN values('NV126', 'Ung Hoang Viet', 'Nam', TO_DATE('2022-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000126', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV126')
 /
- insert into GOD.NHANVIEN values('NV127', 'Ung Song May', 'Nam', TO_DATE('2010-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000127', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV127')
+ insert into NHANVIEN values('NV127', 'Ung Song May', 'Nam', TO_DATE('2010-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000127', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV127')
 /
- insert into GOD.NHANVIEN values('NV128', 'Ðoan Song Tin', 'Nu', TO_DATE('2004-11-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000128', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV128')
+ insert into NHANVIEN values('NV128', 'Ðoan Song Tin', 'Nu', TO_DATE('2004-11-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000128', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV128')
 /
- insert into GOD.NHANVIEN values('NV129', 'Pham Van Thien', 'Nu', TO_DATE('2001-5-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000129', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV129')
+ insert into NHANVIEN values('NV129', 'Pham Van Thien', 'Nu', TO_DATE('2001-5-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000129', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV129')
 /
- insert into GOD.NHANVIEN values('NV130', 'Vo Hoang Ðuc', 'Nam', TO_DATE('2007-8-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000130', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV130')
+ insert into NHANVIEN values('NV130', 'Vo Hoang Ðuc', 'Nam', TO_DATE('2007-8-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000130', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV130')
 /
- insert into GOD.NHANVIEN values('NV131', 'Au Gia Duy', 'Nam', TO_DATE('2018-5-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000131', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV131')
+ insert into NHANVIEN values('NV131', 'Au Gia Duy', 'Nam', TO_DATE('2018-5-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000131', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV131')
 /
- insert into GOD.NHANVIEN values('NV132', 'Nguyen Song Viet', 'Nu', TO_DATE('2018-10-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000132', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV132')
+ insert into NHANVIEN values('NV132', 'Nguyen Song Viet', 'Nu', TO_DATE('2018-10-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000132', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV132')
 /
- insert into GOD.NHANVIEN values('NV133', 'Truong Chi Viet', 'Nam', TO_DATE('2015-1-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000133', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV133')
+ insert into NHANVIEN values('NV133', 'Truong Chi Viet', 'Nam', TO_DATE('2015-1-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000133', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV133')
 /
- insert into GOD.NHANVIEN values('NV134', 'Lai Hoang Tien', 'Nu', TO_DATE('2005-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000134', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV134')
+ insert into NHANVIEN values('NV134', 'Lai Hoang Tien', 'Nu', TO_DATE('2005-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000134', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV134')
 /
- insert into GOD.NHANVIEN values('NV135', 'An Tung Ngoc Nhi', 'Nu', TO_DATE('2007-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000135', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV135')
+ insert into NHANVIEN values('NV135', 'An Tung Ngoc Nhi', 'Nu', TO_DATE('2007-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000135', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV135')
 /
- insert into GOD.NHANVIEN values('NV136', 'Au Tung Phu', 'Nu', TO_DATE('2019-6-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000136', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV136')
+ insert into NHANVIEN values('NV136', 'Au Tung Phu', 'Nu', TO_DATE('2019-6-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000136', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV136')
 /
- insert into GOD.NHANVIEN values('NV137', 'Ðoan Van Ngoc Nhi', 'Nam', TO_DATE('2022-11-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000137', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV137')
+ insert into NHANVIEN values('NV137', 'Ðoan Van Ngoc Nhi', 'Nam', TO_DATE('2022-11-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000137', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV137')
 /
- insert into GOD.NHANVIEN values('NV138', 'Bui Thi Minh', 'Nam', TO_DATE('2013-5-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000138', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV138')
+ insert into NHANVIEN values('NV138', 'Bui Thi Minh', 'Nam', TO_DATE('2013-5-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000138', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV138')
 /
- insert into GOD.NHANVIEN values('NV139', 'Au Van Bao', 'Nam', TO_DATE('2011-3-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000139', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV139')
+ insert into NHANVIEN values('NV139', 'Au Van Bao', 'Nam', TO_DATE('2011-3-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000139', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV139')
 /
- insert into GOD.NHANVIEN values('NV140', 'An Tung Quoc', 'Nu', TO_DATE('2004-4-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000140', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV140')
+ insert into NHANVIEN values('NV140', 'An Tung Quoc', 'Nu', TO_DATE('2004-4-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000140', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV140')
 /
- insert into GOD.NHANVIEN values('NV141', 'Bui Song Vy', 'Nam', TO_DATE('2006-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000141', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV141')
+ insert into NHANVIEN values('NV141', 'Bui Song Vy', 'Nam', TO_DATE('2006-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000141', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV141')
 /
- insert into GOD.NHANVIEN values('NV142', 'An Van Ngan', 'Nam', TO_DATE('2019-5-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000142', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV142')
+ insert into NHANVIEN values('NV142', 'An Van Ngan', 'Nam', TO_DATE('2019-5-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000142', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV142')
 /
- insert into GOD.NHANVIEN values('NV143', 'Tran Song Giang', 'Nam', TO_DATE('2008-5-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000143', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV143')
+ insert into NHANVIEN values('NV143', 'Tran Song Giang', 'Nam', TO_DATE('2008-5-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000143', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV143')
 /
- insert into GOD.NHANVIEN values('NV144', 'An Hoang Sang', 'Nam', TO_DATE('2012-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000144', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV144')
+ insert into NHANVIEN values('NV144', 'An Hoang Sang', 'Nam', TO_DATE('2012-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000144', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV144')
 /
- insert into GOD.NHANVIEN values('NV145', 'Le Van Vinh', 'Nu', TO_DATE('2005-10-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000145', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV145')
+ insert into NHANVIEN values('NV145', 'Le Van Vinh', 'Nu', TO_DATE('2005-10-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000145', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV145')
 /
- insert into GOD.NHANVIEN values('NV146', 'Truong Gia Tu', 'Nu', TO_DATE('2021-9-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000146', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV146')
+ insert into NHANVIEN values('NV146', 'Truong Gia Tu', 'Nu', TO_DATE('2021-9-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000146', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV146')
 /
- insert into GOD.NHANVIEN values('NV147', 'Vu Chi Nam', 'Nam', TO_DATE('2000-11-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000147', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV147')
+ insert into NHANVIEN values('NV147', 'Vu Chi Nam', 'Nam', TO_DATE('2000-11-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000147', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV147')
 /
- insert into GOD.NHANVIEN values('NV148', 'Vo Van Vinh', 'Nam', TO_DATE('2004-4-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000148', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV148')
+ insert into NHANVIEN values('NV148', 'Vo Van Vinh', 'Nam', TO_DATE('2004-4-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000148', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV148')
 /
- insert into GOD.NHANVIEN values('NV149', 'Le Thi Bac', 'Nu', TO_DATE('2002-1-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000149', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV149')
+ insert into NHANVIEN values('NV149', 'Le Thi Bac', 'Nu', TO_DATE('2002-1-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000149', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV149')
 /
- insert into GOD.NHANVIEN values('NV150', 'Ho Thi Tin', 'Nu', TO_DATE('2002-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000150', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV150')
+ insert into NHANVIEN values('NV150', 'Ho Thi Tin', 'Nu', TO_DATE('2002-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000150', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV150')
 /
- insert into GOD.NHANVIEN values('NV151', 'Duong Hoang Vy', 'Nam', TO_DATE('2010-6-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000151', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV151')
+ insert into NHANVIEN values('NV151', 'Duong Hoang Vy', 'Nam', TO_DATE('2010-6-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000151', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV151')
 /
- insert into GOD.NHANVIEN values('NV152', 'Pham Chi Nam', 'Nu', TO_DATE('2014-4-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000152', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV152')
+ insert into NHANVIEN values('NV152', 'Pham Chi Nam', 'Nu', TO_DATE('2014-4-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000152', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV152')
 /
- insert into GOD.NHANVIEN values('NV153', 'Gian Thi Bac', 'Nam', TO_DATE('2011-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000153', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV153')
+ insert into NHANVIEN values('NV153', 'Gian Thi Bac', 'Nam', TO_DATE('2011-8-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000153', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV153')
 /
- insert into GOD.NHANVIEN values('NV154', 'An Song Tiep', 'Nu', TO_DATE('2022-5-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000154', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV154')
+ insert into NHANVIEN values('NV154', 'An Song Tiep', 'Nu', TO_DATE('2022-5-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000154', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV154')
 /
- insert into GOD.NHANVIEN values('NV155', 'Nguyen Tung Ðan', 'Nam', TO_DATE('2022-2-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000155', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV155')
+ insert into NHANVIEN values('NV155', 'Nguyen Tung Ðan', 'Nam', TO_DATE('2022-2-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000155', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV155')
 /
- insert into GOD.NHANVIEN values('NV156', 'Au Gia Cau', 'Nu', TO_DATE('2013-12-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000156', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV156')
+ insert into NHANVIEN values('NV156', 'Au Gia Cau', 'Nu', TO_DATE('2013-12-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000156', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV156')
 /
- insert into GOD.NHANVIEN values('NV157', 'Au Van Ngan', 'Nam', TO_DATE('2010-1-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000157', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV157')
+ insert into NHANVIEN values('NV157', 'Au Van Ngan', 'Nam', TO_DATE('2010-1-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000157', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV157')
 /
- insert into GOD.NHANVIEN values('NV158', 'Gian Hoang Tu', 'Nu', TO_DATE('2022-3-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000158', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV158')
+ insert into NHANVIEN values('NV158', 'Gian Hoang Tu', 'Nu', TO_DATE('2022-3-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000158', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV158')
 /
- insert into GOD.NHANVIEN values('NV159', 'Lai Song Tu', 'Nu', TO_DATE('2012-11-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000159', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV159')
+ insert into NHANVIEN values('NV159', 'Lai Song Tu', 'Nu', TO_DATE('2012-11-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000159', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV159')
 /
- insert into GOD.NHANVIEN values('NV160', 'Au Thi Viet', 'Nam', TO_DATE('2022-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000160', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV160')
+ insert into NHANVIEN values('NV160', 'Au Thi Viet', 'Nam', TO_DATE('2022-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000160', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV160')
 /
- insert into GOD.NHANVIEN values('NV161', 'Ðoan Chi Vy', 'Nam', TO_DATE('2002-8-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000161', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV161')
+ insert into NHANVIEN values('NV161', 'Ðoan Chi Vy', 'Nam', TO_DATE('2002-8-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000161', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV161')
 /
- insert into GOD.NHANVIEN values('NV162', 'Vo Chi khanh', 'Nu', TO_DATE('2004-12-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000162', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV162')
+ insert into NHANVIEN values('NV162', 'Vo Chi khanh', 'Nu', TO_DATE('2004-12-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000162', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV162')
 /
- insert into GOD.NHANVIEN values('NV163', 'Ho Chi Ðan', 'Nu', TO_DATE('2001-9-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000163', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV163')
+ insert into NHANVIEN values('NV163', 'Ho Chi Ðan', 'Nu', TO_DATE('2001-9-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000163', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV163')
 /
- insert into GOD.NHANVIEN values('NV164', 'Ðang Thi Ðuc', 'Nu', TO_DATE('2014-8-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000164', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV164')
+ insert into NHANVIEN values('NV164', 'Ðang Thi Ðuc', 'Nu', TO_DATE('2014-8-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000164', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV164')
 /
- insert into GOD.NHANVIEN values('NV165', 'Le Chi Phu', 'Nu', TO_DATE('2005-11-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000165', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV165')
+ insert into NHANVIEN values('NV165', 'Le Chi Phu', 'Nu', TO_DATE('2005-11-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000165', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV165')
 /
- insert into GOD.NHANVIEN values('NV166', 'Tran Thi Thong', 'Nu', TO_DATE('2022-12-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000166', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV166')
+ insert into NHANVIEN values('NV166', 'Tran Thi Thong', 'Nu', TO_DATE('2022-12-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000166', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV166')
 /
- insert into GOD.NHANVIEN values('NV167', 'An Tung Ðang', 'Nu', TO_DATE('2022-8-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000167', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV167')
+ insert into NHANVIEN values('NV167', 'An Tung Ðang', 'Nu', TO_DATE('2022-8-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000167', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV167')
 /
- insert into GOD.NHANVIEN values('NV168', 'Ung Song Thien', 'Nam', TO_DATE('2005-7-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000168', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV168')
+ insert into NHANVIEN values('NV168', 'Ung Song Thien', 'Nam', TO_DATE('2005-7-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000168', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV168')
 /
- insert into GOD.NHANVIEN values('NV169', 'Nguyen Tung Tu', 'Nam', TO_DATE('2005-1-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000169', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV169')
+ insert into NHANVIEN values('NV169', 'Nguyen Tung Tu', 'Nam', TO_DATE('2005-1-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000169', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV169')
 /
- insert into GOD.NHANVIEN values('NV170', 'Tran Hoang Giang', 'Nam', TO_DATE('2019-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000170', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV170')
+ insert into NHANVIEN values('NV170', 'Tran Hoang Giang', 'Nam', TO_DATE('2019-10-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000170', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV170')
 /
- insert into GOD.NHANVIEN values('NV171', 'Truong Gia Nguyet', 'Nu', TO_DATE('2006-10-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000171', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV171')
+ insert into NHANVIEN values('NV171', 'Truong Gia Nguyet', 'Nu', TO_DATE('2006-10-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000171', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV171')
 /
- insert into GOD.NHANVIEN values('NV172', 'Truong Tung Giang', 'Nam', TO_DATE('2021-9-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000172', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV172')
+ insert into NHANVIEN values('NV172', 'Truong Tung Giang', 'Nam', TO_DATE('2021-9-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000172', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV172')
 /
- insert into GOD.NHANVIEN values('NV173', 'Lai Tung Anh', 'Nu', TO_DATE('2003-5-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000173', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV173')
+ insert into NHANVIEN values('NV173', 'Lai Tung Anh', 'Nu', TO_DATE('2003-5-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000173', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV173')
 /
- insert into GOD.NHANVIEN values('NV174', 'Ung Hoang Duy', 'Nam', TO_DATE('2017-7-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000174', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV174')
+ insert into NHANVIEN values('NV174', 'Ung Hoang Duy', 'Nam', TO_DATE('2017-7-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000174', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV174')
 /
- insert into GOD.NHANVIEN values('NV175', 'Ðang Song Tu', 'Nu', TO_DATE('2020-7-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000175', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV175')
+ insert into NHANVIEN values('NV175', 'Ðang Song Tu', 'Nu', TO_DATE('2020-7-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000175', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV175')
 /
- insert into GOD.NHANVIEN values('NV176', 'Ðoan Chi Giang', 'Nu', TO_DATE('2012-8-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000176', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV176')
+ insert into NHANVIEN values('NV176', 'Ðoan Chi Giang', 'Nu', TO_DATE('2012-8-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000176', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV176')
 /
- insert into GOD.NHANVIEN values('NV177', 'Ho Chi Tiep', 'Nam', TO_DATE('2018-2-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000177', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV177')
+ insert into NHANVIEN values('NV177', 'Ho Chi Tiep', 'Nam', TO_DATE('2018-2-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000177', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV177')
 /
- insert into GOD.NHANVIEN values('NV178', 'An Van Tuan', 'Nu', TO_DATE('2001-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000178', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV178')
+ insert into NHANVIEN values('NV178', 'An Van Tuan', 'Nu', TO_DATE('2001-2-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000178', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV178')
 /
- insert into GOD.NHANVIEN values('NV179', 'Gian Gia May', 'Nam', TO_DATE('2004-1-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000179', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV179')
+ insert into NHANVIEN values('NV179', 'Gian Gia May', 'Nam', TO_DATE('2004-1-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000179', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV179')
 /
- insert into GOD.NHANVIEN values('NV180', 'Ho Thi Sang', 'Nu', TO_DATE('2001-1-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000180', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV180')
+ insert into NHANVIEN values('NV180', 'Ho Thi Sang', 'Nu', TO_DATE('2001-1-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000180', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV180')
 /
- insert into GOD.NHANVIEN values('NV181', 'Ho Van Anh', 'Nu', TO_DATE('2013-10-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000181', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV181')
+ insert into NHANVIEN values('NV181', 'Ho Van Anh', 'Nu', TO_DATE('2013-10-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000181', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV181')
 /
- insert into GOD.NHANVIEN values('NV182', 'Ðoan Thi Cau', 'Nam', TO_DATE('2020-8-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000182', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV182')
+ insert into NHANVIEN values('NV182', 'Ðoan Thi Cau', 'Nam', TO_DATE('2020-8-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000182', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV182')
 /
- insert into GOD.NHANVIEN values('NV183', 'Truong Tung Ngoc Nhi', 'Nu', TO_DATE('2009-6-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000183', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV183')
+ insert into NHANVIEN values('NV183', 'Truong Tung Ngoc Nhi', 'Nu', TO_DATE('2009-6-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000183', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV183')
 /
- insert into GOD.NHANVIEN values('NV184', 'Bui Chi Ngan', 'Nam', TO_DATE('2021-2-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000184', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV184')
+ insert into NHANVIEN values('NV184', 'Bui Chi Ngan', 'Nam', TO_DATE('2021-2-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000184', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV184')
 /
- insert into GOD.NHANVIEN values('NV185', 'Ðang Thi Sang', 'Nam', TO_DATE('2005-12-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000185', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV185')
+ insert into NHANVIEN values('NV185', 'Ðang Thi Sang', 'Nam', TO_DATE('2005-12-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000185', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV185')
 /
- insert into GOD.NHANVIEN values('NV186', 'Lai Tung Bac', 'Nu', TO_DATE('2021-7-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000186', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV186')
+ insert into NHANVIEN values('NV186', 'Lai Tung Bac', 'Nu', TO_DATE('2021-7-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000186', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV186')
 /
- insert into GOD.NHANVIEN values('NV187', 'Tran Thi Chung', 'Nam', TO_DATE('2015-10-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000187', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV187')
+ insert into NHANVIEN values('NV187', 'Tran Thi Chung', 'Nam', TO_DATE('2015-10-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000187', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV187')
 /
- insert into GOD.NHANVIEN values('NV188', 'Lai Tung Quoc', 'Nu', TO_DATE('2017-9-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000188', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV188')
+ insert into NHANVIEN values('NV188', 'Lai Tung Quoc', 'Nu', TO_DATE('2017-9-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000188', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV188')
 /
- insert into GOD.NHANVIEN values('NV189', 'Vu Hoang Vinh', 'Nam', TO_DATE('2016-8-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000189', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV189')
+ insert into NHANVIEN values('NV189', 'Vu Hoang Vinh', 'Nam', TO_DATE('2016-8-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000189', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV189')
 /
- insert into GOD.NHANVIEN values('NV190', 'Lai Thi Ðan', 'Nu', TO_DATE('2013-8-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000190', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV190')
+ insert into NHANVIEN values('NV190', 'Lai Thi Ðan', 'Nu', TO_DATE('2013-8-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000190', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV190')
 /
- insert into GOD.NHANVIEN values('NV191', 'Ly Gia Minh', 'Nam', TO_DATE('2003-3-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000191', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV191')
+ insert into NHANVIEN values('NV191', 'Ly Gia Minh', 'Nam', TO_DATE('2003-3-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000191', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV191')
 /
- insert into GOD.NHANVIEN values('NV192', 'Vo Tung khanh', 'Nam', TO_DATE('2003-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000192', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV192')
+ insert into NHANVIEN values('NV192', 'Vo Tung khanh', 'Nam', TO_DATE('2003-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000192', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV192')
 /
- insert into GOD.NHANVIEN values('NV193', 'An Chi Vinh', 'Nam', TO_DATE('2006-11-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000193', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV193')
+ insert into NHANVIEN values('NV193', 'An Chi Vinh', 'Nam', TO_DATE('2006-11-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000193', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV193')
 /
- insert into GOD.NHANVIEN values('NV194', 'Le Song Thuong', 'Nu', TO_DATE('2009-4-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000194', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV194')
+ insert into NHANVIEN values('NV194', 'Le Song Thuong', 'Nu', TO_DATE('2009-4-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000194', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV194')
 /
- insert into GOD.NHANVIEN values('NV195', 'Pham Tung Thuong', 'Nu', TO_DATE('2006-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000195', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV195')
+ insert into NHANVIEN values('NV195', 'Pham Tung Thuong', 'Nu', TO_DATE('2006-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000195', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV195')
 /
- insert into GOD.NHANVIEN values('NV196', 'Le Thi Viet', 'Nam', TO_DATE('2021-2-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000196', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV196')
+ insert into NHANVIEN values('NV196', 'Le Thi Viet', 'Nam', TO_DATE('2021-2-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000196', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV196')
 /
- insert into GOD.NHANVIEN values('NV197', 'Truong Hoang Ðan', 'Nu', TO_DATE('2003-6-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000197', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV197')
+ insert into NHANVIEN values('NV197', 'Truong Hoang Ðan', 'Nu', TO_DATE('2003-6-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000197', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV197')
 /
- insert into GOD.NHANVIEN values('NV198', 'Bui Tung Vu', 'Nam', TO_DATE('2001-3-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000198', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV198')
+ insert into NHANVIEN values('NV198', 'Bui Tung Vu', 'Nam', TO_DATE('2001-3-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000198', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV198')
 /
- insert into GOD.NHANVIEN values('NV199', 'Au Tung Viet', 'Nam', TO_DATE('2002-11-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000199', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV199')
+ insert into NHANVIEN values('NV199', 'Au Tung Viet', 'Nam', TO_DATE('2002-11-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000199', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV199')
 /
- insert into GOD.NHANVIEN values('NV200', 'Vu Chi Tuan', 'Nu', TO_DATE('2010-5-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000200', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV200')
+ insert into NHANVIEN values('NV200', 'Vu Chi Tuan', 'Nu', TO_DATE('2010-5-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000200', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV200')
 /
- insert into GOD.NHANVIEN values('NV201', 'Le Hoang Tien', 'Nam', TO_DATE('2005-4-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000201', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV201')
+ insert into NHANVIEN values('NV201', 'Le Hoang Tien', 'Nam', TO_DATE('2005-4-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000201', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV201')
 /
- insert into GOD.NHANVIEN values('NV202', 'Pham Song Bac', 'Nam', TO_DATE('2019-1-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000202', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV202')
+ insert into NHANVIEN values('NV202', 'Pham Song Bac', 'Nam', TO_DATE('2019-1-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000202', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV202')
 /
- insert into GOD.NHANVIEN values('NV203', 'Lai Hoang Chi', 'Nam', TO_DATE('2011-12-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000203', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV203')
+ insert into NHANVIEN values('NV203', 'Lai Hoang Chi', 'Nam', TO_DATE('2011-12-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000203', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV203')
 /
- insert into GOD.NHANVIEN values('NV204', 'Gian Tung Sang', 'Nam', TO_DATE('2004-7-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000204', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV204')
+ insert into NHANVIEN values('NV204', 'Gian Tung Sang', 'Nam', TO_DATE('2004-7-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000204', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV204')
 /
- insert into GOD.NHANVIEN values('NV205', 'Ho Chi Nam', 'Nam', TO_DATE('2022-6-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000205', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV205')
+ insert into NHANVIEN values('NV205', 'Ho Chi Nam', 'Nam', TO_DATE('2022-6-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000205', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV205')
 /
- insert into GOD.NHANVIEN values('NV206', 'Ly Tung Ngoc Nhi', 'Nu', TO_DATE('2019-2-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000206', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV206')
+ insert into NHANVIEN values('NV206', 'Ly Tung Ngoc Nhi', 'Nu', TO_DATE('2019-2-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000206', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV206')
 /
- insert into GOD.NHANVIEN values('NV207', 'Vo Chi Vy', 'Nu', TO_DATE('2016-1-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000207', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV207')
+ insert into NHANVIEN values('NV207', 'Vo Chi Vy', 'Nu', TO_DATE('2016-1-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000207', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV207')
 /
- insert into GOD.NHANVIEN values('NV208', 'Tran Hoang Han', 'Nu', TO_DATE('2022-1-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000208', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV208')
+ insert into NHANVIEN values('NV208', 'Tran Hoang Han', 'Nu', TO_DATE('2022-1-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000208', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV208')
 /
- insert into GOD.NHANVIEN values('NV209', 'Lai Thi Vu', 'Nu', TO_DATE('2017-1-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000209', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV209')
+ insert into NHANVIEN values('NV209', 'Lai Thi Vu', 'Nu', TO_DATE('2017-1-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000209', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV209')
 /
- insert into GOD.NHANVIEN values('NV210', 'Pham Song Quoc', 'Nam', TO_DATE('2010-2-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000210', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV210')
+ insert into NHANVIEN values('NV210', 'Pham Song Quoc', 'Nam', TO_DATE('2010-2-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000210', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV210')
 /
- insert into GOD.NHANVIEN values('NV211', 'Bui Tung Ngan', 'Nam', TO_DATE('2018-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000211', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV211')
+ insert into NHANVIEN values('NV211', 'Bui Tung Ngan', 'Nam', TO_DATE('2018-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000211', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV211')
 /
- insert into GOD.NHANVIEN values('NV212', 'Gian Van Sang', 'Nam', TO_DATE('2018-6-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000212', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV212')
+ insert into NHANVIEN values('NV212', 'Gian Van Sang', 'Nam', TO_DATE('2018-6-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000212', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV212')
 /
- insert into GOD.NHANVIEN values('NV213', 'Au Gia Anh', 'Nam', TO_DATE('2007-9-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000213', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV213')
+ insert into NHANVIEN values('NV213', 'Au Gia Anh', 'Nam', TO_DATE('2007-9-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000213', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV213')
 /
- insert into GOD.NHANVIEN values('NV214', 'Ðoan Song Han', 'Nam', TO_DATE('2014-6-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000214', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV214')
+ insert into NHANVIEN values('NV214', 'Ðoan Song Han', 'Nam', TO_DATE('2014-6-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000214', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV214')
 /
- insert into GOD.NHANVIEN values('NV215', 'An Hoang Sang', 'Nu', TO_DATE('2014-10-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000215', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV215')
+ insert into NHANVIEN values('NV215', 'An Hoang Sang', 'Nu', TO_DATE('2014-10-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000215', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV215')
 /
- insert into GOD.NHANVIEN values('NV216', 'Vo Chi Giang', 'Nu', TO_DATE('2006-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000216', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV216')
+ insert into NHANVIEN values('NV216', 'Vo Chi Giang', 'Nu', TO_DATE('2006-6-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000216', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV216')
 /
- insert into GOD.NHANVIEN values('NV217', 'Truong Thi Tan', 'Nu', TO_DATE('2011-12-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000217', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV217')
+ insert into NHANVIEN values('NV217', 'Truong Thi Tan', 'Nu', TO_DATE('2011-12-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000217', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV217')
 /
- insert into GOD.NHANVIEN values('NV218', 'Ho Tung Ðan', 'Nu', TO_DATE('2009-4-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000218', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV218')
+ insert into NHANVIEN values('NV218', 'Ho Tung Ðan', 'Nu', TO_DATE('2009-4-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000218', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV218')
 /
- insert into GOD.NHANVIEN values('NV219', 'Bui Van Nam', 'Nam', TO_DATE('2009-4-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000219', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV219')
+ insert into NHANVIEN values('NV219', 'Bui Van Nam', 'Nam', TO_DATE('2009-4-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000219', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV219')
 /
- insert into GOD.NHANVIEN values('NV220', 'Ðoan Hoang Vy', 'Nu', TO_DATE('2009-10-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000220', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV220')
+ insert into NHANVIEN values('NV220', 'Ðoan Hoang Vy', 'Nu', TO_DATE('2009-10-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000220', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV220')
 /
- insert into GOD.NHANVIEN values('NV221', 'Vo Tung Tin', 'Nu', TO_DATE('2001-8-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000221', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV221')
+ insert into NHANVIEN values('NV221', 'Vo Tung Tin', 'Nu', TO_DATE('2001-8-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000221', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV221')
 /
- insert into GOD.NHANVIEN values('NV222', 'Ung Hoang Vinh', 'Nam', TO_DATE('2010-3-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000222', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV222')
+ insert into NHANVIEN values('NV222', 'Ung Hoang Vinh', 'Nam', TO_DATE('2010-3-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000222', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV222')
 /
- insert into GOD.NHANVIEN values('NV223', 'Nguyen Thi Tin', 'Nam', TO_DATE('2022-10-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000223', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV223')
+ insert into NHANVIEN values('NV223', 'Nguyen Thi Tin', 'Nam', TO_DATE('2022-10-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000223', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV223')
 /
- insert into GOD.NHANVIEN values('NV224', 'Ly Tung Ðang', 'Nu', TO_DATE('2001-9-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000224', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV224')
+ insert into NHANVIEN values('NV224', 'Ly Tung Ðang', 'Nu', TO_DATE('2001-9-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000224', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV224')
 /
- insert into GOD.NHANVIEN values('NV225', 'Tran Tung Ðuc', 'Nu', TO_DATE('2022-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000225', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV225')
+ insert into NHANVIEN values('NV225', 'Tran Tung Ðuc', 'Nu', TO_DATE('2022-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000225', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV225')
 /
- insert into GOD.NHANVIEN values('NV226', 'Ho Tung Thong', 'Nam', TO_DATE('2002-6-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000226', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV226')
+ insert into NHANVIEN values('NV226', 'Ho Tung Thong', 'Nam', TO_DATE('2002-6-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000226', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV226')
 /
- insert into GOD.NHANVIEN values('NV227', 'Ly Tung Bao', 'Nam', TO_DATE('2009-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000227', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV227')
+ insert into NHANVIEN values('NV227', 'Ly Tung Bao', 'Nam', TO_DATE('2009-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000227', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV227')
 /
- insert into GOD.NHANVIEN values('NV228', 'Ðoan Van Ngan', 'Nu', TO_DATE('2007-1-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000228', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV228')
+ insert into NHANVIEN values('NV228', 'Ðoan Van Ngan', 'Nu', TO_DATE('2007-1-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000228', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV228')
 /
- insert into GOD.NHANVIEN values('NV229', 'Au Chi Anh', 'Nam', TO_DATE('2019-4-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000229', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV229')
+ insert into NHANVIEN values('NV229', 'Au Chi Anh', 'Nam', TO_DATE('2019-4-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000229', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV229')
 /
- insert into GOD.NHANVIEN values('NV230', 'Le Hoang Cuc', 'Nam', TO_DATE('2000-2-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000230', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV230')
+ insert into NHANVIEN values('NV230', 'Le Hoang Cuc', 'Nam', TO_DATE('2000-2-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000230', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV230')
 /
- insert into GOD.NHANVIEN values('NV231', 'Truong Chi Thong', 'Nam', TO_DATE('2001-3-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000231', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV231')
+ insert into NHANVIEN values('NV231', 'Truong Chi Thong', 'Nam', TO_DATE('2001-3-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000231', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV231')
 /
- insert into GOD.NHANVIEN values('NV232', 'Nguyen Hoang Cau', 'Nu', TO_DATE('2005-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000232', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV232')
+ insert into NHANVIEN values('NV232', 'Nguyen Hoang Cau', 'Nu', TO_DATE('2005-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000232', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV232')
 /
- insert into GOD.NHANVIEN values('NV233', 'Duong Van Ðan', 'Nam', TO_DATE('2017-2-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000233', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV233')
+ insert into NHANVIEN values('NV233', 'Duong Van Ðan', 'Nam', TO_DATE('2017-2-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000233', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV233')
 /
- insert into GOD.NHANVIEN values('NV234', 'Gian Song May', 'Nu', TO_DATE('2022-9-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000234', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV234')
+ insert into NHANVIEN values('NV234', 'Gian Song May', 'Nu', TO_DATE('2022-9-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000234', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV234')
 /
- insert into GOD.NHANVIEN values('NV235', 'Ung Chi khanh', 'Nu', TO_DATE('2019-3-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000235', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV235')
+ insert into NHANVIEN values('NV235', 'Ung Chi khanh', 'Nu', TO_DATE('2019-3-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000235', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV235')
 /
- insert into GOD.NHANVIEN values('NV236', 'Ðoan Chi Duy', 'Nu', TO_DATE('2002-4-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000236', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV236')
+ insert into NHANVIEN values('NV236', 'Ðoan Chi Duy', 'Nu', TO_DATE('2002-4-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000236', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV236')
 /
- insert into GOD.NHANVIEN values('NV237', 'Ung Hoang May', 'Nam', TO_DATE('2019-7-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000237', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV237')
+ insert into NHANVIEN values('NV237', 'Ung Hoang May', 'Nam', TO_DATE('2019-7-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000237', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV237')
 /
- insert into GOD.NHANVIEN values('NV238', 'Pham Song Anh', 'Nu', TO_DATE('2005-7-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000238', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV238')
+ insert into NHANVIEN values('NV238', 'Pham Song Anh', 'Nu', TO_DATE('2005-7-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000238', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV238')
 /
- insert into GOD.NHANVIEN values('NV239', 'Nguyen Gia Tuan', 'Nu', TO_DATE('2011-12-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000239', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV239')
+ insert into NHANVIEN values('NV239', 'Nguyen Gia Tuan', 'Nu', TO_DATE('2011-12-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000239', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV239')
 /
- insert into GOD.NHANVIEN values('NV240', 'Bui Gia Vy', 'Nu', TO_DATE('2019-8-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000240', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV240')
+ insert into NHANVIEN values('NV240', 'Bui Gia Vy', 'Nu', TO_DATE('2019-8-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000240', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV240')
 /
- insert into GOD.NHANVIEN values('NV241', 'Vo Hoang Bao', 'Nu', TO_DATE('2000-11-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000241', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV241')
+ insert into NHANVIEN values('NV241', 'Vo Hoang Bao', 'Nu', TO_DATE('2000-11-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000241', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV241')
 /
- insert into GOD.NHANVIEN values('NV242', 'Le Hoang Vinh', 'Nu', TO_DATE('2020-1-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000242', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV242')
+ insert into NHANVIEN values('NV242', 'Le Hoang Vinh', 'Nu', TO_DATE('2020-1-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000242', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV242')
 /
- insert into GOD.NHANVIEN values('NV243', 'Pham Gia An', 'Nu', TO_DATE('2003-10-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000243', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV243')
+ insert into NHANVIEN values('NV243', 'Pham Gia An', 'Nu', TO_DATE('2003-10-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000243', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV243')
 /
- insert into GOD.NHANVIEN values('NV244', 'An Chi Viet', 'Nam', TO_DATE('2014-1-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000244', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV244')
+ insert into NHANVIEN values('NV244', 'An Chi Viet', 'Nam', TO_DATE('2014-1-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000244', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV244')
 /
- insert into GOD.NHANVIEN values('NV245', 'Vo Gia Nam', 'Nu', TO_DATE('2005-6-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000245', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV245')
+ insert into NHANVIEN values('NV245', 'Vo Gia Nam', 'Nu', TO_DATE('2005-6-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000245', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV245')
 /
- insert into GOD.NHANVIEN values('NV246', 'Pham Song Cau', 'Nu', TO_DATE('2017-9-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000246', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV246')
+ insert into NHANVIEN values('NV246', 'Pham Song Cau', 'Nu', TO_DATE('2017-9-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000246', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV246')
 /
- insert into GOD.NHANVIEN values('NV247', 'Ho Gia Minh', 'Nam', TO_DATE('2007-1-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000247', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV247')
+ insert into NHANVIEN values('NV247', 'Ho Gia Minh', 'Nam', TO_DATE('2007-1-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000247', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV247')
 /
- insert into GOD.NHANVIEN values('NV248', 'Au Van Tu', 'Nam', TO_DATE('2013-4-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000248', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV248')
+ insert into NHANVIEN values('NV248', 'Au Van Tu', 'Nam', TO_DATE('2013-4-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000248', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV248')
 /
- insert into GOD.NHANVIEN values('NV249', 'Le Hoang Han', 'Nu', TO_DATE('2003-5-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000249', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV249')
+ insert into NHANVIEN values('NV249', 'Le Hoang Han', 'Nu', TO_DATE('2003-5-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000249', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV249')
 /
- insert into GOD.NHANVIEN values('NV250', 'Ung Thi Ðang', 'Nam', TO_DATE('2002-3-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000250', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV250')
+ insert into NHANVIEN values('NV250', 'Ung Thi Ðang', 'Nam', TO_DATE('2002-3-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000250', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV250')
 /
- insert into GOD.NHANVIEN values('NV251', 'Lai Gia Vy', 'Nam', TO_DATE('2015-8-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000251', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV251')
+ insert into NHANVIEN values('NV251', 'Lai Gia Vy', 'Nam', TO_DATE('2015-8-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000251', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV251')
 /
- insert into GOD.NHANVIEN values('NV252', 'Ðang Thi Han', 'Nu', TO_DATE('2005-11-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000252', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV252')
+ insert into NHANVIEN values('NV252', 'Ðang Thi Han', 'Nu', TO_DATE('2005-11-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000252', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV252')
 /
- insert into GOD.NHANVIEN values('NV253', 'Gian Tung Ngoc Nhi', 'Nu', TO_DATE('2019-8-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000253', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV253')
+ insert into NHANVIEN values('NV253', 'Gian Tung Ngoc Nhi', 'Nu', TO_DATE('2019-8-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000253', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV253')
 /
- insert into GOD.NHANVIEN values('NV254', 'Duong Hoang Nam', 'Nu', TO_DATE('2020-5-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000254', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV254')
+ insert into NHANVIEN values('NV254', 'Duong Hoang Nam', 'Nu', TO_DATE('2020-5-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000254', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV254')
 /
- insert into GOD.NHANVIEN values('NV255', 'Ðang Van Chi', 'Nam', TO_DATE('2020-5-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000255', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV255')
+ insert into NHANVIEN values('NV255', 'Ðang Van Chi', 'Nam', TO_DATE('2020-5-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000255', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV255')
 /
- insert into GOD.NHANVIEN values('NV256', 'Truong Van Han', 'Nam', TO_DATE('2008-6-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000256', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV256')
+ insert into NHANVIEN values('NV256', 'Truong Van Han', 'Nam', TO_DATE('2008-6-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000256', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV256')
 /
- insert into GOD.NHANVIEN values('NV257', 'Ly Tung Ngoc Nhi', 'Nam', TO_DATE('2008-11-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000257', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV257')
+ insert into NHANVIEN values('NV257', 'Ly Tung Ngoc Nhi', 'Nam', TO_DATE('2008-11-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000257', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV257')
 /
- insert into GOD.NHANVIEN values('NV258', 'An Van Ðuc', 'Nam', TO_DATE('2016-7-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000258', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV258')
+ insert into NHANVIEN values('NV258', 'An Van Ðuc', 'Nam', TO_DATE('2016-7-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000258', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV258')
 /
- insert into GOD.NHANVIEN values('NV259', 'Ho Gia Minh', 'Nu', TO_DATE('2013-1-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000259', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV259')
+ insert into NHANVIEN values('NV259', 'Ho Gia Minh', 'Nu', TO_DATE('2013-1-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000259', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV259')
 /
- insert into GOD.NHANVIEN values('NV260', 'Duong Thi Anh', 'Nu', TO_DATE('2016-3-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000260', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV260')
+ insert into NHANVIEN values('NV260', 'Duong Thi Anh', 'Nu', TO_DATE('2016-3-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000260', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV260')
 /
- insert into GOD.NHANVIEN values('NV261', 'Lai Thi Tin', 'Nam', TO_DATE('2008-7-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000261', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV261')
+ insert into NHANVIEN values('NV261', 'Lai Thi Tin', 'Nam', TO_DATE('2008-7-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000261', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV261')
 /
- insert into GOD.NHANVIEN values('NV262', 'Le Thi Chung', 'Nam', TO_DATE('2016-6-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000262', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV262')
+ insert into NHANVIEN values('NV262', 'Le Thi Chung', 'Nam', TO_DATE('2016-6-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000262', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV262')
 /
- insert into GOD.NHANVIEN values('NV263', 'Vu Van Han', 'Nam', TO_DATE('2007-11-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000263', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV263')
+ insert into NHANVIEN values('NV263', 'Vu Van Han', 'Nam', TO_DATE('2007-11-18','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000263', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV263')
 /
- insert into GOD.NHANVIEN values('NV264', 'Vo Thi Tu', 'Nam', TO_DATE('2008-8-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000264', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV264')
+ insert into NHANVIEN values('NV264', 'Vo Thi Tu', 'Nam', TO_DATE('2008-8-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000264', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV264')
 /
- insert into GOD.NHANVIEN values('NV265', 'Bui Tung Quoc', 'Nu', TO_DATE('2010-5-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000265', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV265')
+ insert into NHANVIEN values('NV265', 'Bui Tung Quoc', 'Nu', TO_DATE('2010-5-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000265', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV265')
 /
- insert into GOD.NHANVIEN values('NV266', 'Vo Van Phu', 'Nam', TO_DATE('2020-11-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000266', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV266')
+ insert into NHANVIEN values('NV266', 'Vo Van Phu', 'Nam', TO_DATE('2020-11-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000266', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV266')
 /
- insert into GOD.NHANVIEN values('NV267', 'Ðoan Thi Ðuc', 'Nam', TO_DATE('2017-6-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000267', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV267')
+ insert into NHANVIEN values('NV267', 'Ðoan Thi Ðuc', 'Nam', TO_DATE('2017-6-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000267', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV267')
 /
- insert into GOD.NHANVIEN values('NV268', 'Bui Van Minh', 'Nu', TO_DATE('2022-6-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000268', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV268')
+ insert into NHANVIEN values('NV268', 'Bui Van Minh', 'Nu', TO_DATE('2022-6-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000268', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV268')
 /
- insert into GOD.NHANVIEN values('NV269', 'Ðang Hoang Ngoc Nhi', 'Nu', TO_DATE('2009-4-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000269', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV269')
+ insert into NHANVIEN values('NV269', 'Ðang Hoang Ngoc Nhi', 'Nu', TO_DATE('2009-4-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000269', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV269')
 /
- insert into GOD.NHANVIEN values('NV270', 'Vu Song Vy', 'Nu', TO_DATE('2003-12-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000270', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV270')
+ insert into NHANVIEN values('NV270', 'Vu Song Vy', 'Nu', TO_DATE('2003-12-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000270', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV270')
 /
- insert into GOD.NHANVIEN values('NV271', 'Duong Song Viet', 'Nu', TO_DATE('2017-8-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000271', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV271')
+ insert into NHANVIEN values('NV271', 'Duong Song Viet', 'Nu', TO_DATE('2017-8-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000271', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV271')
 /
- insert into GOD.NHANVIEN values('NV272', 'Lai Gia Vu', 'Nam', TO_DATE('2001-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000272', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV272')
+ insert into NHANVIEN values('NV272', 'Lai Gia Vu', 'Nam', TO_DATE('2001-6-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000272', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV272')
 /
- insert into GOD.NHANVIEN values('NV273', 'Nguyen Gia Tien', 'Nam', TO_DATE('2016-10-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000273', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV273')
+ insert into NHANVIEN values('NV273', 'Nguyen Gia Tien', 'Nam', TO_DATE('2016-10-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000273', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV273')
 /
- insert into GOD.NHANVIEN values('NV274', 'Lai Gia Thuong', 'Nu', TO_DATE('2007-9-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000274', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV274')
+ insert into NHANVIEN values('NV274', 'Lai Gia Thuong', 'Nu', TO_DATE('2007-9-25','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000274', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV274')
 /
- insert into GOD.NHANVIEN values('NV275', 'Lai Chi Bao', 'Nu', TO_DATE('2013-7-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000275', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV275')
+ insert into NHANVIEN values('NV275', 'Lai Chi Bao', 'Nu', TO_DATE('2013-7-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000275', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV275')
 /
- insert into GOD.NHANVIEN values('NV276', 'Le Thi Tuan', 'Nu', TO_DATE('2003-12-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000276', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV276')
+ insert into NHANVIEN values('NV276', 'Le Thi Tuan', 'Nu', TO_DATE('2003-12-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000276', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV276')
 /
- insert into GOD.NHANVIEN values('NV277', 'Le Chi Tan', 'Nam', TO_DATE('2015-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000277', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV277')
+ insert into NHANVIEN values('NV277', 'Le Chi Tan', 'Nam', TO_DATE('2015-11-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000277', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV277')
 /
- insert into GOD.NHANVIEN values('NV278', 'Bui Hoang Tiep', 'Nu', TO_DATE('2011-5-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000278', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV278')
+ insert into NHANVIEN values('NV278', 'Bui Hoang Tiep', 'Nu', TO_DATE('2011-5-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000278', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV278')
 /
- insert into GOD.NHANVIEN values('NV279', 'Truong Song Tiep', 'Nam', TO_DATE('2005-10-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000279', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV279')
+ insert into NHANVIEN values('NV279', 'Truong Song Tiep', 'Nam', TO_DATE('2005-10-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000279', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV279')
 /
- insert into GOD.NHANVIEN values('NV280', 'Ðoan Thi Giang', 'Nu', TO_DATE('2019-2-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000280', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV280')
+ insert into NHANVIEN values('NV280', 'Ðoan Thi Giang', 'Nu', TO_DATE('2019-2-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000280', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV280')
 /
- insert into GOD.NHANVIEN values('NV281', 'Tran Van Chung', 'Nu', TO_DATE('2003-12-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000281', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV281')
+ insert into NHANVIEN values('NV281', 'Tran Van Chung', 'Nu', TO_DATE('2003-12-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000281', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV281')
 /
- insert into GOD.NHANVIEN values('NV282', 'Ung Tung Han', 'Nu', TO_DATE('2020-5-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000282', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV282')
+ insert into NHANVIEN values('NV282', 'Ung Tung Han', 'Nu', TO_DATE('2020-5-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000282', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV282')
 /
- insert into GOD.NHANVIEN values('NV283', 'Lai Van Quoc', 'Nu', TO_DATE('2000-7-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000283', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV283')
+ insert into NHANVIEN values('NV283', 'Lai Van Quoc', 'Nu', TO_DATE('2000-7-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000283', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV283')
 /
- insert into GOD.NHANVIEN values('NV284', 'Vu Tung Vu', 'Nam', TO_DATE('2006-2-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000284', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV284')
+ insert into NHANVIEN values('NV284', 'Vu Tung Vu', 'Nam', TO_DATE('2006-2-1','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000284', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV284')
 /
- insert into GOD.NHANVIEN values('NV285', 'Tran Van Tu', 'Nu', TO_DATE('2017-10-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000285', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV285')
+ insert into NHANVIEN values('NV285', 'Tran Van Tu', 'Nu', TO_DATE('2017-10-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000285', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV285')
 /
- insert into GOD.NHANVIEN values('NV286', 'Duong Van Thien', 'Nam', TO_DATE('2014-8-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000286', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV286')
+ insert into NHANVIEN values('NV286', 'Duong Van Thien', 'Nam', TO_DATE('2014-8-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000286', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV286')
 /
- insert into GOD.NHANVIEN values('NV287', 'Tran Tung Quoc', 'Nu', TO_DATE('2013-3-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000287', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV287')
+ insert into NHANVIEN values('NV287', 'Tran Tung Quoc', 'Nu', TO_DATE('2013-3-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000287', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV287')
 /
- insert into GOD.NHANVIEN values('NV288', 'Lai Chi Bac', 'Nu', TO_DATE('2018-12-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000288', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV288')
+ insert into NHANVIEN values('NV288', 'Lai Chi Bac', 'Nu', TO_DATE('2018-12-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000288', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV288')
 /
- insert into GOD.NHANVIEN values('NV289', 'Ly Thi Ngan', 'Nu', TO_DATE('2007-8-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000289', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV289')
+ insert into NHANVIEN values('NV289', 'Ly Thi Ngan', 'Nu', TO_DATE('2007-8-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000289', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV289')
 /
- insert into GOD.NHANVIEN values('NV290', 'Ly Tung Tan', 'Nu', TO_DATE('2007-9-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000290', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV290')
+ insert into NHANVIEN values('NV290', 'Ly Tung Tan', 'Nu', TO_DATE('2007-9-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000290', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV290')
 /
- insert into GOD.NHANVIEN values('NV291', 'Ðoan Van Vu', 'Nu', TO_DATE('2009-12-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000291', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV291')
+ insert into NHANVIEN values('NV291', 'Ðoan Van Vu', 'Nu', TO_DATE('2009-12-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000291', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV291')
 /
- insert into GOD.NHANVIEN values('NV292', 'Duong Gia Phu', 'Nu', TO_DATE('2017-8-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000292', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV292')
+ insert into NHANVIEN values('NV292', 'Duong Gia Phu', 'Nu', TO_DATE('2017-8-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000292', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV292')
 /
- insert into GOD.NHANVIEN values('NV293', 'Ðoan Tung Bao', 'Nam', TO_DATE('2008-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000293', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV293')
+ insert into NHANVIEN values('NV293', 'Ðoan Tung Bao', 'Nam', TO_DATE('2008-12-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000293', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV293')
 /
- insert into GOD.NHANVIEN values('NV294', 'Ly Van Phu', 'Nu', TO_DATE('2003-12-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000294', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV294')
+ insert into NHANVIEN values('NV294', 'Ly Van Phu', 'Nu', TO_DATE('2003-12-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000294', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV294')
 /
- insert into GOD.NHANVIEN values('NV295', 'Au Van Thong', 'Nam', TO_DATE('2019-1-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000295', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV295')
+ insert into NHANVIEN values('NV295', 'Au Van Thong', 'Nam', TO_DATE('2019-1-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000295', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV295')
 /
- insert into GOD.NHANVIEN values('NV296', 'Bui Van Vu', 'Nu', TO_DATE('2015-6-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000296', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV296')
+ insert into NHANVIEN values('NV296', 'Bui Van Vu', 'Nu', TO_DATE('2015-6-8','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000296', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV296')
 /
- insert into GOD.NHANVIEN values('NV297', 'Nguyen Gia Tan', 'Nu', TO_DATE('2006-4-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000297', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV297')
+ insert into NHANVIEN values('NV297', 'Nguyen Gia Tan', 'Nu', TO_DATE('2006-4-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000297', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV297')
 /
- insert into GOD.NHANVIEN values('NV298', 'Bui Hoang Chi', 'Nu', TO_DATE('2019-2-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000298', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV298')
+ insert into NHANVIEN values('NV298', 'Bui Hoang Chi', 'Nu', TO_DATE('2019-2-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000298', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV298')
 /
- insert into GOD.NHANVIEN values('NV299', 'Truong Van Vu', 'Nu', TO_DATE('2012-11-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000299', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV299')
+ insert into NHANVIEN values('NV299', 'Truong Van Vu', 'Nu', TO_DATE('2012-11-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000299', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV299')
 /
- insert into GOD.NHANVIEN values('NV300', 'Vu Hoang Bac', 'Nam', TO_DATE('2014-12-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000300', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV300')
+ insert into NHANVIEN values('NV300', 'Vu Hoang Bac', 'Nam', TO_DATE('2014-12-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000300', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV300')
 /
- insert into GOD.NHANVIEN values('NV301', 'Gian Hoang Minh', 'Nam', TO_DATE('2018-10-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000301', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV301')
+ insert into NHANVIEN values('NV301', 'Gian Hoang Minh', 'Nam', TO_DATE('2018-10-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000301', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV301')
 /
- insert into GOD.NHANVIEN values('NV302', 'Gian Van Ðang', 'Nam', TO_DATE('2013-10-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000302', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV302')
+ insert into NHANVIEN values('NV302', 'Gian Van Ðang', 'Nam', TO_DATE('2013-10-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000302', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV302')
 /
- insert into GOD.NHANVIEN values('NV303', 'Tran Gia Ngoc Nhi', 'Nam', TO_DATE('2021-2-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000303', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV303')
+ insert into NHANVIEN values('NV303', 'Tran Gia Ngoc Nhi', 'Nam', TO_DATE('2021-2-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000303', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV303')
 /
- insert into GOD.NHANVIEN values('NV304', 'Tran Chi Ðang', 'Nu', TO_DATE('2010-7-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000304', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV304')
+ insert into NHANVIEN values('NV304', 'Tran Chi Ðang', 'Nu', TO_DATE('2010-7-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000304', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV304')
 /
- insert into GOD.NHANVIEN values('NV305', 'Lai Van Anh', 'Nu', TO_DATE('2011-6-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000305', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV305')
+ insert into NHANVIEN values('NV305', 'Lai Van Anh', 'Nu', TO_DATE('2011-6-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000305', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV305')
 /
- insert into GOD.NHANVIEN values('NV306', 'Ho Chi Chi', 'Nam', TO_DATE('2007-2-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000306', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV306')
+ insert into NHANVIEN values('NV306', 'Ho Chi Chi', 'Nam', TO_DATE('2007-2-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000306', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV306')
 /
- insert into GOD.NHANVIEN values('NV307', 'Lai Van Chung', 'Nu', TO_DATE('2007-4-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000307', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV307')
+ insert into NHANVIEN values('NV307', 'Lai Van Chung', 'Nu', TO_DATE('2007-4-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000307', '22000', '10000', 'Nhan vien', 'QL016', 4, 'UserNV307')
 /
- insert into GOD.NHANVIEN values('NV308', 'Vu Chi Tin', 'Nu', TO_DATE('2006-11-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000308', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV308')
+ insert into NHANVIEN values('NV308', 'Vu Chi Tin', 'Nu', TO_DATE('2006-11-27','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000308', '22000', '10000', 'Nhan vien', 'QL017', 5, 'UserNV308')
 /
- insert into GOD.NHANVIEN values('NV309', 'Vu Tung Ngan', 'Nam', TO_DATE('2017-1-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000309', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV309')
+ insert into NHANVIEN values('NV309', 'Vu Tung Ngan', 'Nam', TO_DATE('2017-1-13','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000309', '22000', '10000', 'Nhan vien', 'QL018', 6, 'UserNV309')
 /
- insert into GOD.NHANVIEN values('NV310', 'Ho Thi Minh', 'Nu', TO_DATE('2016-7-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000310', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV310')
+ insert into NHANVIEN values('NV310', 'Ho Thi Minh', 'Nu', TO_DATE('2016-7-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000310', '22000', '10000', 'Nhan vien', 'QL019', 7, 'UserNV310')
 /
- insert into GOD.NHANVIEN values('NV311', 'Lai Song Thong', 'Nam', TO_DATE('2003-3-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000311', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV311')
+ insert into NHANVIEN values('NV311', 'Lai Song Thong', 'Nam', TO_DATE('2003-3-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000311', '22000', '10000', 'Nhan vien', 'QL020', 8, 'UserNV311')
 /
- insert into GOD.NHANVIEN values('NV312', 'Vu Song Viet', 'Nu', TO_DATE('2003-5-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000312', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV312')
+ insert into NHANVIEN values('NV312', 'Vu Song Viet', 'Nu', TO_DATE('2003-5-5','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000312', '22000', '10000', 'Nhan vien', 'QL021', 1, 'UserNV312')
 /
- insert into GOD.NHANVIEN values('NV313', 'Truong Chi Ðuc', 'Nu', TO_DATE('2006-3-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000313', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV313')
+ insert into NHANVIEN values('NV313', 'Truong Chi Ðuc', 'Nu', TO_DATE('2006-3-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000313', '22000', '10000', 'Nhan vien', 'QL022', 2, 'UserNV313')
 /
- insert into GOD.NHANVIEN values('NV314', 'Tran Hoang Tan', 'Nam', TO_DATE('2020-3-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000314', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV314')
+ insert into NHANVIEN values('NV314', 'Tran Hoang Tan', 'Nam', TO_DATE('2020-3-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000314', '22000', '10000', 'Nhan vien', 'QL023', 3, 'UserNV314')
 /
- insert into GOD.NHANVIEN values('NV315', 'Tran Thi An', 'Nu', TO_DATE('2022-11-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000315', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV315')
+ insert into NHANVIEN values('NV315', 'Tran Thi An', 'Nu', TO_DATE('2022-11-26','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000315', '22000', '10000', 'Nhan vien', 'QL024', 4, 'UserNV315')
 /
- insert into GOD.NHANVIEN values('NV316', 'Gian Gia Minh', 'Nu', TO_DATE('2019-6-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000316', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV316')
+ insert into NHANVIEN values('NV316', 'Gian Gia Minh', 'Nu', TO_DATE('2019-6-14','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000316', '22000', '10000', 'Nhan vien', 'QL025', 5, 'UserNV316')
 /
- insert into GOD.NHANVIEN values('NV317', 'Ðoan Thi Bao', 'Nu', TO_DATE('2013-1-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000317', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV317')
+ insert into NHANVIEN values('NV317', 'Ðoan Thi Bao', 'Nu', TO_DATE('2013-1-28','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000317', '22000', '10000', 'Nhan vien', 'QL026', 6, 'UserNV317')
 /
- insert into GOD.NHANVIEN values('NV318', 'Ho Chi Anh', 'Nam', TO_DATE('2013-10-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000318', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV318')
+ insert into NHANVIEN values('NV318', 'Ho Chi Anh', 'Nam', TO_DATE('2013-10-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000318', '22000', '10000', 'Nhan vien', 'QL027', 7, 'UserNV318')
 /
- insert into GOD.NHANVIEN values('NV319', 'Tran Tung Vy', 'Nu', TO_DATE('2017-10-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000319', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV319')
+ insert into NHANVIEN values('NV319', 'Tran Tung Vy', 'Nu', TO_DATE('2017-10-21','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000319', '22000', '10000', 'Nhan vien', 'QL028', 8, 'UserNV319')
 /
- insert into GOD.NHANVIEN values('NV320', 'Ðoan Van Anh', 'Nam', TO_DATE('2018-7-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000320', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV320')
+ insert into NHANVIEN values('NV320', 'Ðoan Van Anh', 'Nam', TO_DATE('2018-7-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000320', '22000', '10000', 'Nhan vien', 'QL029', 1, 'UserNV320')
 /
- insert into GOD.NHANVIEN values('NV321', 'Ðang Thi An', 'Nu', TO_DATE('2021-6-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000321', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV321')
+ insert into NHANVIEN values('NV321', 'Ðang Thi An', 'Nu', TO_DATE('2021-6-17','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000321', '22000', '10000', 'Nhan vien', 'QL030', 2, 'UserNV321')
 /
- insert into GOD.NHANVIEN values('NV322', 'Ðang Song Thuong', 'Nu', TO_DATE('2021-10-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000322', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV322')
+ insert into NHANVIEN values('NV322', 'Ðang Song Thuong', 'Nu', TO_DATE('2021-10-20','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000322', '22000', '10000', 'Nhan vien', 'QL031', 3, 'UserNV322')
 /
- insert into GOD.NHANVIEN values('NV323', 'Gian Chi Phu', 'Nu', TO_DATE('2013-10-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000323', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV323')
+ insert into NHANVIEN values('NV323', 'Gian Chi Phu', 'Nu', TO_DATE('2013-10-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000323', '22000', '10000', 'Nhan vien', 'QL032', 4, 'UserNV323')
 /
- insert into GOD.NHANVIEN values('NV324', 'Ly Thi Ðang', 'Nam', TO_DATE('2000-2-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000324', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV324')
+ insert into NHANVIEN values('NV324', 'Ly Thi Ðang', 'Nam', TO_DATE('2000-2-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000324', '22000', '10000', 'Nhan vien', 'QL033', 5, 'UserNV324')
 /
- insert into GOD.NHANVIEN values('NV325', 'Gian Chi Phu', 'Nam', TO_DATE('2006-5-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000325', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV325')
+ insert into NHANVIEN values('NV325', 'Gian Chi Phu', 'Nam', TO_DATE('2006-5-15','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000325', '22000', '10000', 'Nhan vien', 'QL034', 6, 'UserNV325')
 /
- insert into GOD.NHANVIEN values('NV326', 'Tran Song Thuong', 'Nu', TO_DATE('2020-2-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000326', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV326')
+ insert into NHANVIEN values('NV326', 'Tran Song Thuong', 'Nu', TO_DATE('2020-2-6','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000326', '22000', '10000', 'Nhan vien', 'QL035', 7, 'UserNV326')
 /
- insert into GOD.NHANVIEN values('NV327', 'Nguyen Chi khanh', 'Nam', TO_DATE('2008-10-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000327', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV327')
+ insert into NHANVIEN values('NV327', 'Nguyen Chi khanh', 'Nam', TO_DATE('2008-10-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000327', '22000', '10000', 'Nhan vien', 'QL016', 8, 'UserNV327')
 /
- insert into GOD.NHANVIEN values('NV328', 'Pham Tung Duy', 'Nu', TO_DATE('2013-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000328', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV328')
+ insert into NHANVIEN values('NV328', 'Pham Tung Duy', 'Nu', TO_DATE('2013-9-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000328', '22000', '10000', 'Nhan vien', 'QL017', 1, 'UserNV328')
 /
- insert into GOD.NHANVIEN values('NV329', 'Bui Tung Tuan', 'Nu', TO_DATE('2018-10-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000329', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV329')
+ insert into NHANVIEN values('NV329', 'Bui Tung Tuan', 'Nu', TO_DATE('2018-10-7','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000329', '22000', '10000', 'Nhan vien', 'QL018', 2, 'UserNV329')
 /
- insert into GOD.NHANVIEN values('NV330', 'Truong Song Nam', 'Nu', TO_DATE('2009-7-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000330', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV330')
+ insert into NHANVIEN values('NV330', 'Truong Song Nam', 'Nu', TO_DATE('2009-7-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000330', '22000', '10000', 'Nhan vien', 'QL019', 3, 'UserNV330')
 /
- insert into GOD.NHANVIEN values('NV331', 'Pham Gia Thong', 'Nu', TO_DATE('2003-9-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000331', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV331')
+ insert into NHANVIEN values('NV331', 'Pham Gia Thong', 'Nu', TO_DATE('2003-9-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000331', '22000', '10000', 'Nhan vien', 'QL020', 4, 'UserNV331')
 /
- insert into GOD.NHANVIEN values('NV332', 'Truong Van Thong', 'Nam', TO_DATE('2016-8-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000332', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV332')
+ insert into NHANVIEN values('NV332', 'Truong Van Thong', 'Nam', TO_DATE('2016-8-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000332', '22000', '10000', 'Nhan vien', 'QL021', 5, 'UserNV332')
 /
- insert into GOD.NHANVIEN values('NV333', 'Truong Chi Vu', 'Nu', TO_DATE('2009-9-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000333', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV333')
+ insert into NHANVIEN values('NV333', 'Truong Chi Vu', 'Nu', TO_DATE('2009-9-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000333', '22000', '10000', 'Nhan vien', 'QL022', 6, 'UserNV333')
 /
- insert into GOD.NHANVIEN values('NV334', 'Nguyen Hoang Chi', 'Nam', TO_DATE('2004-10-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000334', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV334')
+ insert into NHANVIEN values('NV334', 'Nguyen Hoang Chi', 'Nam', TO_DATE('2004-10-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000334', '22000', '10000', 'Nhan vien', 'QL023', 7, 'UserNV334')
 /
- insert into GOD.NHANVIEN values('NV335', 'Ho Thi Vinh', 'Nu', TO_DATE('2020-6-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000335', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV335')
+ insert into NHANVIEN values('NV335', 'Ho Thi Vinh', 'Nu', TO_DATE('2020-6-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000335', '22000', '10000', 'Nhan vien', 'QL024', 8, 'UserNV335')
 /
- insert into GOD.NHANVIEN values('NV336', 'Lai Thi Thien', 'Nam', TO_DATE('2005-3-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000336', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV336')
+ insert into NHANVIEN values('NV336', 'Lai Thi Thien', 'Nam', TO_DATE('2005-3-11','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000336', '22000', '10000', 'Nhan vien', 'QL025', 1, 'UserNV336')
 /
- insert into GOD.NHANVIEN values('NV337', 'Ho Song Ngoc Nhi', 'Nam', TO_DATE('2017-3-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000337', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV337')
+ insert into NHANVIEN values('NV337', 'Ho Song Ngoc Nhi', 'Nam', TO_DATE('2017-3-23','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000337', '22000', '10000', 'Nhan vien', 'QL026', 2, 'UserNV337')
 /
- insert into GOD.NHANVIEN values('NV338', 'Vo Hoang Chi', 'Nam', TO_DATE('2006-10-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000338', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV338')
+ insert into NHANVIEN values('NV338', 'Vo Hoang Chi', 'Nam', TO_DATE('2006-10-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000338', '22000', '10000', 'Nhan vien', 'QL027', 3, 'UserNV338')
 /
- insert into GOD.NHANVIEN values('NV339', 'Duong Thi Vu', 'Nam', TO_DATE('2010-6-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000339', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV339')
+ insert into NHANVIEN values('NV339', 'Duong Thi Vu', 'Nam', TO_DATE('2010-6-10','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000339', '22000', '10000', 'Nhan vien', 'QL028', 4, 'UserNV339')
 /
- insert into GOD.NHANVIEN values('NV340', 'Ðang Chi Quoc', 'Nam', TO_DATE('2005-9-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000340', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV340')
+ insert into NHANVIEN values('NV340', 'Ðang Chi Quoc', 'Nam', TO_DATE('2005-9-24','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000340', '22000', '10000', 'Nhan vien', 'QL029', 5, 'UserNV340')
 /
- insert into GOD.NHANVIEN values('NV341', 'Lai Van Minh', 'Nam', TO_DATE('2008-4-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000341', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV341')
+ insert into NHANVIEN values('NV341', 'Lai Van Minh', 'Nam', TO_DATE('2008-4-22','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000341', '22000', '10000', 'Nhan vien', 'QL030', 6, 'UserNV341')
 /
- insert into GOD.NHANVIEN values('NV342', 'Nguyen Hoang Ðan', 'Nam', TO_DATE('2017-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000342', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV342')
+ insert into NHANVIEN values('NV342', 'Nguyen Hoang Ðan', 'Nam', TO_DATE('2017-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000342', '22000', '10000', 'Nhan vien', 'QL031', 7, 'UserNV342')
 /
- insert into GOD.NHANVIEN values('NV343', 'Ðang Chi Minh', 'Nam', TO_DATE('2002-8-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000343', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV343')
+ insert into NHANVIEN values('NV343', 'Ðang Chi Minh', 'Nam', TO_DATE('2002-8-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000343', '22000', '10000', 'Nhan vien', 'QL032', 8, 'UserNV343')
 /
- insert into GOD.NHANVIEN values('NV344', 'Vo Chi Chung', 'Nam', TO_DATE('2002-5-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000344', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV344')
+ insert into NHANVIEN values('NV344', 'Vo Chi Chung', 'Nam', TO_DATE('2002-5-19','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000344', '22000', '10000', 'Nhan vien', 'QL033', 1, 'UserNV344')
 /
- insert into GOD.NHANVIEN values('NV345', 'Ðang Thi Tu', 'Nam', TO_DATE('2009-8-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000345', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV345')
+ insert into NHANVIEN values('NV345', 'Ðang Thi Tu', 'Nam', TO_DATE('2009-8-9','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000345', '22000', '10000', 'Nhan vien', 'QL034', 2, 'UserNV345')
 /
- insert into GOD.NHANVIEN values('NV346', 'Tran Thi khanh', 'Nu', TO_DATE('2013-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000346', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV346')
+ insert into NHANVIEN values('NV346', 'Tran Thi khanh', 'Nu', TO_DATE('2013-4-12','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000346', '22000', '10000', 'Nhan vien', 'QL035', 3, 'UserNV346')
 /
 
 --------------- END --------------

@@ -1,4 +1,6 @@
-﻿using Phase_1.UserControls;
+﻿using Oracle.ManagedDataAccess.Client;
+using Phase_1.Phase_2.UserControls;
+using Phase_1.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace Phase_1
 {
@@ -16,6 +19,7 @@ namespace Phase_1
         bool sidebarExpand;
         bool taskCollapsed;
         bool profileCollapsed;
+        OracleConnection connection = null;
 
         private void addUserControl(UserControl userControl)
         {
@@ -28,7 +32,11 @@ namespace Phase_1
         {
             InitializeComponent();
         }
-
+        public TaiChinh(OracleConnection connection)
+        {
+            InitializeComponent();
+            this.connection = connection;
+        }
         private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
 
@@ -87,7 +95,8 @@ namespace Phase_1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            TaskTimer.Start();
+            PhanCongEveryone ql = new PhanCongEveryone();
+            addUserControl(ql);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -116,7 +125,7 @@ namespace Phase_1
 
         private void button21_Click(object sender, EventArgs e)
         {
-            TaiChinh_PhanCongEveryone ql = new TaiChinh_PhanCongEveryone();
+            PhanCongEveryone ql = new PhanCongEveryone();
             addUserControl(ql);
         }
 
@@ -184,6 +193,11 @@ namespace Phase_1
                     ProfileTimer.Stop();
                 }
             }
+        }
+
+        private void sidebar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
