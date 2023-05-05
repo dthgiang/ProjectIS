@@ -55,7 +55,7 @@ CREATE  TABLE NhanVien (
 -- Tao bang PhongBan
 CREATE TABLE PhongBan (
 	MaPB 		number primary key,
-	TenPB 	    varchar2(60) not null,
+	TenPB 	    varchar2(60),
 	TrPHG 	    varchar(10)
 );
 

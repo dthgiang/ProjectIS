@@ -85,7 +85,7 @@ CREATE OR REPLACE PROCEDURE grantEmpRole
 AS
     CURSOR CUR IS (SELECT MANV FROM ATBM.NHANVIEN WHERE MANV NOT IN 
         (SELECT grantee FROM DBA_ROLE_PRIVS
-            where granted_role = 'RL_NHANVIEN') AND VaiTro = 'Nhan vien');
+            where granted_role = 'RL_NHANVIEN'));
     STR VARCHAR(1000);
     USR VARCHAR2(100);
     BEGIN
@@ -153,9 +153,7 @@ AS
 -------------------------
 CREATE OR REPLACE PROCEDURE usp_GrantUserTAICHINH
 AS
-    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE VaiTro = 'Tai chinh' AND
-        MANV NOT IN (SELECT grantee FROM DBA_ROLE_PRIVS
-                 where granted_role = 'RL_TAICHINH'));
+    CURSOR CUR IS (SELECT MANV FROM NHANVIEN WHERE VaiTro = 'Tai chinh');
     strSQL VARCHAR(2000);
     Usr varchar2(100);
 BEGIN
