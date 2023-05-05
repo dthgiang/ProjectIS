@@ -1,4 +1,6 @@
-﻿using Phase_1.UserControls;
+﻿using Oracle.ManagedDataAccess.Client;
+using Phase_1.Phase_2.UserControls;
+using Phase_1.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +18,8 @@ namespace Phase_1
         bool sidebarExpand;
         bool taskCollapsed;
         bool profileCollapsed;
-
+        String username;
+        OracleConnection connection;
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -28,6 +31,12 @@ namespace Phase_1
         public NhanSu()
         {
             InitializeComponent();
+        }
+        public NhanSu(String user, OracleConnection connection)
+        {
+            InitializeComponent();
+            this.connection = connection;
+            this.username = user;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -74,27 +83,6 @@ namespace Phase_1
             }
         }
 
-        private void TaskTimer_Tick(object sender, EventArgs e)
-        {
-            if (taskCollapsed)
-            {
-                TaskContainer.Height += 10;
-                if (TaskContainer.Height == TaskContainer.MaximumSize.Height)
-                {
-                    taskCollapsed = false;
-                    TaskTimer.Stop();
-                }
-            }
-            else
-            {
-                TaskContainer.Height -= 10;
-                if (TaskContainer.Height == TaskContainer.MinimumSize.Height)
-                {
-                    taskCollapsed = true;
-                    TaskTimer.Stop();
-                }
-            }
-        }
 
         private void ProfileTimer_Tick(object sender, EventArgs e)
         {
@@ -120,8 +108,8 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NhanSu nhansu = new NhanSu();
-            nhansu.Show();
+            NhanSu_EditPhongBan nhansu = new NhanSu_EditPhongBan(username, connection);
+            addUserControl(nhansu);
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -157,10 +145,6 @@ namespace Phase_1
 
         }
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button21_Click(object sender, EventArgs e)
         {

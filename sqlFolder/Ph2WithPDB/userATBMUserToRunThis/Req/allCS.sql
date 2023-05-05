@@ -191,20 +191,20 @@ grant update on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 ----------------------------------
 --- <<<< CS4 - Tai Chinh >>>> ----
 ----------------------------------
-
-create or replace view view_nhanvien
+grant RL_NhanVien to RL_TAICHINH;
+create or replace view view_allnhanvien
 as
     
     select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from nhanvien;
 /   
-GRANT SELECT ON view_nhanvien TO RL_TAICHINH;
+GRANT SELECT ON view_allnhanvien TO RL_TAICHINH;
 GRANT SELECT ON phancong TO RL_TAICHINH;
-GRANT UPDATE (LUONG, PHUCAP) ON view_nhanvien TO RL_TAICHINH;
+GRANT UPDATE  ON view_allnhanvien TO RL_TAICHINH;
 
 /
-CREATE OR REPLACE TRIGGER update_viewnhanvien
+CREATE OR REPLACE TRIGGER update_view_allnhanvien
 INSTEAD OF UPDATE 
-ON view_nhanvien 
+ON view_allnhanvien 
 FOR EACH ROW 
 BEGIN
     IF :new.luong <> :old.luong THEN
@@ -222,7 +222,7 @@ SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE = 'RL_TAICHINH';
 --------------------------------
 --- <<<< CS5 - Nhan su >>>> ----
 --------------------------------
-
+GRANT RL_NHANVIEN TO RL_NHANSU;
 --2 -
 GRANT INSERT, UPDATE ON PHONGBAN TO RL_NHANSU;
 --3
@@ -258,9 +258,9 @@ BEGIN
     end if;
 END;
 /
-grant select on NS_XEMNHANVIEN  to RL_nhansu;
-grant insert on NS_XEMNHANVIEN  to RL_nhansu;
-grant update on NS_XEMNHANVIEN  to RL_nhansu;
+grant select on NS_XEMNHANVIEN  to RL_NHANSU;
+grant insert on NS_XEMNHANVIEN  to RL_NHANSU;
+grant update on NS_XEMNHANVIEN  to RL_NHANSU;
 
 -------------------------------------
 --- <<<< CS6 - Truong De An >>>> ----

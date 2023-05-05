@@ -103,7 +103,7 @@ namespace Phase_1
                     }
                 case "Nhan su":
                     {
-                        TruongPhong l = new TruongPhong(user, connection);
+                        NhanSu l = new NhanSu(user, connection);
                         l.Show();
                         break;
                     }
