@@ -18,7 +18,7 @@ ALTER SESSION SET container = QLDTPDB;
 -- Co quyen xem tat ca cac thuoc tinh tr�n quan he NHANVIEN va PHANCONG lien quan ?en chinh nhan vien do. 
 ------------
 create OR REPLACE view Vw_NhanVien as
-    select * from ATBM.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from ATBM.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
 
 create OR REPLACE view Vw_PhanCong as
@@ -51,7 +51,7 @@ grant RL_NhanVien to RL_QuanLy;
 -- Duoc xem tat ca cac thuoc tinh, tru LUONG va PHUCAP trong quan he NHANVIEN do Q quan ly truc tiep .
 create or replace view PH2_View_QLy_XemNhanvien
 as
-    select MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG, LUONG, PHUCAP from ATBM.NhanVien 
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from ATBM.NhanVien 
     where MaNQL = SYS_CONTEXT('USERENV', 'SESSION_USER') or MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER')
 /
 
@@ -105,7 +105,7 @@ nhan vien thuoc phong ban ma T lam truong phong */
 -- tao view de cho xem cac thuoc tinh tren bang nhan vien
 ----------------------
 create OR REPLACE view Vw_TruongPhongToNhanVien as
-    select MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, LUONG, PHUCAP, VAITRO, MANQL,PHG from NhanVien NV join PhongBan on NV.PHG = MaPB where TrPHG = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from NhanVien NV join PhongBan on NV.PHG = MaPB where TrPHG = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
 
 -- su dung VPD de che di thuoc tinh LUONG & PHU CAP
@@ -195,7 +195,7 @@ grant update on Vw_TruongPhongToPhanCong to RL_TruongPhong;
 create or replace view view_nhanvien
 as
     
-    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg from nhanvien;
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from nhanvien;
 /   
 GRANT SELECT ON view_nhanvien TO RL_TAICHINH;
 GRANT SELECT ON phancong TO RL_TAICHINH;
