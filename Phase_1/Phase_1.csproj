@@ -134,6 +134,12 @@
     <Compile Include="Phase_2\NhanSu.Designer.cs">
       <DependentUpon>NhanSu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phase_2\NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_2\NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phase_2\UserControls\Notification.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\NhanSu.resx">
       <DependentUpon>NhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\Notification.resx">
       <DependentUpon>Notification.cs</DependentUpon>

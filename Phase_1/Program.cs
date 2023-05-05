@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Phase_1.Phase_2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Phase_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new NhanVien());
         }
     }
 }
