@@ -162,13 +162,14 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            GiamDoc gd = new GiamDoc();
+            gd.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            PhanCongEveryone ql = new PhanCongEveryone();
-            addUserControl(ql);
+
         }
 
         private void button6_Click(object sender, EventArgs e)

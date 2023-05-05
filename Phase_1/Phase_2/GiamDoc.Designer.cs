@@ -75,6 +75,10 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.button22 = new System.Windows.Forms.Button();
             this.btnThongBao = new System.Windows.Forms.Button();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.button26 = new System.Windows.Forms.Button();
+            this.btnAudit = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -90,10 +94,6 @@
             this.button25 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.button26 = new System.Windows.Forms.Button();
-            this.btnAudit = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
@@ -118,13 +118,13 @@
             this.panel11.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelThongTin.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -491,6 +491,38 @@
             this.btnThongBao.UseVisualStyleBackColor = false;
             this.btnThongBao.Click += new System.EventHandler(this.button10_Click);
             // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.panel26);
+            this.panel25.Controls.Add(this.btnAudit);
+            resources.ApplyResources(this.panel25, "panel25");
+            this.panel25.Name = "panel25";
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.button26);
+            resources.ApplyResources(this.panel26, "panel26");
+            this.panel26.Name = "panel26";
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button26, "button26");
+            this.button26.ForeColor = System.Drawing.Color.White;
+            this.button26.Name = "button26";
+            this.button26.UseVisualStyleBackColor = false;
+            // 
+            // btnAudit
+            // 
+            this.btnAudit.BackColor = System.Drawing.Color.Transparent;
+            this.btnAudit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.btnAudit, "btnAudit");
+            this.btnAudit.ForeColor = System.Drawing.Color.White;
+            this.btnAudit.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
+            this.btnAudit.Name = "btnAudit";
+            this.btnAudit.UseVisualStyleBackColor = false;
+            this.btnAudit.Click += new System.EventHandler(this.btnAudit_Click);
+            // 
             // sidebarTimer
             // 
             this.sidebarTimer.Interval = 10;
@@ -607,38 +639,6 @@
             this.ProfileTimer.Interval = 10;
             this.ProfileTimer.Tick += new System.EventHandler(this.ProfileTimer_Tick);
             // 
-            // panel25
-            // 
-            this.panel25.Controls.Add(this.panel26);
-            this.panel25.Controls.Add(this.btnAudit);
-            resources.ApplyResources(this.panel25, "panel25");
-            this.panel25.Name = "panel25";
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.button26);
-            resources.ApplyResources(this.panel26, "panel26");
-            this.panel26.Name = "panel26";
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button26, "button26");
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Name = "button26";
-            this.button26.UseVisualStyleBackColor = false;
-            // 
-            // btnAudit
-            // 
-            this.btnAudit.BackColor = System.Drawing.Color.Transparent;
-            this.btnAudit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
-            resources.ApplyResources(this.btnAudit, "btnAudit");
-            this.btnAudit.ForeColor = System.Drawing.Color.White;
-            this.btnAudit.Image = global::Phase_1.Properties.Resources.icons8_task_completed_24;
-            this.btnAudit.Name = "btnAudit";
-            this.btnAudit.UseVisualStyleBackColor = false;
-            this.btnAudit.Click += new System.EventHandler(this.btnAudit_Click);
-            // 
             // GiamDoc
             // 
             resources.ApplyResources(this, "$this");
@@ -674,14 +674,14 @@
             this.panel11.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel26.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
