@@ -32,7 +32,7 @@ namespace Phase_1.UserControls
             container = panelContainer;
             InitializeComponent();
 
-            if (Login.role != "admin")
+            if (Login.getRole() != "admin")
             {
                 sendNotificationButton.Hide();
 

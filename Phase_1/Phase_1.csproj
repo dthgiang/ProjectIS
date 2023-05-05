@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +133,18 @@
     </Compile>
     <Compile Include="Phase_2\NhanSu.Designer.cs">
       <DependentUpon>NhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\AddNotification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\AddNotification.Designer.cs">
+      <DependentUpon>AddNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +243,12 @@
     <Compile Include="Phase_2\UserControls\TaiChinh_DSNhanVien.Designer.cs">
       <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.Designer.cs">
+      <DependentUpon>TaiChinh_PhanCongEveryone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -276,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\NhanSu.resx">
       <DependentUpon>NhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\AddNotification.resx">
+      <DependentUpon>AddNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -326,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\TaiChinh_DSNhanVien.resx">
       <DependentUpon>TaiChinh_DSNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\TaiChinh_PhanCongEveryone.resx">
+      <DependentUpon>TaiChinh_PhanCongEveryone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\TruongDeAn_CapNhatDeAn.resx">
       <DependentUpon>TruongDeAn_CapNhatDeAn.cs</DependentUpon>
