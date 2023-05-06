@@ -74,37 +74,6 @@ namespace Phase_1.Phase_2
             sidebarTimer.Start();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NhanVien nv = new NhanVien();
-            this.Close();
-            nv.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            TaskTimer.Start();
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-            //NhanVien_PhanCong ql = new NhanVien_PhanCong();
-            //addUserControl(ql);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
-            addUserControl(ql);
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
-            addUserControl(ql);
-        }
-
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -171,11 +140,6 @@ namespace Phase_1.Phase_2
         {
             QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
             addUserControl(ql);
-        }
-
-        private void btnThongBao_Click(object sender, EventArgs e)
-        {
-            AllLayout.showNotification(panelContainer);
         }
     }
 }

@@ -121,14 +121,7 @@ namespace Phase_1
                         break;
                     }
 
-                case "Nhan vien":
-                    {
-                        NhanVien l = new NhanVien(user, connection);
-                        l.Show();
-                        break;
-                    }
-
-                case "QUAN LY":
+                case "Quan ly":
                     {
                         QuanLyTrucTiep l= new QuanLyTrucTiep(user, connection);
                         l.Show();
