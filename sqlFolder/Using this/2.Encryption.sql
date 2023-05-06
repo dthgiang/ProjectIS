@@ -72,7 +72,7 @@ BEGIN
     v_khuvuc := :new.khuvuc;
     v_linhvuc := :new.linhvuc;
     
-    v_key := GET_KEY(5);
+    v_key := GET_KEY(10);
     INSERT INTO SAVE_KEY VALUES(v_manv, v_key);
     
     :new.luong := encryption(UTL_RAW.CAST_TO_RAW(v_luong), v_manv);
@@ -155,7 +155,7 @@ create or replace view view_getpw
 as
     select password from nhanvien where manv = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
-484B5656574555434D47
+6467575
 select * from save_key;
 EXEC ATBM.NEW_KEY;
 grant execute on ATBM.new_key to NV000; 

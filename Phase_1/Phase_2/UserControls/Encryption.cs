@@ -75,7 +75,7 @@ namespace Phase_1.Phase_2.UserControls
             try
             {
 
-                OracleCommand command = new OracleCommand("EXEC ATBM.NEW_KEY", connection);
+                OracleCommand command = new OracleCommand("BEGIN ATBM.NEW_KEY; END;", connection);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Procedure executed successfully");
             }
