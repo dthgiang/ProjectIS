@@ -38,6 +38,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.adminCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,11 +112,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // adminCheckBox
+            // 
+            resources.ApplyResources(this.adminCheckBox, "adminCheckBox");
+            this.adminCheckBox.ForeColor = System.Drawing.Color.DarkBlue;
+            this.adminCheckBox.Name = "adminCheckBox";
+            this.adminCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.adminCheckBox);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordInput);
@@ -147,5 +156,6 @@
         private System.Windows.Forms.TextBox passwordInput;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.CheckBox adminCheckBox;
     }
 }

@@ -59,7 +59,7 @@ namespace Phase_1
 
             string view = "PH1_VIEW_USERS_PRIVS";
         
-        String strSQL = sqlQueryView(view, "GOD");
+        String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
             
             try
             {
@@ -83,7 +83,7 @@ namespace Phase_1
                 view = "PH1_VIEW_COL_PRIVS";
 
             }
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
 
             try
             {
@@ -106,7 +106,7 @@ namespace Phase_1
                 
                 view = "PH1_VIEW_USERS_PRIVS";
             }
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
             
             try
             {

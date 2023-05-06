@@ -40,7 +40,7 @@ namespace Phase_1
         private List<string> getUserRoleTableList(string m)
         {
 
-            string sql = "SELECT " + m.ToUpper() + "NAME FROM GOD.PH1_VIEW_ALL_" + m.ToUpper() + "S";
+            string sql = "SELECT " + m.ToUpper() + "NAME FROM " + DatabaseAccess.Connector.getOwner() + ".PH1_VIEW_ALL_" + m.ToUpper() + "S";
             OracleCommand cmd = new OracleCommand(sql, con);
 
             // Execute the query and get the data reader
@@ -94,7 +94,6 @@ namespace Phase_1
             {
                 string columnValue = reader.GetString(0); // Assuming the column is of type string
                 userList.Add(columnValue);
-                System.Diagnostics.Debug.WriteLine(columnValue);
             }
             userList.Add("ALL");
             return userList;
@@ -103,7 +102,7 @@ namespace Phase_1
         private string getTableOwner(string tabName, string m)
         {
 
-            string sql = "SELECT OWNER FROM GOD.PH1_VIEW_ALL_" + m.ToUpper() + "S WHERE " + m.ToUpper() + "NAME = '" + tabName + "'";
+            string sql = "SELECT OWNER FROM " + DatabaseAccess.Connector.getOwner() + ".PH1_VIEW_ALL_" + m.ToUpper() + "S WHERE " + m.ToUpper() + "NAME = '" + tabName + "'";
             OracleCommand cmd = new OracleCommand(sql, con);
 
             // Execute the query and get the data reader
@@ -119,7 +118,7 @@ namespace Phase_1
         private List<string> getAllRole()
         {
 
-            string sql = "SELECT ROLENAME FROM GOD.PH1_VIEW_ALL_ROLES";
+            string sql = "SELECT ROLENAME FROM  " + DatabaseAccess.Connector.getOwner() + ".PH1_VIEW_ALL_ROLES";
             OracleCommand cmd = new OracleCommand(sql, con);
 
             // Execute the query and get the data reader
@@ -247,6 +246,9 @@ namespace Phase_1
                 {
                     this.objectName = userR;
                     nameObjsLabel.Text = this.objectName;
+                    nameObjsLabel.ForeColor = Color.OrangeRed;
+                    nameObjsLabel.Font = new Font("Cambria", 14, FontStyle.Bold);
+
                     objectTextBox.Text = this.objectName;
                     granteeRoleTextBox.Text = this.objectName;
                     granteeChangePWTextBox.Text = this.objectName;
@@ -261,6 +263,7 @@ namespace Phase_1
                         passwordCheckBox.Hide();
                     }
 
+                    welcomeLabel.ForeColor = Color.MediumVioletRed;
                     welcomeLabel.Text = "You are editing on " + this.mode;
                 }
                 else
@@ -314,6 +317,12 @@ namespace Phase_1
             if (priv.ToUpper() == "UPDATE")
             {
                 col = attributeComboBox.Text;
+                if (col == "ALL")
+                {
+                    priv += " ON " + owner + "." + obj;
+                    execProc(sender, e, priv, grantee, opt);
+                    return;
+                }
                 privl += "(" + col + ")";
             }
             privl += " ON " + owner + "." + obj;

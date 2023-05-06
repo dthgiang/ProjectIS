@@ -51,6 +51,21 @@ namespace Phase_1
 
             return "admin";
         }
+
+        /* ALL USER:
+        -- Truong de an:    TDA037
+        -- Nhan vien:       NV100
+        -- Nhan su:         NS015
+        -- TaiChinh:        TC010
+        -- Truong phong:    TP040
+        -- Quan li:         QL0303
+        -- admin phase 1:   DB_manage
+        -- admin OLS:       OLS_Admin
+        -- audit Admi:
+        -- security admin:
+         */
+
+
         private void loginButton_Click(object sender, EventArgs e)
         {
 
@@ -64,6 +79,8 @@ namespace Phase_1
             }
             */
 
+          
+
             connection = Connector.GetConnectionPhase2(user, pw);
             // Check if connection does not succeed
             if (connection == null)
@@ -72,9 +89,17 @@ namespace Phase_1
                 return;
             }
             username = user;
-
-
             this.Hide();
+
+
+            if (adminCheckBox.Checked)
+            {
+                Form1 f1 = new Form1(connection);
+                f1.Show();
+                return;
+            }
+
+
 
             role = authenFunc(connection);
             System.Diagnostics.Debug.WriteLine(role);

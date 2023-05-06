@@ -15,7 +15,6 @@ namespace Phase_1
     {
         OracleConnection connection = null;
         public String userID = null;
-        public String password = null;
         public Form1(OracleConnection connection)
         {
             InitializeComponent();

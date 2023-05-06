@@ -55,7 +55,6 @@ namespace Phase_1
                 Form1 f1 = new Form1(connection);
                 this.Hide();
                 f1.userID = userID;
-                f1.password = password;
                 f1.Show();
 
             }

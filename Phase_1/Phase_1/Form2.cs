@@ -70,7 +70,7 @@ namespace Phase_1
             strCBB = temp == "" ? "Table" : temp;
 
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
 
 
             try
@@ -106,7 +106,7 @@ namespace Phase_1
 
             strCBB = filterBox.Text.ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
             
             
             try{
@@ -363,8 +363,10 @@ namespace Phase_1
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                if (filterBox.Text == "")
+                    filterBox.Text = "Table";
                 string names = filterBox.Text + "Name";
-                objectNameTextBox.Text = selectedRow.Cells[names].Value.ToString();
+                objectNameTextBox.Text = selectedRow.Cells[names.ToUpper()].Value.ToString();
 
             }
         }
@@ -385,7 +387,7 @@ namespace Phase_1
 
             strCBB = filterBox.SelectedItem.ToString().ToUpper();
             string view = "PH1_VIEW_ALL_" + strCBB + "S";
-            String strSQL = sqlQueryView(view, "GOD");
+            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
 
 
             try

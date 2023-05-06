@@ -161,7 +161,7 @@ namespace Phase_1
             // Set the location of the form
             this.Location = new Point(x, y);
 
-            String strSQL = sqlQueryViewCon(view, "GOD");
+            String strSQL = sqlQueryViewCon(view, DatabaseAccess.Connector.getOwner());
             try
             {
                 
@@ -196,7 +196,7 @@ namespace Phase_1
             if (userR != "") {
                 this.objectName = userR;
                 if (isExist()){
-                    string sqlCommand = sqlQueryViewCon(view, "GOD");
+                    string sqlCommand = sqlQueryViewCon(view, DatabaseAccess.Connector.getOwner());
                     try
                     {
                         raiseTable(dataGridView1, sqlCommand);
@@ -281,7 +281,7 @@ namespace Phase_1
                 view = "PH1_VIEW_COL_PRIVS";
 
             }
-            String strSQL = sqlQueryViewCon(view, "GOD");
+            String strSQL = sqlQueryViewCon(view, DatabaseAccess.Connector.getOwner());
 
             try
             {
@@ -304,7 +304,7 @@ namespace Phase_1
 
                 view = "PH1_VIEW_USERS_PRIVS";
             }
-            string strSQL = sqlQueryViewCon(view, "GOD");
+            string strSQL = sqlQueryViewCon(view, DatabaseAccess.Connector.getOwner());
 
             try
             {
