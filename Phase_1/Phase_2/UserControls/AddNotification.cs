@@ -72,7 +72,7 @@ namespace Phase_1.UserControls
             //assignDataLabel(p_noiDung IN VARCHAR2,p_doiTuong IN VARCHAR2,p_linhVuc IN VARCHAR2,p_khuVuc IN VARCHAR2, p_label IN VARCHAR2);
             try 
             {
-                OracleCommand command = new OracleCommand("assignDataLabel", connection);
+                OracleCommand command = new OracleCommand(DatabaseAccess.Connector.getOwner() + ".assignDataLabel", connection);
                 // set the command type to stored procedure
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -360,7 +360,7 @@ namespace Phase_1.UserControls
 
             try
             {
-                OracleCommand command = new OracleCommand("assignUserLabel", connection);
+                OracleCommand command = new OracleCommand(DatabaseAccess.Connector.getOwner() + ".assignUserLabel", connection);
                 // set the command type to stored procedure
                 command.CommandType = CommandType.StoredProcedure;
 

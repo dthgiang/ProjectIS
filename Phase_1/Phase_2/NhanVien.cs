@@ -58,8 +58,8 @@ namespace Phase_1.Phase_2
 
         private void btnViewProfile_Click(object sender, EventArgs e)
         {
-            XemProfile ql = new XemProfile();
-            addUserControl(ql);
+            AllLayout.showProfile(panelContainer);
+
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -126,20 +126,22 @@ namespace Phase_1.Phase_2
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_Task nhanvien = new QLTrucTiep_Task();
-            addUserControl(nhanvien);
+            AllLayout.showTask(panelContainer);
         }
 
         private void btnPhongban_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
-            addUserControl(ql);
+            AllLayout.showDepartment(panelContainer);
         }
 
         private void btnDeAn_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
-            addUserControl(ql);
+            AllLayout.showProject(panelContainer);
+        }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            AllLayout.showNotification(panelContainer);
         }
     }
 }

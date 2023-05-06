@@ -73,8 +73,7 @@ namespace Phase_1
 
         private void button23_Click(object sender, EventArgs e)
         {
-            XemProfile ql = new XemProfile();
-            addUserControl(ql);
+            AllLayout.showProfile(panelContainer);
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -103,14 +102,12 @@ namespace Phase_1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
-            addUserControl(ql);
+            AllLayout.showDepartment(panelContainer);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
-            addUserControl(ql);
+            AllLayout.showProject(panelContainer);
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -121,8 +118,7 @@ namespace Phase_1
 
         private void button15_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_Task ql = new QLTrucTiep_Task();
-            addUserControl(ql);
+            AllLayout.showTask(panelContainer);
         }
 
         private void button21_Click(object sender, EventArgs e)

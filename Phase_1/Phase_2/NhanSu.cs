@@ -20,13 +20,6 @@ namespace Phase_1
         bool profileCollapsed;
         String username;
         OracleConnection connection;
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            panelContainer.Controls.Clear();
-            panelContainer.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
 
         public NhanSu()
         {
@@ -108,13 +101,18 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            NhanSu x = new NhanSu();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AllLayout.showTask(panelContainer);
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-            XemProfile ql = new XemProfile();
-            addUserControl(ql);
+            AllLayout.showProfile(panelContainer);
+
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -133,11 +131,12 @@ namespace Phase_1
         {
             sidebarTimer.Start();
         }
-
+        /*
         private void button4_Click(object sender, EventArgs e)
         {
             TaskTimer.Start();
         }
+        */
 
         private void sidebar_Paint(object sender, PaintEventArgs e)
         {
@@ -153,19 +152,18 @@ namespace Phase_1
         private void button6_Click(object sender, EventArgs e)
         {
             NhanSu_EditPhongBan ql = new NhanSu_EditPhongBan(username, connection);
-            addUserControl(ql);
+            AllLayout.addUserControl(ql, panelContainer);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
-            addUserControl(ql);
+            AllLayout.showProject(panelContainer);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             NhanSu_EditNhanVien ql = new NhanSu_EditNhanVien(username, connection);
-            addUserControl(ql);
+            AllLayout.addUserControl(ql, panelContainer);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

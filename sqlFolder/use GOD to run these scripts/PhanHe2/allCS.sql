@@ -31,10 +31,9 @@ grant update(DIACHI) on god.Vw_NhanVien to RL_NhanVien;
 /
 
 --Co the xem du lieu caa toan bo quan he PHONGBAN va DEAN
-grant select on god.PhongBan to RL_NhanVien;
-grant select on god.DeAn to RL_NhanVien;
+grant select on ATBM.PhongBan to RL_NhanVien;
+grant select on ATBM.DeAn to RL_NhanVien;
 /
-
 
 -----------------------
 --- <<<< CS2  >>>> ----

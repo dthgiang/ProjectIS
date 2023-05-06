@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,29 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Oracle.ManagedDataAccess.Client;
 
-namespace Phase_1.UserControls
+namespace Phase_1.Phase_2.UserControls
 {
-    public partial class QLTrucTiep_DSDeAn : UserControl
+    public partial class NhanVien_PhanCong : UserControl
     {
-        public QLTrucTiep_DSDeAn()
+        public NhanVien_PhanCong()
         {
             InitializeComponent();
+
             try
             {
-                Helper.raiseTable(dataGridView1, "select * from ATBM.DEAN", Login.getConnection());
+                MessageBox.Show("hihi");
+                Helper.raiseTable(dataGridView1, "select * from ATBM.Vw_PhanCong", Login.getConnection());
                 dataGridView1.Show();
             }
             catch (OracleException ex)
             {
                 System.Diagnostics.Debug.WriteLine("OracleException: " + ex.Message);
             }
-        }
-
-        private void QLTrucTiep_DSDeAn_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

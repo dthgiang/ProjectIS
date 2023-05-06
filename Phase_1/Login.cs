@@ -79,7 +79,7 @@ namespace Phase_1
             }
             */
 
-          
+            System.Diagnostics.Debug.WriteLine(username + " " + pw);
 
             connection = Connector.GetConnectionPhase2(user, pw);
             // Check if connection does not succeed

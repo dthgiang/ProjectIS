@@ -172,6 +172,8 @@ END;
 /
 
 grant create view TO OLS_ADMIN with admin option;
+grant execute on assignDataLabel to RL_NhanSu;
+grant execute on assignUserLabel to RL_NhanSu;
 
 /
 --select * from ALL_SA_DATA_LABELS;

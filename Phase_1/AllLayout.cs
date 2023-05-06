@@ -17,7 +17,8 @@ namespace Phase_1
         {
         }
 
-        private static void addUserControl(UserControl userControl, Panel panelContainer)
+        // Panel container la man hinh con cua giao dien - được truyền trực tiếp từ giao diện vào
+        public static void addUserControl(UserControl userControl, Panel panelContainer)
         {
             userControl.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
@@ -31,9 +32,32 @@ namespace Phase_1
             addUserControl(nt, panelContainer);
         }
 
-        public static void showMyInformatioin()
+        // Hien thi man hinh xem toan bo Phong Ban
+        public static void showDepartment(Panel panelContainer)
         {
+            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
+            addUserControl(ql, panelContainer);
+        }
 
+
+        // Hien thi man hinh xem toan bo De An
+        public static void showProject(Panel panelContainer)
+        {
+            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
+            addUserControl(ql, panelContainer);
+        }
+
+
+        public static void showProfile(Panel panelContainer)
+        {
+            XemProfile ql = new XemProfile();
+            addUserControl(ql, panelContainer);
+        }
+
+        public static void showTask(Panel panelContainer)
+        {
+            QLTrucTiep_Task ql = new QLTrucTiep_Task();
+            addUserControl(ql, panelContainer);
         }
     }
 }

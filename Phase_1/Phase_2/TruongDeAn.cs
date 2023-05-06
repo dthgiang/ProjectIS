@@ -38,8 +38,7 @@ namespace Phase_1
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_Task tda = new QLTrucTiep_Task();
-            addUserControl(tda);
+            AllLayout.showTask(panelContainer);
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -115,8 +114,7 @@ namespace Phase_1
 
         private void button23_Click(object sender, EventArgs e)
         {
-            XemProfile ql = new XemProfile();
-            addUserControl(ql);
+            AllLayout.showProfile(panelContainer);
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -139,8 +137,7 @@ namespace Phase_1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
-            addUserControl(ql);
+            AllLayout.showDepartment(panelContainer);
         }
 
         private void button8_Click(object sender, EventArgs e)
