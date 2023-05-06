@@ -141,5 +141,10 @@ namespace Phase_1.Phase_2
             QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
             addUserControl(ql);
         }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            AllLayout.showNotification(panelContainer);
+        }
     }
 }

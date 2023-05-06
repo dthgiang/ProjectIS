@@ -750,6 +750,7 @@
             this.btnThongBao.Text = "                  Notification";
             this.btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongBao.UseVisualStyleBackColor = false;
+            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
             // 
             // sidebarTimer
             // 

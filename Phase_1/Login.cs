@@ -89,62 +89,69 @@ namespace Phase_1
                 return;
             }
             username = user;
-            this.Hide();
-
-
-            if (adminCheckBox.Checked)
-            {
-                Form1 f1 = new Form1(connection);
-                f1.Show();
-                return;
-            }
-
-
 
             role = authenFunc(connection);
             System.Diagnostics.Debug.WriteLine(role);
 
-            // select vaitro from vw_nhanvien -> assign to vai tro;
-            switch (role)
+            if (adminCheckBox.Checked)
             {
-                case "admin":
+                if (role.ToUpper() == "ADMIN" )
+                {
+                    Form1 f1 = new Form1(connection);
+                    f1.Show();
+                    return;
+                }
+               else
+                {
+                    MessageBox.Show("Sorry you are not Admin !!!");
+                    return;
+                }
+            }
+
+            this.Hide();
+
+
+            // select vaitro from vw_nhanvien -> assign to vai tro;
+            switch (role.ToUpper())
+            {
+                case "ADMIN":
                     {
                         TruongPhong l = new TruongPhong(user, connection);
                         l.Show();
                         break;
                     }
 
-                case "Quan ly":
+                case "QUAN LY":
                     {
                         QuanLyTrucTiep l= new QuanLyTrucTiep(user, connection);
                         l.Show();
                         break;
                     }
-                case "Truong phong":
+                case "TRUONG PHONG":
                     {
                         TruongPhong l = new TruongPhong(user, connection);
                         l.Show();
                         break;
                     }
-                case "Nhan su":
+                case "NHAN SU":
                     {
                         NhanSu l = new NhanSu(user, connection);
                         l.Show();
                         break;
                     }
-                case "Tai chinh":
+                case "TAI CHINH":
                     {
                         TaiChinh l = new TaiChinh(user, connection);
                         l.Show();
                         break;
                     }
-                case "Ban giam doc":
+                case "BAN GIAM DOC":
                     {
                         GiamDoc l = new GiamDoc(user, connection);
                         l.Show();
                         break;
                     }
-                case "Truong de an":
+                case "TRUONG DE AN":
                     {
                         TruongDeAn l = new TruongDeAn(user, connection);
                         l.Show();
@@ -152,7 +159,7 @@ namespace Phase_1
                     }
                 default:
                     { // default se la nhan vien
-                        TruongPhong l = new TruongPhong(user, connection);
+                        Phase_2.NhanVien l = new Phase_2.NhanVien();
                         l.Show();
                         break;
                     }

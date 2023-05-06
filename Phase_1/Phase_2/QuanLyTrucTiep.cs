@@ -199,5 +199,10 @@ namespace Phase_1
                 }
             }
         }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            AllLayout.showNotification(panelContainer);
+        }
     }
 }

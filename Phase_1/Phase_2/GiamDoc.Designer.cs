@@ -465,6 +465,8 @@
             this.panel22.Controls.Add(this.btnThongBao);
             resources.ApplyResources(this.panel22, "panel22");
             this.panel22.Name = "panel22";
+            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
+
             // 
             // panel23
             // 

@@ -32,13 +32,13 @@ namespace Phase_1.UserControls
             container = panelContainer;
             InitializeComponent();
 
-            if (Login.getRole() != "admin")
+            if (Login.getRole() == "admin" || Login.getRole().ToUpper() == "NHAN SU")
             {
-                sendNotificationButton.Hide();
+                sendNotificationButton.Show();
 
             } else
             {
-                sendNotificationButton.Show();
+                sendNotificationButton.Hide();
             }
 
             Helper.raiseTable(dataGridView1, "select * from OLS_ADMIN.VW_XEMTHONGBAO", connection);

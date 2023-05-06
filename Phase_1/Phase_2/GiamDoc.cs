@@ -189,6 +189,10 @@ namespace Phase_1
             GiamDoc_XemDSNhanVien gd = new GiamDoc_XemDSNhanVien();
             addUserControl(gd);
         }
+        private void btnThongBao_Click(object sender, EventArgs e)
+        {
+            AllLayout.showNotification(panelContainer);
+        }
 
         private void btnAudit_Click(object sender, EventArgs e)
         {

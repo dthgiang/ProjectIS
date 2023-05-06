@@ -16,5 +16,20 @@ namespace Phase_1.UserControls
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void XemProfile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+
 namespace Phase_1
 {
     public partial class TruongPhong : Form
@@ -191,9 +192,8 @@ namespace Phase_1
         }
 
         private void notificationButton_Click(object sender, EventArgs e)
-        {
-            Notification nt = new Notification(username, connection, panelContainer);
-            addUserControl(nt);
+        {   
+            AllLayout.showNotification(panelContainer);
         }
     }
 }
