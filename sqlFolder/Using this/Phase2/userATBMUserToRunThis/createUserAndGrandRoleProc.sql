@@ -11,7 +11,7 @@ exec grantTruongPhongRole;
 exec usp_GrantUserTAICHINH;
 exec usp_GrantUserNHANSU;
 exec usp_GrantUserTRUONGDEAN;
-exec usp_GrantUserGD;
+exec USP_GRANTUSERGD;
 */
 ------------ start from here ---
 -- Run from this than run Proc Area ---
@@ -225,7 +225,7 @@ BEGIN
         FETCH CUR INTO Usr;
         EXIT WHEN CUR%NOTFOUND;
  
-        strSQL:= 'GRANT SELECT ON fga_log$ TO '||Usr;
+        strSQL:= 'GRANT SELECT ON sys.fga_log$ TO '||Usr;
         EXECUTE IMMEDIATE (strSQL);
     END LOOP;
 END;

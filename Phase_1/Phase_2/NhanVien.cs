@@ -8,13 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
+using Phase_1.Phase_2.UserControls;
 
-namespace Phase_1.Phase_2
+namespace Phase_1
 {
     public partial class NhanVien : Form
     {
         bool sidebarExpand;
+        bool taskCollapsed;
         bool profileCollapsed;
+        string username;
+        OracleConnection connection;
 
         private void addUserControl(UserControl userControl)
         {
@@ -23,18 +28,23 @@ namespace Phase_1.Phase_2
             panelContainer.Controls.Add(userControl);
             userControl.BringToFront();
         }
-
         public NhanVien()
         {
             InitializeComponent();
         }
+        public NhanVien(string user, OracleConnection con)
+        {
+            username = user;
+            connection = con;
+            InitializeComponent();
+        }
 
-        private void btnRed_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnGreen_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
             {
@@ -46,23 +56,28 @@ namespace Phase_1.Phase_2
             }
         }
 
-        private void btnGray_Click(object sender, EventArgs e)
+        private void button13_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void picAvatar_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             ProfileTimer.Start();
         }
 
-        private void btnViewProfile_Click(object sender, EventArgs e)
+        private void button23_Click(object sender, EventArgs e)
         {
             XemProfile ql = new XemProfile();
             addUserControl(ql);
         }
 
-        private void btnSignOut_Click(object sender, EventArgs e)
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button25_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login login = new Login();
@@ -72,6 +87,36 @@ namespace Phase_1.Phase_2
         private void menuButton_Click(object sender, EventArgs e)
         {
             sidebarTimer.Start();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NhanVien nv = new NhanVien();
+            this.Close();
+            nv.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TaskTimer.Start();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            NhanVien_PhanCong ql = new NhanVien_PhanCong();
+            addUserControl(ql);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
+            addUserControl(ql);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
+            addUserControl(ql);
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -96,6 +141,28 @@ namespace Phase_1.Phase_2
             }
         }
 
+        private void TaskTimer_Tick(object sender, EventArgs e)
+        {
+            if (taskCollapsed)
+            {
+                TaskContainer.Height += 10;
+                if (TaskContainer.Height == TaskContainer.MaximumSize.Height)
+                {
+                    taskCollapsed = false;
+                    TaskTimer.Stop();
+                }
+            }
+            else
+            {
+                TaskContainer.Height -= 10;
+                if (TaskContainer.Height == TaskContainer.MinimumSize.Height)
+                {
+                    taskCollapsed = true;
+                    TaskTimer.Stop();
+                }
+            }
+        }
+
         private void ProfileTimer_Tick(object sender, EventArgs e)
         {
             if (profileCollapsed)
@@ -116,30 +183,6 @@ namespace Phase_1.Phase_2
                     ProfileTimer.Stop();
                 }
             }
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            NhanVien nhanvien = new NhanVien();
-            nhanvien.Show();
-        }
-
-        private void btnTask_Click(object sender, EventArgs e)
-        {
-            QLTrucTiep_Task nhanvien = new QLTrucTiep_Task();
-            addUserControl(nhanvien);
-        }
-
-        private void btnPhongban_Click(object sender, EventArgs e)
-        {
-            QLTrucTiep_DSPhongBan ql = new QLTrucTiep_DSPhongBan();
-            addUserControl(ql);
-        }
-
-        private void btnDeAn_Click(object sender, EventArgs e)
-        {
-            QLTrucTiep_DSDeAn ql = new QLTrucTiep_DSDeAn();
-            addUserControl(ql);
         }
 
         private void btnThongBao_Click(object sender, EventArgs e)

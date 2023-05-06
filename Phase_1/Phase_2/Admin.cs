@@ -11,10 +11,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Phase_1.Phase_2
+namespace Phase_1
 {
     public partial class Admin : Form
     {
+        bool sidebarExpand;
+        bool taskCollapsed;
+        bool profileCollapsed;
         String username;
         OracleConnection connection;
         private void addUserControl(UserControl userControl)
@@ -34,9 +37,11 @@ namespace Phase_1.Phase_2
             this.connection = connection;
             this.username = user;
         }
-        private void button3_Click(object sender, EventArgs e)
+
+
+        private void button4_Click(object sender, EventArgs e)
         {
-            Encryption encryption = new Encryption(username,connection);
+            Encryption encryption = new Encryption(username, connection);
             addUserControl(encryption);
         }
     }

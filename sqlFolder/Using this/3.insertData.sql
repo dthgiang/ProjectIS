@@ -25,6 +25,7 @@ select 1 from dual;
 -- TABLE 3
 -- Nhap lieu cho bang ATBM.NHANVIEN ---
 ----------------------------------
+
 insert into NHANVIEN values('GD001', 'An Song Anh', 'Nu', TO_DATE('2005-11-2','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450001', '22000', '10000', 'Ban giam doc', NULL, 2, '123', 'Mien Trung', 'San Xuat')
 /
  insert into NHANVIEN values('GD002', 'Ðang Thi Tin', 'Nam', TO_DATE('2011-2-3','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '09450002', '22000', '10000', 'Ban giam doc', NULL, 3, '123', 'Mien Trung', 'Gia Cong')
@@ -715,7 +716,7 @@ insert into NHANVIEN values('GD001', 'An Song Anh', 'Nu', TO_DATE('2005-11-2','Y
 /
  insert into NHANVIEN values('NV345', 'Lai Chi Tien', 'Nam', TO_DATE('2002-11-16','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000345', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Trung', 'San Xuat')
 /
- insert into NHANVIEN values('NV346', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000346', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Bac', 'Mua Ban')
+ insert into NHANVIEN values('NV000', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguy?n Vãn C?, Phý?ng 4, Qu?n 5, TP. H? Chí Minh', '0945000346', '22000', '10000', 'Admin', null, null, '123', null, null)
 /
 --------------- END --------------
 

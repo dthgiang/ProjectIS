@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // label17
+            // phone
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(443, 298);
@@ -75,7 +75,7 @@
             this.label17.TabIndex = 38;
             this.label17.Text = "label12";
             // 
-            // label16
+            // address
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(443, 258);
@@ -118,7 +118,7 @@
             this.nameLabel.TabIndex = 34;
             this.nameLabel.Text = "label12";
             // 
-            // label22
+            // deptID
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(439, 586);
@@ -128,7 +128,7 @@
             this.label22.TabIndex = 33;
             this.label22.Text = "label12";
             // 
-            // label21
+            // managed
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(439, 526);
@@ -138,7 +138,7 @@
             this.label21.TabIndex = 32;
             this.label21.Text = "label12";
             // 
-            // label20
+            // role
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(439, 478);
@@ -148,7 +148,7 @@
             this.label20.TabIndex = 31;
             this.label20.Text = "label12";
             // 
-            // label19
+            // bonus
             // 
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(439, 422);
@@ -158,7 +158,7 @@
             this.label19.TabIndex = 30;
             this.label19.Text = "label12";
             // 
-            // label18
+            // salary
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(439, 359);

@@ -116,7 +116,14 @@ namespace Phase_1
             {
                 case "ADMIN":
                     {
-                        TruongPhong l = new TruongPhong(user, connection);
+                        Admin l = new Admin(user, connection);
+                        l.Show();
+                        break;
+                    }
+
+                case "Nhan vien":
+                    {
+                        NhanVien l = new NhanVien(user, connection);
                         l.Show();
                         break;
                     }
