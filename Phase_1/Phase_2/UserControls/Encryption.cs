@@ -93,5 +93,10 @@ namespace Phase_1.Phase_2.UserControls
             // Ngăn không cho lỗi được ném ra và hiển thị hộp thoại mặc định
             e.ThrowException = false;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

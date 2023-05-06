@@ -529,6 +529,15 @@
   <ItemGroup>
     <None Include="Resources\avatarMain.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ssh-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-access-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-key-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

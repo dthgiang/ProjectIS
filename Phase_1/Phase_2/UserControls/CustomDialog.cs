@@ -12,8 +12,6 @@ namespace Phase_1.Phase_2.UserControls
 {
     public partial class CustomDialog : Form
     {
-        private Label label;
-        private TextBox textBox;
         private Button okButton;
 
         public CustomDialog()
@@ -43,6 +41,11 @@ namespace Phase_1.Phase_2.UserControls
         private void CustomDialog_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

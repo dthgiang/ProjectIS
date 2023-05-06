@@ -27,8 +27,8 @@ namespace Phase_1.Phase_2.UserControls
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            String pw= textBox1.Text;
-            String new_key= textBox2.Text;
+            String pw= txtPassword.Text;
+            String new_key= txtNewKey.Text;
             if (new_key.Length >= 10)
             {
                 OracleCommand command = new OracleCommand("select password from ATBM.view_getpw", connection);
@@ -56,6 +56,16 @@ namespace Phase_1.Phase_2.UserControls
             {
                 MessageBox.Show("The key must be longer than 10 characters");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admin_UpdateKey_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
