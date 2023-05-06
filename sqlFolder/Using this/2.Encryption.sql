@@ -25,17 +25,17 @@ BEGIN
 END;
  
 /
-CREATE OR REPLACE FUNCTION GET_KEY
+CREATE OR REPLACE FUNCTION GET_KEY (n INTEGER)
 RETURN raw
 as
   l_key RAW(16);
 BEGIN
   DBMS_RANDOM.initialize(ROUND(DBMS_UTILITY.get_time));
-  l_key := UTL_RAW.cast_to_raw(DBMS_RANDOM.STRING('U', 16));
+  l_key := UTL_RAW.cast_to_raw(DBMS_RANDOM.STRING('U', n));
   return l_key;
 END;
 /
-select GET_KEY from dual;
+select GET_KEY(3) from dual;
 /
 CREATE OR REPLACE TRIGGER TRG_INSERT_NHANVIEN
 BEFORE INSERT ON NHANVIEN 
@@ -72,7 +72,7 @@ BEGIN
     v_khuvuc := :new.khuvuc;
     v_linhvuc := :new.linhvuc;
     
-    v_key := GET_KEY;
+    v_key := GET_KEY(10);
     INSERT INTO SAVE_KEY VALUES(v_manv, v_key);
     
     :new.luong := encryption(UTL_RAW.CAST_TO_RAW(v_luong), v_manv);
@@ -95,8 +95,45 @@ BEGIN
         LINHVUC=v_linhvuc
     WHERE MANV = v_manv;
 END;
+--thay doi khoa hang loat
 /
-select * from nhanvien
+create or replace procedure new_key
+as  
+    CURSOR CUR IS (SELECT MANV, decryption(luong, manv), decryption(phucap, manv) FROM ATBM.nhanvien);
+    strsql VARCHAR2(1000);
+    luong_old VARCHAR2(255);
+    phucap_old VARCHAR2(255);
+    v_manv VARCHAR2(100);
+    new_key raw(200);
+    luong_new raw(2000);
+    phucap_new raw(2000);
+BEGIN
+    OPEN CUR;
+    LOOP
+        FETCH CUR INTO v_manv, luong_old, phucap_old;
+        EXIT WHEN CUR%NOTFOUND;
+        
+        select GET_KEY(10) into new_key from dual;
 
+        strsql := 'update atbm.save_key set key='''||new_key||''' where manv='''||v_manv||'''';
+        EXECUTE IMMEDIATE (strsql);
+        
+        SELECT DBMS_CRYPTO.enCRYPT(UTL_RAW.CAST_TO_RAW(luong_old), 4353, new_key) INTO luong_new FROM dual;
+        SELECT DBMS_CRYPTO.enCRYPT(UTL_RAW.CAST_TO_RAW(phucap_old), 4353, new_key) INTO phucap_new FROM dual;
+        strsql := 'update atbm.nhanvien set luong='''||luong_new||''', phucap='''||phucap_new||''' where manv='''||v_manv||'''';
+        EXECUTE IMMEDIATE (strsql);
+    END LOOP;
 
-
+END;
+/
+create or replace procedure update_key_admin (new_key in raw)
+as
+    strsql VARCHAR2(1000);
+    manv varchar(10);
+begin
+    select manv into manv from atbm.Vw_NhanVien;
+    strsql := 'update atbm.save_key set key='''||new_key||'''where manv='''||manv||'''';
+    EXECUTE IMMEDIATE (strsql);
+end;
+/
+grant execute on update_key_admin to NV000;

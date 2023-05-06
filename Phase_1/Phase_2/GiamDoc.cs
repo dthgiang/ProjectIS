@@ -195,5 +195,10 @@ namespace Phase_1
             Audit audit = new Audit(username,connection);
             addUserControl(audit);
         }
+
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
