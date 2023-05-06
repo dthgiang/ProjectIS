@@ -1,4 +1,4 @@
-﻿namespace Phase_1
+﻿namespace Phase_1.Phase_2
 {
     partial class NhanVien
     {
@@ -37,53 +37,32 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.TaskContainer = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnTask = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnPhongban = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnDeAn = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnGray = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.TaskTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnRed = new System.Windows.Forms.Button();
+            this.btnGreen = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelThongTin = new System.Windows.Forms.Panel();
             this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnViewProfile = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
             this.btnThongBao = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
@@ -91,28 +70,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.TaskContainer.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.panel13.SuspendLayout();
             this.panelContainer.SuspendLayout();
             this.panelThongTin.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -120,10 +90,10 @@
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
             this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.panel1);
-            this.sidebar.Controls.Add(this.TaskContainer);
+            this.sidebar.Controls.Add(this.panel4);
             this.sidebar.Controls.Add(this.panel6);
             this.sidebar.Controls.Add(this.panel8);
-            this.sidebar.Controls.Add(this.panel10);
+            this.sidebar.Controls.Add(this.panel22);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -204,7 +174,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnHome
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
@@ -497,7 +467,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnTask
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
@@ -553,7 +523,7 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnPhongban
             // 
             this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(34)))), ((int)(((byte)(78)))));
@@ -673,7 +643,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Controls.Add(this.pictureBox1);
+            this.panel12.Controls.Add(this.picAvatar);
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(410, 0);
@@ -682,7 +652,7 @@
             this.panel12.Size = new System.Drawing.Size(1056, 91);
             this.panel12.TabIndex = 1;
             // 
-            // pictureBox1
+            // picAvatar
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Phase_1.Properties.Resources.icons8_user_30;
@@ -697,10 +667,10 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.button13);
+            this.panel13.Controls.Add(this.btnGray);
             this.panel13.Controls.Add(this.panel24);
-            this.panel13.Controls.Add(this.button11);
-            this.panel13.Controls.Add(this.button12);
+            this.panel13.Controls.Add(this.btnRed);
+            this.panel13.Controls.Add(this.btnGreen);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel13.Location = new System.Drawing.Point(702, 0);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -708,7 +678,7 @@
             this.panel13.Size = new System.Drawing.Size(354, 91);
             this.panel13.TabIndex = 0;
             // 
-            // button13
+            // btnGray
             // 
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -755,10 +725,17 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // TaskTimer
+            // btnGreen
             // 
-            this.TaskTimer.Interval = 10;
-            this.TaskTimer.Tick += new System.EventHandler(this.TaskTimer_Tick);
+            this.btnGreen.FlatAppearance.BorderSize = 0;
+            this.btnGreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGreen.Image = global::Phase_1.Properties.Resources.maximize;
+            this.btnGreen.Location = new System.Drawing.Point(165, 19);
+            this.btnGreen.Name = "btnGreen";
+            this.btnGreen.Size = new System.Drawing.Size(23, 23);
+            this.btnGreen.TabIndex = 1;
+            this.btnGreen.UseVisualStyleBackColor = true;
+            this.btnGreen.Click += new System.EventHandler(this.btnGreen_Click);
             // 
             // panelContainer
             // 
@@ -800,9 +777,8 @@
             this.button24.Text = "Edit profile";
             this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
-            // button25
+            // btnSignOut
             // 
             this.button25.FlatAppearance.BorderSize = 0;
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -819,7 +795,7 @@
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
-            // button23
+            // btnViewProfile
             // 
             this.button23.FlatAppearance.BorderSize = 0;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -883,29 +859,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.TaskContainer.ResumeLayout(false);
-            this.panel18.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -918,54 +885,29 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnPhongban;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnDeAn;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Timer TaskTimer;
-        private System.Windows.Forms.Panel TaskContainer;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnRed;
+        private System.Windows.Forms.Button btnGray;
+        private System.Windows.Forms.Button btnGreen;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelThongTin;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picAvatar;
         private System.Windows.Forms.Timer ProfileTimer;
         private System.Windows.Forms.Button btnThongBao;
     }

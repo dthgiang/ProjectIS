@@ -1,5 +1,4 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +15,6 @@ namespace Phase_1.UserControls
         public QLTrucTiep_DSDeAn()
         {
             InitializeComponent();
-
-            try
-            {
-                Helper.raiseTable(dataGridView1, "select * from ATBM.DEAN", Login.getConnection());
-                dataGridView1.Show();
-            }
-            catch (OracleException ex)
-            {
-                System.Diagnostics.Debug.WriteLine("OracleException: " + ex.Message);
-            }
         }
 
         private void QLTrucTiep_DSDeAn_Load(object sender, EventArgs e)
