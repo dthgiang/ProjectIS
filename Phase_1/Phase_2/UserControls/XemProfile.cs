@@ -16,7 +16,5 @@ namespace Phase_1.UserControls
         {
             InitializeComponent();
         }
-
     }
-
 }
