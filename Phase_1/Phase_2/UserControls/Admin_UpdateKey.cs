@@ -29,25 +29,32 @@ namespace Phase_1.Phase_2.UserControls
         {
             String pw= textBox1.Text;
             String new_key= textBox2.Text;
-            OracleCommand command = new OracleCommand("select password from ATBM.view_getpw", connection);
-            OracleDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
+            if (new_key.Length >= 10)
             {
-                string key = reader.GetString(0);
-                if (key == pw)
+                OracleCommand command = new OracleCommand("select password from ATBM.view_getpw", connection);
+                OracleDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
                 {
-                    try
+                    string key = reader.GetString(0);
+                    if (key == pw)
                     {
-                        OracleCommand command_ = new OracleCommand("update atbm.save_key set key='"+new_key+"' where manv='"+username+"'", connection);
-                        command_.ExecuteNonQuery();
-                        MessageBox.Show("Procedure executed successfully");
-                    }
-                    catch (OracleException ex)
-                    {
-                        MessageBox.Show("Error: " + ex.ToString());
+                        try
+                        {
+                            OracleCommand command_ = new OracleCommand("update atbm.save_key set key='" + new_key + "' where manv='" + username + "'", connection);
+                            command_.ExecuteNonQuery();
+                            MessageBox.Show("Procedure executed successfully");
+                        }
+                        catch (OracleException ex)
+                        {
+                            MessageBox.Show("Error: " + ex.ToString());
+                        }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("The key must be longer than 10 characters");
             }
         }
     }

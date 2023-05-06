@@ -155,7 +155,4 @@ create or replace view view_getpw
 as
     select password from nhanvien where manv = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
-6467575
-select * from save_key;
-EXEC ATBM.NEW_KEY;
-grant execute on ATBM.new_key to NV000; 
+
