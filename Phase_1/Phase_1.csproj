@@ -147,11 +147,23 @@
     <Compile Include="Phase_2\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phase_2\UserControls\Admin_UpdateKey.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\Admin_UpdateKey.Designer.cs">
+      <DependentUpon>Admin_UpdateKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phase_2\UserControls\Audit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Phase_2\UserControls\Audit.Designer.cs">
       <DependentUpon>Audit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\CustomDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\CustomDialog.Designer.cs">
+      <DependentUpon>CustomDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Phase_2\UserControls\Encryption.cs">
       <SubType>UserControl</SubType>
@@ -176,6 +188,12 @@
     </Compile>
     <Compile Include="Phase_2\UserControls\AddNotification.Designer.cs">
       <DependentUpon>AddNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\XemTatCaTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_2\UserControls\XemTatCaTable.Designer.cs">
+      <DependentUpon>XemTatCaTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -327,8 +345,14 @@
     <EmbeddedResource Include="Phase_2\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\Admin_UpdateKey.resx">
+      <DependentUpon>Admin_UpdateKey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\Audit.resx">
       <DependentUpon>Audit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\CustomDialog.resx">
+      <DependentUpon>CustomDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\Encryption.resx">
       <DependentUpon>Encryption.cs</DependentUpon>

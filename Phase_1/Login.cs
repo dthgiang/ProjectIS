@@ -159,8 +159,8 @@ namespace Phase_1
                     }
                 default:
                     { // default se la nhan vien
-                        Phase_2.NhanVien l = new Phase_2.NhanVien();
-                        l.Show();
+                        //Phase_2.NhanVien l = new Phase_2.NhanVien();
+                        //l.Show();
                         break;
                     }
             }

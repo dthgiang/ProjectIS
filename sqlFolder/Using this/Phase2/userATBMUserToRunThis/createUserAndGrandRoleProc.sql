@@ -12,6 +12,7 @@ exec usp_GrantUserTAICHINH;
 exec usp_GrantUserNHANSU;
 exec usp_GrantUserTRUONGDEAN;
 exec USP_GRANTUSERGD;
+exec usp_GrantUserAdmin
 */
 ------------ start from here ---
 -- Run from this than run Proc Area ---
@@ -229,3 +230,28 @@ BEGIN
         EXECUTE IMMEDIATE (strSQL);
     END LOOP;
 END;
+/
+CREATE OR REPLACE PROCEDURE usp_GrantUserAdmin
+AS
+    CURSOR CUR IS (SELECT MANV FROM ATBM.NHANVIEN WHERE VaiTro = 'Admin');
+    strSQL VARCHAR(2000);
+    Usr varchar2(100);
+BEGIN
+    OPEN CUR;
+    LOOP
+        FETCH CUR INTO Usr;
+        EXIT WHEN CUR%NOTFOUND;
+ 
+        strSQL:= 'GRANT SELECT,update ON atbm.save_key to '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+        strSQL:= 'grant execute on ATBM.new_key to '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+        strSQL:= 'grant execute on ATBM.update_key_admin to '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+        strSQL:= 'grant select on atbm.view_getkey to '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+        strSQL:= 'grant select on atbm.view_getpw to '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+    END LOOP;
+END;
+/
