@@ -553,6 +553,7 @@
             this.button24.Text = "Edit profile";
             this.button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // btnSignOut
             // 

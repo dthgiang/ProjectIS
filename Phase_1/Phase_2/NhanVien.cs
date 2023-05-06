@@ -143,5 +143,10 @@ namespace Phase_1.Phase_2
         {
             AllLayout.showNotification(panelContainer);
         }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

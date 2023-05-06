@@ -31,7 +31,13 @@ namespace Phase_1
             this.connection = connection;
             this.username = user;
         }
-
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
         private void button11_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -152,7 +158,7 @@ namespace Phase_1
         private void button6_Click(object sender, EventArgs e)
         {
             NhanSu_EditPhongBan ql = new NhanSu_EditPhongBan(username, connection);
-            AllLayout.addUserControl(ql, panelContainer);
+            addUserControl(ql);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -163,7 +169,7 @@ namespace Phase_1
         private void button10_Click(object sender, EventArgs e)
         {
             NhanSu_EditNhanVien ql = new NhanSu_EditNhanVien(username, connection);
-            AllLayout.addUserControl(ql, panelContainer);
+            addUserControl(ql);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
