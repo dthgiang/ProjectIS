@@ -182,7 +182,7 @@ namespace Phase_1.UserControls
             else if (e.ColumnIndex == dataGridView1.Columns["MANV"].Index)
             {
                 String MANV = dataGridView1.Rows[e.RowIndex].Cells["MANV"].Value.ToString();
-                String sql = "insert into ATBM.NS_XEMNHANVIEN values ('" + MANV + "',NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL)";
+                String sql = "INSERT INTO ATBM.NS_XEMNHANVIEN (MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, VAITRO, MANQL, PHG, KHUVUC, LINHVUC) VALUES('" + MANV+"', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)";
                 OracleCommand command = new OracleCommand(sql, connection);
 
 

@@ -231,8 +231,8 @@ GRANT INSERT, UPDATE ON PHONGBAN TO RL_NHANSU;
 CREATE OR REPLACE VIEW NS_XEMNHANVIEN 
 AS
 SELECT MANV, TENNV, PHAI, NGAYSINH, DIACHI, SODT, 
-	 DECODE( manv, sys_CONTEXT ('userenv', 'session_user'), decryption(luong, manv) , null) LUONG ,
-	 DECODE (manv, sys_CONTEXT ('userenv', 'session_user'), decryption(PHUCAP, manv) , null) PHUCAP, 
+	 CAST(DECODE( manv, sys_CONTEXT ('userenv', 'session_user'), decryption(luong, manv) , null) AS VARCHAR2(1000)) LUONG ,
+	 CAST(DECODE (manv, sys_CONTEXT ('userenv', 'session_user'), decryption(PHUCAP, manv) , null) AS VARCHAR2(1000)) PHUCAP, 
 	 VAITRO, MANQL, PHG, khuvuc, linhvuc FROM
      NHANVIEN 
 /
