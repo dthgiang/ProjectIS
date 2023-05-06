@@ -32,7 +32,12 @@ namespace Phase_1.UserControls
             addComboBox(objectComboBox, obj);
             addComboBox(fieldComboBox, field);
             addComboBox(regionComboBox, region);
-            System.Diagnostics.Debug.WriteLine("Yes it still here");
+
+            contentTextBox.Show();
+            dataGridView1.Hide();
+            assignToLabel.Hide();
+            objectTextBox.Hide();
+            assignButton.Hide();
 
         }
 
@@ -161,6 +166,65 @@ namespace Phase_1.UserControls
             return dataRow;
         }
 
+        public string getUserLabel()
+        {
+            string temp = "";
+
+            string finalLabel;
+            // xu ly object (role)
+            string obj = getLabelFromCheckBox(objectComboBox, ref temp);
+
+
+            if (obj == "" || obj.IndexOf("NV") != -1)
+            {
+                finalLabel = "NV:";
+            }
+            else if (obj.IndexOf("TP") != -1)
+            {
+                finalLabel = "TP:";
+            }
+            else
+            {
+                finalLabel = "GD:";
+            }
+
+            // xu ly field - compartment
+            string field = getLabelFromCheckBox(fieldComboBox, ref temp);
+
+            if (field == "")
+            {
+                finalLabel += "";
+
+            }
+            else if (field.IndexOf("All") != -1)
+            {
+                finalLabel += "SX,GC,MB";
+            } else
+            {
+                finalLabel += field;
+            }
+
+            finalLabel += ":";
+
+            // xu ly region - group
+            string region = getLabelFromCheckBox(regionComboBox, ref temp);
+
+            if (region == "")
+            {
+                finalLabel += "";
+            }
+            else if (region.IndexOf("All") != -1)
+            {
+                finalLabel += "MB,MT,MN";
+            }
+            else
+            {
+                finalLabel += region;
+            }
+
+            return finalLabel;
+        }
+
         public string getLabelFromCheckBox(CheckedListBox clb, ref string obj)
         {
             obj = "";
@@ -251,6 +315,76 @@ namespace Phase_1.UserControls
             return label;
         }
 
+        private void configEmpButton_Click(object sender, EventArgs e)
+        {
+            contentTextBox.Hide();
+            dataGridView1.Show();
+            assignToLabel.Show();
+            objectTextBox.Show();
+            assignButton.Show();
+            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".NHANVIEN";
+            Phase_1.Helper.raiseTable(dataGridView1, sql, connection);
 
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            contentTextBox.Show();
+            dataGridView1.Hide();
+            assignToLabel.Hide();
+            objectTextBox.Hide();
+            assignButton.Hide();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                objectTextBox.Text = selectedRow.Cells["MANV"].Value.ToString();
+            }
+        }
+
+        private void assignButton_Click(object sender, EventArgs e)
+        {
+            string flabel = getUserLabel();
+            string user = objectTextBox.Text;
+            objectTextBox.Text = "";
+            if (user == "")
+            {
+                MessageBox.Show("Plase choose Employee");
+                return;
+            }
+            System.Diagnostics.Debug.WriteLine(flabel);
+
+            try
+            {
+                OracleCommand command = new OracleCommand("assignUserLabel", connection);
+                // set the command type to stored procedure
+                command.CommandType = CommandType.StoredProcedure;
+
+                // create input parameter
+ 
+                OracleParameter doiTuong = new OracleParameter("p_user", OracleDbType.Varchar2, ParameterDirection.Input);
+                doiTuong.Value = user;
+            
+                OracleParameter label = new OracleParameter("p_label", OracleDbType.Varchar2, ParameterDirection.Input);
+                label.Value = flabel;
+                // add parameters to the command object
+                command.Parameters.Add(doiTuong);
+                command.Parameters.Add(label);
+
+                // execute the command
+                command.ExecuteNonQuery();
+                MessageBox.Show("Assign successful");
+
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }
