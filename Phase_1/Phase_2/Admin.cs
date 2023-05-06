@@ -44,5 +44,33 @@ namespace Phase_1
             Encryption encryption = new Encryption(username, connection);
             addUserControl(encryption);
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            Admin_UpdateKey l = new Admin_UpdateKey(username, connection);
+            addUserControl(l);
+        }
     }
 }

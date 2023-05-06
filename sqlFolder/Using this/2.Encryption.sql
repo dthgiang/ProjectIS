@@ -72,7 +72,7 @@ BEGIN
     v_khuvuc := :new.khuvuc;
     v_linhvuc := :new.linhvuc;
     
-    v_key := GET_KEY(10);
+    v_key := GET_KEY(5);
     INSERT INTO SAVE_KEY VALUES(v_manv, v_key);
     
     :new.luong := encryption(UTL_RAW.CAST_TO_RAW(v_luong), v_manv);
@@ -99,7 +99,7 @@ END;
 /
 create or replace procedure new_key
 as  
-    CURSOR CUR IS (SELECT MANV, decryption(luong, manv), decryption(phucap, manv) FROM ATBM.nhanvien);
+    CURSOR CUR IS (SELECT MANV, decryption(luong, manv), decryption(phucap, manv) FROM ATBM.nhanvien where vaitro != 'Admin');
     strsql VARCHAR2(1000);
     luong_old VARCHAR2(255);
     phucap_old VARCHAR2(255);
@@ -129,11 +129,33 @@ END;
 create or replace procedure update_key_admin (new_key in raw)
 as
     strsql VARCHAR2(1000);
-    manv varchar(10);
+    luong_old VARCHAR2(255);
+    phucap_old VARCHAR2(255);
+    v_manv VARCHAR2(100);
+    luong_new raw(2000);
+    phucap_new raw(2000);
 begin
-    select manv into manv from atbm.Vw_NhanVien;
-    strsql := 'update atbm.save_key set key='''||new_key||'''where manv='''||manv||'''';
+    select manv, luong, phucap into v_manv, luong_old, phucap_old from atbm.Vw_NhanVien;
+    
+    strsql := 'update atbm.save_key set key='''||new_key||'''where manv='''||v_manv||'''';
+    EXECUTE IMMEDIATE (strsql);
+
+    
+    SELECT DBMS_CRYPTO.enCRYPT(UTL_RAW.CAST_TO_RAW(luong_old), 4353, new_key) INTO luong_new FROM dual;
+    SELECT DBMS_CRYPTO.enCRYPT(UTL_RAW.CAST_TO_RAW(phucap_old), 4353, new_key) INTO phucap_new FROM dual;
+    strsql := 'update atbm.nhanvien set luong='''||luong_new||''', phucap='''||phucap_new||''' where manv='''||v_manv||'''';
     EXECUTE IMMEDIATE (strsql);
 end;
 /
-grant execute on update_key_admin to NV000;
+create or replace view view_getkey
+as
+    select cast(key as varchar2(1000)) key from save_key where manv = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+create or replace view view_getpw
+as
+    select password from nhanvien where manv = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+484B5656574555434D47
+select * from save_key;
+EXEC ATBM.NEW_KEY;
+grant execute on ATBM.new_key to NV000; 
