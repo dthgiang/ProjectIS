@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dobLabel = new System.Windows.Forms.Label();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.roleLabel = new System.Windows.Forms.Label();
+            this.DOBLabel = new System.Windows.Forms.Label();
             this.genderLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.idLabel = new System.Windows.Forms.Label();
+            this.departmentLabel = new System.Windows.Forms.Label();
+            this.managedLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.bonusLabel = new System.Windows.Forms.Label();
+            this.salaryLabel = new System.Windows.Forms.Label();
+            this.IDLabel = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -65,36 +65,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // phone
+            // phoneLabel
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(443, 298);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 20);
-            this.label17.TabIndex = 38;
-            this.label17.Text = "label12";
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Location = new System.Drawing.Point(443, 298);
+            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(60, 20);
+            this.phoneLabel.TabIndex = 38;
+            this.phoneLabel.Text = "label12";
             // 
-            // address
+            // roleLabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(443, 258);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 20);
-            this.label16.TabIndex = 37;
-            this.label16.Text = "label12";
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.Location = new System.Drawing.Point(443, 258);
+            this.roleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(60, 20);
+            this.roleLabel.TabIndex = 37;
+            this.roleLabel.Text = "label12";
             // 
-            // dobLabel
+            // DOBLabel
             // 
-            this.dobLabel.AutoSize = true;
-            this.dobLabel.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dobLabel.Location = new System.Drawing.Point(443, 153);
-            this.dobLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.dobLabel.Name = "dobLabel";
-            this.dobLabel.Size = new System.Drawing.Size(73, 23);
-            this.dobLabel.TabIndex = 36;
-            this.dobLabel.Text = "label12";
+            this.DOBLabel.AutoSize = true;
+            this.DOBLabel.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DOBLabel.Location = new System.Drawing.Point(443, 153);
+            this.DOBLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DOBLabel.Name = "DOBLabel";
+            this.DOBLabel.Size = new System.Drawing.Size(73, 23);
+            this.DOBLabel.TabIndex = 36;
+            this.DOBLabel.Text = "label12";
             // 
             // genderLabel
             // 
@@ -118,67 +118,67 @@
             this.nameLabel.TabIndex = 34;
             this.nameLabel.Text = "label12";
             // 
-            // deptID
+            // departmentLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(439, 586);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 20);
-            this.label22.TabIndex = 33;
-            this.label22.Text = "label12";
+            this.departmentLabel.AutoSize = true;
+            this.departmentLabel.Location = new System.Drawing.Point(439, 586);
+            this.departmentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.departmentLabel.Name = "departmentLabel";
+            this.departmentLabel.Size = new System.Drawing.Size(60, 20);
+            this.departmentLabel.TabIndex = 33;
+            this.departmentLabel.Text = "label12";
             // 
-            // managed
+            // managedLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(439, 526);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 20);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "label12";
+            this.managedLabel.AutoSize = true;
+            this.managedLabel.Location = new System.Drawing.Point(439, 526);
+            this.managedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.managedLabel.Name = "managedLabel";
+            this.managedLabel.Size = new System.Drawing.Size(60, 20);
+            this.managedLabel.TabIndex = 32;
+            this.managedLabel.Text = "label12";
             // 
-            // role
+            // addressLabel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(439, 478);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 20);
-            this.label20.TabIndex = 31;
-            this.label20.Text = "label12";
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Location = new System.Drawing.Point(439, 478);
+            this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(60, 20);
+            this.addressLabel.TabIndex = 31;
+            this.addressLabel.Text = "label12";
             // 
-            // bonus
+            // bonusLabel
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(439, 422);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 20);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "label12";
+            this.bonusLabel.AutoSize = true;
+            this.bonusLabel.Location = new System.Drawing.Point(439, 422);
+            this.bonusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bonusLabel.Name = "bonusLabel";
+            this.bonusLabel.Size = new System.Drawing.Size(60, 20);
+            this.bonusLabel.TabIndex = 30;
+            this.bonusLabel.Text = "label12";
             // 
-            // salary
+            // salaryLabel
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(439, 359);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 20);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "label12";
+            this.salaryLabel.AutoSize = true;
+            this.salaryLabel.Location = new System.Drawing.Point(439, 359);
+            this.salaryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.salaryLabel.Name = "salaryLabel";
+            this.salaryLabel.Size = new System.Drawing.Size(60, 20);
+            this.salaryLabel.TabIndex = 29;
+            this.salaryLabel.Text = "label12";
             // 
-            // idLabel
+            // IDLabel
             // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(444, 30);
-            this.idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(80, 23);
-            this.idLabel.TabIndex = 28;
-            this.idLabel.Text = "label12";
-            this.idLabel.Click += new System.EventHandler(this.idLabel_Click);
+            this.IDLabel.AutoSize = true;
+            this.IDLabel.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDLabel.Location = new System.Drawing.Point(444, 30);
+            this.IDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Size = new System.Drawing.Size(80, 23);
+            this.IDLabel.TabIndex = 28;
+            this.IDLabel.Text = "label12";
+            this.IDLabel.Click += new System.EventHandler(this.idLabel_Click);
             // 
             // panel12
             // 
@@ -426,17 +426,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.avatarPictureBox);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.dobLabel);
+            this.Controls.Add(this.phoneLabel);
+            this.Controls.Add(this.roleLabel);
+            this.Controls.Add(this.DOBLabel);
             this.Controls.Add(this.genderLabel);
             this.Controls.Add(this.nameLabel);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.idLabel);
+            this.Controls.Add(this.departmentLabel);
+            this.Controls.Add(this.managedLabel);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.bonusLabel);
+            this.Controls.Add(this.salaryLabel);
+            this.Controls.Add(this.IDLabel);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
@@ -471,17 +471,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label dobLabel;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.Label DOBLabel;
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Label departmentLabel;
+        private System.Windows.Forms.Label managedLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label bonusLabel;
+        private System.Windows.Forms.Label salaryLabel;
+        private System.Windows.Forms.Label IDLabel;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;

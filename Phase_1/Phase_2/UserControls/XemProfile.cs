@@ -16,6 +16,7 @@ namespace Phase_1.UserControls
         public XemProfile()
         {
             InitializeComponent();
+            avatarPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
 
             try
             {
@@ -25,17 +26,17 @@ namespace Phase_1.UserControls
 
                 if (reader.Read())
                 {
-                    empID.Text = reader["MANV"].ToString();
-                    fullName.Text = reader["TENNV"].ToString();
-                    gender.Text = reader["PHAI"].ToString();
-                    DOB.Text = reader["NGAYSINH"].ToString();
-                    address.Text = reader["DIACHI"].ToString();
-                    phone.Text = reader["SODT"].ToString();
-                    salary.Text = reader["LUONG"].ToString();
-                    bonus.Text = reader["PHUCAP"].ToString();
-                    role.Text = reader["VAITRO"].ToString();
-                    managed.Text = reader["MANQL"].ToString();
-                    deptID.Text = reader["PHG"].ToString();
+                    IDLabel.Text = reader["MANV"].ToString();
+                    nameLabel.Text = reader["TENNV"].ToString();
+                    genderLabel.Text = reader["PHAI"].ToString();
+                    DOBLabel.Text = reader["NGAYSINH"].ToString();
+                    addressLabel.Text = reader["DIACHI"].ToString();
+                    phoneLabel.Text = reader["SODT"].ToString();
+                    salaryLabel.Text = reader["LUONG"].ToString();
+                    bonusLabel.Text = reader["PHUCAP"].ToString();
+                    roleLabel.Text = reader["VAITRO"].ToString();
+                    managedLabel.Text = reader["MANQL"].ToString();
+                    departmentLabel.Text = reader["PHG"].ToString();
                 }
             }
             catch (OracleException ex)
@@ -59,9 +60,6 @@ namespace Phase_1.UserControls
 
         }
 
-        private void XemProfile_Load(object sender, EventArgs e)
-        {
-
-        }
     }
+
 }

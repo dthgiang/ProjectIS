@@ -1,5 +1,5 @@
 ﻿
-namespace Phase_1.Phase_2.UserControls
+namespace Phase_1.UserControls
 {
     partial class NhanVien_PhanCong
     {

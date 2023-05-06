@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Phase_1.Phase_2.UserControls
+namespace Phase_1.UserControls
 {
     public partial class NhanVien_PhanCong : UserControl
     {

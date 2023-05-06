@@ -103,8 +103,9 @@ namespace Phase_1
 
         private void button15_Click(object sender, EventArgs e)
         {
-            NhanVien_PhanCong ql = new NhanVien_PhanCong();
-            addUserControl(ql);
+
+            //NhanVien_PhanCong ql = new NhanVien_PhanCong();
+            //addUserControl(ql);
         }
 
         private void button6_Click(object sender, EventArgs e)
