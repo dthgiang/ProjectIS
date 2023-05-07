@@ -371,9 +371,9 @@ select 1 from dual;
  insert into ATBM.NHANVIEN values('NV344', 'Pham Thi Phu', 'Nu', TO_DATE('2022-12-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000344', '5938', '1826', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Gia Cong');/
  insert into ATBM.NHANVIEN values('NV345', '�?oan Tung Nguyet', 'Nam', TO_DATE('2009-5-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000345', '3501', '1701', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Mua Ban');/
  insert into ATBM.NHANVIEN values('NV346', 'Nguyen Thi Nguyet', 'Nu', TO_DATE('2020-6-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000346', '3213', '1660', 'Admin', 'QL035', 3, '123', 'Mien Nam', 'San Xuat');/
- insert into NHANVIEN values('NV000', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguyễn Văn Cừ, Quận 5, TP. Hồ Chí Minh', '0945000347', '22000', '10000', 'Admin', null, null, '123', null, null);/
+ insert into ATBM.NHANVIEN values('NV000', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguyễn Văn Cừ, Quận 5, TP. Hồ Chí Minh', '0945000347', '22000', '10000', 'Admin', null, null, '123', null, null);/
 --------------- END --------------
-
+/
 -- TABLE 4
 -- Nhap lieu cho bang ATBM.DEAN ---
 ----------------------------------
