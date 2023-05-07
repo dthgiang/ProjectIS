@@ -130,5 +130,19 @@ namespace Phase_1
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin a = new Admin();
+            this.Hide();
+            a.Show();
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            this.Hide();
+            l.Show();
+        }
     }
 }
