@@ -336,48 +336,54 @@ namespace Phase_1
 
         private void dropButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure to drop this one", "Confirmation", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (filterBox.Text == "User")
             {
-                if (dataGridView1.SelectedRows.Count > 0)
+                DialogResult result = MessageBox.Show("Are you sure to drop this one", "Confirmation", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                    string mode = filterBox.Text;
-                    string names = mode + "Name";
-                    string choose = selectedRow.Cells[names].Value.ToString();
-                    objectNameTextBox.Text = "";
-
-
-                    try
+                    if (dataGridView1.SelectedRows.Count > 0)
                     {
-                        
-                        OracleCommand command = new OracleCommand("ph1_dropUserOrRole", con);
+                        DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                        string mode = filterBox.Text;
+                        string names = mode + "Name";
+                        string choose = selectedRow.Cells[names].Value.ToString();
+                        objectNameTextBox.Text = "";
 
 
-                        command.CommandType = System.Data.CommandType.StoredProcedure;
+                        try
+                        {
 
-                        // Add input parameter(s) to the command
-                        command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = choose;
-                        command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = mode;
-                        System.Diagnostics.Debug.WriteLine(choose + " - " + mode);
-                        // Get the value of the output parameter(s)
-                        command.ExecuteNonQuery();
+                            OracleCommand command = new OracleCommand("ph1_dropUserOrRole", con);
 
-                        // The stored procedure executed successfully
-                        MessageBox.Show(mode + " " + choose + " dropped", "Message", MessageBoxButtons.OK);
-                        Form2_Load(sender, e);
-                      
+
+                            command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                            // Add input parameter(s) to the command
+                            command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = choose;
+                            command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = mode;
+                            System.Diagnostics.Debug.WriteLine(choose + " - " + mode);
+                            // Get the value of the output parameter(s)
+                            command.ExecuteNonQuery();
+
+                            // The stored procedure executed successfully
+                            MessageBox.Show(mode + " " + choose + " dropped", "Message", MessageBoxButtons.OK);
+                            Form2_Load(sender, e);
+
+                        }
+                        catch (OracleException ex)
+                        {
+                            MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
+                        }
                     }
-                    catch (OracleException ex)
+                    else
                     {
-                        MessageBox.Show("OracleException: " + ex.Message, "Message", MessageBoxButtons.OK);
+                        MessageBox.Show("Please choose the object", "Message", MessageBoxButtons.OK);
+
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Please choose the object", "Message", MessageBoxButtons.OK);
-
-                }
+            }
+            else {
+                MessageBox.Show("Only user!");
             }
         }
 
