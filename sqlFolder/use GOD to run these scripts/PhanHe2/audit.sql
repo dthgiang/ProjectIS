@@ -158,3 +158,4 @@ grant select on ATBM.vw_ViewAudit to RL_GiamDoc;
 grant select on ATBM.vw_ViewLog to RL_GiamDoc;
 grant select on  SYS.fga_log$ to RL_GiamDoc;
 /
+select * from ATBM.vw_Viewlog;

@@ -139,12 +139,12 @@ exec setThongBaoLabel;
 exec setUserLabel;
 /
 
-create or replace procedure assignDataLabel(p_noiDung IN VARCHAR2,p_doiTuong IN VARCHAR2,p_linhVuc IN VARCHAR2,p_khuVuc IN VARCHAR2, p_label IN VARCHAR2)
+create or replace procedure assignDataLabel(p_noiDung IN VARCHAR2, p_nguoiGui IN VARCHAR2,p_doiTuong IN VARCHAR2,p_linhVuc IN VARCHAR2,p_khuVuc IN VARCHAR2, p_label IN VARCHAR2)
 as
     strSql VARCHAR2(300);
 BEGIN
-    INSERT INTO OLS_ADMIN.THONGBAO (NOIDUNG, DOITUONG, LINHVUC, KHUVUC, REGION_LABEL)
-        VALUES(p_noiDung, p_doiTuong, p_linhVuc, p_khuVuc, CHAR_TO_LABEL('REGION_POLICY', UPPER(p_label)));
+    INSERT INTO OLS_ADMIN.THONGBAO (NOIDUNG,THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC, REGION_LABEL)
+        VALUES(p_noiDung,SYSDATE,p_nguoiGui, p_doiTuong, p_linhVuc, p_khuVuc, CHAR_TO_LABEL('REGION_POLICY', UPPER(p_label)));
     strSql := 'BEGIN SA_USER_ADMIN.SET_USER_LABELS(''region_policy'',''OLS_CULY'',''NV''); END;';
     EXECUTE IMMEDIATE (strSql);
     EXCEPTION
@@ -177,7 +177,7 @@ grant create view TO OLS_ADMIN with admin option;
 
 ---- for code 
 create or replace view vw_xemThongBao as
-    select NoiDung,LinhVuc, KhuVuc from OLS_ADMIN.THONGBAO;
+    select NoiDung,THOIGIAN, NGUOIGUI, LinhVuc, KhuVuc from OLS_ADMIN.THONGBAO;
 /
 grant select on vw_xemThongBao to RL_NHANVIEN;
 /
@@ -188,9 +188,11 @@ create or replace view vw_xemThongBaoAdmin as
 ---
 ----------------------
 -- cau 3 B
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T1', 'Truong phong', null, null);
+--insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T1', 'Truong phong', null, null);
+exec assignDataLabel('Mot ngay chay DL ai chia', 'God', 'Truong phong', null, null, 'NV');
+exec assignDataLabel('Thong bao T1', 'Giam Doc', 'Truong phong', null, null, 'NV');
 -- Cau 3 C
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T2', 'Truong phong', 'San xuat', 'Mien Trung');
+exec assignDataLabel('Thong bao T2', 'Giam Doc', 'Truong phong', 'San xuat', 'Mien Trung', 'TP:SX:MT');
 
 -- Thong bao de test lai OLS
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao  T3 (Tat ca deu thay thong bao nay)', 'Nhan vien', null, null);
+exec assignDataLabel('Giải phóng Miền Nam - Thống nhất đất nước. Cày ngày cày đêm - Mười cộng bảo mật', '10+ ATBM', 'Nhan vien', null, null, 'NV');

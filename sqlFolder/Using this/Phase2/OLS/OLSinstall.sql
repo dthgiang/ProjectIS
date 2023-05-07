@@ -154,6 +154,8 @@ drop table ThongBao;
 CREATE TABLE ThongBao ( 
 id NUMBER(10) GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), 
 NoiDung VARCHAR2(300), 
+ThoiGian DATE,
+NGUOIGUI VARCHAR2(100),
 DoiTuong VARCHAR2(100), 
 LinhVuc VARCHAR2(100), 
 KhuVuc VARCHAR2(100),
@@ -162,33 +164,33 @@ CONSTRAINT ThongBao_pk PRIMARY KEY (id)
 /
 
 delete from THONGBAO;
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc San xuat cua khu vuc Mien Bac', 'Giam doc','San xuat','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc San xuat cua khu vuc Mien Trung', 'Giam doc','San xuat','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc San xuat cua khu vuc Mien Nam', 'Giam doc','San xuat','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Gia Cong cua khu vuc Mien Bac', 'Giam doc','Gia Cong','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Gia Cong cua khu vuc Mien Trung', 'Giam doc','Gia Cong','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Gia Cong cua khu vuc Mien Nam', 'Giam doc','Gia Cong','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Mua ban cua khu vuc Mien Bac', 'Giam doc','Mua ban','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Mua ban cua khu vuc Mien Trung', 'Giam doc','Mua ban','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Mua ban cua khu vuc Mien Nam', 'Giam doc','Mua ban','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc San xuat cua khu vuc Mien Bac', 'Truong phong','San xuat','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc San xuat cua khu vuc Mien Trung', 'Truong phong','San xuat','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc San xuat cua khu vuc Mien Nam', 'Truong phong','San xuat','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Gia Cong cua khu vuc Mien Bac', 'Truong phong','Gia Cong','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Gia Cong cua khu vuc Mien Trung', 'Truong phong','Gia Cong','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Gia Cong cua khu vuc Mien Nam', 'Truong phong','Gia Cong','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Mua ban cua khu vuc Mien Bac', 'Truong phong','Mua ban','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Mua ban cua khu vuc Mien Trung', 'Truong phong','Mua ban','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Mua ban cua khu vuc Mien Nam', 'Truong phong','Mua ban','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc San xuat cua khu vuc Mien Bac', 'Nhan vien','San xuat','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc San xuat cua khu vuc Mien Trung', 'Nhan vien','San xuat','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc San xuat cua khu vuc Mien Nam', 'Nhan vien','San xuat','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Gia Cong cua khu vuc Mien Bac', 'Nhan vien','Gia Cong','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Gia Cong cua khu vuc Mien Trung', 'Nhan vien','Gia Cong','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Gia Cong cua khu vuc Mien Nam', 'Nhan vien','Gia Cong','Mien Nam');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Mua ban cua khu vuc Mien Bac', 'Nhan vien','Mua ban','Mien Bac');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Mua ban cua khu vuc Mien Trung', 'Nhan vien','Mua ban','Mien Trung');
-insert into THONGBAO(NOIDUNG, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Mua ban cua khu vuc Mien Nam', 'Nhan vien','Mua ban','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc San xuat cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','San xuat','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc San xuat cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','San xuat','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc San xuat cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','San xuat','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Gia Cong cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','Gia Cong','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Gia Cong cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','Gia Cong','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Gia Cong cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','Gia Cong','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Mua ban cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','Mua ban','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Mua ban cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','Mua ban','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Giam doc thuoc linh vuc Mua ban cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Giam doc','Mua ban','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc San xuat cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','San xuat','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc San xuat cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','San xuat','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc San xuat cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','San xuat','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Gia Cong cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','Gia Cong','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Gia Cong cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','Gia Cong','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Gia Cong cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','Gia Cong','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Mua ban cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','Mua ban','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Mua ban cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','Mua ban','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Truong phong thuoc linh vuc Mua ban cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Truong phong','Mua ban','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc San xuat cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','San xuat','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc San xuat cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','San xuat','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc San xuat cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','San xuat','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Gia Cong cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','Gia Cong','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Gia Cong cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','Gia Cong','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Gia Cong cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','Gia Cong','Mien Nam');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Mua ban cua khu vuc Mien Bac',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','Mua ban','Mien Bac');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Mua ban cua khu vuc Mien Trung',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','Mua ban','Mien Trung');
+insert into THONGBAO(NOIDUNG, THOIGIAN, NGUOIGUI, DOITUONG, LINHVUC, KHUVUC) VALUES('Thong bao toi Nhan vien thuoc linh vuc Mua ban cua khu vuc Mien Nam',TO_DATE('30-04-1975','DD-MM-YYYY'), 'Admin', 'Nhan vien','Mua ban','Mien Nam');
 ---- da 
 /*
 BEGIN

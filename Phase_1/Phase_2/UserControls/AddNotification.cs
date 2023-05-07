@@ -79,6 +79,8 @@ namespace Phase_1.UserControls
                 // create input parameter
                 OracleParameter noiDung = new OracleParameter("p_noiDung", OracleDbType.Varchar2, ParameterDirection.Input);
                 noiDung.Value = content;
+                OracleParameter nguoiGui = new OracleParameter("p_nguoiGui", OracleDbType.Varchar2, ParameterDirection.Input);
+                nguoiGui.Value = Login.getUsername();
                 OracleParameter doiTuong = new OracleParameter("p_doiTuong", OracleDbType.Varchar2, ParameterDirection.Input);
                 doiTuong.Value = finalLabel[1];
                 OracleParameter linhVuc = new OracleParameter("p_linhVuc", OracleDbType.Varchar2, ParameterDirection.Input);
@@ -97,10 +99,12 @@ namespace Phase_1.UserControls
                 label.Value = finalLabel[0];
                 // add parameters to the command object
                 command.Parameters.Add(noiDung);
+                command.Parameters.Add(nguoiGui);
                 command.Parameters.Add(doiTuong);
                 command.Parameters.Add(linhVuc);
                 command.Parameters.Add(khuVuc);
                 command.Parameters.Add(label);
+
 
                 // execute the command
                 command.ExecuteNonQuery();
