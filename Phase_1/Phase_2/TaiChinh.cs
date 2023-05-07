@@ -90,8 +90,9 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaiChinh taichinh = new TaiChinh();
-            taichinh.Show();
+            TruongPhong truongphong = new TruongPhong();
+            this.Close();
+            truongphong.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

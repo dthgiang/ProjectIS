@@ -27,5 +27,10 @@ namespace Phase_1.UserControls
                 System.Diagnostics.Debug.WriteLine("OracleException: " + ex.Message);
             }
         }
+
+        private void QLTrucTiep_TaskEmp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
