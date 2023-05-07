@@ -157,13 +157,13 @@ CREATE OR REPLACE VIEW PH1_TEST_VIEW_ALL_VIEWS
  AS 
     select * from ATBM.PH1_VIEW_ALL_VIEWS;
 /
-grant select on PH1_VIEW_USERS_PRIVS to DB_Manager;
-grant select on PH1_VIEW_ALL_TABLES to DB_Manager;
-grant select on PH1_VIEW_ALL_VIEWS to DB_Manager;
-grant select on PH1_VIEW_ALL_USERS to DB_Manager;
-grant select on ROLE_PRIVS to DB_Manager;
-grant select on USER_PRIVS to DB_Manager;
-grant select on USER_INFO to DB_Manager;
+grant select on atbm.PH1_VIEW_USERS_PRIVS to DB_Manager;
+grant select on atbm.PH1_VIEW_ALL_TABLES to DB_Manager;
+grant select on atbm.PH1_VIEW_ALL_VIEWS to DB_Manager;
+grant select on atbm.PH1_VIEW_ALL_USERS to DB_Manager;
+grant select on atbm.ROLE_PRIVS to DB_Manager;
+grant select on atbm.USER_PRIVS to DB_Manager;
+grant select on atbm.USER_INFO to DB_Manager;
 
 /*
 drop view USER_ROLE_PRIVs

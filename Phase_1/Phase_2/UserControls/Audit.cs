@@ -62,5 +62,7 @@ namespace Phase_1.Phase_2.UserControls
                 richTextBox1.ForeColor = Color.OrangeRed;
             }
         }
+
+
     }
 }

@@ -254,6 +254,8 @@ BEGIN
  
         strSQL:= 'GRANT SELECT ON sys.fga_log$ TO '||Usr;
         EXECUTE IMMEDIATE (strSQL);
+        strSQL:= 'GRANT SELECT ON UNIFIED_AUDIT_TRAIL TO '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
     END LOOP;
 END;
 /

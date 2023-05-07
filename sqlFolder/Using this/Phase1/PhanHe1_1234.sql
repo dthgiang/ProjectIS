@@ -1,8 +1,10 @@
 alter session set container= qldtpdb; 
 
 -- Tao nguoi quan tri du lieu
-create user DB_manager identified by 123;
-grant connect to DB_manager;
+--drop user DB_manager
+--create user DB_manager identified by 123;
+--grant connect to DB_manager;
+create role DB_manager;
 
 -- Xem danh sach user trong he thong
 CREATE OR REPLACE VIEW USER_INFO
@@ -72,6 +74,12 @@ grant insert any table to DB_Manager ;
 grant delete any table to DB_Manager ;
 grant update any table to DB_Manager ;
 grant create view to DB_Manager;
+grant create table to DB_Manager;
+grant create user to DB_Manager;
+grant create role to DB_Manager;
+
+
+
 
 /*
 Qua trinh cap quyen co tuy chon la co cho phep nguoi duoc cap quyen co the cap 

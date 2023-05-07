@@ -278,7 +278,7 @@ namespace Phase_1
                 command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = txt_name.Text;
                 command.Parameters.Add("p_password", OracleDbType.Varchar2).Value = pwTextBox.Text;
                 command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = filterBox.Text;
-                command.Parameters.Add("p_isPW", OracleDbType.Varchar2).Value = pwCheckBox.Checked;
+                //command.Parameters.Add("p_isPW", OracleDbType.Varchar2).Value = pwCheckBox.Checked;
 
                 // Get the value of the output parameter(s)
                 int resultEx = command.ExecuteNonQuery();
