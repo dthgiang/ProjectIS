@@ -172,7 +172,7 @@ END;
 /
 grant create view TO OLS_ADMIN with admin option;
 
-
+/*
 GRANT EXECUTE ON sa_components TO RL_NhanSu; 
 GRANT EXECUTE ON sa_user_admin TO RL_NhanSu; 
 GRANT EXECUTE ON sa_label_admin TO RL_NhanSu; 
@@ -183,7 +183,7 @@ GRANT LBAC_DBA TO RL_NhanSu;
 GRANT EXECUTE ON sa_sysdba TO RL_NhanSu; 
 GRANT EXECUTE ON to_lbac_data_label TO RL_NhanSu; 
 grant region_policy_DBA to RL_NhanSu;
-grant execute on region_policy to RL_NhanSu;
+grant execute OLS_Admin.region_policy to RL_NhanSu;
 
 */
 grant execute on assignDataLabel to RL_NhanSu;
