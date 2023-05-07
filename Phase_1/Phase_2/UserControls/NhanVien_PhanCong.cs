@@ -19,8 +19,7 @@ namespace Phase_1.Phase_2.UserControls
 
             try
             {
-                MessageBox.Show("hihi");
-                Helper.raiseTable(dataGridView1, "select * from ATBM.Vw_PhanCong", Login.getConnection());
+                Helper.raiseTable(dataGridView1, "SELECT * FROM ATBM.Vw_PhanCong", Login.getConnection());
                 dataGridView1.Show();
             }
             catch (OracleException ex)
@@ -29,6 +28,5 @@ namespace Phase_1.Phase_2.UserControls
             }
         }
 
-        
     }
 }

@@ -1,4 +1,5 @@
-﻿using Phase_1.UserControls;
+﻿using Phase_1.Phase_2.UserControls;
+using Phase_1.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -126,7 +127,8 @@ namespace Phase_1.Phase_2
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            AllLayout.showTask(panelContainer);
+            NhanVien_PhanCong nv = new NhanVien_PhanCong();
+            addUserControl(nv);
         }
 
         private void btnPhongban_Click(object sender, EventArgs e)
