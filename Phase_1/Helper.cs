@@ -11,7 +11,7 @@ namespace Phase_1
 {
     class Helper
     {
-        public static void raiseTable(DataGridView dgv, string SQLCommand, OracleConnection connection)
+        public static bool raiseTable(DataGridView dgv, string SQLCommand, OracleConnection connection)
         {
 
             OracleDataAdapter adt = new OracleDataAdapter(SQLCommand, connection);
@@ -21,11 +21,11 @@ namespace Phase_1
             adt.Fill(userTable);
             if (userTable.Rows.Count < 1)
             {
-                System.Diagnostics.Debug.WriteLine("here we go again");
-                return;
+                return false;
             }
 
             dgv.DataSource = userTable;
+            return true;
         }
 
         public static void addUserControl(Panel panelContainer, UserControl userControl)
