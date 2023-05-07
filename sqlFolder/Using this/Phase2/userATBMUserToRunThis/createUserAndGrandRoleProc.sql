@@ -18,6 +18,8 @@ exec usp_GrantUserAdmin
 ------------ start from here ---
 -- Run from this than run Proc Area ---
 -------------
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+
 create role RL_NhanVien;
 CREATE role RL_QUANLY;
 create role RL_TruongPhong;
@@ -25,6 +27,7 @@ CREATE ROLE RL_TAICHINH;
 CREATE ROLE RL_NHANSU;
 CREATE ROLE RL_TRUONGDEAN;
 CREATE ROLE RL_GIAMDOC;
+create role RL_DB_manager;
 
 grant RL_NHANVIEN TO RL_GIAMDOC;
 
@@ -279,6 +282,8 @@ BEGIN
         strSQL:= 'grant select on atbm.view_getkey to '||Usr;
         EXECUTE IMMEDIATE (strSQL);
         strSQL:= 'grant select on atbm.view_getpw to '||Usr;
+        EXECUTE IMMEDIATE (strSQL);
+        strSQL:= 'grant RL_DB_MANAGER to '||Usr;
         EXECUTE IMMEDIATE (strSQL);
     END LOOP;
 END;

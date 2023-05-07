@@ -264,25 +264,49 @@ namespace Phase_1
             bt_createtable.Hide();
             lbl_username.Show();
 
-
+            String sql;
 
             try
             {
+                if (filterBox.Text=="User")
+                {
+                    OracleCommand command = new OracleCommand("atbm.ph1_createUser", con);
+                    command.CommandType = CommandType.StoredProcedure;
 
-                OracleCommand command = new OracleCommand("ph1_createUserOrRole", con);
-                string x = txt_name.Text;
+                    // Add input parameters to the command
+                    command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = txt_name.Text;
+                    command.Parameters.Add("p_password", OracleDbType.Varchar2).Value = pwTextBox.Text;
 
-                command.CommandType = System.Data.CommandType.StoredProcedure;
+                    // Execute the stored procedure
+                    command.ExecuteNonQuery();
 
-                // Add input parameter(s) to the command
-                command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = txt_name.Text;
-                command.Parameters.Add("p_password", OracleDbType.Varchar2).Value = pwTextBox.Text;
-                command.Parameters.Add("p_mode", OracleDbType.Varchar2).Value = filterBox.Text;
-                //command.Parameters.Add("p_isPW", OracleDbType.Varchar2).Value = pwCheckBox.Checked;
+                }
+                else 
+                {
+                    OracleCommand command = new OracleCommand("atbm.ph1_createRole", con);
+                    command.CommandType = CommandType.StoredProcedure;
 
-                // Get the value of the output parameter(s)
-                int resultEx = command.ExecuteNonQuery();
-                System.Diagnostics.Debug.WriteLine(x);
+                    // Add input parameters to the command
+                    command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = txt_name.Text;
+                    command.Parameters.Add("p_password", OracleDbType.Varchar2).Value = pwTextBox.Text;
+
+                    // Execute the stored procedure
+                    command.ExecuteNonQuery();
+
+                }
+
+                //OracleCommand command = new OracleCommand(sql, con);
+                //string x = txt_name.Text;
+
+                ////command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                //// Add input parameter(s) to the command
+                ////command.Parameters.Add("p_username", OracleDbType.Varchar2).Value = txt_name.Text;
+                ////command.Parameters.Add("p_password", OracleDbType.Varchar2).Value = pwTextBox.Text;
+
+
+                //// Get the value of the output parameter(s)
+                //command.ExecuteNonQuery();
 
 
                 // The stored procedure executed successfully
@@ -440,6 +464,11 @@ namespace Phase_1
                 pwLabel.Hide();
                 pwTextBox.Hide();
             }
+        }
+
+        private void pwTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

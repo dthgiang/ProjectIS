@@ -1,10 +1,11 @@
 alter session set container= qldtpdb; 
 
 -- Tao nguoi quan tri du lieu
---drop user DB_manager
---create user DB_manager identified by 123;
---grant connect to DB_manager;
-create role DB_manager;
+--drop user RL_DB_MANAGER
+--create user RL_DB_MANAGER identified by 123;
+--grant connect to RL_DB_MANAGER;
+
+
 
 -- Xem danh sach user trong he thong
 CREATE OR REPLACE VIEW USER_INFO
@@ -46,9 +47,9 @@ grant select on DBA_VIEWS TO ATBM WITH GRANT OPTION;
 */
 ----------
 
-grant select on ROLE_PRIVS to DB_Manager;
-grant select on USER_PRIVS to DB_Manager;
-grant select on USER_INFO to DB_Manager;
+grant select on ROLE_PRIVS to RL_DB_MANAGER;
+grant select on USER_PRIVS to RL_DB_MANAGER;
+grant select on USER_INFO to RL_DB_MANAGER;
 
 /*
 drop view USER_ROLE_PRIVs
@@ -61,22 +62,23 @@ SELECT * FROM SYS.USER_ROLE_PRIVS;
 SET sqlformat ansiconsole;
 SET SQLFORMAT DEFAULT
 -- Cho phep tao moi, xoa, sua user/ role
-GRANT CREATE USER, ALTER USER, DROP USER TO DB_Manager;
-GRANT CREATE ROLE TO DB_Manager;
+GRANT CREATE USER, ALTER USER, DROP USER TO RL_DB_MANAGER;
+GRANT CREATE ROLE TO RL_DB_MANAGER;
 
 
 -- Cho phep thuc hien cap quyen: cap quyen cho user/role/ cap role cho user
 
-GRANT GRANT ANY object PRIVILEGE TO DB_MANAGER;
-GRANT GRANT ANY ROLE TO DB_MANAGER ;
-grant select any table to DB_Manager ;
-grant insert any table to DB_Manager ;
-grant delete any table to DB_Manager ;
-grant update any table to DB_Manager ;
-grant create view to DB_Manager;
-grant create table to DB_Manager;
-grant create user to DB_Manager;
-grant create role to DB_Manager;
+GRANT GRANT ANY object PRIVILEGE TO RL_DB_MANAGER;
+GRANT GRANT ANY ROLE TO RL_DB_MANAGER ;
+grant select any table to RL_DB_MANAGER ;
+grant insert any table to RL_DB_MANAGER ;
+grant delete any table to RL_DB_MANAGER ;
+grant update any table to RL_DB_MANAGER ;
+grant create view to RL_DB_MANAGER;
+grant create table to RL_DB_MANAGER;
+grant create user to RL_DB_MANAGER;
+grant create role to RL_DB_MANAGER;
+
 
 
 
