@@ -27,17 +27,40 @@ namespace Phase_1.Phase_2.UserControls
         }
         private void Audit_Load(object sender, EventArgs e)
         {
-            OracleDataAdapter adt = new OracleDataAdapter("select sessionid, dbuid,osuid, oshst, clientid, obj$name, policyname, scn, lsqltext, comment$text,comment$text, ntimestamp#, current_user from SYS.fga_log$", connection);
-
-            DataTable table = new DataTable();
-
-            adt.Fill(table);
-            dataGridView1.DataSource = table;
-
-            dataGridView1.ReadOnly = true;
+            viewAuditButton_Click(sender, e);
 
         }
 
+        private void viewAuditButton_Click(object sender, EventArgs e)
+        {
+            viewLogButton.Show();
+            auditLabel.Show();
+            viewAuditButton.Hide();
+            logDataGridView.Hide();
+            richTextBox1.Hide();
+            auditDataGridView.Show();
+            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".VW_VIEWAUDIT";
+            Helper.raiseTable(auditDataGridView, sql, connection);
+        }
 
+        private void viewLogButton_Click(object sender, EventArgs e)
+        {
+            viewLogButton.Hide();
+            auditLabel.Hide();
+            auditDataGridView.Hide();
+            viewAuditButton.Show();
+            logDataGridView.Show();
+            richTextBox1.Hide();
+
+            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".VW_VIEWLOG";
+            bool x = Helper.raiseTable(logDataGridView, sql, connection);
+            if (!x)
+            {
+                richTextBox1.Show();
+                richTextBox1.Text = "Log file is empty";
+                richTextBox1.Font = new Font("Cambria", 20, FontStyle.Bold);
+                richTextBox1.ForeColor = Color.OrangeRed;
+            }
+        }
     }
 }

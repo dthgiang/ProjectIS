@@ -142,12 +142,19 @@ SELECT * FROM dba_audit_policy_columns;
 ------- End test
 
 -------------------
------ USE SYS to run this: because Oracle khong co grant option cai dictionary nay
+----- Dung ca SYS lan ATBM run 2 cai nay: because Oracle khong co grant option cai dictionary nay
 -----------------------
 create or replace view vw_ViewAudit as
     SELECT OS_USERNAME as xUser, ACTION_NAME, OBJECT_SCHEMA as xSchema, OBJECT_NAME as TableName, TO_CHAR(EVENT_TIMESTAMP, 'DD-MM-YYYY') AS DayAccess, USERHOST, TERMINAL,CLIENT_PROGRAM_NAME, SESSIONID, DBID, AUTHENTICATION_TYPE 
     FROM UNIFIED_AUDIT_TRAIL
     where FGA_POLICY_NAME  = 'LUONG_PHUCAP_AUDIT_POLICY' OR FGA_POLICY_NAME  = 'LUONG_PHUCAP_OTHER_AUDIT_POLICY' OR FGA_POLICY_NAME  = 'THOIGIAN_UPDATE_AUDIT_POLICY'; --thoigian_update_audit_policy
 /
+create or replace view vw_ViewLog as
+    select sessionid, dbuid,osuid, oshst, clientid, obj$name, policyname, scn, lsqltext, comment$text, ntimestamp#, current_user 
+    from SYS.fga_log$
+/
+-- dung sys de grant
 grant select on ATBM.vw_ViewAudit to RL_GiamDoc;
+grant select on ATBM.vw_ViewLog to RL_GiamDoc;
+grant select on  SYS.fga_log$ to RL_GiamDoc;
 /
