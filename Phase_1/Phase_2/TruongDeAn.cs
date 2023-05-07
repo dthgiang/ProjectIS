@@ -131,8 +131,9 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TruongDeAn tda = new TruongDeAn();
-            tda.Show();
+            TruongPhong truongphong = new TruongPhong();
+            this.Close();
+            truongphong.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

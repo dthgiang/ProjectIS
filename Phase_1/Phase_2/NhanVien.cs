@@ -122,6 +122,7 @@ namespace Phase_1.Phase_2
         private void btnHome_Click(object sender, EventArgs e)
         {
             NhanVien nhanvien = new NhanVien();
+            this.Close();
             nhanvien.Show();
         }
 

@@ -28,5 +28,9 @@ namespace Phase_1.Phase_2.UserControls
             }
         }
 
+        private void NhanVien_PhanCong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
