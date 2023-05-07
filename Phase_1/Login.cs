@@ -110,7 +110,7 @@ namespace Phase_1
 
             this.Hide();
 
-
+            
             // select vaitro from vw_nhanvien -> assign to vai tro;
             switch (role.ToUpper())
             {
@@ -121,7 +121,7 @@ namespace Phase_1
                         break;
                     }
 
-                case "Quan ly":
+                case "QUAN LI":
                     {
                         QuanLyTrucTiep l= new QuanLyTrucTiep(user, connection);
                         l.Show();

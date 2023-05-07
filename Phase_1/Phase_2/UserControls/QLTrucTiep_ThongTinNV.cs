@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace Phase_1.UserControls
         public QLTrucTiep_ThongTinNV()
         {
             InitializeComponent();
+            try
+            {
+                Helper.raiseTable(dataGridView1, "SELECT * FROM ATBM.PH2_View_QLy_XemNhanvien", Login.getConnection());
+                dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                System.Diagnostics.Debug.WriteLine("OracleException: " + ex.Message);
+            }
         }
     }
 }

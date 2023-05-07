@@ -93,9 +93,10 @@ namespace Phase_1
             sidebarTimer.Start();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void homeBtn_Click(object sender, EventArgs e)
         {
             QuanLyTrucTiep QLTT = new QuanLyTrucTiep();
+            this.Close();
             QLTT.Show();
         }
 
@@ -109,17 +110,17 @@ namespace Phase_1
             AllLayout.showTask(panelContainer);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void deptListBtn_Click(object sender, EventArgs e)
         {
             AllLayout.showDepartment(panelContainer);
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void prjListBtn_Click(object sender, EventArgs e)
         {
             AllLayout.showProject(panelContainer);
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void myEmpListBtn_Click(object sender, EventArgs e)
         {
             QLTrucTiep_ThongTinNV ql = new QLTrucTiep_ThongTinNV();
             addUserControl(ql);
