@@ -24,11 +24,11 @@ ALTER SESSION SET container = QLDTPDB;
 
 
 create OR REPLACE view Vw_NhanVien as
-    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from ATBM.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from ATBM.NhanVien  where UPPER(MaNV) = UPPER(SYS_CONTEXT('USERENV', 'SESSION_USER'));
 /
 
 create OR REPLACE view Vw_PhanCong as
-    select * from ATBM.PhanCong  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
+    select * from ATBM.PhanCong   where UPPER(MaNV) = UPPER(SYS_CONTEXT('USERENV', 'SESSION_USER'));
 /
 grant select on ATBM.Vw_NhanVien to RL_NhanVien;
 grant select on ATBM.Vw_PhanCong to RL_NhanVien;
