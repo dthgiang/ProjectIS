@@ -1,5 +1,4 @@
 ALTER SESSION SET container = QLDTPDB;
-
 --------- Grant quyen xem audit cho giam doc
 grant select on  SYS.fga_log$ to ATBM with grant option;
 grant select on  SYS.fga_log$ to RL_GIAMDOC;
@@ -83,7 +82,7 @@ end;
 ----------------
 /*
 select * from ATBM.nhanvien;
-select * from ATBM.Vw_NhanVien;
+select * from ATBM.View_allNhanVien;
 --kiem tra audit
 select sessionid, dbuid,osuid, oshst, clientid, obj$name, policyname, scn, lsqltext, comment$text,comment$text, ntimestamp#, current_user from SYS.fga_log$;
 */
@@ -126,14 +125,29 @@ end;
 ---------------
 --- Test area
 ----------------
---/*
+/*
 select * from ATBM.nhanvien;
-update ATBM.NHANVIEN  set  TENNV = 'AKAZA', PHUCAP = 99999 where MANV = 'NV55';
-select * from ATBM.Vw_NhanVienToNhanVien;
+update ATBM.NHANVIEN  set  TENNV = 'AKAZA', PHUCAP = '99999' where MANV = 'NV55';
+select * from ATBM.Vw_NhanVien;
 --kiem tra audit
 SELECT *
 FROM UNIFIED_AUDIT_TRAIL
-where FGA_POLICY_NAME  = 'luong_phucap_other_audit_policy';
---*/
+where FGA_POLICY_NAME  = 'LUONG_PHUCAP_OTHER_AUDIT_POLICY';
+
+SELECT * FROM dba_audit_policies;
+SELECT * FROM dba_audit_policy_columns;
+
+*/
 
 ------- End test
+
+-------------------
+----- USE SYS to run this: because Oracle khong co grant option cai dictionary nay
+-----------------------
+create or replace view vw_ViewAudit as
+    SELECT OS_USERNAME as xUser, ACTION_NAME, OBJECT_SCHEMA as xSchema, OBJECT_NAME as TableName, TO_CHAR(EVENT_TIMESTAMP, 'DD-MM-YYYY') AS DayAccess, USERHOST, TERMINAL,CLIENT_PROGRAM_NAME, SESSIONID, DBID, AUTHENTICATION_TYPE 
+    FROM UNIFIED_AUDIT_TRAIL
+    where FGA_POLICY_NAME  = 'LUONG_PHUCAP_AUDIT_POLICY' OR FGA_POLICY_NAME  = 'LUONG_PHUCAP_OTHER_AUDIT_POLICY' OR FGA_POLICY_NAME  = 'THOIGIAN_UPDATE_AUDIT_POLICY'; --thoigian_update_audit_policy
+/
+grant select on ATBM.vw_ViewAudit to RL_GiamDoc;
+/
