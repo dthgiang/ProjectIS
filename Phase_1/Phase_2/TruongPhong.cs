@@ -163,9 +163,7 @@ namespace Phase_1
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            TruongPhong truongphong = new TruongPhong();
-            this.Close();
-            truongphong.Show();
+            addUserControl(new Home());
         }
 
         private void button4_Click(object sender, EventArgs e)

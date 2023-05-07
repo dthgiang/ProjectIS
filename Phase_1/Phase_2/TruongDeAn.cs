@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Phase_1.Phase_2.UserControls;
 
 namespace Phase_1
 {
@@ -131,9 +132,8 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TruongPhong truongphong = new TruongPhong();
-            this.Close();
-            truongphong.Show();
+            addUserControl(new Home());
+
         }
 
         private void button6_Click(object sender, EventArgs e)

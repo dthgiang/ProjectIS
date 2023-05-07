@@ -19,6 +19,8 @@ namespace Phase_1.UserControls
             try
             {
                 Helper.raiseTable(dataGridView1, "select * from ATBM.PHONGBAN", Login.getConnection());
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                
                 dataGridView1.Show();
             }
             catch (OracleException ex)

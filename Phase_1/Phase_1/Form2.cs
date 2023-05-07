@@ -24,6 +24,8 @@ namespace Phase_1
         {
             InitializeComponent();
             this.con = connection;
+            filterBox.Text = "Table";
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -363,7 +365,7 @@ namespace Phase_1
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                if (filterBox.Text == "")
+                if (filterBox.Text == "" )
                     filterBox.Text = "Table";
                 string names = filterBox.Text + "Name";
                 objectNameTextBox.Text = selectedRow.Cells[names.ToUpper()].Value.ToString();

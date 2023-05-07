@@ -133,9 +133,8 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Admin a = new Admin();
-            this.Hide();
-            a.Show();
+            addUserControl(new Home());
+
         }
 
         private void button25_Click(object sender, EventArgs e)

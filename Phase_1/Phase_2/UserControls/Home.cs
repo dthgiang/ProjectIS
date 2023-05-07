@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Phase_1.Phase_2.UserControls
 {
-    public partial class XemTatCaTable : UserControl
+    public partial class Home : UserControl
     {
-        public XemTatCaTable()
+        public Home()
         {
             InitializeComponent();
         }

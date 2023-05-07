@@ -326,9 +326,9 @@ namespace Phase_1.UserControls
             assignToLabel.Show();
             objectTextBox.Show();
             assignButton.Show();
-            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".NHANVIEN";
+            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".NS_XEMNHANVIEN ";
             Phase_1.Helper.raiseTable(dataGridView1, sql, connection);
-
+            configEmpButton.Hide();
 
         }
 
@@ -339,6 +339,7 @@ namespace Phase_1.UserControls
             assignToLabel.Hide();
             objectTextBox.Hide();
             assignButton.Hide();
+            configEmpButton.Show();
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

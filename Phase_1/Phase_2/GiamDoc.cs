@@ -161,9 +161,7 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GiamDoc gd = new GiamDoc();
-            gd.Show();
+            addUserControl(new Home());
         }
 
         private void button4_Click(object sender, EventArgs e)

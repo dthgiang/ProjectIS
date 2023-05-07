@@ -107,9 +107,8 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NhanSu x = new NhanSu();
-            this.Hide();
-            x.Show();
+            addUserControl(new Home());
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -20,6 +20,7 @@ namespace DatabaseAccess
         private static OracleConnection connection;
         private static string OWNER = "ATBM";
         private static string OLS = "OLS_Admin";
+        public  static string SYS = "SYS";
 
         private Connector() { }
         private Connector(string user, string pw)
@@ -83,6 +84,10 @@ namespace DatabaseAccess
         public static string getOLSAdmin()
         {
             return OLS;
+        }
+        public static string getSys()
+        {
+            return SYS;
         }
 
     }

@@ -188,3 +188,8 @@ grant delete any table to DB_Manager ;
 grant update any table to DB_Manager ;  
 grant create view to DB_Manager;
 grant create procedure to DB_Manager;
+grant connect to DB_manager;
+/*
+create user hehe identified by 123;
+grant DB_manager to hehe;
+*/

@@ -5,7 +5,7 @@ SELECT * FROM DBA_AUDIT_POLICIES
 WHERE object_schema = 'ATBM' 
 AND object_name = 'phancong';
 
---Những ngư�?i đã cập nhật trư�?ng THOIGIAN trong quan hệ PHANCONG. 
+--Những ngư�?i đã cập nhật trư�?ng THOIGIAN trong quan hệ PHANCONG. 
 
 -- Drop if the Policy have been exist
 /*
@@ -44,7 +44,7 @@ update ATBM.Vw_TruongPhongToPhanCong set thoigian=TO_DATE('2022-7-4','YYYY-MM-DD
 ------- End test
 
 
--- Những ngư�?i đã đ�?c trên trư�?ng LUONG và PHUCAP của ngư�?i khác.
+-- Những ngư�?i đã đ�?c trên trư�?ng LUONG và PHUCAP của ngư�?i khác.
 
 -- Drop if the Policy have been exist
 /*
@@ -90,7 +90,7 @@ select sessionid, dbuid,osuid, oshst, clientid, obj$name, policyname, scn, lsqlt
 
 -------------- Audit 4c
 ------------------------
---  Một ngư�?i không thuộc vai trò “Tài chính�? nhưng đã cập nhật thành công trên trư�?ng LUONG và PHUCAP. 
+--  Một ngư�?i không thuộc vai trò “Tài chính�? nhưng đã cập nhật thành công trên trư�?ng LUONG và PHUCAP. 
 -- Drop if the Policy have been exist
 /*
 begin
@@ -151,6 +151,6 @@ create or replace view vw_ViewLog as
     from SYS.fga_log$
 /
 -- dung sys de grant
-GRANT SELECT ON ATBM.vw_ViewAudit TO RL_GiamDoc ;
-grant select on ATBM.vw_ViewLog to RL_GiamDoc;
+GRANT SELECT ON SYS.vw_ViewAudit TO RL_GiamDoc ;
+grant select on SYS.vw_ViewLog to RL_GiamDoc;
 grant select on  SYS.fga_log$ to RL_GiamDoc;

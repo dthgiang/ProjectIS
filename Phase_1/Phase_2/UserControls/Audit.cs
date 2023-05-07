@@ -39,7 +39,7 @@ namespace Phase_1.Phase_2.UserControls
             logDataGridView.Hide();
             richTextBox1.Hide();
             auditDataGridView.Show();
-            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".VW_VIEWAUDIT";
+            string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWAUDIT";
             Helper.raiseTable(auditDataGridView, sql, connection);
         }
 
@@ -52,7 +52,7 @@ namespace Phase_1.Phase_2.UserControls
             logDataGridView.Show();
             richTextBox1.Hide();
 
-            string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".VW_VIEWLOG";
+            string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWLOG";
             bool x = Helper.raiseTable(logDataGridView, sql, connection);
             if (!x)
             {

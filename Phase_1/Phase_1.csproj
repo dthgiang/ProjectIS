@@ -195,11 +195,11 @@
     <Compile Include="Phase_2\UserControls\TruongPhong_XemNV.Designer.cs">
       <DependentUpon>TruongPhong_XemNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Phase_2\UserControls\XemTatCaTable.cs">
+    <Compile Include="Phase_2\UserControls\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Phase_2\UserControls\XemTatCaTable.Designer.cs">
-      <DependentUpon>XemTatCaTable.cs</DependentUpon>
+    <Compile Include="Phase_2\UserControls\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -374,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\UserControls\TruongPhong_XemNV.resx">
       <DependentUpon>TruongPhong_XemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_2\UserControls\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

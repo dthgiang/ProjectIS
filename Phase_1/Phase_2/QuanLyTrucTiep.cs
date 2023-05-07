@@ -95,9 +95,8 @@ namespace Phase_1
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            QuanLyTrucTiep QLTT = new QuanLyTrucTiep();
-            this.Close();
-            QLTT.Show();
+            addUserControl(new Home());
+
         }
 
         private void button4_Click(object sender, EventArgs e)
