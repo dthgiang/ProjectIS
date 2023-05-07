@@ -327,7 +327,7 @@ namespace Phase_1.UserControls
             objectTextBox.Show();
             assignButton.Show();
             string sql = "select * from " + DatabaseAccess.Connector.getOwner() + ".NS_XEMNHANVIEN ";
-            Phase_1.Helper.raiseTable(dataGridView1, sql, connection);
+            Helper.raiseTable(dataGridView1, sql, connection);
             configEmpButton.Hide();
 
         }

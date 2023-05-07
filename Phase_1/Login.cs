@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using DatabaseAccess;
+using Phase_1.Phase_1;
+
 namespace Phase_1
 {
     public partial class Login : Form
@@ -97,7 +99,7 @@ namespace Phase_1
             {
                 if (role.ToUpper() == "ADMIN" )
                 {
-                    Form1 f1 = new Form1(connection);
+                    Admin_Phase1 f1 = new Admin_Phase1(connection);
                     f1.Show();
                     return;
                 }

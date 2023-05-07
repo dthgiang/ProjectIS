@@ -35,7 +35,7 @@ namespace Phase_1
             this.grantRoleButton = new System.Windows.Forms.Button();
             this.returnButton = new System.Windows.Forms.Button();
             this.welcomeLabel = new System.Windows.Forms.Label();
-            this.nameObjsLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.rowComboBox = new System.Windows.Forms.ComboBox();
             this.roleLabel = new System.Windows.Forms.Label();
             this.optionComboBox = new System.Windows.Forms.ComboBox();
@@ -141,23 +141,25 @@ namespace Phase_1
             this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.welcomeLabel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.welcomeLabel.Location = new System.Drawing.Point(576, 272);
+            this.welcomeLabel.Location = new System.Drawing.Point(549, 271);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(284, 25);
             this.welcomeLabel.TabIndex = 13;
             this.welcomeLabel.Text = "You are editing on User:";
+            this.welcomeLabel.Click += new System.EventHandler(this.welcomeLabel_Click);
             // 
-            // nameObjsLabel
+            // label4
             // 
-            this.nameObjsLabel.AutoSize = true;
-            this.nameObjsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameObjsLabel.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameObjsLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.nameObjsLabel.Location = new System.Drawing.Point(649, 309);
-            this.nameObjsLabel.Name = "nameObjsLabel";
-            this.nameObjsLabel.Size = new System.Drawing.Size(124, 25);
-            this.nameObjsLabel.TabIndex = 14;
-            this.nameObjsLabel.Text = "Username";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(649, 309);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 25);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Username";
+            this.label4.Click += new System.EventHandler(this.nameObjsLabel_Click);
             // 
             // rowComboBox
             // 
@@ -306,7 +308,7 @@ namespace Phase_1
             this.grantPrivPanel.Controls.Add(this.objectTextBox);
             this.grantPrivPanel.Controls.Add(this.attributeComboBox);
             this.grantPrivPanel.Controls.Add(this.attributeLabel);
-            this.grantPrivPanel.Location = new System.Drawing.Point(442, 320);
+            this.grantPrivPanel.Location = new System.Drawing.Point(7, 29);
             this.grantPrivPanel.Name = "grantPrivPanel";
             this.grantPrivPanel.Size = new System.Drawing.Size(598, 446);
             this.grantPrivPanel.TabIndex = 37;
@@ -344,7 +346,7 @@ namespace Phase_1
             this.changePWPanel.Controls.Add(this.changePWActionButton);
             this.changePWPanel.Controls.Add(this.granteeChangePWTextBox);
             this.changePWPanel.Controls.Add(this.confirmPWLabel);
-            this.changePWPanel.Location = new System.Drawing.Point(424, 320);
+            this.changePWPanel.Location = new System.Drawing.Point(288, 801);
             this.changePWPanel.Name = "changePWPanel";
             this.changePWPanel.Size = new System.Drawing.Size(648, 378);
             this.changePWPanel.TabIndex = 38;
@@ -446,6 +448,7 @@ namespace Phase_1
             this.grantRolePanel.BackColor = System.Drawing.Color.Transparent;
             this.grantRolePanel.Controls.Add(this.rowComboBox);
             this.grantRolePanel.Controls.Add(this.label6);
+            this.grantRolePanel.Controls.Add(this.grantPrivPanel);
             this.grantRolePanel.Controls.Add(this.roleLabel);
             this.grantRolePanel.Controls.Add(this.grantRoleActionButton);
             this.grantRolePanel.Controls.Add(this.granteeRoleTextBox);
@@ -532,9 +535,8 @@ namespace Phase_1
             this.BackgroundImage = global::Phase_1.Properties.Resources.GrantAndAlter;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1476, 992);
-            this.Controls.Add(this.nameObjsLabel);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.changePWPanel);
-            this.Controls.Add(this.grantPrivPanel);
             this.Controls.Add(this.grantRolePanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.welcomeLabel);
@@ -566,7 +568,7 @@ namespace Phase_1
         private System.Windows.Forms.Button grantRoleButton;
         private System.Windows.Forms.Button returnButton;
         private System.Windows.Forms.Label welcomeLabel;
-        private System.Windows.Forms.Label nameObjsLabel;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox rowComboBox;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.ComboBox optionComboBox;

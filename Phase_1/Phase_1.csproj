@@ -87,6 +87,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phase_1\Admin_Phase1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase_1\Admin_Phase1.Designer.cs">
+      <DependentUpon>Admin_Phase1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Phase_1\Detail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,24 @@
     </Compile>
     <Compile Include="Phase_1\Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\UserControls\Grant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_1\UserControls\Grant.Designer.cs">
+      <DependentUpon>Grant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\UserControls\ManageObject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_1\UserControls\ManageObject.Designer.cs">
+      <DependentUpon>ManageObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase_1\UserControls\ManagePrivilege.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Phase_1\UserControls\ManagePrivilege.Designer.cs">
+      <DependentUpon>ManagePrivilege.cs</DependentUpon>
     </Compile>
     <Compile Include="Phase_2\Admin.cs">
       <SubType>Form</SubType>
@@ -319,6 +343,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\Admin_Phase1.resx">
+      <DependentUpon>Admin_Phase1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Phase_1\Detail.resx">
       <DependentUpon>Detail.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -335,6 +362,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_1\Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\UserControls\Grant.resx">
+      <DependentUpon>Grant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\UserControls\ManageObject.resx">
+      <DependentUpon>ManageObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase_1\UserControls\ManagePrivilege.resx">
+      <DependentUpon>ManagePrivilege.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>

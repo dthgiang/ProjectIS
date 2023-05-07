@@ -195,9 +195,6 @@ namespace Phase_1
             addUserControl(audit);
         }
 
-        private void panelContainer_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }

@@ -8,23 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using Phase_1.UserControls;
+
 
 namespace Phase_1
 {
-    public partial class GrantAndAlter : Form
+    public partial class Grant : UserControl
     {
         OracleConnection con = null;
         string objectName = null;
         string mode = null;
         string view = "PH1_VIEW_USERS_PRIVS";
-        
 
-        public GrantAndAlter(OracleConnection connection)
+
+        public Grant(OracleConnection connection)
         {
             InitializeComponent();
             this.con = connection;
         }
-        public GrantAndAlter(OracleConnection connection, string objectN, string mode)
+        public Grant(OracleConnection connection, string objectN, string mode)
         {
             InitializeComponent();
             this.con = connection;
@@ -58,7 +60,13 @@ namespace Phase_1
 
             return userList;
         }
-
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panel2.Controls.Clear();
+            panel2.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
 
         private int isExist()
         {
@@ -185,9 +193,11 @@ namespace Phase_1
             //grantRoleLabel.Hide();
             //changePWLabel.Show();
 
-            if (this.mode == "Role") {
+            if (this.mode == "Role")
+            {
                 passwordCheckBox.Show();
-            } else
+            }
+            else
             {
                 passwordCheckBox.Hide();
             }
@@ -212,7 +222,7 @@ namespace Phase_1
             // Set the location of the form
             this.Location = new Point(x, y);
 
-            label4.Text = this.objectName;
+            nameObjsLabel.Text = this.objectName;
             welcomeLabel.Text = "You are editing on " + this.mode;
             List<string> objectList = getUserRoleTableList("Table");
             objectList.AddRange(getUserRoleTableList("View"));
@@ -236,18 +246,18 @@ namespace Phase_1
 
         private void changeUserButton_Click(object sender, EventArgs e)
         {
-            string userR = searchNameTextBox.Text;
+            string userR = textBox1.Text;
             string temp = this.objectName;
-            searchNameTextBox.Text = "";
+            textBox1.Text = "";
             if (userR != "")
             {
                 this.objectName = userR;
                 if (isExist() != 0)
                 {
                     this.objectName = userR;
-                    label4.Text = this.objectName;
-                    label4.ForeColor = Color.OrangeRed;
-                    label4.Font = new Font("Cambria", 14, FontStyle.Bold);
+                    nameObjsLabel.Text = this.objectName;
+                    nameObjsLabel.ForeColor = Color.OrangeRed;
+                    nameObjsLabel.Font = new Font("Cambria", 14, FontStyle.Bold);
 
                     objectTextBox.Text = this.objectName;
                     granteeRoleTextBox.Text = this.objectName;
@@ -329,7 +339,7 @@ namespace Phase_1
 
             execProc(sender, e, privl, grantee, opt);
 
-            
+
 
         }
 
@@ -363,7 +373,8 @@ namespace Phase_1
 
         private void passwordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (passwordCheckBox.Checked) {
+            if (passwordCheckBox.Checked)
+            {
                 newPWTextBox.Hide();
                 confirmPWTextBox.Hide();
                 newPWLabel.Hide();
@@ -382,10 +393,13 @@ namespace Phase_1
         {
             string newPW = newPWTextBox.Text;
             string confirm = confirmPWTextBox.Text;
-            if (newPW != confirm || newPW == "")  {
+            if (newPW != confirm || newPW == "")
+            {
                 MessageBox.Show("Password does not match", "Message", MessageBoxButtons.OK);
 
-            } else {
+            }
+            else
+            {
                 try
                 {
                     string opt = passwordCheckBox.Checked ? "No" : "Yes";
@@ -417,14 +431,38 @@ namespace Phase_1
             }
         }
 
-        private void welcomeLabel_Click(object sender, EventArgs e)
+        private void Grant_Load(object sender, EventArgs e)
         {
+            // Get the size of the primary screen
+            Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 
+            // Calculate the location of the form to be centered on the screen
+            int x = (workingArea.Width - this.Width) / 2;
+            int y = (workingArea.Height - this.Height) / 2;
+
+            // Set the location of the form
+            this.Location = new Point(x, y);
+
+            label4.Text = this.objectName;
+            welcomeLabel.Text = "You are editing on " + this.mode;
+            List<string> objectList = getUserRoleTableList("Table");
+            objectList.AddRange(getUserRoleTableList("View"));
+            objectComboBox.DataSource = objectList;
+
+            objectTextBox.Text = this.objectName;
+            granteeRoleTextBox.Text = this.objectName;
+            granteeChangePWTextBox.Text = this.objectName;
+            optionComboBox.Text = "No";
+
+            grantPrivPanel.Show();
+            grantRolePanel.Hide();
+            changePWPanel.Hide();
+
+            //grantPrivLabel.Show();
+            //grantRoleLabel.Hide();
+            //changePWLabel.Hide();
         }
 
-        private void nameObjsLabel_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

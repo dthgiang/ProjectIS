@@ -238,7 +238,7 @@
             this.DataType,
             this.PrimaryKey});
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.Location = new System.Drawing.Point(399, 482);
+            this.dataGridView2.Location = new System.Drawing.Point(421, 481);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;

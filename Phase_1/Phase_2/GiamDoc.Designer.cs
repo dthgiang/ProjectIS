@@ -596,7 +596,6 @@
             this.panelContainer.Controls.Add(this.panelThongTin);
             resources.ApplyResources(this.panelContainer, "panelContainer");
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContainer_Paint);
             // 
             // panelThongTin
             // 

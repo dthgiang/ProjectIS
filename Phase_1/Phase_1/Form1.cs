@@ -57,7 +57,7 @@ namespace Phase_1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Phase_1.Login f4 = new Phase_1.Login();
+            Login f4 = new Login();
             this.Hide();
             f4.Show();
         }
