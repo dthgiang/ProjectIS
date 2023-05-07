@@ -1,5 +1,12 @@
 ALTER SESSION SET container = QLDTPDB;
 /
+grant execute on sys.dbms_crypto to ATBM;
+/
+select *
+from dba_tab_privs
+where table_name = 'DBMS_CRYPTO'
+  and owner = 'SYS';
+/
 
 CREATE OR REPLACE FUNCTION decryption (data IN RAW, manhnavien in varchar)
   RETURN VARCHAR2
@@ -7,7 +14,7 @@ AS
   result varchar2(1000);
   l_key raw(20);
 BEGIN
-  select key into l_key from save_key where manv=manhnavien;
+  select key into l_key from save_key where UPPER(manv)=UPPER(manhnavien);
   SELECT UTL_RAW.CAST_TO_varchar2(DBMS_CRYPTO.DECRYPT(data, 4353, l_key ))INTO result FROM dual;
   RETURN result;
 END;
@@ -19,7 +26,7 @@ AS
     result raw(2000);
     l_key raw(20);
 BEGIN
-    select key into l_key from save_key where manv=manhnavien;
+    select key into l_key from save_key where UPPER(manv)=UPPER(manhnavien);
     SELECT DBMS_CRYPTO.enCRYPT(data, 4353, l_key) INTO result FROM dual;
     RETURN result;
 END;

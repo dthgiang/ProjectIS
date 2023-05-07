@@ -137,7 +137,7 @@ END;
 SET SERVEROUTPUT ON;
 exec setThongBaoLabel;
 exec setUserLabel;
-
+/
 
 create or replace procedure assignDataLabel(p_noiDung IN VARCHAR2,p_doiTuong IN VARCHAR2,p_linhVuc IN VARCHAR2,p_khuVuc IN VARCHAR2, p_label IN VARCHAR2)
 as
@@ -145,7 +145,6 @@ as
 BEGIN
     INSERT INTO OLS_ADMIN.THONGBAO (NOIDUNG, DOITUONG, LINHVUC, KHUVUC, REGION_LABEL)
         VALUES(p_noiDung, p_doiTuong, p_linhVuc, p_khuVuc, CHAR_TO_LABEL('REGION_POLICY', UPPER(p_label)));
-        
     strSql := 'BEGIN SA_USER_ADMIN.SET_USER_LABELS(''region_policy'',''OLS_CULY'',''NV''); END;';
     EXECUTE IMMEDIATE (strSql);
     EXCEPTION
@@ -172,22 +171,6 @@ END;
 /
 grant create view TO OLS_ADMIN with admin option;
 
-/*
-GRANT EXECUTE ON sa_components TO RL_NhanSu; 
-GRANT EXECUTE ON sa_user_admin TO RL_NhanSu; 
-GRANT EXECUTE ON sa_label_admin TO RL_NhanSu; 
-GRANT EXECUTE ON sa_policy_admin TO RL_NhanSu; 
-GRANT EXECUTE ON sa_audit_admin TO RL_NhanSu; 
-GRANT EXECUTE ON SA_SESSION TO RL_NhanSu; 
-GRANT LBAC_DBA TO RL_NhanSu; 
-GRANT EXECUTE ON sa_sysdba TO RL_NhanSu; 
-GRANT EXECUTE ON to_lbac_data_label TO RL_NhanSu; 
-grant region_policy_DBA to RL_NhanSu;
-grant execute OLS_Admin.region_policy to RL_NhanSu;
-
-*/
-grant execute on assignDataLabel to RL_NhanSu;
-grant execute on assignUserLabel to RL_NhanSu;
 
 /
 --select * from ALL_SA_DATA_LABELS;

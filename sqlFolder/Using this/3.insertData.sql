@@ -25,699 +25,353 @@ select 1 from dual;
 -- TABLE 3
 -- Nhap lieu cho bang ATBM.NHANVIEN ---
 ----------------------------------
+ insert into ATBM.NHANVIEN values('GD001', 'Vo Hoang Phu', 'Nam', TO_DATE('2006-9-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450001', '55555', '1252', 'Giam doc', NULL, null, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('GD002', 'Lai Gia Ngan', 'Nu', TO_DATE('2005-5-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450002', '55555', '1448', 'Giam doc', NULL, null, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('GD003', 'Vu Van Vy', 'Nam', TO_DATE('2003-11-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450003', '55555', '1100', 'Giam doc', NULL, null, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('GD004', 'Bui Song Chung', 'Nam', TO_DATE('2010-6-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450004', '55555', '1955', 'Giam doc', NULL, null, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('GD005', 'Au Tung Tan', 'Nu', TO_DATE('2004-10-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450005', '55555', '1179', 'Giam doc', NULL, null, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('TC06', 'Nguyen Gia Giang', 'Nam', TO_DATE('2017-3-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450006', '11000', '1172', 'Tai chinh', NULL, 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('TC07', 'An Hoang Ngoc Nhi', 'Nam', TO_DATE('2017-4-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450007', '11000', '1308', 'Tai chinh', NULL, 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('TC08', 'ƒêang Song Cau', 'Nu', TO_DATE('2006-12-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450008', '11000', '1690', 'Tai chinh', NULL, 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('TC09', 'Vo Tung Tan', 'Nu', TO_DATE('2010-5-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '09450009', '11000', '1530', 'Tai chinh', NULL, 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('TC010', 'ƒêoan Van Vy', 'Nam', TO_DATE('2003-1-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500010', '11000', '1211', 'Tai chinh', NULL, 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NS011', 'Le Van Duy', 'Nam', TO_DATE('2000-1-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500011', '13000', '1658', 'Nhan su', NULL, 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NS012', 'Vo Van Giang', 'Nam', TO_DATE('2012-8-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500012', '13000', '1459', 'Nhan su', NULL, 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NS013', 'Gian Tung Quoc', 'Nu', TO_DATE('2014-9-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500013', '13000', '1437', 'Nhan su', NULL, 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NS014', 'Gian Chi Viet', 'Nu', TO_DATE('2021-7-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500014', '13000', '1247', 'Nhan su', NULL, 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NS015', 'Nguyen Gia Minh', 'Nu', TO_DATE('2014-3-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500015', '13000', '1940', 'Nhan su', NULL, 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL016', 'ƒêoan Chi Sang', 'Nam', TO_DATE('2017-5-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500016', '25000', '1908', 'Quan li', NULL, 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL017', 'Ly Tung Han', 'Nam', TO_DATE('2005-9-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500017', '25000', '1929', 'Quan li', NULL, 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('QL018', 'Ly Van Vu', 'Nam', TO_DATE('2009-6-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500018', '25000', '1410', 'Quan li', NULL, 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL019', 'Pham Van Quoc', 'Nu', TO_DATE('2019-1-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500019', '25000', '1464', 'Quan li', NULL, 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL020', 'Ung Song Nam', 'Nam', TO_DATE('2006-3-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500020', '25000', '1006', 'Quan li', NULL, 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('QL021', 'ƒêang Van Viet', 'Nam', TO_DATE('2005-9-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500021', '25000', '1703', 'Quan li', NULL, 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL022', 'Tran Tung Viet', 'Nam', TO_DATE('2001-9-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500022', '25000', '1481', 'Quan li', NULL, 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL023', 'ƒêang Chi Bao', 'Nu', TO_DATE('2007-8-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500023', '25000', '1962', 'Quan li', NULL, 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('QL024', 'Ho Hoang Minh', 'Nu', TO_DATE('2018-8-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500024', '25000', '1720', 'Quan li', NULL, 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL025', 'Ung Chi Thong', 'Nu', TO_DATE('2006-10-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500025', '25000', '1310', 'Quan li', NULL, 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL026', 'Ly Tung Viet', 'Nam', TO_DATE('2013-9-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500026', '25000', '1737', 'Quan li', NULL, 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('QL027', 'An Van Tu', 'Nu', TO_DATE('2000-12-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500027', '25000', '1646', 'Quan li', NULL, 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL028', 'Bui Thi Thuong', 'Nam', TO_DATE('2013-7-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500028', '25000', '1615', 'Quan li', NULL, 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL029', 'Ung Van Cau', 'Nam', TO_DATE('2021-6-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500029', '25000', '1884', 'Quan li', NULL, 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('QL030', 'Nguyen Chi Sang', 'Nam', TO_DATE('2012-6-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500030', '25000', '1658', 'Quan li', NULL, 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL031', 'Ung Thi Thong', 'Nu', TO_DATE('2005-1-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500031', '25000', '1848', 'Quan li', NULL, 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL032', 'Ly Chi Sang', 'Nam', TO_DATE('2006-6-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500032', '25000', '1520', 'Quan li', NULL, 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('QL033', 'An Hoang Cau', 'Nam', TO_DATE('2007-10-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500033', '25000', '1423', 'Quan li', NULL, 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('QL034', 'Ung Tung Cuc', 'Nam', TO_DATE('2012-4-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500034', '25000', '1485', 'Quan li', NULL, 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('QL035', 'Pham Van Bac', 'Nam', TO_DATE('2018-2-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500035', '25000', '1239', 'Quan li', NULL, 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('TDA036', 'Au Tung Han', 'Nu', TO_DATE('2004-5-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500036', '20000', '1981', 'Truong de an', NULL, 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('TDA037', 'Bui Hoang Minh', 'Nu', TO_DATE('2004-10-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500037', '20000', '1464', 'Truong de an', NULL, 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('TDA038', 'Au Gia Bao', 'Nam', TO_DATE('2013-10-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500038', '20000', '1947', 'Truong de an', NULL, 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('TP039', 'Vo Hoang Thong', 'Nam', TO_DATE('2002-5-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500039', '22000', '1360', 'Truong phong', NULL, 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('TP040', 'Ho Song Chung', 'Nam', TO_DATE('2003-6-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500040', '22000', '1145', 'Truong phong', NULL, 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('TP041', 'Duong Tung Thien', 'Nam', TO_DATE('2011-1-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500041', '22000', '1383', 'Truong phong', NULL, 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('TP042', 'Vu Chi Tien', 'Nam', TO_DATE('2006-5-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500042', '22000', '2000', 'Truong phong', NULL, 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('TP043', 'An Hoang Tu', 'Nam', TO_DATE('2010-3-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500043', '22000', '1018', 'Truong phong', NULL, 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('TP044', 'Ly Thi ƒêang', 'Nam', TO_DATE('2013-2-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500044', '22000', '1740', 'Truong phong', NULL, 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('TP045', 'Tran Hoang Duy', 'Nam', TO_DATE('2007-3-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500045', '22000', '1384', 'Truong phong', NULL, 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('TP046', 'Pham Gia ƒêan', 'Nu', TO_DATE('2004-8-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500046', '22000', '1685', 'Truong phong', NULL, 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV47', 'ƒêang Hoang Tuan', 'Nam', TO_DATE('2012-1-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500047', '7160', '1756', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV48', 'Pham Tung Tin', 'Nam', TO_DATE('2009-1-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500048', '5760', '1238', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV49', 'Bui Van Phu', 'Nu', TO_DATE('2017-12-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500049', '2268', '1612', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV50', 'An Thi ƒêang', 'Nam', TO_DATE('2004-4-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500050', '5966', '1873', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV51', 'Ho Gia Han', 'Nam', TO_DATE('2008-12-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500051', '8635', '1046', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV52', 'Gian Song Duy', 'Nam', TO_DATE('2009-2-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500052', '4473', '1733', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV53', 'Vu Tung Tin', 'Nam', TO_DATE('2002-7-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500053', '9945', '1003', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV54', 'Vo Hoang Anh', 'Nam', TO_DATE('2003-4-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500054', '1796', '1459', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV55', 'Vo Gia khanh', 'Nu', TO_DATE('2019-10-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500055', '2640', '1881', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV56', 'Tran Gia Tan', 'Nu', TO_DATE('2012-8-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500056', '8936', '1829', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV57', 'Truong Chi Vu', 'Nam', TO_DATE('2010-10-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500057', '8780', '1254', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV58', 'An Song Vinh', 'Nu', TO_DATE('2002-2-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500058', '8716', '1612', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV59', 'Ly Thi Minh', 'Nam', TO_DATE('2015-11-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500059', '8312', '1282', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV60', 'ƒêoan Thi ƒêan', 'Nam', TO_DATE('2020-5-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500060', '4599', '1065', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV61', 'ƒêang Tung Quoc', 'Nam', TO_DATE('2000-2-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500061', '2727', '1595', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV62', 'Duong Tung Tin', 'Nu', TO_DATE('2008-10-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500062', '9465', '1706', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV63', 'Ly Thi ƒêan', 'Nu', TO_DATE('2020-9-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500063', '2190', '1903', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV64', 'Duong Song Nguyet', 'Nu', TO_DATE('2005-9-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500064', '7821', '1422', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV65', 'Truong Van Tiep', 'Nam', TO_DATE('2005-2-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500065', '2734', '1468', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV66', 'Ung Gia khanh', 'Nam', TO_DATE('2002-3-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500066', '8968', '1177', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV67', 'Ho Song Tan', 'Nam', TO_DATE('2003-9-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500067', '7986', '1218', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV68', 'Ung Chi Vu', 'Nu', TO_DATE('2010-8-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500068', '2570', '1157', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV69', 'Pham Tung Phu', 'Nu', TO_DATE('2010-11-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500069', '3118', '1368', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV70', 'Au Song Tu', 'Nam', TO_DATE('2015-4-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500070', '1568', '1748', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV71', 'Tran Van Tu', 'Nu', TO_DATE('2009-4-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500071', '9359', '1026', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV72', 'ƒêang Thi Chung', 'Nu', TO_DATE('2006-11-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500072', '2596', '1589', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV73', 'Le Van Cuc', 'Nam', TO_DATE('2020-5-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500073', '7213', '1309', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV74', 'Au Chi Phu', 'Nam', TO_DATE('2021-11-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500074', '8228', '1029', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV75', 'Vu Song ƒêuc', 'Nam', TO_DATE('2003-8-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500075', '6616', '1020', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV76', 'Vo Van Ngan', 'Nam', TO_DATE('2005-9-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500076', '5562', '1636', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV77', 'Vo Van Tan', 'Nu', TO_DATE('2022-1-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500077', '7564', '1540', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV78', 'ƒêang Hoang Tien', 'Nam', TO_DATE('2010-6-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500078', '7044', '1027', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV79', 'Vo Song An', 'Nam', TO_DATE('2009-10-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500079', '1205', '1881', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV80', 'Vu Tung Tuan', 'Nam', TO_DATE('2011-9-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500080', '8018', '1419', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV81', 'Ho Hoang Chung', 'Nam', TO_DATE('2020-9-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500081', '9695', '1027', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV82', 'Ho Song May', 'Nu', TO_DATE('2014-12-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500082', '3852', '1351', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV83', 'Au Hoang Tiep', 'Nu', TO_DATE('2004-7-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500083', '9072', '1163', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV84', 'Vo Gia Tuan', 'Nam', TO_DATE('2009-11-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500084', '8221', '1820', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV85', 'Truong Thi Nguyet', 'Nu', TO_DATE('2019-12-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500085', '6176', '1063', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV86', 'Pham Tung Giang', 'Nu', TO_DATE('2009-11-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500086', '1018', '1311', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV87', 'Truong Thi Cuc', 'Nu', TO_DATE('2001-10-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500087', '2331', '1357', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV88', 'Nguyen Hoang Giang', 'Nam', TO_DATE('2000-9-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500088', '8256', '1763', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV89', 'Ho Van Tu', 'Nu', TO_DATE('2014-4-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500089', '2225', '1151', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV90', 'Ho Thi Bao', 'Nam', TO_DATE('2021-10-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500090', '3475', '1092', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV91', 'Lai Chi Chi', 'Nam', TO_DATE('2018-3-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500091', '3010', '1438', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV92', 'ƒêoan Hoang Minh', 'Nu', TO_DATE('2005-12-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500092', '2159', '1894', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV93', 'Truong Van Nam', 'Nu', TO_DATE('2009-5-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500093', '2907', '1987', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV94', 'Ly Hoang Tan', 'Nu', TO_DATE('2008-7-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500094', '2958', '1231', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV95', 'Tran Van Vy', 'Nu', TO_DATE('2020-5-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500095', '5482', '1696', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV96', 'Vu Chi Cau', 'Nu', TO_DATE('2016-11-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500096', '7277', '1451', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV97', 'Duong Chi Han', 'Nam', TO_DATE('2002-12-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500097', '8011', '1864', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV98', 'Ly Tung Tu', 'Nam', TO_DATE('2003-5-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500098', '3715', '1424', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV99', 'Gian Gia ƒêuc', 'Nam', TO_DATE('2012-12-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '094500099', '9123', '1749', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV100', 'Truong Van Thien', 'Nu', TO_DATE('2016-7-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000100', '3309', '1786', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV101', 'Ly Tung Ngan', 'Nu', TO_DATE('2016-6-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000101', '4943', '1809', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV102', 'Le Chi Vinh', 'Nam', TO_DATE('2003-5-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000102', '1845', '1672', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV103', 'Vu Chi An', 'Nu', TO_DATE('2000-7-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000103', '6251', '1831', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV104', 'Tran Gia khanh', 'Nu', TO_DATE('2012-3-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000104', '6602', '1527', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV105', 'ƒêoan Thi Minh', 'Nu', TO_DATE('2001-4-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000105', '7349', '1774', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV106', 'Gian Tung Ngan', 'Nu', TO_DATE('2018-8-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000106', '4670', '1637', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV107', 'Bui Van Vinh', 'Nam', TO_DATE('2007-4-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000107', '7164', '1643', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV108', 'An Van ƒêang', 'Nam', TO_DATE('2016-6-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000108', '2840', '1506', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV109', 'Truong Song Tan', 'Nu', TO_DATE('2006-7-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000109', '3018', '1303', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV110', 'Vo Van Ngoc Nhi', 'Nu', TO_DATE('2002-1-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000110', '9272', '1796', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV111', 'Duong Chi Thuong', 'Nu', TO_DATE('2011-8-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000111', '5020', '1288', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV112', 'Gian Song ƒêan', 'Nam', TO_DATE('2001-6-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000112', '1671', '1541', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV113', 'Le Tung An', 'Nu', TO_DATE('2022-7-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000113', '2504', '1878', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV114', 'Au Thi Giang', 'Nu', TO_DATE('2000-9-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000114', '8881', '1966', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV115', 'ƒêoan Tung Minh', 'Nam', TO_DATE('2002-9-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000115', '9243', '1813', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV116', 'Le Song ƒêuc', 'Nu', TO_DATE('2003-11-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000116', '2746', '1833', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV117', 'Nguyen Gia Vu', 'Nu', TO_DATE('2008-3-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000117', '1061', '1329', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV118', 'Pham Van Bao', 'Nu', TO_DATE('2013-11-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000118', '7388', '1391', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV119', 'Ho Chi May', 'Nu', TO_DATE('2020-2-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000119', '1158', '1286', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV120', 'ƒêoan Tung Cau', 'Nu', TO_DATE('2006-12-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000120', '1396', '1154', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV121', 'Vo Gia Phu', 'Nu', TO_DATE('2008-10-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000121', '3755', '1803', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV122', 'Le Song Bac', 'Nu', TO_DATE('2000-9-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000122', '8172', '1293', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV123', 'Nguyen Song Anh', 'Nu', TO_DATE('2016-11-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000123', '8230', '1159', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV124', 'Vu Thi Anh', 'Nu', TO_DATE('2001-3-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000124', '1102', '1101', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV125', 'Ung Thi Vinh', 'Nam', TO_DATE('2016-10-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000125', '8598', '1873', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV126', 'Nguyen Tung Minh', 'Nam', TO_DATE('2002-6-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000126', '5082', '1929', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV127', 'Pham Chi Tien', 'Nu', TO_DATE('2016-8-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000127', '3841', '1052', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV128', 'Ly Chi khanh', 'Nam', TO_DATE('2020-5-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000128', '9577', '1283', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV129', 'Au Thi Han', 'Nu', TO_DATE('2008-1-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000129', '9999', '1771', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV130', 'Ung Chi Ngoc Nhi', 'Nam', TO_DATE('2004-11-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000130', '8939', '1008', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV131', 'ƒêang Hoang Bac', 'Nam', TO_DATE('2010-3-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000131', '2670', '1955', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV132', 'Vo Chi Cau', 'Nu', TO_DATE('2011-6-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000132', '6619', '1658', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV133', 'Ung Tung Chi', 'Nu', TO_DATE('2011-1-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000133', '4802', '1563', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV134', 'Vo Chi Quoc', 'Nu', TO_DATE('2012-5-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000134', '6231', '1796', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV135', 'Truong Chi Phu', 'Nam', TO_DATE('2004-1-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000135', '4076', '1415', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV136', 'Ho Gia Tan', 'Nam', TO_DATE('2009-2-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000136', '6150', '1385', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV137', 'Le Gia Thuong', 'Nam', TO_DATE('2001-9-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000137', '9967', '1428', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV138', 'Lai Hoang Bao', 'Nu', TO_DATE('2005-7-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000138', '4305', '1157', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV139', 'Lai Tung Vy', 'Nu', TO_DATE('2021-4-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000139', '7103', '1562', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV140', 'Au Song Quoc', 'Nu', TO_DATE('2001-10-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000140', '9393', '1349', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV141', 'Vu Chi Tiep', 'Nam', TO_DATE('2014-10-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000141', '9006', '1679', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV142', 'Lai Tung Quoc', 'Nam', TO_DATE('2013-12-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000142', '6796', '1524', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV143', 'Tran Song Han', 'Nu', TO_DATE('2006-9-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000143', '5896', '1157', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV144', 'Gian Hoang Quoc', 'Nu', TO_DATE('2002-8-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000144', '4881', '1178', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV145', 'Ho Tung Vinh', 'Nam', TO_DATE('2011-11-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000145', '3666', '1658', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV146', 'Duong Tung ƒêan', 'Nam', TO_DATE('2020-4-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000146', '9583', '1506', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV147', 'Ly Hoang Tuan', 'Nam', TO_DATE('2008-3-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000147', '9478', '1246', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV148', 'Nguyen Gia Tien', 'Nam', TO_DATE('2020-3-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000148', '1435', '1175', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV149', 'Lai Hoang Nam', 'Nam', TO_DATE('2021-8-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000149', '3399', '1528', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV150', 'Vo Song Nam', 'Nu', TO_DATE('2007-8-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000150', '3759', '1334', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV151', 'ƒêoan Chi Thong', 'Nam', TO_DATE('2021-1-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000151', '6885', '1435', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV152', 'ƒêoan Chi Thuong', 'Nam', TO_DATE('2011-6-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000152', '1154', '1120', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV153', 'ƒêang Gia Ngan', 'Nam', TO_DATE('2014-9-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000153', '9197', '1799', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV154', 'An Tung Viet', 'Nu', TO_DATE('2000-7-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000154', '8517', '1631', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV155', 'An Gia khanh', 'Nam', TO_DATE('2001-3-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000155', '9002', '1826', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV156', 'Ung Thi May', 'Nu', TO_DATE('2018-11-22','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000156', '8796', '1444', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV157', 'Nguyen Gia Nguyet', 'Nam', TO_DATE('2021-12-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000157', '6215', '1751', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV158', 'Vo Gia Thuong', 'Nam', TO_DATE('2015-7-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000158', '3474', '1384', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV159', 'Le Tung ƒêang', 'Nu', TO_DATE('2015-3-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000159', '3720', '1188', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV160', 'Tran Chi Bao', 'Nu', TO_DATE('2007-3-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000160', '3349', '1798', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV161', 'Vu Song Chi', 'Nam', TO_DATE('2019-4-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000161', '9787', '1785', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV162', 'An Song ƒêang', 'Nu', TO_DATE('2004-8-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000162', '1543', '1556', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV163', 'Le Thi Chung', 'Nam', TO_DATE('2002-7-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000163', '8344', '1505', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV164', 'Ly Tung Thuong', 'Nu', TO_DATE('2020-7-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000164', '3946', '1456', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV165', 'Ho Gia Bao', 'Nam', TO_DATE('2001-7-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000165', '5019', '1784', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV166', 'Truong Gia May', 'Nu', TO_DATE('2004-7-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000166', '7646', '1945', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV167', 'Ung Chi Minh', 'Nam', TO_DATE('2006-4-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000167', '3279', '1550', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV168', 'Bui Song Chung', 'Nam', TO_DATE('2011-8-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000168', '9906', '1766', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV169', 'Tran Gia ƒêuc', 'Nu', TO_DATE('2010-3-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000169', '2626', '1467', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV170', 'Ho Gia ƒêuc', 'Nam', TO_DATE('2015-3-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000170', '6870', '1830', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV171', 'Lai Gia Thien', 'Nu', TO_DATE('2006-8-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000171', '7999', '1767', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV172', 'Duong Song Minh', 'Nu', TO_DATE('2009-1-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000172', '4866', '1256', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV173', 'Vu Gia An', 'Nam', TO_DATE('2021-2-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000173', '9389', '1406', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV174', 'Gian Gia Thong', 'Nam', TO_DATE('2011-7-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000174', '9873', '1658', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV175', 'Vo Van Chi', 'Nu', TO_DATE('2013-8-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000175', '7507', '1222', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV176', 'Au Van ƒêuc', 'Nam', TO_DATE('2008-6-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000176', '5646', '1301', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV177', 'Vu Hoang Tiep', 'Nam', TO_DATE('2016-1-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000177', '6679', '1551', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV178', 'Ung Hoang ƒêang', 'Nu', TO_DATE('2012-5-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000178', '3508', '1979', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV179', 'Ly Thi Tin', 'Nam', TO_DATE('2012-10-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000179', '7734', '1823', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV180', 'Duong Tung May', 'Nam', TO_DATE('2008-12-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000180', '7455', '1193', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV181', 'Au Van Ngan', 'Nam', TO_DATE('2022-3-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000181', '8614', '1406', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV182', 'Ung Hoang Ngan', 'Nu', TO_DATE('2013-1-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000182', '8966', '1219', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV183', 'Nguyen Song Vu', 'Nu', TO_DATE('2004-4-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000183', '3349', '1062', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV184', 'Ly Van ƒêang', 'Nam', TO_DATE('2000-12-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000184', '8837', '1151', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV185', 'An Thi Sang', 'Nu', TO_DATE('2014-9-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000185', '2076', '1304', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV186', 'Ho Hoang Tin', 'Nu', TO_DATE('2021-3-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000186', '1802', '1109', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV187', 'Vo Hoang Phu', 'Nu', TO_DATE('2017-4-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000187', '6544', '1745', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV188', 'ƒêang Hoang Vy', 'Nam', TO_DATE('2009-7-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000188', '2965', '1790', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV189', 'Ung Gia Anh', 'Nu', TO_DATE('2003-8-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000189', '8697', '1975', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV190', 'Tran Hoang Han', 'Nu', TO_DATE('2008-10-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000190', '5682', '1535', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV191', 'Lai Song Ngan', 'Nam', TO_DATE('2006-11-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000191', '2417', '1231', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV192', 'Duong Hoang Cau', 'Nam', TO_DATE('2021-6-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000192', '6394', '1898', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV193', 'Duong Van Tan', 'Nam', TO_DATE('2011-5-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000193', '9008', '1661', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV194', 'Bui Thi Quoc', 'Nam', TO_DATE('2004-5-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000194', '8417', '1913', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV195', 'ƒêang Song Vy', 'Nu', TO_DATE('2010-9-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000195', '2518', '1343', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV196', 'Lai Chi Tuan', 'Nu', TO_DATE('2009-7-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000196', '1930', '1511', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV197', 'Tran Chi Nam', 'Nu', TO_DATE('2005-8-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000197', '6826', '1584', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV198', 'Ung Gia Tiep', 'Nu', TO_DATE('2017-2-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000198', '8296', '1969', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV199', 'Duong Chi Tuan', 'Nu', TO_DATE('2000-4-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000199', '7676', '1420', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV200', 'Vu Gia Vy', 'Nam', TO_DATE('2014-4-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000200', '3497', '1396', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV201', 'Lai Chi Chi', 'Nam', TO_DATE('2010-10-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000201', '7889', '1389', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV202', 'Tran Tung Tuan', 'Nu', TO_DATE('2015-1-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000202', '2260', '1965', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV203', 'Bui Thi Ngoc Nhi', 'Nam', TO_DATE('2008-7-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000203', '6290', '1821', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV204', 'Vo Tung Tin', 'Nam', TO_DATE('2001-7-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000204', '5687', '1077', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV205', 'Bui Van An', 'Nam', TO_DATE('2002-1-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000205', '9266', '1467', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV206', 'Gian Gia ƒêuc', 'Nam', TO_DATE('2011-4-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000206', '1577', '1188', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV207', 'An Gia Quoc', 'Nu', TO_DATE('2005-11-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000207', '3350', '1472', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV208', 'Bui Thi Duy', 'Nu', TO_DATE('2020-11-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000208', '1393', '1392', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV209', 'ƒêang Thi Nguyet', 'Nu', TO_DATE('2020-2-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000209', '6192', '1896', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV210', 'Ung Gia khanh', 'Nam', TO_DATE('2014-9-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000210', '9517', '1060', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV211', 'Duong Chi ƒêuc', 'Nu', TO_DATE('2016-8-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000211', '9480', '1417', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV212', 'Duong Hoang Vu', 'Nam', TO_DATE('2019-4-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000212', '2010', '1786', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV213', 'Truong Hoang Ngoc Nhi', 'Nu', TO_DATE('2005-4-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000213', '4631', '1759', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV214', 'Gian Gia Anh', 'Nam', TO_DATE('2011-4-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000214', '9676', '1812', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV215', 'Nguyen Van Nguyet', 'Nam', TO_DATE('2000-10-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000215', '7080', '1516', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV216', 'Vo Chi Tu', 'Nam', TO_DATE('2009-6-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000216', '3012', '1528', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV217', 'Ly Tung Minh', 'Nam', TO_DATE('2016-8-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000217', '6709', '1131', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV218', 'Duong Thi Vinh', 'Nam', TO_DATE('2008-11-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000218', '8986', '1229', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV219', 'Nguyen Thi Tiep', 'Nam', TO_DATE('2012-2-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000219', '7955', '1359', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV220', 'Gian Van Thuong', 'Nam', TO_DATE('2015-5-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000220', '9628', '1931', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV221', 'Pham Chi Tien', 'Nam', TO_DATE('2021-6-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000221', '2262', '1825', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV222', 'Ung Thi Vu', 'Nu', TO_DATE('2002-5-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000222', '5765', '1755', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV223', 'Ho Van Duy', 'Nam', TO_DATE('2011-7-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000223', '5098', '1604', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV224', 'An Thi khanh', 'Nu', TO_DATE('2001-10-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000224', '1370', '1482', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV225', 'Ung Thi Nam', 'Nam', TO_DATE('2007-9-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000225', '6354', '1105', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV226', 'Duong Thi Thong', 'Nam', TO_DATE('2019-8-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000226', '3314', '1971', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV227', 'Ung Song Tin', 'Nu', TO_DATE('2001-12-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000227', '7119', '1693', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV228', 'Le Chi An', 'Nu', TO_DATE('2022-1-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000228', '3454', '1703', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV229', 'Pham Song Thien', 'Nam', TO_DATE('2004-6-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000229', '9853', '1957', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV230', 'ƒêang Thi Thuong', 'Nam', TO_DATE('2005-3-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000230', '7043', '1536', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV231', 'An Hoang ƒêuc', 'Nu', TO_DATE('2012-8-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000231', '9491', '1669', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV232', 'Vo Van Viet', 'Nam', TO_DATE('2022-10-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000232', '1737', '1793', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV233', 'Bui Thi Duy', 'Nu', TO_DATE('2009-8-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000233', '6952', '1377', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV234', 'Bui Gia Bac', 'Nu', TO_DATE('2004-2-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000234', '8454', '1711', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV235', 'Lai Tung Phu', 'Nam', TO_DATE('2003-11-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000235', '4052', '1488', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV236', 'Bui Tung May', 'Nam', TO_DATE('2007-3-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000236', '5106', '1452', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV237', 'Ho Chi Chi', 'Nu', TO_DATE('2006-8-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000237', '4881', '1270', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV238', 'Pham Gia Phu', 'Nu', TO_DATE('2009-4-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000238', '4035', '1097', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV239', 'Le Hoang Vy', 'Nam', TO_DATE('2018-11-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000239', '1364', '1759', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV240', 'Vu Gia Tan', 'Nam', TO_DATE('2004-9-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000240', '5317', '1354', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV241', 'Pham Thi Phu', 'Nu', TO_DATE('2008-4-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000241', '5214', '1316', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV242', 'Ho Van Thuong', 'Nu', TO_DATE('2015-5-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000242', '4506', '1443', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV243', 'Lai Hoang Vu', 'Nam', TO_DATE('2022-8-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000243', '2213', '1799', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV244', 'Vo Song Bao', 'Nam', TO_DATE('2008-9-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000244', '3653', '1540', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV245', 'Duong Gia Cuc', 'Nam', TO_DATE('2003-7-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000245', '5895', '1530', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV246', 'Ung Hoang May', 'Nu', TO_DATE('2002-5-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000246', '4664', '1441', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV247', 'Le Tung Tin', 'Nam', TO_DATE('2003-6-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000247', '3326', '1926', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV248', 'Nguyen Van May', 'Nam', TO_DATE('2020-9-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000248', '4131', '1473', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV249', 'Lai Song Ngoc Nhi', 'Nu', TO_DATE('2021-4-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000249', '2116', '1969', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV250', 'Lai Chi Nguyet', 'Nam', TO_DATE('2014-11-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000250', '8961', '1368', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV251', 'Vu Song May', 'Nu', TO_DATE('2015-2-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000251', '2355', '1269', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV252', 'Vo Hoang ƒêang', 'Nam', TO_DATE('2011-5-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000252', '5974', '1244', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV253', 'Vu Van Tin', 'Nu', TO_DATE('2006-7-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000253', '6332', '1452', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV254', 'An Gia Quoc', 'Nu', TO_DATE('2003-4-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000254', '7512', '1387', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV255', 'Pham Hoang Ngoc Nhi', 'Nam', TO_DATE('2006-1-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000255', '8420', '1533', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV256', 'Truong Hoang ƒêang', 'Nam', TO_DATE('2011-2-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000256', '2516', '1670', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV257', 'Ho Thi Vu', 'Nu', TO_DATE('2017-2-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000257', '3110', '1260', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV258', 'Au Thi Tin', 'Nu', TO_DATE('2014-9-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000258', '2314', '1493', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV259', 'Gian Tung Thong', 'Nu', TO_DATE('2002-6-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000259', '3102', '1488', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV260', 'Bui Chi Anh', 'Nu', TO_DATE('2016-2-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000260', '8413', '1202', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV261', 'Lai Song khanh', 'Nu', TO_DATE('2016-4-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000261', '7732', '1926', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV262', 'Bui Song Nguyet', 'Nu', TO_DATE('2014-4-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000262', '7384', '1771', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV263', 'Le Hoang An', 'Nu', TO_DATE('2012-12-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000263', '1661', '1267', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV264', 'Ung Gia Vy', 'Nu', TO_DATE('2022-10-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000264', '8088', '1963', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV265', 'Ho Hoang Vu', 'Nu', TO_DATE('2017-9-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000265', '4275', '1128', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV266', 'Le Song Sang', 'Nu', TO_DATE('2017-10-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000266', '2104', '1591', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV267', 'Lai Song Sang', 'Nu', TO_DATE('2018-4-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000267', '6682', '1707', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV268', 'An Hoang Cuc', 'Nu', TO_DATE('2017-4-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000268', '6815', '1657', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV269', 'Gian Tung ƒêan', 'Nam', TO_DATE('2010-12-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000269', '1946', '1909', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV270', 'ƒêoan Hoang Sang', 'Nu', TO_DATE('2019-7-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000270', '1781', '1899', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV271', 'Au Tung khanh', 'Nam', TO_DATE('2005-2-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000271', '2457', '1031', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV272', 'Ung Hoang Cau', 'Nu', TO_DATE('2007-9-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000272', '8658', '1749', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV273', 'Gian Gia ƒêang', 'Nu', TO_DATE('2006-1-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000273', '8299', '1587', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV274', 'Ly Song khanh', 'Nu', TO_DATE('2000-1-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000274', '2024', '1527', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV275', 'Pham Chi Bao', 'Nam', TO_DATE('2014-7-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000275', '9957', '1101', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV276', 'An Thi Nam', 'Nam', TO_DATE('2020-11-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000276', '6814', '1575', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV277', 'Tran Chi Ngan', 'Nu', TO_DATE('2017-5-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000277', '9722', '1619', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV278', 'Truong Song Ngan', 'Nam', TO_DATE('2022-6-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000278', '8981', '1636', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV279', 'Ly Thi Minh', 'Nu', TO_DATE('2005-1-8','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000279', '3225', '1586', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV280', 'ƒêang Van khanh', 'Nam', TO_DATE('2016-4-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000280', '2414', '1781', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV281', 'Ho Thi Thien', 'Nam', TO_DATE('2018-8-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000281', '7762', '1115', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV282', 'An Hoang Tan', 'Nam', TO_DATE('2000-9-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000282', '4822', '1628', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV283', 'ƒêoan Tung Vy', 'Nu', TO_DATE('2018-11-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000283', '7539', '1166', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV284', 'An Gia ƒêan', 'Nu', TO_DATE('2002-9-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000284', '9378', '1302', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV285', 'Ly Thi Chi', 'Nam', TO_DATE('2000-12-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000285', '8090', '1843', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV286', 'Au Hoang Thong', 'Nam', TO_DATE('2013-3-1','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000286', '1180', '1026', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV287', 'Pham Thi Minh', 'Nu', TO_DATE('2012-4-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000287', '4109', '1714', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV288', 'Pham Van Han', 'Nam', TO_DATE('2013-10-26','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000288', '8083', '1515', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV289', 'Le Hoang Duy', 'Nam', TO_DATE('2001-3-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000289', '5390', '1786', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV290', 'Gian Chi Anh', 'Nu', TO_DATE('2018-8-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000290', '1893', '1820', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV291', 'Lai Tung Tin', 'Nam', TO_DATE('2002-2-20','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000291', '7912', '1742', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV292', 'Lai Gia Vu', 'Nam', TO_DATE('2017-1-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000292', '8363', '1083', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV293', 'Vu Tung Minh', 'Nam', TO_DATE('2006-5-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000293', '1810', '1200', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV294', 'Ung Tung Chi', 'Nu', TO_DATE('2013-6-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000294', '8680', '1658', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV295', 'Vu Gia Chi', 'Nu', TO_DATE('2000-1-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000295', '9990', '1810', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV296', 'Le Gia Tan', 'Nu', TO_DATE('2017-9-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000296', '8646', '1021', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV297', 'Pham Thi Tin', 'Nam', TO_DATE('2021-7-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000297', '1398', '1743', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV298', 'Ung Van Quoc', 'Nu', TO_DATE('2004-9-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000298', '5725', '1928', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV299', 'Gian Hoang Tuan', 'Nam', TO_DATE('2021-8-15','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000299', '4346', '1023', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV300', 'Duong Thi Tu', 'Nu', TO_DATE('2007-4-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000300', '7412', '1820', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV301', 'ƒêang Chi Bao', 'Nu', TO_DATE('2019-12-21','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000301', '1043', '1737', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV302', 'Ho Van Cau', 'Nam', TO_DATE('2006-11-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000302', '5090', '1409', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV303', 'Bui Chi Cau', 'Nu', TO_DATE('2010-7-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000303', '1158', '1470', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV304', 'Bui Song Chung', 'Nam', TO_DATE('2010-1-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000304', '4758', '1456', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV305', 'Au Tung Duy', 'Nam', TO_DATE('2010-8-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000305', '7565', '1972', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV306', 'ƒêoan Thi Ngan', 'Nam', TO_DATE('2007-10-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000306', '2842', '1087', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV307', 'An Chi Cau', 'Nam', TO_DATE('2011-2-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000307', '1943', '1135', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV308', 'Pham Song Vinh', 'Nu', TO_DATE('2020-6-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000308', '4034', '1155', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV309', 'An Gia Vu', 'Nam', TO_DATE('2015-11-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000309', '2054', '1055', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV310', 'Vu Van Nam', 'Nam', TO_DATE('2015-6-4','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000310', '5194', '1196', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV311', 'Duong Van Giang', 'Nu', TO_DATE('2007-6-10','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000311', '8054', '1242', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV312', 'Tran Hoang ƒêan', 'Nam', TO_DATE('2008-6-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000312', '5355', '1899', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV313', 'Gian Chi Thong', 'Nam', TO_DATE('2007-11-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000313', '1906', '1461', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV314', 'An Chi Sang', 'Nu', TO_DATE('2009-3-23','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000314', '5966', '1630', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV315', 'Vo Van Tu', 'Nam', TO_DATE('2003-12-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000315', '7868', '1417', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV316', 'Duong Tung Chi', 'Nam', TO_DATE('2000-3-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000316', '9107', '1142', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV317', 'Truong Tung Nam', 'Nam', TO_DATE('2002-7-5','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000317', '2531', '1760', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV318', 'Ly Hoang Thuong', 'Nam', TO_DATE('2010-4-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000318', '8925', '1408', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV319', 'Pham Chi Thong', 'Nu', TO_DATE('2021-4-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000319', '5882', '1907', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV320', 'Nguyen Thi Viet', 'Nu', TO_DATE('2005-7-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000320', '6088', '1437', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV321', 'Lai Van Phu', 'Nam', TO_DATE('2004-5-25','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000321', '6801', '1673', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV322', 'ƒêang Hoang ƒêan', 'Nam', TO_DATE('2014-8-28','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000322', '4566', '1578', 'Nhan vien', 'QL031', 3, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV323', 'Bui Gia ƒêuc', 'Nam', TO_DATE('2001-9-19','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000323', '7236', '1055', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV324', 'Ly Hoang Ngan', 'Nu', TO_DATE('2003-3-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000324', '8930', '1838', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV325', 'Duong Song Vy', 'Nam', TO_DATE('2018-9-9','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000325', '3483', '1759', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV326', 'Tran Thi Phu', 'Nu', TO_DATE('2006-6-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000326', '3795', '1572', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV327', 'Au Hoang Tiep', 'Nam', TO_DATE('2013-12-13','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000327', '2767', '2000', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV328', 'ƒêoan Thi ƒêang', 'Nam', TO_DATE('2012-3-14','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000328', '3831', '1355', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV329', 'Vo Tung Ngan', 'Nu', TO_DATE('2022-10-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000329', '3217', '1747', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV330', 'Tran Thi Thien', 'Nam', TO_DATE('2016-2-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000330', '5631', '1124', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV331', 'Bui Gia Thong', 'Nu', TO_DATE('2002-9-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000331', '6216', '1338', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV332', 'Nguyen Gia Vinh', 'Nu', TO_DATE('2008-7-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000332', '1067', '1003', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV333', 'Nguyen Van Bao', 'Nam', TO_DATE('2012-12-27','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000333', '9460', '1276', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV334', 'Duong Thi Tan', 'Nam', TO_DATE('2022-3-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000334', '6328', '1180', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV335', 'ƒêang Song Nam', 'Nam', TO_DATE('2019-8-2','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000335', '3151', '1920', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV336', 'Au Gia Ngoc Nhi', 'Nu', TO_DATE('2012-10-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000336', '9320', '1012', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV337', 'Vo Song Bac', 'Nu', TO_DATE('2020-11-11','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000337', '3774', '1775', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV338', 'An Tung Viet', 'Nam', TO_DATE('2011-10-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000338', '6126', '1590', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV339', 'Duong Song Anh', 'Nam', TO_DATE('2018-8-16','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000339', '1276', '1126', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV340', 'Nguyen Gia Anh', 'Nu', TO_DATE('2010-1-24','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000340', '2676', '1839', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV341', 'Ho Tung Tan', 'Nam', TO_DATE('2013-3-17','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000341', '7254', '1766', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV342', 'Lai Gia Tuan', 'Nu', TO_DATE('2010-8-12','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000342', '6122', '1495', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV343', 'Duong Song khanh', 'Nu', TO_DATE('2004-12-3','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000343', '9286', '1840', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'San Xuat');/
+ insert into ATBM.NHANVIEN values('NV344', 'Pham Thi Phu', 'Nu', TO_DATE('2022-12-18','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000344', '5938', '1826', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Gia Cong');/
+ insert into ATBM.NHANVIEN values('NV345', 'ƒêoan Tung Nguyet', 'Nam', TO_DATE('2009-5-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000345', '3501', '1701', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Mua Ban');/
+ insert into ATBM.NHANVIEN values('NV346', 'Nguyen Thi Nguyet', 'Nu', TO_DATE('2020-6-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000346', '3213', '1660', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'San Xuat');/
 
-insert into NHANVIEN values('GD001', 'An Song Anh', 'Nu', TO_DATE('2005-11-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450001', '22000', '10000', 'Ban giam doc', NULL, 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('GD002', '–ang Thi Tin', 'Nam', TO_DATE('2011-2-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450002', '22000', '10000', 'Ban giam doc', NULL, 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('GD003', 'Pham Chi Han', 'Nu', TO_DATE('2008-12-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450003', '22000', '10000', 'Ban giam doc', NULL, 4, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('GD004', 'Duong Thi –uc', 'Nu', TO_DATE('2008-3-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450004', '22000', '10000', 'Ban giam doc', NULL, 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('GD005', '–oan Chi Chi', 'Nu', TO_DATE('2005-10-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450005', '22000', '10000', 'Ban giam doc', NULL, 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('TC06', '–oan Song Sang', 'Nam', TO_DATE('2021-3-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450006', '22000', '10000', 'Tai chinh', NULL, 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('TC07', 'Pham Van Thuong', 'Nam', TO_DATE('2003-9-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450007', '22000', '10000', 'Tai chinh', NULL, 8, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('TC08', 'Au Thi An', 'Nu', TO_DATE('2020-5-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450008', '22000', '10000', 'Tai chinh', NULL, 1, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('TC09', 'Ho Song Han', 'Nu', TO_DATE('2015-10-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '09450009', '22000', '10000', 'Tai chinh', NULL, 2, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('TC010', 'Vu Song May', 'Nam', TO_DATE('2001-9-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500010', '22000', '10000', 'Tai chinh', NULL, 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NS011', 'Nguyen Hoang Tu', 'Nam', TO_DATE('2013-2-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500011', '22000', '10000', 'Nhan su', NULL, 4, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NS012', 'Pham Song Tu', 'Nam', TO_DATE('2006-9-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500012', '22000', '10000', 'Nhan su', NULL, 5, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NS013', 'Le Thi Tuan', 'Nam', TO_DATE('2017-8-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500013', '22000', '10000', 'Nhan su', NULL, 6, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NS014', 'Vo Tung Viet', 'Nu', TO_DATE('2009-2-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500014', '22000', '10000', 'Nhan su', NULL, 7, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NS015', 'Ho Tung Vu', 'Nam', TO_DATE('2019-11-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500015', '22000', '10000', 'Nhan su', NULL, 8, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('QL016', '–oan Tung Vy', 'Nam', TO_DATE('2000-1-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500016', '22000', '10000', 'Quan li', NULL, 1, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('QL017', 'Vu Van Tu', 'Nam', TO_DATE('2008-6-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500017', '22000', '10000', 'Quan li', NULL, 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('QL018', 'Ly Hoang –ang', 'Nu', TO_DATE('2007-4-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500018', '22000', '10000', 'Quan li', NULL, 3, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('QL019', 'Duong Tung Han', 'Nu', TO_DATE('2007-10-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500019', '22000', '10000', 'Quan li', NULL, 4, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('QL020', 'Au Chi Vu', 'Nam', TO_DATE('2004-10-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500020', '22000', '10000', 'Quan li', NULL, 5, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('QL021', 'An Thi Tu', 'Nu', TO_DATE('2022-9-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500021', '22000', '10000', 'Quan li', NULL, 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('QL022', 'Bui Hoang Anh', 'Nu', TO_DATE('2010-4-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500022', '22000', '10000', 'Quan li', NULL, 7, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('QL023', 'Bui Van Tiep', 'Nam', TO_DATE('2016-3-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500023', '22000', '10000', 'Quan li', NULL, 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('QL024', 'Vo Song Quoc', 'Nam', TO_DATE('2010-10-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500024', '22000', '10000', 'Quan li', NULL, 1, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('QL025', 'Au Chi khanh', 'Nu', TO_DATE('2001-7-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500025', '22000', '10000', 'Quan li', NULL, 2, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('QL026', 'Tran Song –ang', 'Nam', TO_DATE('2006-5-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500026', '22000', '10000', 'Quan li', NULL, 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('QL027', 'An Chi Vinh', 'Nam', TO_DATE('2016-3-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500027', '22000', '10000', 'Quan li', NULL, 4, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('QL028', 'Vo Chi Bao', 'Nam', TO_DATE('2001-1-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500028', '22000', '10000', 'Quan li', NULL, 5, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('QL029', 'Duong Hoang Cau', 'Nam', TO_DATE('2005-11-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500029', '22000', '10000', 'Quan li', NULL, 6, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('QL030', 'Duong Gia May', 'Nam', TO_DATE('2003-10-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500030', '22000', '10000', 'Quan li', NULL, 7, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('QL031', 'Gian Tung Duy', 'Nu', TO_DATE('2012-8-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500031', '22000', '10000', 'Quan li', NULL, 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('QL032', 'Au Van Bao', 'Nam', TO_DATE('2016-7-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500032', '22000', '10000', 'Quan li', NULL, 1, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('QL033', 'Au Van Tuan', 'Nu', TO_DATE('2012-7-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500033', '22000', '10000', 'Quan li', NULL, 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('QL034', 'Lai Van Han', 'Nu', TO_DATE('2000-9-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500034', '22000', '10000', 'Quan li', NULL, 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('QL035', 'Tran Chi An', 'Nu', TO_DATE('2002-3-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500035', '22000', '10000', 'Quan li', NULL, 4, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('TDA036', 'Ly Gia Chung', 'Nu', TO_DATE('2019-8-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500036', '22000', '10000', 'Truong de an', NULL, 5, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('TDA037', 'Bui Tung Vy', 'Nu', TO_DATE('2004-1-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500037', '22000', '10000', 'Truong de an', NULL, 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('TDA038', 'Bui Chi Vy', 'Nam', TO_DATE('2021-12-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500038', '22000', '10000', 'Truong de an', NULL, 7, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('TP039', 'Ung Van Phu', 'Nam', TO_DATE('2014-8-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500039', '22000', '10000', 'Truong phong', NULL, 1, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('TP040', 'Vo Gia Tien', 'Nu', TO_DATE('2014-5-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500040', '22000', '10000', 'Truong phong', NULL, 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('TP041', 'Bui Tung Quoc', 'Nu', TO_DATE('2004-7-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500041', '22000', '10000', 'Truong phong', NULL, 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('TP042', 'Au Hoang Thuong', 'Nu', TO_DATE('2012-2-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500042', '22000', '10000', 'Truong phong', NULL, 4, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('TP043', '–ang Gia Minh', 'Nu', TO_DATE('2019-6-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500043', '22000', '10000', 'Truong phong', NULL, 5, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('TP044', 'Nguyen Van Vinh', 'Nu', TO_DATE('2014-11-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500044', '22000', '10000', 'Truong phong', NULL, 6, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('TP045', 'Ho Song Ngan', 'Nam', TO_DATE('2001-8-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500045', '22000', '10000', 'Truong phong', NULL, 7, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('TP046', 'Le Chi Anh', 'Nu', TO_DATE('2008-6-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500046', '22000', '10000', 'Truong phong', NULL, 8, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV47', 'Bui Thi Quoc', 'Nu', TO_DATE('2003-5-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500047', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV48', '–ang Tung –uc', 'Nam', TO_DATE('2011-3-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500048', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV49', 'Lai Gia Quoc', 'Nam', TO_DATE('2015-11-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500049', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV50', 'Nguyen Song Thien', 'Nu', TO_DATE('2017-9-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500050', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV51', '–ang Thi Chi', 'Nam', TO_DATE('2019-1-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500051', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV52', 'Nguyen Song Cuc', 'Nu', TO_DATE('2014-8-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500052', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV53', 'Pham Van Nam', 'Nu', TO_DATE('2006-10-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500053', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV54', 'Tran Hoang Vinh', 'Nam', TO_DATE('2002-4-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500054', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV55', 'Tran Hoang Sang', 'Nam', TO_DATE('2004-3-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500055', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV56', 'Truong Chi Phu', 'Nam', TO_DATE('2019-6-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500056', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV57', 'Tran Tung Thien', 'Nu', TO_DATE('2018-10-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500057', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV58', 'Bui Thi Duy', 'Nam', TO_DATE('2015-6-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500058', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV59', 'Ung Gia Thuong', 'Nu', TO_DATE('2007-3-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500059', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV60', 'Au Song Thien', 'Nam', TO_DATE('2008-6-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500060', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV61', 'Ho Thi Chung', 'Nu', TO_DATE('2013-1-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500061', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV62', 'Ly Chi An', 'Nam', TO_DATE('2000-11-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500062', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV63', 'Vu Tung Quoc', 'Nu', TO_DATE('2002-8-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500063', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV64', 'Bui Gia Giang', 'Nu', TO_DATE('2017-8-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500064', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV65', 'An Hoang Thuong', 'Nam', TO_DATE('2016-5-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500065', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV66', 'An Song May', 'Nu', TO_DATE('2004-6-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500066', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV67', 'Pham Tung Han', 'Nu', TO_DATE('2003-12-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500067', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV68', 'Ho Tung Duy', 'Nam', TO_DATE('2007-11-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500068', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV69', 'Tran Hoang Bac', 'Nu', TO_DATE('2018-6-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500069', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV70', '–ang Thi Tu', 'Nu', TO_DATE('2020-8-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500070', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV71', 'Ho Van Tan', 'Nam', TO_DATE('2006-4-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500071', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV72', 'Le Chi Ngan', 'Nu', TO_DATE('2004-3-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500072', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV73', 'Nguyen Thi May', 'Nam', TO_DATE('2011-8-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500073', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV74', 'Nguyen Chi Tan', 'Nam', TO_DATE('2012-10-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500074', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV75', '–oan Gia Tin', 'Nu', TO_DATE('2007-6-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500075', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV76', 'Vo Gia Chung', 'Nam', TO_DATE('2004-5-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500076', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV77', '–oan Song Tin', 'Nam', TO_DATE('2005-9-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500077', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV78', 'Vu Hoang Nam', 'Nu', TO_DATE('2006-11-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500078', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV79', 'Pham Song Sang', 'Nam', TO_DATE('2018-8-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500079', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV80', 'Nguyen Song Chi', 'Nu', TO_DATE('2009-11-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500080', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV81', 'Ung Thi Tiep', 'Nam', TO_DATE('2013-10-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500081', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV82', 'Ung Hoang Tuan', 'Nu', TO_DATE('2014-9-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500082', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV83', 'Pham Chi Chi', 'Nu', TO_DATE('2012-11-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500083', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV84', 'Ho Song Vu', 'Nu', TO_DATE('2013-12-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500084', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV85', 'Bui Gia Chi', 'Nu', TO_DATE('2003-5-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500085', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV86', 'Ly Hoang Tu', 'Nu', TO_DATE('2020-1-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500086', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV87', 'Ung Song khanh', 'Nam', TO_DATE('2011-1-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500087', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV88', 'Le Chi May', 'Nu', TO_DATE('2014-1-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500088', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV89', 'Pham Tung Viet', 'Nam', TO_DATE('2019-6-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500089', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV90', 'Au Van Bao', 'Nu', TO_DATE('2002-1-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500090', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV91', 'Nguyen Van Giang', 'Nam', TO_DATE('2020-3-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500091', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV92', 'Nguyen Song Cau', 'Nam', TO_DATE('2008-4-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500092', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV93', 'Vu Song –ang', 'Nu', TO_DATE('2016-12-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500093', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV94', 'Pham Tung Bac', 'Nam', TO_DATE('2012-7-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500094', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV95', 'Ung Song –ang', 'Nu', TO_DATE('2016-4-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500095', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV96', 'Nguyen Hoang Phu', 'Nam', TO_DATE('2007-11-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500096', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV97', 'Ho Thi Han', 'Nam', TO_DATE('2012-10-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500097', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV98', 'Ho Chi –uc', 'Nam', TO_DATE('2022-11-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500098', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV99', 'Lai Chi Cau', 'Nu', TO_DATE('2013-3-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '094500099', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV100', '–oan Thi An', 'Nam', TO_DATE('2022-11-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000100', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV101', 'Nguyen Hoang Tin', 'Nu', TO_DATE('2015-9-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000101', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV102', 'Gian Thi Giang', 'Nu', TO_DATE('2001-2-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000102', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV103', 'Vo Tung Vinh', 'Nu', TO_DATE('2006-2-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000103', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV104', 'Bui Thi Anh', 'Nam', TO_DATE('2009-7-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000104', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV105', 'Ho Tung Tan', 'Nu', TO_DATE('2022-5-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000105', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV106', 'Vu Hoang Ngoc Nhi', 'Nu', TO_DATE('2005-9-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000106', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV107', 'Vu Thi Chi', 'Nam', TO_DATE('2008-8-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000107', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV108', 'Vu Van Tien', 'Nam', TO_DATE('2001-3-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000108', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV109', 'Nguyen Thi Thien', 'Nam', TO_DATE('2018-5-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000109', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV110', 'Lai Hoang Duy', 'Nam', TO_DATE('2004-9-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000110', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV111', 'Vu Van Phu', 'Nu', TO_DATE('2003-4-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000111', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV112', 'An Gia Thuong', 'Nu', TO_DATE('2020-5-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000112', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV113', 'Le Song –ang', 'Nu', TO_DATE('2001-9-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000113', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV114', 'Nguyen Song Bac', 'Nam', TO_DATE('2016-9-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000114', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV115', 'Ung Song Phu', 'Nu', TO_DATE('2009-5-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000115', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV116', 'Tran Chi Vu', 'Nu', TO_DATE('2022-12-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000116', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV117', 'Bui Thi Minh', 'Nu', TO_DATE('2010-3-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000117', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV118', 'Nguyen Van Bac', 'Nu', TO_DATE('2013-9-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000118', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV119', 'Pham Thi May', 'Nam', TO_DATE('2017-9-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000119', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV120', 'Ho Song Thuong', 'Nam', TO_DATE('2013-12-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000120', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV121', 'Pham Song Chi', 'Nu', TO_DATE('2016-9-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000121', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV122', 'Ho Thi Tin', 'Nam', TO_DATE('2004-7-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000122', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV123', 'An Chi Nam', 'Nam', TO_DATE('2021-1-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000123', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV124', 'Vu Chi Cuc', 'Nam', TO_DATE('2016-8-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000124', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV125', 'Ho Hoang Thien', 'Nu', TO_DATE('2018-7-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000125', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV126', 'Au Thi Han', 'Nu', TO_DATE('2019-7-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000126', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV127', 'Nguyen Chi Tiep', 'Nam', TO_DATE('2001-4-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000127', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV128', 'Tran Hoang An', 'Nu', TO_DATE('2018-11-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000128', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV129', '–oan Hoang Vu', 'Nam', TO_DATE('2010-4-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000129', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV130', 'Le Thi Viet', 'Nam', TO_DATE('2020-5-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000130', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV131', 'Le Song Tan', 'Nu', TO_DATE('2004-11-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000131', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV132', 'Le Hoang Bao', 'Nu', TO_DATE('2016-6-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000132', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV133', 'Ho Tung Minh', 'Nam', TO_DATE('2000-4-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000133', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV134', 'Duong Hoang Duy', 'Nam', TO_DATE('2000-12-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000134', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV135', 'Duong Thi Tien', 'Nu', TO_DATE('2002-11-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000135', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV136', 'Gian Song Thong', 'Nu', TO_DATE('2012-5-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000136', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV137', 'Au Gia Viet', 'Nam', TO_DATE('2011-5-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000137', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV138', 'Vo Chi Cuc', 'Nu', TO_DATE('2013-11-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000138', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV139', 'Truong Tung khanh', 'Nu', TO_DATE('2018-2-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000139', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV140', 'Ly Gia Nguyet', 'Nam', TO_DATE('2002-12-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000140', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV141', 'Pham Tung Nguyet', 'Nu', TO_DATE('2007-12-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000141', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV142', 'Ly Song Anh', 'Nam', TO_DATE('2005-12-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000142', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV143', 'Ung Gia Tiep', 'Nam', TO_DATE('2006-2-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000143', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV144', '–ang Thi Tuan', 'Nam', TO_DATE('2001-8-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000144', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV145', 'Lai Thi Bao', 'Nam', TO_DATE('2022-3-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000145', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV146', 'Gian Tung Sang', 'Nu', TO_DATE('2006-5-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000146', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV147', 'Vu Thi Phu', 'Nu', TO_DATE('2003-8-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000147', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV148', 'Bui Chi Chung', 'Nu', TO_DATE('2018-12-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000148', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV149', 'Truong Thi Nguyet', 'Nam', TO_DATE('2017-2-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000149', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV150', 'Gian Gia Anh', 'Nu', TO_DATE('2011-10-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000150', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV151', 'Nguyen Thi Han', 'Nam', TO_DATE('2012-3-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000151', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV152', 'Gian Song Ngoc Nhi', 'Nu', TO_DATE('2018-7-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000152', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV153', 'Vu Tung Tiep', 'Nam', TO_DATE('2002-5-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000153', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV154', 'Gian Gia Giang', 'Nam', TO_DATE('2020-2-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000154', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV155', 'Pham Thi –uc', 'Nam', TO_DATE('2010-10-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000155', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV156', 'Nguyen Van Cau', 'Nam', TO_DATE('2012-6-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000156', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV157', 'Vo Chi Vu', 'Nam', TO_DATE('2013-10-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000157', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV158', 'An Van Chi', 'Nam', TO_DATE('2004-2-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000158', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV159', 'Lai Van Sang', 'Nam', TO_DATE('2010-9-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000159', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV160', 'Le Chi Thien', 'Nu', TO_DATE('2019-11-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000160', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV161', 'Ung Thi May', 'Nu', TO_DATE('2008-10-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000161', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV162', 'Vo Song Sang', 'Nu', TO_DATE('2021-7-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000162', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV163', 'Truong Song Nguyet', 'Nu', TO_DATE('2008-7-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000163', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV164', 'Gian Chi Sang', 'Nu', TO_DATE('2008-7-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000164', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV165', 'Lai Tung Tuan', 'Nam', TO_DATE('2000-2-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000165', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV166', 'Lai Hoang Thuong', 'Nu', TO_DATE('2007-3-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000166', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV167', 'Ho Hoang Giang', 'Nam', TO_DATE('2007-11-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000167', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV168', 'Lai Thi Chi', 'Nam', TO_DATE('2009-10-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000168', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV169', 'Au Thi Cau', 'Nu', TO_DATE('2012-3-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000169', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV170', 'Lai Gia Viet', 'Nam', TO_DATE('2001-2-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000170', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV171', 'Pham Chi –ang', 'Nam', TO_DATE('2002-6-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000171', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV172', 'An Gia khanh', 'Nam', TO_DATE('2005-10-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000172', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV173', 'Lai Hoang Tan', 'Nu', TO_DATE('2008-6-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000173', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV174', '–oan Thi Bao', 'Nam', TO_DATE('2015-2-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000174', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV175', 'Duong Thi –uc', 'Nu', TO_DATE('2002-4-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000175', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV176', 'Bui Tung Minh', 'Nam', TO_DATE('2004-2-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000176', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV177', '–oan Hoang Ngoc Nhi', 'Nam', TO_DATE('2000-9-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000177', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV178', 'Nguyen Thi Han', 'Nam', TO_DATE('2017-11-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000178', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV179', 'Le Gia Vinh', 'Nu', TO_DATE('2016-1-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000179', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV180', 'Vo Thi Cau', 'Nam', TO_DATE('2019-1-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000180', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV181', '–oan Gia Cuc', 'Nu', TO_DATE('2019-7-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000181', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV182', 'An Hoang Chung', 'Nu', TO_DATE('2014-8-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000182', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV183', 'Le Thi Tiep', 'Nam', TO_DATE('2013-3-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000183', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV184', 'Le Van Ngan', 'Nam', TO_DATE('2018-4-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000184', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV185', 'Pham Thi Giang', 'Nu', TO_DATE('2001-2-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000185', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV186', 'Gian Tung Cau', 'Nam', TO_DATE('2001-8-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000186', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV187', 'Au Gia Ngan', 'Nam', TO_DATE('2021-1-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000187', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV188', 'Gian Van Tiep', 'Nu', TO_DATE('2016-10-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000188', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV189', 'Lai Tung Viet', 'Nu', TO_DATE('2011-8-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000189', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV190', 'Vo Chi Chi', 'Nam', TO_DATE('2017-1-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000190', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV191', 'Lai Hoang Sang', 'Nu', TO_DATE('2000-11-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000191', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV192', 'Au Van Thien', 'Nam', TO_DATE('2003-10-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000192', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV193', 'Duong Thi Nam', 'Nu', TO_DATE('2021-11-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000193', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV194', 'Ho Song Han', 'Nam', TO_DATE('2022-8-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000194', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV195', 'Lai Song Tuan', 'Nam', TO_DATE('2019-4-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000195', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV196', 'Gian Song –ang', 'Nam', TO_DATE('2003-8-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000196', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV197', 'Tran Tung Tuan', 'Nu', TO_DATE('2005-9-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000197', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV198', 'Ung Hoang Nam', 'Nam', TO_DATE('2008-9-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000198', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV199', 'Duong Song Thuong', 'Nam', TO_DATE('2019-2-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000199', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV200', 'Ly Van Ngoc Nhi', 'Nu', TO_DATE('2000-1-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000200', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV201', 'Pham Chi khanh', 'Nam', TO_DATE('2020-2-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000201', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV202', 'Vu Van –an', 'Nam', TO_DATE('2015-6-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000202', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV203', 'Ly Gia Bac', 'Nam', TO_DATE('2002-11-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000203', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV204', '–ang Van Tu', 'Nam', TO_DATE('2002-4-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000204', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV205', 'Truong Hoang Han', 'Nam', TO_DATE('2019-12-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000205', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV206', 'Nguyen Tung Chi', 'Nu', TO_DATE('2016-6-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000206', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV207', 'Duong Hoang –an', 'Nam', TO_DATE('2018-11-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000207', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV208', 'Truong Chi Quoc', 'Nam', TO_DATE('2003-5-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000208', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV209', 'Ly Hoang Chi', 'Nam', TO_DATE('2019-2-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000209', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV210', 'Gian Thi Vy', 'Nu', TO_DATE('2019-8-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000210', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV211', 'Ho Tung Vy', 'Nam', TO_DATE('2020-9-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000211', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV212', 'An Hoang Nguyet', 'Nam', TO_DATE('2007-1-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000212', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV213', 'Pham Chi –uc', 'Nam', TO_DATE('2001-7-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000213', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV214', 'Gian Thi Tin', 'Nam', TO_DATE('2016-8-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000214', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV215', 'Duong Tung May', 'Nam', TO_DATE('2005-4-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000215', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV216', 'Truong Tung Tu', 'Nam', TO_DATE('2004-2-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000216', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV217', 'Pham Gia Sang', 'Nu', TO_DATE('2013-12-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000217', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV218', '–ang Gia Vu', 'Nam', TO_DATE('2008-9-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000218', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV219', 'Pham Thi Han', 'Nam', TO_DATE('2015-3-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000219', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV220', 'Vu Song Ngoc Nhi', 'Nam', TO_DATE('2008-12-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000220', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV221', '–oan Thi Cuc', 'Nam', TO_DATE('2016-3-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000221', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV222', 'Nguyen Hoang Chi', 'Nam', TO_DATE('2022-6-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000222', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV223', 'Pham Song Phu', 'Nu', TO_DATE('2015-2-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000223', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV224', 'Ung Tung Tan', 'Nu', TO_DATE('2009-1-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000224', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV225', 'Le Song Chi', 'Nu', TO_DATE('2013-11-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000225', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV226', 'Tran Chi Tin', 'Nam', TO_DATE('2019-2-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000226', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV227', 'Ung Van khanh', 'Nam', TO_DATE('2017-3-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000227', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV228', 'Ho Tung Tuan', 'Nu', TO_DATE('2022-6-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000228', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV229', 'Le Song Thong', 'Nam', TO_DATE('2012-1-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000229', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV230', 'Lai Thi Vinh', 'Nam', TO_DATE('2011-11-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000230', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV231', 'Vo Tung Thuong', 'Nu', TO_DATE('2010-3-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000231', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV232', 'Tran Hoang Giang', 'Nu', TO_DATE('2001-2-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000232', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV233', 'Pham Hoang Giang', 'Nu', TO_DATE('2006-9-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000233', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV234', 'Lai Chi Thong', 'Nam', TO_DATE('2019-2-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000234', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV235', 'Truong Van Duy', 'Nu', TO_DATE('2000-2-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000235', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV236', 'Le Tung Minh', 'Nu', TO_DATE('2018-12-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000236', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV237', 'Bui Thi Chi', 'Nam', TO_DATE('2022-10-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000237', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV238', 'An Hoang Tin', 'Nam', TO_DATE('2010-1-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000238', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV239', '–oan Thi Phu', 'Nam', TO_DATE('2017-1-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000239', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV240', 'Vu Gia Minh', 'Nu', TO_DATE('2020-12-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000240', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV241', '–ang Van Tuan', 'Nam', TO_DATE('2016-12-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000241', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV242', 'Le Chi Tu', 'Nu', TO_DATE('2011-9-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000242', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV243', 'Truong Chi Duy', 'Nu', TO_DATE('2011-9-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000243', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV244', '–oan Gia Cuc', 'Nam', TO_DATE('2012-8-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000244', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV245', 'An Thi Vy', 'Nam', TO_DATE('2019-8-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000245', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV246', 'Le Hoang Thien', 'Nu', TO_DATE('2007-6-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000246', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV247', 'Ho Chi Han', 'Nam', TO_DATE('2013-3-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000247', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV248', '–oan Hoang Quoc', 'Nu', TO_DATE('2002-12-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000248', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV249', 'Bui Tung Thien', 'Nu', TO_DATE('2017-3-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000249', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV250', 'Vu Gia Sang', 'Nu', TO_DATE('2011-2-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000250', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV251', 'Au Thi Minh', 'Nam', TO_DATE('2004-11-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000251', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV252', 'Vo Chi Tuan', 'Nu', TO_DATE('2003-3-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000252', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV253', 'Ly Hoang Vy', 'Nu', TO_DATE('2003-11-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000253', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV254', '–oan Song Minh', 'Nu', TO_DATE('2021-4-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000254', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV255', '–ang Thi Minh', 'Nam', TO_DATE('2009-3-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000255', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV256', 'Au Gia Tin', 'Nu', TO_DATE('2007-7-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000256', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV257', 'Bui Tung Thien', 'Nam', TO_DATE('2010-8-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000257', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV258', 'Pham Hoang Vu', 'Nam', TO_DATE('2011-7-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000258', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV259', 'Lai Chi Nguyet', 'Nam', TO_DATE('2007-10-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000259', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV260', 'Nguyen Van Vu', 'Nu', TO_DATE('2001-12-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000260', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV261', 'Vo Van An', 'Nam', TO_DATE('2015-8-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000261', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV262', 'Lai Song –uc', 'Nu', TO_DATE('2011-8-17','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000262', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV263', 'Truong Gia Thuong', 'Nam', TO_DATE('2016-2-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000263', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV264', 'An Song Nguyet', 'Nu', TO_DATE('2020-9-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000264', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV265', '–oan Van Tan', 'Nam', TO_DATE('2000-12-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000265', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV266', 'Ho Gia –an', 'Nam', TO_DATE('2021-4-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000266', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV267', 'Truong Hoang Anh', 'Nu', TO_DATE('2019-8-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000267', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV268', 'Ung Hoang Tu', 'Nu', TO_DATE('2001-9-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000268', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV269', 'Ung Tung Han', 'Nam', TO_DATE('2016-3-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000269', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV270', 'Gian Song May', 'Nu', TO_DATE('2002-1-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000270', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV271', 'Ung Gia Tin', 'Nam', TO_DATE('2008-6-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000271', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV272', 'Le Hoang Vy', 'Nu', TO_DATE('2002-2-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000272', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV273', 'Tran Hoang –ang', 'Nu', TO_DATE('2008-8-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000273', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV274', 'Au Gia Tan', 'Nam', TO_DATE('2007-10-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000274', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV275', 'Le Tung Han', 'Nam', TO_DATE('2018-2-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000275', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV276', 'Tran Hoang Tan', 'Nu', TO_DATE('2010-4-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000276', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV277', 'Pham Thi Chi', 'Nam', TO_DATE('2013-6-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000277', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV278', '–ang Thi –uc', 'Nam', TO_DATE('2000-1-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000278', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV279', '–oan Hoang Anh', 'Nu', TO_DATE('2001-5-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000279', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV280', 'Ung Thi May', 'Nam', TO_DATE('2006-10-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000280', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV281', 'Vu Song Tu', 'Nam', TO_DATE('2004-8-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000281', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV282', 'Nguyen Thi Tien', 'Nam', TO_DATE('2005-7-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000282', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV283', 'Vu Hoang Tan', 'Nu', TO_DATE('2015-9-20','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000283', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV284', 'Tran Gia Minh', 'Nam', TO_DATE('2016-7-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000284', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV285', '–oan Tung –uc', 'Nam', TO_DATE('2010-9-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000285', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV286', 'Ly Song Phu', 'Nu', TO_DATE('2009-8-13','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000286', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV287', 'Truong Thi Cau', 'Nam', TO_DATE('2011-9-26','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000287', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV288', 'Lai Thi –an', 'Nu', TO_DATE('2000-10-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000288', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV289', 'Le Van Bac', 'Nu', TO_DATE('2019-6-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000289', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV290', 'Le Gia Tien', 'Nam', TO_DATE('2017-1-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000290', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV291', 'Lai Thi –uc', 'Nam', TO_DATE('2009-4-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000291', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV292', '–oan Gia Bac', 'Nu', TO_DATE('2009-2-5','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000292', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV293', 'Ung Van Nguyet', 'Nam', TO_DATE('2012-6-6','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000293', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV294', 'Vo Hoang Minh', 'Nam', TO_DATE('2011-11-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000294', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV295', 'Bui Tung Tuan', 'Nu', TO_DATE('2008-12-27','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000295', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV296', 'Pham Van Ngan', 'Nu', TO_DATE('2018-5-22','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000296', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV297', '–oan Hoang An', 'Nam', TO_DATE('2002-12-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000297', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV298', 'Pham Gia Giang', 'Nu', TO_DATE('2019-11-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000298', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV299', 'Ung Song Sang', 'Nu', TO_DATE('2001-9-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000299', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV300', '–ang Song Ngan', 'Nam', TO_DATE('2015-4-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000300', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV301', 'An Van Thuong', 'Nu', TO_DATE('2002-10-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000301', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV302', 'Vu Tung –uc', 'Nu', TO_DATE('2018-10-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000302', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV303', 'Vu Chi Tien', 'Nu', TO_DATE('2014-2-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000303', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV304', 'Duong Gia Phu', 'Nam', TO_DATE('2021-4-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000304', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV305', '–oan Gia An', 'Nam', TO_DATE('2020-10-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000305', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV306', 'Vu Tung Chung', 'Nu', TO_DATE('2019-10-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000306', '22000', '10000', 'Nhan vien', 'QL035', 3, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV307', 'Gian Thi Vu', 'Nu', TO_DATE('2010-7-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000307', '22000', '10000', 'Nhan vien', 'QL016', 4, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV308', 'Gian Van Cuc', 'Nam', TO_DATE('2021-2-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000308', '22000', '10000', 'Nhan vien', 'QL017', 5, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV309', 'Ho Chi Tan', 'Nu', TO_DATE('2001-9-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000309', '22000', '10000', 'Nhan vien', 'QL018', 6, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV310', 'Tran Hoang Tiep', 'Nu', TO_DATE('2006-9-11','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000310', '22000', '10000', 'Nhan vien', 'QL019', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV311', 'Vo Song Tiep', 'Nam', TO_DATE('2006-3-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000311', '22000', '10000', 'Nhan vien', 'QL020', 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV312', 'Ly Hoang Tuan', 'Nu', TO_DATE('2008-10-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000312', '22000', '10000', 'Nhan vien', 'QL021', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV313', 'Le Chi Minh', 'Nu', TO_DATE('2022-10-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000313', '22000', '10000', 'Nhan vien', 'QL022', 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV314', 'Vu Tung Nam', 'Nam', TO_DATE('2011-9-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000314', '22000', '10000', 'Nhan vien', 'QL023', 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV315', 'Tran Van Thien', 'Nu', TO_DATE('2006-5-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000315', '22000', '10000', 'Nhan vien', 'QL024', 4, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV316', 'Nguyen Gia Chi', 'Nu', TO_DATE('2011-12-7','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000316', '22000', '10000', 'Nhan vien', 'QL025', 5, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV317', 'Vo Hoang Tin', 'Nam', TO_DATE('2017-4-2','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000317', '22000', '10000', 'Nhan vien', 'QL026', 6, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV318', 'Vu Tung Chung', 'Nam', TO_DATE('2018-8-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000318', '22000', '10000', 'Nhan vien', 'QL027', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV319', 'Vo Chi Tan', 'Nam', TO_DATE('2013-5-10','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000319', '22000', '10000', 'Nhan vien', 'QL028', 8, '123', 'Mien Nam', 'San Xuat')
-/
- insert into NHANVIEN values('NV320', 'Ung Hoang Tan', 'Nam', TO_DATE('2000-8-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000320', '22000', '10000', 'Nhan vien', 'QL029', 1, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV321', 'Vu Thi Thuong', 'Nam', TO_DATE('2004-7-15','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000321', '22000', '10000', 'Nhan vien', 'QL030', 2, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV322', 'Au Tung Bac', 'Nam', TO_DATE('2009-6-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000322', '22000', '10000', 'Nhan vien', 'QL031', 3, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV323', 'Lai Gia Viet', 'Nu', TO_DATE('2012-7-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000323', '22000', '10000', 'Nhan vien', 'QL032', 4, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV324', '–ang Song Sang', 'Nam', TO_DATE('2004-12-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000324', '22000', '10000', 'Nhan vien', 'QL033', 5, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV325', 'Truong Hoang Phu', 'Nam', TO_DATE('2017-7-25','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000325', '22000', '10000', 'Nhan vien', 'QL034', 6, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV326', 'Tran Tung –an', 'Nu', TO_DATE('2006-7-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000326', '22000', '10000', 'Nhan vien', 'QL035', 7, '123', 'Mien Bac', 'Gia Cong')
-/
- insert into NHANVIEN values('NV327', 'Le Thi Duy', 'Nam', TO_DATE('2013-9-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000327', '22000', '10000', 'Nhan vien', 'QL016', 8, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV328', 'Lai Hoang Nam', 'Nam', TO_DATE('2008-10-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000328', '22000', '10000', 'Nhan vien', 'QL017', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV329', '–ang Tung Nam', 'Nam', TO_DATE('2004-3-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000329', '22000', '10000', 'Nhan vien', 'QL018', 2, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV330', 'Au Gia Viet', 'Nu', TO_DATE('2008-6-24','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000330', '22000', '10000', 'Nhan vien', 'QL019', 3, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV331', '–oan Chi May', 'Nam', TO_DATE('2015-4-18','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000331', '22000', '10000', 'Nhan vien', 'QL020', 4, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV332', 'Au Van khanh', 'Nu', TO_DATE('2009-3-12','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000332', '22000', '10000', 'Nhan vien', 'QL021', 5, '123', 'Mien Nam', 'Gia Cong')
-/
- insert into NHANVIEN values('NV333', 'Nguyen Chi Ngan', 'Nu', TO_DATE('2005-10-28','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000333', '22000', '10000', 'Nhan vien', 'QL022', 6, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV334', 'Au Song Phu', 'Nam', TO_DATE('2014-1-1','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000334', '22000', '10000', 'Nhan vien', 'QL023', 7, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV335', 'Au Song Vy', 'Nu', TO_DATE('2019-8-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000335', '22000', '10000', 'Nhan vien', 'QL024', 8, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV336', 'Vo Hoang Chi', 'Nam', TO_DATE('2004-2-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000336', '22000', '10000', 'Nhan vien', 'QL025', 1, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV337', 'Au Thi Han', 'Nam', TO_DATE('2019-2-8','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000337', '22000', '10000', 'Nhan vien', 'QL026', 2, '123', 'Mien Trung', 'Gia Cong')
-/
- insert into NHANVIEN values('NV338', 'An Van –ang', 'Nam', TO_DATE('2004-11-19','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000338', '22000', '10000', 'Nhan vien', 'QL027', 3, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV339', 'Ho Song Tu', 'Nu', TO_DATE('2012-7-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000339', '22000', '10000', 'Nhan vien', 'QL028', 4, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV340', 'An Van Tin', 'Nu', TO_DATE('2001-8-3','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000340', '22000', '10000', 'Nhan vien', 'QL029', 5, '123', 'Mien Bac', 'Mua Ban')
-/
- insert into NHANVIEN values('NV341', '–ang Van Cau', 'Nu', TO_DATE('2000-8-23','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000341', '22000', '10000', 'Nhan vien', 'QL030', 6, '123', 'Mien Nam', 'Mua Ban')
-/
- insert into NHANVIEN values('NV342', 'Truong Song Viet', 'Nu', TO_DATE('2002-9-21','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000342', '22000', '10000', 'Nhan vien', 'QL031', 7, '123', 'Mien Trung', 'Mua Ban');
-/
- insert into NHANVIEN values('NV343', 'Pham Song –ang', 'Nam', TO_DATE('2008-1-14','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000343', '22000', '10000', 'Nhan vien', 'QL032', 8, '123', 'Mien Bac', 'San Xuat')
-/
- insert into NHANVIEN values('NV344', 'Truong Gia Han', 'Nam', TO_DATE('2003-4-9','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000344', '22000', '10000', 'Nhan vien', 'QL033', 1, '123', 'Mien Trung', 'Mua Ban')
-/
- insert into NHANVIEN values('NV345', 'Lai Chi Tien', 'Nam', TO_DATE('2002-11-16','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000345', '22000', '10000', 'Nhan vien', 'QL034', 2, '123', 'Mien Trung', 'San Xuat')
-/
- insert into NHANVIEN values('NV000', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguy?n V„n C?, Ph˝?ng 4, Qu?n 5, TP. H? ChÌ Minh', '0945000346', '22000', '10000', 'Admin', null, null, '123', null, null)
-/
 --------------- END --------------
 
 -- TABLE 4

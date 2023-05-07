@@ -242,7 +242,8 @@ ON NS_XEMNHANVIEN
 FOR EACH ROW 
 DECLARE
 BEGIN
-	insert into nhanvien values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, '0','0',:new.vaitro, :new.manql, :new.phg,'123', :new.khuvuc, :new.linhvuc);
+	insert into nhanvien 
+    values(:new.manv, :new.tennv, :new.phai, :new.ngaysinh,:new.diachi, :new.sodt, '0','0',:new.vaitro, :new.manql, :new.phg,'123', :new.khuvuc, :new.linhvuc);
 END;
 /
 CREATE OR REPLACE TRIGGER TR_NHANSU_UPDATE_NHANVIEN 
