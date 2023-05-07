@@ -16,10 +16,23 @@ namespace Phase_1.Phase_2.UserControls
         public NhanVien_PhanCong()
         {
             InitializeComponent();
+            pictureBox1.Hide();
+            richTextBox2.Hide();
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
             try
             {
-                Helper.raiseTable(dataGridView1, "SELECT * FROM ATBM.Vw_PhanCong", Login.getConnection());
+                bool x = Helper.raiseTable(dataGridView1, "select * from ATBM.Vw_PhanCong", Login.getConnection());
+                if (!x)
+                {
+                    richTextBox2.Font = new Font("Cambira", 15, FontStyle.Regular);
+                    richTextBox2.ForeColor = Color.LawnGreen;
+                    richTextBox2.Text = "Congratulation !! You have no task to do :))";
+                    pictureBox1.Show();
+                    richTextBox2.Show();
+                    dataGridView1.Hide();
+                    return;
+                }
                 dataGridView1.Show();
             }
             catch (OracleException ex)

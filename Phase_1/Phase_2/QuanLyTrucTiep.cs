@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using Phase_1.Phase_2.UserControls;
+
 
 namespace Phase_1
 {
@@ -95,7 +97,7 @@ namespace Phase_1
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            addUserControl(new Home());
+            addUserControl(new Home(panelContainer));
 
         }
 

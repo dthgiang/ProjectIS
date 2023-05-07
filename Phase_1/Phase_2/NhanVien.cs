@@ -16,6 +16,7 @@ namespace Phase_1.Phase_2
     {
         bool sidebarExpand;
         bool profileCollapsed;
+        private static Panel pContainer;
 
         private void addUserControl(UserControl userControl)
         {
@@ -28,6 +29,7 @@ namespace Phase_1.Phase_2
         public NhanVien()
         {
             InitializeComponent();
+            pContainer = panelContainer;
         }
 
         private void btnRed_Click(object sender, EventArgs e)
@@ -121,14 +123,13 @@ namespace Phase_1.Phase_2
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            addUserControl(new Home());
+            addUserControl(new Home(panelContainer));
 
         }
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            NhanVien_PhanCong nv = new NhanVien_PhanCong();
-            addUserControl(nv);
+            addUserControl(new NhanVien_PhanCong());
         }
 
         private void btnPhongban_Click(object sender, EventArgs e)
@@ -148,7 +149,10 @@ namespace Phase_1.Phase_2
 
         private void button24_Click(object sender, EventArgs e)
         {
-
+        }
+        public static Panel getPanelContainer()
+        {
+            return pContainer;
         }
     }
 }

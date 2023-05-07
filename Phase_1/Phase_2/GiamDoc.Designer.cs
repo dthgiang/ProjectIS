@@ -90,7 +90,6 @@
             this.TaskTimer = new System.Windows.Forms.Timer(this.components);
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panelThongTin = new System.Windows.Forms.Panel();
-            this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.ProfileTimer = new System.Windows.Forms.Timer(this.components);
@@ -602,20 +601,10 @@
             // panelThongTin
             // 
             this.panelThongTin.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelThongTin.Controls.Add(this.button24);
             this.panelThongTin.Controls.Add(this.button25);
             this.panelThongTin.Controls.Add(this.button23);
             resources.ApplyResources(this.panelThongTin, "panelThongTin");
             this.panelThongTin.Name = "panelThongTin";
-            // 
-            // button24
-            // 
-            this.button24.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button24, "button24");
-            this.button24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.button24.Name = "button24";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
@@ -739,7 +728,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Panel panelThongTin;
-        private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Panel panel24;

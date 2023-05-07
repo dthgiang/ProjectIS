@@ -163,7 +163,7 @@ namespace Phase_1
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            addUserControl(new Home());
+            addUserControl(new Home(panelContainer));
         }
 
         private void button4_Click(object sender, EventArgs e)

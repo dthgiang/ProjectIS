@@ -62,13 +62,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.avatarPictureBox = new System.Windows.Forms.PictureBox();
+            this.editProfileButton = new System.Windows.Forms.Button();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.dobTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.oracleCommand1 = new Oracle.ManagedDataAccess.Client.OracleCommand();
+            this.dobEditLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // phoneLabel
             // 
             this.phoneLabel.AutoSize = true;
-            this.phoneLabel.Location = new System.Drawing.Point(237, 382);
+            this.phoneLabel.Location = new System.Drawing.Point(237, 374);
             this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(60, 20);
@@ -78,7 +85,7 @@
             // roleLabel
             // 
             this.roleLabel.AutoSize = true;
-            this.roleLabel.Location = new System.Drawing.Point(236, 342);
+            this.roleLabel.Location = new System.Drawing.Point(236, 334);
             this.roleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.roleLabel.Name = "roleLabel";
             this.roleLabel.Size = new System.Drawing.Size(60, 20);
@@ -121,7 +128,7 @@
             // departmentLabel
             // 
             this.departmentLabel.AutoSize = true;
-            this.departmentLabel.Location = new System.Drawing.Point(752, 345);
+            this.departmentLabel.Location = new System.Drawing.Point(752, 337);
             this.departmentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.departmentLabel.Name = "departmentLabel";
             this.departmentLabel.Size = new System.Drawing.Size(60, 20);
@@ -131,7 +138,7 @@
             // managedLabel
             // 
             this.managedLabel.AutoSize = true;
-            this.managedLabel.Location = new System.Drawing.Point(752, 393);
+            this.managedLabel.Location = new System.Drawing.Point(752, 385);
             this.managedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.managedLabel.Name = "managedLabel";
             this.managedLabel.Size = new System.Drawing.Size(60, 20);
@@ -141,7 +148,7 @@
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(314, 509);
+            this.addressLabel.Location = new System.Drawing.Point(314, 501);
             this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(60, 20);
@@ -151,7 +158,7 @@
             // bonusLabel
             // 
             this.bonusLabel.AutoSize = true;
-            this.bonusLabel.Location = new System.Drawing.Point(753, 441);
+            this.bonusLabel.Location = new System.Drawing.Point(753, 433);
             this.bonusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bonusLabel.Name = "bonusLabel";
             this.bonusLabel.Size = new System.Drawing.Size(60, 20);
@@ -161,7 +168,7 @@
             // salaryLabel
             // 
             this.salaryLabel.AutoSize = true;
-            this.salaryLabel.Location = new System.Drawing.Point(233, 441);
+            this.salaryLabel.Location = new System.Drawing.Point(233, 433);
             this.salaryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.salaryLabel.Name = "salaryLabel";
             this.salaryLabel.Size = new System.Drawing.Size(60, 20);
@@ -183,7 +190,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel12.Location = new System.Drawing.Point(318, 534);
+            this.panel12.Location = new System.Drawing.Point(318, 526);
             this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(700, 3);
@@ -192,7 +199,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel11.Location = new System.Drawing.Point(237, 468);
+            this.panel11.Location = new System.Drawing.Point(237, 460);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(300, 3);
@@ -201,7 +208,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel10.Location = new System.Drawing.Point(757, 465);
+            this.panel10.Location = new System.Drawing.Point(757, 457);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(300, 3);
@@ -210,7 +217,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel9.Location = new System.Drawing.Point(756, 370);
+            this.panel9.Location = new System.Drawing.Point(756, 362);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(300, 3);
@@ -219,7 +226,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel8.Location = new System.Drawing.Point(756, 418);
+            this.panel8.Location = new System.Drawing.Point(756, 410);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(300, 3);
@@ -228,7 +235,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel6.Location = new System.Drawing.Point(237, 418);
+            this.panel6.Location = new System.Drawing.Point(237, 410);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(300, 3);
@@ -237,7 +244,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.panel5.Location = new System.Drawing.Point(236, 370);
+            this.panel5.Location = new System.Drawing.Point(236, 362);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(300, 3);
@@ -284,7 +291,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label5.Location = new System.Drawing.Point(179, 505);
+            this.label5.Location = new System.Drawing.Point(179, 497);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 32);
@@ -333,7 +340,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label11.Location = new System.Drawing.Point(126, 389);
+            this.label11.Location = new System.Drawing.Point(126, 381);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 32);
@@ -345,7 +352,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label10.Location = new System.Drawing.Point(580, 341);
+            this.label10.Location = new System.Drawing.Point(580, 333);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(160, 32);
@@ -357,7 +364,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label9.Location = new System.Drawing.Point(576, 389);
+            this.label9.Location = new System.Drawing.Point(576, 381);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(164, 32);
@@ -369,7 +376,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label8.Location = new System.Drawing.Point(128, 341);
+            this.label8.Location = new System.Drawing.Point(128, 333);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 32);
@@ -381,7 +388,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label7.Location = new System.Drawing.Point(581, 441);
+            this.label7.Location = new System.Drawing.Point(581, 433);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 32);
@@ -393,7 +400,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
-            this.label6.Location = new System.Drawing.Point(129, 439);
+            this.label6.Location = new System.Drawing.Point(129, 431);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 32);
@@ -422,10 +429,85 @@
             this.avatarPictureBox.TabIndex = 39;
             this.avatarPictureBox.TabStop = false;
             // 
+            // editProfileButton
+            // 
+            this.editProfileButton.BackColor = System.Drawing.Color.Violet;
+            this.editProfileButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editProfileButton.Location = new System.Drawing.Point(428, 555);
+            this.editProfileButton.Name = "editProfileButton";
+            this.editProfileButton.Size = new System.Drawing.Size(403, 43);
+            this.editProfileButton.TabIndex = 40;
+            this.editProfileButton.Text = "Edit Profile";
+            this.editProfileButton.UseVisualStyleBackColor = false;
+            this.editProfileButton.Click += new System.EventHandler(this.editProfileButton_Click);
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.BackColor = System.Drawing.Color.PaleGreen;
+            this.phoneTextBox.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneTextBox.Location = new System.Drawing.Point(238, 378);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(295, 33);
+            this.phoneTextBox.TabIndex = 41;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.BackColor = System.Drawing.Color.PaleGreen;
+            this.addressTextBox.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Location = new System.Drawing.Point(318, 492);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(700, 33);
+            this.addressTextBox.TabIndex = 42;
+            // 
+            // dobTimePicker
+            // 
+            this.dobTimePicker.CalendarFont = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobTimePicker.CalendarMonthBackground = System.Drawing.Color.LightGreen;
+            this.dobTimePicker.Location = new System.Drawing.Point(614, 159);
+            this.dobTimePicker.Name = "dobTimePicker";
+            this.dobTimePicker.Size = new System.Drawing.Size(442, 26);
+            this.dobTimePicker.TabIndex = 43;
+            this.dobTimePicker.ValueChanged += new System.EventHandler(this.dobTimePicker_ValueChanged);
+            // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.LightGreen;
+            this.saveButton.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(428, 555);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(403, 43);
+            this.saveButton.TabIndex = 44;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // oracleCommand1
+            // 
+            this.oracleCommand1.Transaction = null;
+            // 
+            // dobEditLabel
+            // 
+            this.dobEditLabel.AutoSize = true;
+            this.dobEditLabel.BackColor = System.Drawing.Color.PaleGreen;
+            this.dobEditLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobEditLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(118)))));
+            this.dobEditLabel.Location = new System.Drawing.Point(505, 159);
+            this.dobEditLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dobEditLabel.Name = "dobEditLabel";
+            this.dobEditLabel.Size = new System.Drawing.Size(73, 32);
+            this.dobEditLabel.TabIndex = 45;
+            this.dobEditLabel.Text = "DOB:";
+            // 
             // XemProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dobEditLabel);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.dobTimePicker);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.editProfileButton);
             this.Controls.Add(this.avatarPictureBox);
             this.Controls.Add(this.phoneLabel);
             this.Controls.Add(this.roleLabel);
@@ -506,5 +588,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox avatarPictureBox;
+        private System.Windows.Forms.Button editProfileButton;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.DateTimePicker dobTimePicker;
+        private System.Windows.Forms.Button saveButton;
+        private Oracle.ManagedDataAccess.Client.OracleCommand oracleCommand1;
+        private System.Windows.Forms.Label dobEditLabel;
     }
 }

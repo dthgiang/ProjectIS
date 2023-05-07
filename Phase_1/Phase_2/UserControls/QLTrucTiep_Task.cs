@@ -16,9 +16,21 @@ namespace Phase_1.UserControls
         public QLTrucTiep_Task()
         {
             InitializeComponent();
+            pictureBox1.Hide();
+            richTextBox2.Hide(); 
+
             try
             {
-                Helper.raiseTable(dataGridView1, "select * from ATBM.Vw_PhanCong", Login.getConnection());
+                bool x = Helper.raiseTable(dataGridView1, "select * from ATBM.Vw_PhanCong", Login.getConnection());
+                System.Diagnostics.Debug.WriteLine(x);
+                if (x)
+                {
+                    richTextBox2.Font = new Font("Cambira", 15, FontStyle.Bold);
+                    richTextBox2.ForeColor = Color.LawnGreen;
+                    richTextBox2.Text = "Congratulation !! You have no task to do :))";
+                    pictureBox1.Show();
+                    richTextBox2.Show();
+                }
                 dataGridView1.Show();
             }
             catch (OracleException ex)

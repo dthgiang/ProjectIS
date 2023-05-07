@@ -107,13 +107,13 @@ namespace Phase_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addUserControl(new Home());
+            addUserControl(new Home(panelContainer));
             
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AllLayout.showTask(panelContainer);
+            addUserControl(new NhanVien_PhanCong());
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace Phase_1
 
         private void button25_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Login login = new Login();
+            this.Hide();
             login.Show();
         }
 

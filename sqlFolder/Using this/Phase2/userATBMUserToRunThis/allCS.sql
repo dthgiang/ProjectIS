@@ -17,6 +17,12 @@ ALTER SESSION SET container = QLDTPDB;
 
 -- Co quyen xem tat ca cac thuoc tinh tr�n quan he NHANVIEN va PHANCONG lien quan ?en chinh nhan vien do. 
 ------------
+
+-----------------------------------
+--- <<<< CS1 - Nhan Vien  >>>> ----
+-----------------------------------
+
+
 create OR REPLACE view Vw_NhanVien as
     select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from ATBM.NhanVien  where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
@@ -33,6 +39,14 @@ grant update(NGAYSINH) on ATBM.Vw_NhanVien to RL_NhanVien;
 grant update(SODT) on ATBM.Vw_NhanVien to RL_NhanVien;
 grant update(DIACHI) on ATBM.Vw_NhanVien to RL_NhanVien;
 /
+
+create or replace procedure upDateNhanVien(p_ngaySinh IN VARCHAR2, p_soDT IN VARCHAR2, p_diaChi IN VARCHAR2)
+as
+begin
+    update ATBM.Vw_NhanVien set NGAYSINH = TO_DATE(p_ngaySinh, 'MM-DD-YYYY'), SODT = p_soDT, DIACHI = p_diaChi;
+end;
+/
+grant execute on upDateNhanVien to RL_NhanVien;
 
 --Co the xem du lieu caa toan bo quan he PHONGBAN va DEAN
 grant select on ATBM.PhongBan to RL_NhanVien;
