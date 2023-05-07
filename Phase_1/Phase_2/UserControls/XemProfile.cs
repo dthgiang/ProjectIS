@@ -17,6 +17,17 @@ namespace Phase_1.UserControls
         {
             InitializeComponent();
             avatarPictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            IDLabel.Font = new Font("Cambria", 10, FontStyle.Bold);
+            nameLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            genderLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            DOBLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            addressLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            phoneLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            salaryLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            bonusLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            roleLabel.Font = new Font("Cambria", 10, FontStyle.Bold);
+            managedLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
+            departmentLabel.Font = new Font("Cambria", 10, FontStyle.Regular);
 
             try
             {
@@ -60,6 +71,10 @@ namespace Phase_1.UserControls
 
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

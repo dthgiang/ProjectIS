@@ -7,6 +7,7 @@ exec createUser;
 -- exec dropUser;
 exec grantEmpRole;
 exec grantQuanLyRole;
+exec grantGiamDocRole;
 exec grantTruongPhongRole;
 exec usp_GrantUserTAICHINH;
 exec usp_GrantUserNHANSU;
@@ -23,7 +24,9 @@ create role RL_TruongPhong;
 CREATE ROLE RL_TAICHINH;
 CREATE ROLE RL_NHANSU;
 CREATE ROLE RL_TRUONGDEAN;
+CREATE ROLE RL_GIAMDOC;
 
+grant RL_NHANVIEN TO RL_GIAMDOC;
 
 ----------------
 -- this proc have permission to create user by username and pw in db
@@ -79,6 +82,29 @@ AS
 ----------------------------
 ---- Grant role Area -------
 ----------------------------
+
+-------------------------
+-- this proc have responsibility to grant Role NhanVien  to all user have vai tro = Giam doc
+-------------------------
+CREATE OR REPLACE PROCEDURE grantGiamDocRole
+AS
+    CURSOR CUR IS (SELECT MANV FROM ATBM.NHANVIEN WHERE UPPER(VaiTro) = 'GIAM DOC' AND MANV NOT IN 
+        (SELECT grantee FROM DBA_ROLE_PRIVS
+            where granted_role = 'RL_GIAMDOC'));
+    STR VARCHAR(1000);
+    USR VARCHAR2(100);
+    BEGIN
+        OPEN CUR;
+        LOOP
+            FETCH CUR INTO USR;
+            EXIT WHEN CUR%NOTFOUND;
+            
+            STR := 'grant RL_GIAMDOC to '||USR;
+            EXECUTE IMMEDIATE (STR);
+        END LOOP;
+        dbms_output.put_line( 'All user are granted' );
+    END;
+/
 
 -------------------------
 -- this proc have responsibility to grant Role NhanVien  to all user have vai tro = nhan vien

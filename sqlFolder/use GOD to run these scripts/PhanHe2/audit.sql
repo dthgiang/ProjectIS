@@ -1,5 +1,9 @@
 ALTER SESSION SET container = QLDTPDB;
 
+--------- Grant quyen xem audit cho giam doc
+grant select on  SYS.fga_log$ to ATBM with grant option;
+grant select on  SYS.fga_log$ to RL_GIAMDOC;
+ /
 ----------------------AUDIT------------------
 SELECT * FROM DBA_AUDIT_POLICIES 
 WHERE object_schema = 'ATBM' 

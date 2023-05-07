@@ -151,6 +151,12 @@ namespace Phase_1
                         l.Show();
                         break;
                     }
+                case "GIAM DOC":
+                    {
+                        GiamDoc l = new GiamDoc(user, connection);
+                        l.Show();
+                        break;
+                    }
                 case "TRUONG DE AN":
                     {
                         TruongDeAn l = new TruongDeAn(user, connection);

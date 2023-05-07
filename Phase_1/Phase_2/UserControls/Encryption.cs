@@ -31,6 +31,11 @@ namespace Phase_1.Phase_2.UserControls
             if (result == DialogResult.OK)
             {
                 string text_key = dialog.Key;
+                if (text_key == "")
+                {
+                    MessageBox.Show("Please enter key to continue");
+                    return;
+                }
 
                 OracleCommand command = new OracleCommand("select key from ATBM.view_getkey", connection);
                 OracleDataReader reader = command.ExecuteReader();
