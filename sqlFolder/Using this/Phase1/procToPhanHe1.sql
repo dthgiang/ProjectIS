@@ -1,15 +1,15 @@
-
-
+--
+--grant RL_DB_MANAGER to nv346
 -- Yeu cau tao create cho phep xao user
 CREATE OR REPLACE PROCEDURE ph1_dropUserOrRole(p_username varchar2, p_mode varchar2)
 AS
     STR varchar2(300);
 BEGIN
-    STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
-     EXECUTE IMMEDIATE (STR);
+    --STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+     --EXECUTE IMMEDIATE (STR);
   EXECUTE IMMEDIATE 'DROP  ' || UPPER(p_mode) || ' ' || p_username;
-  STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
-     EXECUTE IMMEDIATE (STR);
+  --STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE';
+     --EXECUTE IMMEDIATE (STR);
   EXCEPTION
    WHEN OTHERS THEN
       IF SQLCODE != -942 THEN
@@ -19,18 +19,15 @@ END;
 /
 
 -- Yeu cau tao create cho phep xao user
-CREATE OR REPLACE PROCEDURE ph1_createUserOrRole(p_username varchar2, p_password varchar2, p_mode varchar2)
+CREATE OR REPLACE PROCEDURE ph1_createUser(p_username varchar2, p_password varchar2)
 AS
 STR VARCHAR(1000);
     BEGIN
-        STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
-        EXECUTE IMMEDIATE (STR);
-        if (UPPER(p_mode) = 'USER') Then
-            STR := 'CREATE USER '||p_username||' IDENTIFIED BY ' || p_password;
-        else
-            STR := 'CREATE ROLE RL_'||p_username;
-        end if;
-            
+        --STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+        --EXECUTE IMMEDIATE (STR);
+
+        STR := 'CREATE USER '||p_username||' IDENTIFIED BY ' || p_password;
+
         EXECUTE IMMEDIATE (STR);
         STR := 'grant connect to ' || UPPER(p_username);
         EXECUTE IMMEDIATE (STR);
@@ -41,7 +38,25 @@ STR VARCHAR(1000);
           END IF;
 END;
 /
+CREATE OR REPLACE PROCEDURE ph1_createRole(p_username varchar2, p_password varchar2)
+AS
+STR VARCHAR(1000);
+BEGIN
+        --STR := 'ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE';
+        --EXECUTE IMMEDIATE (STR);
 
+
+        STR := 'CREATE ROLE RL_'||p_username;
+        
+        EXECUTE IMMEDIATE (STR);
+
+        Exception
+        WHEN OTHERS THEN
+          IF SQLCODE != -942 THEN
+             RAISE;
+          END IF;
+END;
+/
 CREATE OR REPLACE PROCEDURE ph1_changePasswordUserOrRole(p_name varchar2, p_newPassword varchar2, p_mode varchar2, p_isPassword varchar2)
 AS
 STR VARCHAR(1000);
@@ -100,10 +115,10 @@ END;
 exec ph1_createUserOrRole('wibu1','123', 'user');
 exec ph1_dropUserOrRole('wibu', 'user');
 exec ph1_changePasswordUserOrRole('wibu', 'haha', 'role', 'yes');
-exec ph1_grantPriv('wibu1', 'select on ATBM.USER_PRIVS', 'NO');
-exec ph1_revokePriv('wibu1', 'select on ATBM.USER_PRIVS');
+exec ph1_grantPriv('wibu1', 'select on USER_PRIVS', 'NO');
+exec ph1_revokePriv('wibu1', 'select on USER_PRIVS');
 
-REVOKE select on ATBM.USER_PRIVS FROM wibu1;
+REVOKE select on USER_PRIVS FROM wibu1;
 
 SELECT role FROM dba_roles;
 SELECT username FROM dba_users
@@ -143,27 +158,35 @@ AS
 CREATE OR REPLACE VIEW PH1_VIEW_ALL_TABLES
 AS
     SELECT owner, TABLE_NAME AS TableName, TABLESPACE_NAME, STATUS FROM DBA_TABLES
-    WHERE OWNER = 'ATBM' OR OWNER = 'DB_MANAGER';
+    WHERE OWNER = 'ATBM' OR OWNER = 'RL_DB_MANAGER';
     -- WHERE TABBLE_NAME LIKE ''
 /    
 CREATE OR REPLACE VIEW PH1_VIEW_ALL_VIEWS
 AS
     SELECT  owner, VIEW_NAME AS ViewName, TEXT_LENGTH FROM DBA_VIEWS
-    WHERE OWNER = 'ATBM' OR OWNER = 'DB_MANAGER';
+    WHERE OWNER = 'ATBM' OR OWNER = 'RL_DB_MANAGER';
     --WHERE VIEW_NAME LIKE ''
 
 /
 CREATE OR REPLACE VIEW PH1_TEST_VIEW_ALL_VIEWS
  AS 
-    select * from ATBM.PH1_VIEW_ALL_VIEWS;
+    select * from PH1_VIEW_ALL_VIEWS;
 /
-grant select on atbm.PH1_VIEW_USERS_PRIVS to DB_Manager;
-grant select on atbm.PH1_VIEW_ALL_TABLES to DB_Manager;
-grant select on atbm.PH1_VIEW_ALL_VIEWS to DB_Manager;
-grant select on atbm.PH1_VIEW_ALL_USERS to DB_Manager;
-grant select on atbm.ROLE_PRIVS to DB_Manager;
-grant select on atbm.USER_PRIVS to DB_Manager;
-grant select on atbm.USER_INFO to DB_Manager;
+grant select on PH1_VIEW_USERS_PRIVS to RL_DB_MANAGER;
+grant select on PH1_VIEW_ALL_TABLES to RL_DB_MANAGER;
+grant select on PH1_VIEW_ALL_VIEWS to RL_DB_MANAGER;
+grant select on PH1_VIEW_ALL_USERS to RL_DB_MANAGER;
+grant select on ROLE_PRIVS to RL_DB_MANAGER;
+grant select on USER_PRIVS to RL_DB_MANAGER;
+grant select on USER_INFO to RL_DB_MANAGER;
+grant execute on ph1_dropUserOrRole to RL_DB_MANAGER;
+grant execute on ph1_createUser to RL_DB_MANAGER;
+grant execute on ph1_createRole to RL_DB_MANAGER;
+grant execute on ph1_changePasswordUserOrRole to RL_DB_MANAGER;
+grant execute on ph1_grantPriv to RL_DB_MANAGER;
+grant execute on ph1_revokePriv to RL_DB_MANAGER;
+
+
 
 /*
 drop view USER_ROLE_PRIVs
@@ -174,9 +197,8 @@ SELECT * FROM SYS.USER_ROLE_PRIVS;
 
 
 -- Cho phep tao moi, xoa, sua user/ role
-GRANT CREATE USER, ALTER USER, DROP USER TO DB_Manager;
-GRANT CREATE ROLE TO DB_Manager;
-
+GRANT CREATE USER, ALTER USER, DROP USER TO RL_DB_MANAGER;
+GRANT CREATE ROLE TO RL_DB_MANAGER;
 -- Cho phep thuc hien cap quyen: cap quyen cho user/role/ cap role cho user
 
 GRANT GRANT ANY object PRIVILEGE TO DB_MANAGER;
@@ -189,6 +211,8 @@ grant update any table to DB_Manager ;
 grant create view to DB_Manager;
 grant create procedure to DB_Manager;
 grant connect to DB_manager;
+grant delete any table to RL_DB_MANAGER ;
+
 /*
 create user hehe identified by 123;
 grant DB_manager to hehe;

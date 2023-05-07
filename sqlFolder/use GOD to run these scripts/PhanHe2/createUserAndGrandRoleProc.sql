@@ -16,7 +16,6 @@ exec usp_GrantUserTRUONGDEAN;
 ------------ start from here ---
 -- Run from this than run Proc Area ---
 -------------
-ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
 create role RL_NhanVien;
 CREATE role RL_QUANLY;
 create role RL_TruongPhong;
