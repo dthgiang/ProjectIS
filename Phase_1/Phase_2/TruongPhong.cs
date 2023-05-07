@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using Phase_1.Phase_2.UserControls;
 
 namespace Phase_1
 {
@@ -46,7 +47,7 @@ namespace Phase_1
 
         private void button21_Click(object sender, EventArgs e)
         {
-            TruongPhong_DSNV_HieuChinh ql = new TruongPhong_DSNV_HieuChinh(username, connection);
+            TruongPhong_DSNV_HieuChinh ql = new TruongPhong_DSNV_HieuChinh();
             addUserControl(ql);
         }
 
@@ -160,9 +161,10 @@ namespace Phase_1
             sidebarTimer.Start();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void homeBtn_Click(object sender, EventArgs e)
         {
             TruongPhong truongphong = new TruongPhong();
+            this.Close();
             truongphong.Show();
         }
 
@@ -171,19 +173,19 @@ namespace Phase_1
             TaskTimer.Start();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void deptListBtn_Click(object sender, EventArgs e)
         {
             AllLayout.showDepartment(panelContainer);
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void prjListBtn_Click(object sender, EventArgs e)
         {
             AllLayout.showProject(panelContainer);
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void empListBtn_Click(object sender, EventArgs e)
         {
-            QLTrucTiep_ThongTinNV ql = new QLTrucTiep_ThongTinNV();
+            TruongPhong_XemNV ql = new TruongPhong_XemNV();
             addUserControl(ql);
         }
 
