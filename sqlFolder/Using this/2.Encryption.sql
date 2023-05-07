@@ -1,6 +1,7 @@
 ALTER SESSION SET container = QLDTPDB;
 /
 grant execute on sys.dbms_crypto to ATBM;
+--grant select on ATBM.VW_NHANVIEN to NV000;
 /
 select *
 from dba_tab_privs
@@ -163,3 +164,34 @@ as
     select password from nhanvien where manv = SYS_CONTEXT('USERENV', 'SESSION_USER');
 /
 
+-------------------------
+-- Encryption when anyone update on luong or phucap
+-----------------------
+CREATE OR REPLACE TRIGGER TRG_UPDATE_LUONG_NHANVIEN
+BEFORE UPDATE OF LUONG ON ATBM.NHANVIEN 
+FOR EACH ROW 
+DECLARE 
+    v_key RAW(20);
+BEGIN
+            
+        select key into v_key from ATBM.SAVE_KEY where UPPER(MaNV) = UPPER(:new.manv);
+        :new.luong := encryption(UTL_RAW.CAST_TO_RAW(:new.luong), :new.manv);
+    
+END;
+/
+
+-----------------------
+CREATE OR REPLACE TRIGGER TRG_UPDATE_PHUCAP_NHANVIEN
+BEFORE UPDATE OF PHUCAP ON ATBM.NHANVIEN 
+FOR EACH ROW 
+DECLARE 
+    v_key RAW(20);
+BEGIN
+        
+        select key into v_key from ATBM.SAVE_KEY where UPPER(MaNV) = UPPER(:new.manv);
+        DBMS_OUTPUT.PUT_LINE(v_key);
+        :new.phucap := encryption(UTL_RAW.CAST_TO_RAW(:new.phucap), :new.manv);
+        DBMS_OUTPUT.PUT_LINE(:new.phucap);
+
+END;
+/
