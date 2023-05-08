@@ -203,12 +203,7 @@ namespace Phase_1
             }
         }
 
-        private void returnButton_Click(object sender, EventArgs e)
-        {
-            Detail d = new Detail(con, objectName, mode);
-            this.Hide();
-            d.Show();
-        }
+   
 
         private void GrantAndAlter_Load(object sender, EventArgs e)
         {

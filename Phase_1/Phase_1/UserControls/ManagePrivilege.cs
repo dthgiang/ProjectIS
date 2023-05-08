@@ -224,12 +224,7 @@ namespace Phase_1
         }
 
         
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            Form2 f1 = new Form2(con);
-            this.Hide();
-            f1.Show();
-        }
+       
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

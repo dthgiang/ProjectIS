@@ -26,12 +26,7 @@ namespace Phase_1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1(con);
-            this.Hide();
-            f1.Show();
-        }
+     
 
         private void Form2_Load(object sender, EventArgs e)
         {

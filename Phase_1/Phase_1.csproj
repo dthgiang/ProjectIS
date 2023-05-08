@@ -93,36 +93,6 @@
     <Compile Include="Phase_1\Admin_Phase1.Designer.cs">
       <DependentUpon>Admin_Phase1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Phase_1\Detail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Phase_1\Detail.Designer.cs">
-      <DependentUpon>Detail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phase_1\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Phase_1\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phase_1\Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Phase_1\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phase_1\Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Phase_1\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phase_1\Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Phase_1\Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Phase_1\UserControls\Grant.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,12 +122,6 @@
     </Compile>
     <Compile Include="Phase_2\GiamDoc.Designer.cs">
       <DependentUpon>GiamDoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phase_1\GrantAndAlter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Phase_1\GrantAndAlter.Designer.cs">
-      <DependentUpon>GrantAndAlter.cs</DependentUpon>
     </Compile>
     <Compile Include="Phase_2\NhanSu.cs">
       <SubType>Form</SubType>
@@ -346,23 +310,6 @@
     <EmbeddedResource Include="Phase_1\Admin_Phase1.resx">
       <DependentUpon>Admin_Phase1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Phase_1\Detail.resx">
-      <DependentUpon>Detail.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Phase_1\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Phase_1\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Phase_1\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Phase_1\Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Phase_1\UserControls\Grant.resx">
       <DependentUpon>Grant.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,9 +324,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\GiamDoc.resx">
       <DependentUpon>GiamDoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Phase_1\GrantAndAlter.resx">
-      <DependentUpon>GrantAndAlter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phase_2\NhanSu.resx">
       <DependentUpon>NhanSu.cs</DependentUpon>
