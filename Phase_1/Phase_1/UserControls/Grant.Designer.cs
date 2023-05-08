@@ -52,7 +52,6 @@
             this.objectComboBox = new System.Windows.Forms.ComboBox();
             this.grantPrivButton = new System.Windows.Forms.Button();
             this.objectLabel = new System.Windows.Forms.Label();
-            this.nameObjsLabel = new System.Windows.Forms.Label();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.grantRoleButton = new System.Windows.Forms.Button();
             this.changePWButton = new System.Windows.Forms.Button();
@@ -171,7 +170,7 @@
             this.changePWPanel.Controls.Add(this.changePWActionButton);
             this.changePWPanel.Controls.Add(this.granteeChangePWTextBox);
             this.changePWPanel.Controls.Add(this.confirmPWLabel);
-            this.changePWPanel.Location = new System.Drawing.Point(418, 582);
+            this.changePWPanel.Location = new System.Drawing.Point(456, 528);
             this.changePWPanel.Name = "changePWPanel";
             this.changePWPanel.Size = new System.Drawing.Size(648, 378);
             this.changePWPanel.TabIndex = 50;
@@ -206,7 +205,7 @@
             this.grantRolePanel.Controls.Add(this.roleLabel);
             this.grantRolePanel.Controls.Add(this.grantRoleActionButton);
             this.grantRolePanel.Controls.Add(this.granteeRoleTextBox);
-            this.grantRolePanel.Location = new System.Drawing.Point(25, 3);
+            this.grantRolePanel.Location = new System.Drawing.Point(456, 545);
             this.grantRolePanel.Name = "grantRolePanel";
             this.grantRolePanel.Size = new System.Drawing.Size(522, 266);
             this.grantRolePanel.TabIndex = 51;
@@ -324,7 +323,7 @@
             this.grantPrivButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grantPrivButton.Location = new System.Drawing.Point(263, 220);
             this.grantPrivButton.Name = "grantPrivButton";
-            this.grantPrivButton.Size = new System.Drawing.Size(260, 46);
+            this.grantPrivButton.Size = new System.Drawing.Size(260, 50);
             this.grantPrivButton.TabIndex = 43;
             this.grantPrivButton.Text = "Grant Privilege";
             this.grantPrivButton.UseVisualStyleBackColor = false;
@@ -341,18 +340,6 @@
             this.objectLabel.Size = new System.Drawing.Size(101, 29);
             this.objectLabel.TabIndex = 38;
             this.objectLabel.Text = "Object";
-            // 
-            // nameObjsLabel
-            // 
-            this.nameObjsLabel.AutoSize = true;
-            this.nameObjsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.nameObjsLabel.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameObjsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
-            this.nameObjsLabel.Location = new System.Drawing.Point(823, 337);
-            this.nameObjsLabel.Name = "nameObjsLabel";
-            this.nameObjsLabel.Size = new System.Drawing.Size(124, 25);
-            this.nameObjsLabel.TabIndex = 48;
-            this.nameObjsLabel.Text = "Username";
             // 
             // welcomeLabel
             // 
@@ -375,7 +362,7 @@
             this.grantRoleButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grantRoleButton.Location = new System.Drawing.Point(659, 220);
             this.grantRoleButton.Name = "grantRoleButton";
-            this.grantRoleButton.Size = new System.Drawing.Size(260, 46);
+            this.grantRoleButton.Size = new System.Drawing.Size(260, 50);
             this.grantRoleButton.TabIndex = 45;
             this.grantRoleButton.Text = "Grant Role";
             this.grantRoleButton.UseVisualStyleBackColor = false;
@@ -390,7 +377,7 @@
             this.changePWButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.changePWButton.Location = new System.Drawing.Point(1053, 220);
             this.changePWButton.Name = "changePWButton";
-            this.changePWButton.Size = new System.Drawing.Size(260, 46);
+            this.changePWButton.Size = new System.Drawing.Size(260, 50);
             this.changePWButton.TabIndex = 44;
             this.changePWButton.Text = "Change password";
             this.changePWButton.UseVisualStyleBackColor = false;
@@ -494,7 +481,6 @@
             // grantPrivPanel
             // 
             this.grantPrivPanel.BackColor = System.Drawing.Color.Transparent;
-            this.grantPrivPanel.Controls.Add(this.grantRolePanel);
             this.grantPrivPanel.Controls.Add(this.objectComboBox);
             this.grantPrivPanel.Controls.Add(this.objectLabel);
             this.grantPrivPanel.Controls.Add(this.optionLabel);
@@ -506,7 +492,7 @@
             this.grantPrivPanel.Controls.Add(this.objectTextBox);
             this.grantPrivPanel.Controls.Add(this.attributeComboBox);
             this.grantPrivPanel.Controls.Add(this.attributeLabel);
-            this.grantPrivPanel.Location = new System.Drawing.Point(418, 582);
+            this.grantPrivPanel.Location = new System.Drawing.Point(459, 518);
             this.grantPrivPanel.Name = "grantPrivPanel";
             this.grantPrivPanel.Size = new System.Drawing.Size(598, 446);
             this.grantPrivPanel.TabIndex = 49;
@@ -556,11 +542,12 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
-            this.label4.Location = new System.Drawing.Point(823, 337);
+            this.label4.Location = new System.Drawing.Point(826, 337);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 25);
             this.label4.TabIndex = 48;
             this.label4.Text = "Username";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel3
             // 
@@ -586,7 +573,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
             this.button1.DialogResult = System.Windows.Forms.DialogResult.No;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(359, 17);
             this.button1.Name = "button1";
@@ -609,14 +596,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.changePWPanel);
+            this.Controls.Add(this.grantRolePanel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.grantPrivButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.nameObjsLabel);
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.grantRoleButton);
             this.Controls.Add(this.changePWButton);
@@ -664,7 +651,6 @@
         private System.Windows.Forms.ComboBox objectComboBox;
         private System.Windows.Forms.Button grantPrivButton;
         private System.Windows.Forms.Label objectLabel;
-        private System.Windows.Forms.Label nameObjsLabel;
         private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Button grantRoleButton;
         private System.Windows.Forms.Button changePWButton;

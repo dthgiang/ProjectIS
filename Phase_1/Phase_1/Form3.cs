@@ -59,11 +59,11 @@ namespace Phase_1
 
             string view = "PH1_VIEW_USERS_PRIVS";
         
-        String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
+            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
             
             try
             {
-                raiseTable(dataGridView1, strSQL);
+                raiseTable(dataGridView1, "select * from ATBM.PH1_VIEW_USERS_PRIVS ");
         dataGridView1.Show();
             }
             catch (OracleException ex)

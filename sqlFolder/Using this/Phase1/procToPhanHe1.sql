@@ -1,5 +1,5 @@
 --
---grant RL_DB_MANAGER to nv346
+
 -- Yeu cau tao create cho phep xao user
 CREATE OR REPLACE PROCEDURE ph1_dropUserOrRole(p_username varchar2, p_mode varchar2)
 AS
@@ -158,13 +158,13 @@ AS
 CREATE OR REPLACE VIEW PH1_VIEW_ALL_TABLES
 AS
     SELECT owner, TABLE_NAME AS TableName, TABLESPACE_NAME, STATUS FROM DBA_TABLES
-    WHERE OWNER = 'ATBM' OR OWNER = 'RL_DB_MANAGER';
+    WHERE OWNER = 'ATBM' OR OWNER = 'RL_RL_DB_MANAGER';
     -- WHERE TABBLE_NAME LIKE ''
 /    
 CREATE OR REPLACE VIEW PH1_VIEW_ALL_VIEWS
 AS
     SELECT  owner, VIEW_NAME AS ViewName, TEXT_LENGTH FROM DBA_VIEWS
-    WHERE OWNER = 'ATBM' OR OWNER = 'RL_DB_MANAGER';
+    WHERE OWNER = 'ATBM' OR OWNER = 'RL_RL_DB_MANAGER';
     --WHERE VIEW_NAME LIKE ''
 
 /
@@ -201,19 +201,20 @@ GRANT CREATE USER, ALTER USER, DROP USER TO RL_DB_MANAGER;
 GRANT CREATE ROLE TO RL_DB_MANAGER;
 -- Cho phep thuc hien cap quyen: cap quyen cho user/role/ cap role cho user
 
-GRANT GRANT ANY object PRIVILEGE TO DB_MANAGER;
-grant create table to DB_MANAGER ;
-GRANT GRANT ANY ROLE TO DB_MANAGER ;
-grant select any table to DB_Manager ;
-grant insert any table to DB_Manager ;
-grant delete any table to DB_Manager ;
-grant update any table to DB_Manager ;  
-grant create view to DB_Manager;
-grant create procedure to DB_Manager;
-grant connect to DB_manager;
+GRANT GRANT ANY object PRIVILEGE TO RL_DB_MANAGER;
+grant create table to RL_DB_MANAGER ;
+GRANT GRANT ANY ROLE TO RL_DB_MANAGER ;
+grant select any table to RL_DB_MANAGER ;
+grant insert any table to RL_DB_MANAGER ;
 grant delete any table to RL_DB_MANAGER ;
+grant update any table to RL_DB_MANAGER ;  
+grant create view to RL_DB_MANAGER;
+grant create procedure to RL_DB_MANAGER;
+grant connect to RL_DB_MANAGER;
+grant delete any table to RL_RL_DB_MANAGER ;
 
 /*
 create user hehe identified by 123;
-grant DB_manager to hehe;
+grant RL_DB_MANAGER to hehe;
 */
+SELECT * FROM ATBM.PH1_VIEW_USERS_PRIVS;

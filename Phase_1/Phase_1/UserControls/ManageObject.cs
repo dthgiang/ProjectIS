@@ -57,7 +57,6 @@ namespace Phase_1
             label2.Hide();
             label2.Hide();
             bt_createrole.Hide();
-            pwCheckBox.Hide();
             pwLabel.Hide();
             pwTextBox.Hide();
 
@@ -152,7 +151,6 @@ namespace Phase_1
                 label2.Hide();
                 bt_createrole.Hide();
 
-                pwCheckBox.Hide();
                 pwLabel.Hide();
                 pwTextBox.Hide();
 
@@ -169,7 +167,6 @@ namespace Phase_1
                 label2.Hide();
                 bt_createrole.Show();
 
-                pwCheckBox.Hide();
                 pwLabel.Show();
                 pwTextBox.Show();
 
@@ -184,7 +181,6 @@ namespace Phase_1
                 dataGridView2.Hide();
                 lbl_tablename.Hide();
 
-                pwCheckBox.Show();
                 pwLabel.Show();
                 pwTextBox.Show();
 
@@ -333,10 +329,7 @@ namespace Phase_1
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void label2_Click_1(object sender, EventArgs e)
         {
@@ -425,7 +418,6 @@ namespace Phase_1
             lbl_username.Hide();
             label2.Hide();
             bt_createrole.Hide();
-            pwCheckBox.Hide();
             pwLabel.Hide();
             pwTextBox.Hide();
 
@@ -483,19 +475,7 @@ namespace Phase_1
 
         }
 
-        private void pwCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (pwCheckBox.Checked)
-            {
-                pwLabel.Show();
-                pwTextBox.Show();
-            }
-            else
-            {
-                pwLabel.Hide();
-                pwTextBox.Hide();
-            }
-        }
+        
 
         private void ManageObject_Load(object sender, EventArgs e)
         {
@@ -520,7 +500,6 @@ namespace Phase_1
             label2.Hide();
             label2.Hide();
             bt_createrole.Hide();
-            pwCheckBox.Hide();
             pwLabel.Hide();
             pwTextBox.Hide();
 

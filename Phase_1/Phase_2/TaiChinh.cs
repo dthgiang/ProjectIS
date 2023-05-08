@@ -199,12 +199,12 @@ namespace Phase_1
 
         private void btnPhongban_Click(object sender, EventArgs e)
         {
-
+            AllLayout.showDepartment(panelContainer);
         }
 
         private void btnDeAn_Click(object sender, EventArgs e)
         {
-
+            AllLayout.showProject(panelContainer);
         }
 
         private void btnThongBao_Click(object sender, EventArgs e)

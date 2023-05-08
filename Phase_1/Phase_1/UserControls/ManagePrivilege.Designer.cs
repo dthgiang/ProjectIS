@@ -32,7 +32,7 @@
             this.colPrivCheckbox = new System.Windows.Forms.CheckBox();
             this.moreActionButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.objChoosetextBox = new System.Windows.Forms.TextBox();
             this.revokeButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.privilegeTextBox = new System.Windows.Forms.TextBox();
@@ -101,15 +101,15 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "Find grantee";
             // 
-            // searchTextBox
+            // objChoosetextBox
             // 
-            this.searchTextBox.BackColor = System.Drawing.Color.White;
-            this.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.searchTextBox.Location = new System.Drawing.Point(489, 340);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(456, 23);
-            this.searchTextBox.TabIndex = 34;
+            this.objChoosetextBox.BackColor = System.Drawing.Color.White;
+            this.objChoosetextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.objChoosetextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.objChoosetextBox.Location = new System.Drawing.Point(489, 340);
+            this.objChoosetextBox.Name = "objChoosetextBox";
+            this.objChoosetextBox.Size = new System.Drawing.Size(456, 23);
+            this.objChoosetextBox.TabIndex = 34;
             // 
             // revokeButton
             // 
@@ -159,7 +159,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1133, 437);
             this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // panel1
@@ -183,7 +182,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Console", 44F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
-            this.label3.Location = new System.Drawing.Point(434, 0);
+            this.label3.Location = new System.Drawing.Point(430, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(577, 88);
             this.label3.TabIndex = 46;
@@ -191,7 +190,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.BackColor = System.Drawing.Color.SteelBlue;
+            this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
             this.searchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.searchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -216,7 +215,7 @@
             this.Controls.Add(this.colPrivCheckbox);
             this.Controls.Add(this.moreActionButton);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.searchTextBox);
+            this.Controls.Add(this.objChoosetextBox);
             this.Controls.Add(this.revokeButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.privilegeTextBox);
@@ -237,7 +236,7 @@
         private System.Windows.Forms.CheckBox colPrivCheckbox;
         private System.Windows.Forms.Button moreActionButton;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.TextBox objChoosetextBox;
         private System.Windows.Forms.Button revokeButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox privilegeTextBox;

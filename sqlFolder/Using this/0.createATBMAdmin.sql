@@ -371,3 +371,11 @@ GRANT EXECUTE ON dbms_rls TO "ATBM";
 grant EXECUTE on DBMS_RANDOM to "ATBM";
 GRANT SELECT ON fga_log$ TO ATBM with grant option;
 GRANT SELECT ON UNIFIED_AUDIT_TRAIL TO ATBM with grant option;
+GRANT SELECT ON DBA_TAB_PRIVS TO ATBM with grant option;
+GRANT SELECT ON DBA_ROLES TO ATBM with grant option;
+GRANT SELECT ON DBA_TABLES TO ATBM with grant option;
+GRANT SELECT ON DBA_VIEWS TO ATBM with grant option;
+GRANT SELECT ON DBA_USERS TO ATBM with grant option;
+GRANT SELECT ON ROLE_PRIVS TO ATBM with grant option;
+GRANT SELECT ON ROLE_TAB_PRIVS TO ATBM with grant option;
+

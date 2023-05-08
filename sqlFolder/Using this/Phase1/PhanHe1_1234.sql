@@ -1,9 +1,6 @@
 alter session set container= qldtpdb; 
 
--- Tao nguoi quan tri du lieu
---drop user RL_DB_MANAGER
---create user RL_DB_MANAGER identified by 123;
---grant connect to RL_DB_MANAGER;
+--GRANT RL_DB_MANAGER TO NV346;
 
 
 

@@ -171,10 +171,10 @@ namespace Phase_1
 
         private void grantRoleButton_Click(object sender, EventArgs e)
         {
-            grantPrivPanel.Hide();
             grantRolePanel.Show();
+            grantPrivPanel.Hide();
             changePWPanel.Hide();
-
+            
             //grantPrivLabel.Hide();
             //grantRoleLabel.Show();
             //changePWLabel.Hide();
@@ -222,7 +222,6 @@ namespace Phase_1
             // Set the location of the form
             this.Location = new Point(x, y);
 
-            nameObjsLabel.Text = this.objectName;
             welcomeLabel.Text = "You are editing on " + this.mode;
             List<string> objectList = getUserRoleTableList("Table");
             objectList.AddRange(getUserRoleTableList("View"));
@@ -255,9 +254,7 @@ namespace Phase_1
                 if (isExist() != 0)
                 {
                     this.objectName = userR;
-                    nameObjsLabel.Text = this.objectName;
-                    nameObjsLabel.ForeColor = Color.OrangeRed;
-                    nameObjsLabel.Font = new Font("Cambria", 14, FontStyle.Bold);
+
 
                     objectTextBox.Text = this.objectName;
                     granteeRoleTextBox.Text = this.objectName;
@@ -444,7 +441,6 @@ namespace Phase_1
             this.Location = new Point(x, y);
 
             label4.Text = this.objectName;
-            welcomeLabel.Text = "You are editing on " + this.mode;
             List<string> objectList = getUserRoleTableList("Table");
             objectList.AddRange(getUserRoleTableList("View"));
             objectComboBox.DataSource = objectList;
@@ -463,6 +459,9 @@ namespace Phase_1
             //changePWLabel.Hide();
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

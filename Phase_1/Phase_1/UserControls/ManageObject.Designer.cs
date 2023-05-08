@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pwCheckBox = new System.Windows.Forms.CheckBox();
             this.pwTextBox = new System.Windows.Forms.TextBox();
             this.detailButton = new System.Windows.Forms.Button();
             this.dropButton = new System.Windows.Forms.Button();
@@ -59,19 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pwCheckBox
-            // 
-            this.pwCheckBox.AutoSize = true;
-            this.pwCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.pwCheckBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pwCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
-            this.pwCheckBox.Location = new System.Drawing.Point(431, 423);
-            this.pwCheckBox.Name = "pwCheckBox";
-            this.pwCheckBox.Size = new System.Drawing.Size(250, 33);
-            this.pwCheckBox.TabIndex = 43;
-            this.pwCheckBox.Text = "   Use password";
-            this.pwCheckBox.UseVisualStyleBackColor = false;
             // 
             // pwTextBox
             // 
@@ -193,15 +179,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.Location = new System.Drawing.Point(470, 481);
+            this.dataGridView2.Location = new System.Drawing.Point(381, 481);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(517, 380);
+            this.dataGridView2.Size = new System.Drawing.Size(607, 380);
             this.dataGridView2.TabIndex = 36;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // bt_createrole
             // 
@@ -248,7 +233,7 @@
             this.bt_createtable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_createtable.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_createtable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(162)))), ((int)(((byte)(126)))));
-            this.bt_createtable.Location = new System.Drawing.Point(785, 884);
+            this.bt_createtable.Location = new System.Drawing.Point(852, 885);
             this.bt_createtable.Name = "bt_createtable";
             this.bt_createtable.Size = new System.Drawing.Size(136, 51);
             this.bt_createtable.TabIndex = 32;
@@ -345,7 +330,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(402, 481);
+            this.dataGridView1.Location = new System.Drawing.Point(177, 481);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -353,7 +338,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(519, 380);
+            this.dataGridView1.Size = new System.Drawing.Size(1083, 380);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -392,7 +377,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pwCheckBox);
             this.Controls.Add(this.detailButton);
             this.Controls.Add(this.dropButton);
             this.Controls.Add(this.objectLabel);
@@ -420,8 +404,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox pwCheckBox;
         private System.Windows.Forms.TextBox pwTextBox;
         private System.Windows.Forms.Button detailButton;
         private System.Windows.Forms.Button dropButton;

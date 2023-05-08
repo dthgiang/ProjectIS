@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Phase_1.UserControls;
 using Phase_1.Phase_1;
+using System.Xml.Linq;
 
 
 namespace Phase_1
@@ -20,11 +21,13 @@ namespace Phase_1
         string objectName = null;
         string mode = null;
         string view = "PH1_VIEW_USERS_PRIVS";
-
+        string pri;
         public ManagePriviliege(OracleConnection connection)
         {
             InitializeComponent();
             this.con = connection;
+            this.objectName = null;
+            this.mode = null;
 
         }
         public ManagePriviliege(OracleConnection connection, string objectN, string mode)
@@ -138,103 +141,13 @@ namespace Phase_1
             adt.Fill(userTable);
             dataGridView1.DataSource = userTable;
         }
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
-                    + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
-                privilegeTextBox.Text = priv;
-
-
-
-            }
-        }
-
-        private void ManagePriviliege_Load(object sender, EventArgs e)
-        {
-            if (this.objectName != null)
-            {
-                // Get the size of the primary screen
-                Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
-
-                // Calculate the location of the form to be centered on the screen
-                int x = (workingArea.Width - this.Width) / 2;
-                int y = (workingArea.Height - this.Height) / 2;
-
-                // Set the location of the form
-                this.Location = new Point(x, y);
-
-                String strSQL = sqlQueryViewCon(view, DatabaseAccess.Connector.getOwner());
-                try
-                {
-
-
-                    raiseTable(dataGridView1, strSQL);
-                    dataGridView1.Show();
-                }
-                catch (OracleException ex)
-                {
-                    Console.WriteLine("OracleException: " + ex.Message);
-                }
-            }
-            else
-            {
-                ManagePriviliege_Load1(sender, e);
-            }
-
-        }
-
-        private void ManagePriviliege_Load1(object sender, EventArgs e)
-        {
-
-            // Get the size of the primary screen
-            Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
-
-            // Calculate the location of the form to be centered on the screen
-            int x = (workingArea.Width - this.Width) / 2;
-            int y = (workingArea.Height - this.Height) / 2;
-
-            // Set the location of the form
-            this.Location = new Point(x, y);
-            allPrivCheckbox.Checked = true;
-
-            string view = "PH1_VIEW_USERS_PRIVS";
-
-            String strSQL = sqlQueryView(view, DatabaseAccess.Connector.getOwner());
-
-            try
-            {
-                raiseTable(dataGridView1, strSQL);
-                dataGridView1.Show();
-            }
-            catch (OracleException ex)
-            {
-                Console.WriteLine("OracleException: " + ex.Message);
-            }
-
-
-        }
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            Form2 f1 = new Form2(con);
-            this.Hide();
-            f1.Show();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
+        
+        
         private void searchButton_Click(object sender, EventArgs e)
         {
-            string userR = searchTextBox.Text;
+            string userR = objChoosetextBox.Text;
             string temp = this.objectName;
-            searchTextBox.Text = "";
+            objChoosetextBox.Text = "";
             if (userR != "")
             {
                 this.objectName = userR;
@@ -259,11 +172,78 @@ namespace Phase_1
 
             }
         }
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                objChoosetextBox.Text = selectedRow.Cells["GRANTEE"].Value.ToString();
+
+                string priv = selectedRow.Cells["PRIVILEGE"].Value.ToString() + " ON "
+                    + selectedRow.Cells["OWNER"].Value.ToString() + "." + selectedRow.Cells["TABLE_NAME"].Value.ToString();
+                privilegeTextBox.Text = priv;
+                this.objectName = objChoosetextBox.Text;
+                this.mode = priv;
+            }
+        }
+        private void ManagePriviliege_Load(object sender, EventArgs e)
+        {
+            // Get the size of the primary screen
+            Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
+
+            // Calculate the location of the form to be centered on the screen
+            int x = (workingArea.Width - this.Width) / 2;
+            int y = (workingArea.Height - this.Height) / 2;
+
+            // Set the location of the form
+            this.Location = new Point(x, y);
+            String strSQL;
+            if (this.objectName != null)
+            {
+
+                strSQL = sqlQueryViewCon(view, DatabaseAccess.Connector.getOwner());
+               
+            }
+            else
+            {
+                strSQL = "SELECT * FROM ATBM.PH1_VIEW_USERS_PRIVS";
+                
+            }
+
+            try
+            {
+                raiseTable(dataGridView1, strSQL);
+                dataGridView1.Show();
+            }
+            catch (OracleException ex)
+            {
+                Console.WriteLine("OracleException: " + ex.Message);
+            }
+
+        }
+
+        
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form2 f1 = new Form2(con);
+            this.Hide();
+            f1.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        
 
 
         private void revokeButton_Click(object sender, EventArgs e)
         {
             string priv = privilegeTextBox.Text;
+            this.objectName=objChoosetextBox.Text;
             if (priv == "")
             {
                 MessageBox.Show("Please choose privilege to revoke", "Message", MessageBoxButtons.OK);
@@ -370,6 +350,8 @@ namespace Phase_1
         {
 
         }
+
+
     }
 
 
