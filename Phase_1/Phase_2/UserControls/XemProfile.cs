@@ -165,7 +165,7 @@ namespace Phase_1.UserControls
 
         private void dobTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            DOB = dobTimePicker.Value.ToString("dd-mm-yyyy");
+            DOB = dobTimePicker.Value.ToString("mm-dd-yyyy");
         }
     }
 
