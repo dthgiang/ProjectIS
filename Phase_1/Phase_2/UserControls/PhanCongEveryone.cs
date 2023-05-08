@@ -37,5 +37,10 @@ namespace Phase_1.Phase_2.UserControls
             adt.Fill(table);
             dataGridView1.DataSource = table;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

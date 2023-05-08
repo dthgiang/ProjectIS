@@ -166,7 +166,8 @@ namespace Phase_1
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            PhanCongEveryone gd = new PhanCongEveryone(username, connection);
+            addUserControl(gd);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -181,7 +182,7 @@ namespace Phase_1
 
         private void button10_Click(object sender, EventArgs e)
         {
-            GiamDoc_XemDSNhanVien gd = new GiamDoc_XemDSNhanVien();
+            GiamDoc_XemDSNhanVien gd = new GiamDoc_XemDSNhanVien(username,connection);
             addUserControl(gd);
         }
         private void btnThongBao_Click(object sender, EventArgs e)

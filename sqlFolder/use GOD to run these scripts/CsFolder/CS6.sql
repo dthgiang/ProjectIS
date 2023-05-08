@@ -1,6 +1,0 @@
-
-
-GRANT SELECT, INSERT, DELETE, UPDATE ON god.DEAN TO RL_TRUONGDEAN; 
-
-select * from nhanvien;
-

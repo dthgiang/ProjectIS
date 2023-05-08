@@ -372,6 +372,8 @@ select 1 from dual;
  insert into ATBM.NHANVIEN values('NV345', '�?oan Tung Nguyet', 'Nam', TO_DATE('2009-5-7','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000345', '3501', '1701', 'Nhan vien', 'QL034', 2, '123', 'Mien Bac', 'Mua Ban');/
  insert into ATBM.NHANVIEN values('NV346', 'Nguyen Thi Nguyet', 'Nu', TO_DATE('2020-6-6','YYYY-MM-DD'), '227 Nguyen Van Cu, Quan 1, TP. HCM', '0945000346', '3213', '1660', 'Admin', 'QL035', 3, '123', 'Mien Nam', 'San Xuat');/
  insert into ATBM.NHANVIEN values('NV000', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguyễn Văn Cừ, Quận 5, TP. Hồ Chí Minh', '0945000347', '22000', '10000', 'Admin', null, null, '123', null, null);/
+ insert into ATBM.NHANVIEN values('ATBM', 'An Chi Tu', 'Nu', TO_DATE('2017-4-4','YYYY-MM-DD'), '227 Nguyễn Văn Cừ, Quận 5, TP. Hồ Chí Minh', '0945000347', '22000', '10000', 'Admin', null, null, '123', null, null);/
+
 --------------- END --------------
 /
 -- TABLE 4
@@ -404,7 +406,7 @@ into ATBM.DEAN values('DA803', 'De An so 3 Phong 8', TO_DATE('2021-10-17','YYYY-
 select 1 from dual;
 
 --------------- END --------------
-
+select * from phancong
 -- TABLE 5
 -- Nhap lieu cho bang ATBM.PHANCONG ---
 --------------------------------------

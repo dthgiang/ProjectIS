@@ -27,15 +27,27 @@ namespace Phase_1.Phase_2.UserControls
         }
         private void Audit_Load(object sender, EventArgs e)
         {
-            viewAuditButton_Click(sender, e);
+
+            auditLabel.Hide();
+            auditDataGridView.Hide();
+            logDataGridView.Show();
+            richTextBox1.Hide();
+
+            string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWLOG";
+            bool x = Helper.raiseTable(logDataGridView, sql, connection);
+            if (!x)
+            {
+                richTextBox1.Show();
+                richTextBox1.Text = "Log file is empty";
+                richTextBox1.Font = new Font("Cambria", 20, FontStyle.Bold);
+                richTextBox1.ForeColor = Color.OrangeRed;
+            }
 
         }
 
         private void viewAuditButton_Click(object sender, EventArgs e)
         {
-            viewLogButton.Show();
             auditLabel.Show();
-            viewAuditButton.Hide();
             logDataGridView.Hide();
             richTextBox1.Hide();
             auditDataGridView.Show();
@@ -45,10 +57,8 @@ namespace Phase_1.Phase_2.UserControls
 
         private void viewLogButton_Click(object sender, EventArgs e)
         {
-            viewLogButton.Hide();
             auditLabel.Hide();
             auditDataGridView.Hide();
-            viewAuditButton.Show();
             logDataGridView.Show();
             richTextBox1.Hide();
 
@@ -63,6 +73,9 @@ namespace Phase_1.Phase_2.UserControls
             }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

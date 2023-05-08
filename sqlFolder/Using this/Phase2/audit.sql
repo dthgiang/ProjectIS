@@ -151,6 +151,6 @@ create or replace view vw_ViewLog as
     from SYS.fga_log$
 /
 -- dung sys de grant
-GRANT SELECT ON SYS.vw_ViewAudit TO RL_GiamDoc ;
-grant select on SYS.vw_ViewLog to RL_GiamDoc;
-grant select on  SYS.fga_log$ to RL_GiamDoc;
+GRANT SELECT ON SYS.vw_ViewAudit TO RL_GIAMDOC ;
+grant select on SYS.vw_ViewLog to RL_GIAMDOC;
+grant select on  SYS.fga_log$ to RL_GIAMDOC;

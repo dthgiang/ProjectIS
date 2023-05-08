@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Phase_1
 {
@@ -59,5 +60,6 @@ namespace Phase_1
             QLTrucTiep_Task ql = new QLTrucTiep_Task();
             addUserControl(ql, panelContainer);
         }
+
     }
 }

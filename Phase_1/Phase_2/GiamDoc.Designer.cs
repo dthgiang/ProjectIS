@@ -488,7 +488,7 @@
             this.btnThongBao.Image = global::Phase_1.Properties.Resources.icons8_notification_24;
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.UseVisualStyleBackColor = false;
-            this.btnThongBao.Click += new System.EventHandler(this.button10_Click);
+            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
             // 
             // panel25
             // 

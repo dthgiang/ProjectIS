@@ -27,14 +27,18 @@ namespace Phase_1.UserControls
         }
         private void GiamDoc_XemDSNhanVien_Load(object sender, EventArgs e)
         {
-            OracleDataAdapter adt = new OracleDataAdapter("select * FROM ATBM.nhanvien", connection);
+            OracleDataAdapter adt = new OracleDataAdapter("select * FROM ATBM.NHANVIEN", connection);
 
             DataTable table = new DataTable();
 
             adt.Fill(table);
             dataGridView1.DataSource = table;
 
-            dataGridView1.ReadOnly = true;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

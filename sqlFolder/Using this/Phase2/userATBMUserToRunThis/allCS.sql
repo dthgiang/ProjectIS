@@ -289,4 +289,6 @@ grant RL_NhanVien to RL_TruongDeAn;
 -- Co quyen them, xoa, sua tren quan he DeAn
 GRANT SELECT, INSERT, DELETE, UPDATE ON ATBM.DEAN TO RL_TRUONGDEAN; 
 
-
+---GIAM DOC
+GRANT SELECT ON NHANVIEN TO RL_GIAMDOC;
+grant select on phancong to RL_GIAMDOC
