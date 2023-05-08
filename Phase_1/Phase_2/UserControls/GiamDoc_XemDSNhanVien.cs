@@ -27,7 +27,8 @@ namespace Phase_1.UserControls
         }
         private void GiamDoc_XemDSNhanVien_Load(object sender, EventArgs e)
         {
-            OracleDataAdapter adt = new OracleDataAdapter("select * FROM ATBM.NHANVIEN", connection);
+            string sql = "select * FROM " + DatabaseAccess.Connector.getOwner() + ".NS_XEMNHANVIEN";
+            OracleDataAdapter adt = new OracleDataAdapter(sql, connection);
 
             DataTable table = new DataTable();
 

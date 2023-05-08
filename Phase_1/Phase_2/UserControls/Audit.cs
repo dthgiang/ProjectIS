@@ -28,20 +28,7 @@ namespace Phase_1.Phase_2.UserControls
         private void Audit_Load(object sender, EventArgs e)
         {
 
-            auditLabel.Hide();
-            auditDataGridView.Hide();
-            logDataGridView.Show();
-            richTextBox1.Hide();
-
-            string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWLOG";
-            bool x = Helper.raiseTable(logDataGridView, sql, connection);
-            if (!x)
-            {
-                richTextBox1.Show();
-                richTextBox1.Text = "Log file is empty";
-                richTextBox1.Font = new Font("Cambria", 20, FontStyle.Bold);
-                richTextBox1.ForeColor = Color.OrangeRed;
-            }
+            viewAuditButton_Click(sender, e);
 
         }
 
@@ -51,8 +38,14 @@ namespace Phase_1.Phase_2.UserControls
             logDataGridView.Hide();
             richTextBox1.Hide();
             auditDataGridView.Show();
-            string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWAUDIT";
-            Helper.raiseTable(auditDataGridView, sql, connection);
+            viewLogButton.Show();
+            viewAuditButton.Hide();
+            if (auditDataGridView.Rows.Count == 0)
+            {
+                string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWAUDIT";
+                Helper.raiseTable(auditDataGridView, sql, connection);
+
+            }
         }
 
         private void viewLogButton_Click(object sender, EventArgs e)
@@ -61,6 +54,8 @@ namespace Phase_1.Phase_2.UserControls
             auditDataGridView.Hide();
             logDataGridView.Show();
             richTextBox1.Hide();
+            viewLogButton.Hide();
+            viewAuditButton.Show();
 
             string sql = "select * from " + DatabaseAccess.Connector.getSys() + ".VW_VIEWLOG";
             bool x = Helper.raiseTable(logDataGridView, sql, connection);
@@ -69,13 +64,10 @@ namespace Phase_1.Phase_2.UserControls
                 richTextBox1.Show();
                 richTextBox1.Text = "Log file is empty";
                 richTextBox1.Font = new Font("Cambria", 20, FontStyle.Bold);
-                richTextBox1.ForeColor = Color.OrangeRed;
+                richTextBox1.ForeColor = Color.OrangeRed; return;
             }
+            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -25,6 +25,8 @@ namespace Phase_1
             }
 
             dgv.DataSource = userTable;
+            dgv.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
             return true;
         }
 

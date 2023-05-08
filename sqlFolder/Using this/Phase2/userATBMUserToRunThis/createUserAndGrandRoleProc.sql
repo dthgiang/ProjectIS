@@ -30,6 +30,8 @@ CREATE ROLE RL_GIAMDOC;
 create role RL_DB_manager;
 
 grant RL_NHANVIEN TO RL_GIAMDOC;
+grant select any table to RL_GIAMDOC;
+grant select on ATBM.NS_XEMNHANVIEN to RL_GIAMDOC;
 
 ----------------
 -- this proc have permission to create user by username and pw in db
