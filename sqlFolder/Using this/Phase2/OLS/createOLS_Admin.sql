@@ -16,6 +16,8 @@ EXEC LBACSYS.OLS_ENFORCEMENT.ENABLE_OLS;
 shutdown IMMEDIATE; 
 startup;
 
+ALTER USER lbacsys IDENTIFIED BY lbacsys ACCOUNT UNLOCK ;
+
 --B4: Check if PDB exist
 select * from v$services; 
 SELECT name FROM v$pdbs;
@@ -24,11 +26,9 @@ SELECT name FROM v$pdbs;
 
 --B6: If exist - open it
 ALTER PLUGGABLE DATABASE QLDTPDB OPEN READ WRITE; 
-
 --B7: switch to PDB - error MUST USE SQL PLUS TO ALTER
 alter session set container= qldtpdb; 
 --B8: UNLOCK LBACSYS 
-ALTER USER lbacsys IDENTIFIED BY lbacsys ACCOUNT UNLOCK ;
 SELECT SYS_CONTEXT('USERENV', 'CON_NAME') AS CURRENT_CONTAINER FROM DUAL;
 
 --B9: Create ols admin
@@ -49,6 +49,10 @@ GRANT EXECUTE ON sa_sysdba TO OLS_ADMIN;
 GRANT EXECUTE ON to_lbac_data_label TO OLS_ADMIN; 
 grant select, update, insert, delete on NHANVIEN to OLS_ADMIN;
 grant create user to OLS_ADMIN;
+
+
+
+
 grant select on ATBM.VW_NHANVIEN to OLS_ADMIN;
 grant connect to OLS_ADMIN with admin option;
 --GRANT region_policy_DBA TO OLS_ADMIN; 

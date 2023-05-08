@@ -60,7 +60,7 @@ namespace Phase_1
         -- Nhan su:         NS015
         -- TaiChinh:        TC010
         -- Truong phong:    TP040
-        -- Quan li:         QL0303
+        -- Quan li:         QL030
         -- admin phase 1:   DB_manage
         -- admin OLS:       OLS_Admin
         -- audit Admi:

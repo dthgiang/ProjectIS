@@ -108,7 +108,7 @@ object_schema => 'ATBM',
 object_name => 'nhanvien',
 policy_name => 'luong_phucap_other_audit_policy',
 audit_column => 'luong,phucap',
-audit_condition => 'VAITRO != ' || '''TAICHINH''',
+audit_condition => 'USER not like ''TC%''',
 statement_types => 'UPDATE');
 end;
 /

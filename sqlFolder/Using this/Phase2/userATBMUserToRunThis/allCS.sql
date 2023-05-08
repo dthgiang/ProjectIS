@@ -100,12 +100,8 @@ GRANT SELECT ON ATBM.PH2_View_QLy_XemNhanvien TO RL_QUANLY;
 -- Co the xem cac dong trong quan he PHANCONG lien quan den chinh Q va cac nhan vien N duyoc Q quan ly
 create or replace view PH2_View_Qly_XemPhanCong
 as
-    select * from ATBM.phancong
-    where MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER') OR MANV IN (
-        SELECT MANV 
-        FROM ATBM.NHANVIEN 
-        WHERE MaNQL = SYS_CONTEXT('USERENV', 'SESSION_USER')
-    );
+    select pc.MaNv, nv.tennv, pc.mada, pc.thoigian from ATBM.phancong pc join ATBM.NHANVIEN nv on nv.MaNV = pc.Manv 
+    where pc.MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER') OR MaNQL = SYS_CONTEXT('USERENV', 'SESSION_USER');
 / 
 
 GRANT SELECT ON ATBM.PH2_View_Qly_XemPhanCong TO RL_QUANLY;

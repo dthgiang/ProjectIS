@@ -139,7 +139,8 @@ exec setThongBaoLabel;
 exec setUserLabel;
 /
 
-create or replace procedure assignDataLabel(p_noiDung IN VARCHAR2, p_nguoiGui IN VARCHAR2,p_doiTuong IN VARCHAR2,p_linhVuc IN VARCHAR2,p_khuVuc IN VARCHAR2, p_label IN VARCHAR2)
+create or replace procedure assignDataLabel(p_noiDung IN VARCHAR2, p_nguoiGui IN VARCHAR2,p_doiTuong IN VARCHAR2,
+                                            p_linhVuc IN VARCHAR2,p_khuVuc IN VARCHAR2, p_label IN VARCHAR2)
 as
     strSql VARCHAR2(300);
 BEGIN

@@ -45,63 +45,21 @@ END;
 /
 select GET_KEY(3) from dual;
 /
+
 CREATE OR REPLACE TRIGGER TRG_INSERT_NHANVIEN
 BEFORE INSERT ON NHANVIEN 
 FOR EACH ROW 
 DECLARE 
     v_key RAW(20);
-    v_manv NHANVIEN.MANV%TYPE;
-    v_tennv NHANVIEN.TENNV%TYPE;
-    v_phai NHANVIEN.PHAI%TYPE;
-    v_ngaysinh NHANVIEN.NGAYSINH%TYPE;
-    v_diachi NHANVIEN.DIACHI%TYPE;
-    v_sodt NHANVIEN.SODT%TYPE;
-    v_luong NHANVIEN.LUONG%TYPE;
-    v_phucap NHANVIEN.PHUCAP%TYPE;
-    v_vaitro NHANVIEN.VAITRO%TYPE;
-    v_manql NHANVIEN.MANQL%TYPE;
-    v_phg NHANVIEN.PHG%TYPE;
-    v_password NHANVIEN.password%TYPE;
-    v_khuvuc NHANVIEN.KHUVUC%TYPE;
-    v_linhvuc NHANVIEN.LINHVUC%TYPE;
+
 BEGIN
-    v_manv := :new.manv;
-    v_tennv := :new.tennv;
-    v_phai := :new.phai;
-    v_ngaysinh := :new.ngaysinh;
-    v_diachi := :new.diachi;
-    v_sodt := :new.sodt;
-    v_luong := :new.luong;
-    v_phucap := :new.phucap;
-    v_vaitro := :new.vaitro;
-    v_manql := :new.manql;
-    v_phg := :new.phg;
-    v_password := :new.password;
-    v_khuvuc := :new.khuvuc;
-    v_linhvuc := :new.linhvuc;
     
     v_key := GET_KEY(10);
-    INSERT INTO SAVE_KEY VALUES(v_manv, v_key);
+    INSERT INTO SAVE_KEY VALUES(:new.manv, v_key);
     
-    :new.luong := encryption(UTL_RAW.CAST_TO_RAW(v_luong), v_manv);
-    :new.phucap := encryption(UTL_RAW.CAST_TO_RAW(v_phucap), v_manv);
-    
-    -- C?p nh?t b?ng NHANVIEN
-    UPDATE NHANVIEN SET 
-        TENNV = v_tennv,
-        PHAI = v_phai,
-        NGAYSINH = v_ngaysinh,
-        DIACHI = v_diachi,
-        SODT = v_sodt,
-        LUONG = :new.luong,
-        PHUCAP = :new.phucap,
-        VAITRO = v_vaitro,
-        MANQL = v_manql,
-        PHG = v_phg,
-        password = v_password,
-        KHUVUC=v_khuvuc,
-        LINHVUC=v_linhvuc
-    WHERE MANV = v_manv;
+    :new.luong := encryption(UTL_RAW.CAST_TO_RAW(:new.luong), :new.manv);
+    :new.phucap := encryption(UTL_RAW.CAST_TO_RAW(:new.phucap), :new.manv);
+
 END;
 --thay doi khoa hang loat
 /

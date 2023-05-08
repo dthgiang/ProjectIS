@@ -108,7 +108,7 @@ namespace Phase_1
 
         private void button15_Click(object sender, EventArgs e)
         {
-            AllLayout.showTask(panelContainer);
+            addUserControl(new NhanVien_PhanCong());
         }
 
         private void deptListBtn_Click(object sender, EventArgs e)
