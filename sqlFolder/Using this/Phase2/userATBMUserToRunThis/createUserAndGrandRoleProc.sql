@@ -87,10 +87,42 @@ AS
 ----------------------------
 ---- Grant role Area -------
 ----------------------------
+-------------------------
+-- this proc have responsibility to grant Role to user
+-------------------------
 
+CREATE OR REPLACE PROCEDURE grantRole(p_vaiTro IN VARCHAR2, p_role IN VARCHAR2)
+AS
+    CURSOR CUR IS (SELECT MANV FROM ATBM.NHANVIEN WHERE UPPER(VaiTro) = upper(p_vaiTro) AND MANV NOT IN 
+        (SELECT grantee FROM DBA_ROLE_PRIVS
+            where granted_role = upper(p_role)));
+    STR VARCHAR(1000);
+    USR VARCHAR2(100);
+    BEGIN
+        OPEN CUR;
+        LOOP
+            FETCH CUR INTO USR;
+            EXIT WHEN CUR%NOTFOUND;
+            
+            STR := 'grant '|| upper(p_role) ||' to '||USR;
+            EXECUTE IMMEDIATE (STR);
+        END LOOP;
+        dbms_output.put_line( 'All user are granted' );
+    END;
+/
+/*
+exec grantRole('Nhan vien', 'RL_NHANVIEN');
+exec grantRole('Nhan Su', 'RL_NHANSU');
+exec grantRole('Tai Chinh', 'RL_TAICHINH');
+exec grantRole('Giam Doc', 'RL_GIAMDOC');
+exec grantRole('Truong Phong', 'RL_TRUONGPHONG');
+exec grantRole('Truong De An', 'RL_TRUONGDEAN');
+exec grantRole('Quan Ly', 'RL_QUANLY');
+*/
 -------------------------
 -- this proc have responsibility to grant Role NhanVien  to all user have vai tro = Giam doc
 -------------------------
+
 CREATE OR REPLACE PROCEDURE grantGiamDocRole
 AS
     CURSOR CUR IS (SELECT MANV FROM ATBM.NHANVIEN WHERE UPPER(VaiTro) = 'GIAM DOC' AND MANV NOT IN 

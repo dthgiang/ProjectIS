@@ -65,7 +65,9 @@ grant RL_NhanVien to RL_QuanLy;
 -- Duoc xem tat ca cac thuoc tinh, tru LUONG va PHUCAP trong quan he NHANVIEN do Q quan ly truc tiep .
 create or replace view PH2_View_QLy_XemNhanvien
 as
-    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap, vaitro, manql, phg, khuvuc, linhvuc from ATBM.NhanVien 
+    select manv, tennv, phai, ngaysinh, diachi, sodt, decryption(luong, manv) luong, decryption(phucap, manv) phucap,
+    vaitro, manql, phg, khuvuc, linhvuc
+    from ATBM.NhanVien 
     where MaNQL = SYS_CONTEXT('USERENV', 'SESSION_USER') or MaNV = SYS_CONTEXT('USERENV', 'SESSION_USER')
 /
 
@@ -79,6 +81,8 @@ begin
     return 'MANV = '||''''||userAcc||'''';
 end;
 /
+
+
 BEGIN
     DBMS_RLS.add_policy(
     object_schema => 'ATBM',
