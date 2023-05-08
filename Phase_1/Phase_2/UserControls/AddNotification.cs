@@ -235,7 +235,7 @@ namespace Phase_1.UserControls
             string label = "";
             foreach (Object x in clb.CheckedItems) {
                 obj += x.ToString();
-                label += getShortLabel(obj);
+                label += getShortLabel(x.ToString());
                 label += ",";
                 obj += ",";
             }
@@ -354,6 +354,7 @@ namespace Phase_1.UserControls
         private void assignButton_Click(object sender, EventArgs e)
         {
             string flabel = getUserLabel();
+            System.Diagnostics.Debug.WriteLine(flabel);
             string user = objectTextBox.Text;
             objectTextBox.Text = "";
             if (user == "")
